@@ -11,7 +11,7 @@ interface InputProps {
 export const Input = ({ value, setValue, placeholder, asText = false }: InputProps) => {
     const Tag = asText ? 'textarea' : 'input';
 
-    const height = asText ? 'h-[200px]' : 'h-[50px]';
+    const height = asText ? 'h-[150px] xsm:h-[200px]' : 'h-[50px]';
     const verticalPadding = asText ? 'py-5' : '';
 
     return (

@@ -1,5 +1,6 @@
 "use client";
 
+import { DEFAULT_LOCALE, locales } from '@/locales';
 import NextLink from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -15,7 +16,12 @@ export interface LinkProps {
  * If the current path is the same as the href, the css will highlight it.
  */
 export const Link = ({ icon, href, label }: LinkProps) => {
-    const pathname = usePathname();
+    let pathname = usePathname();
+
+    // To check if we're on an unprefixed route.
+    const hasLocale = locales.some(locale => pathname.includes(locale));
+
+    pathname = hasLocale ? pathname : `/${DEFAULT_LOCALE}${pathname === "/" ? "" : pathname}`;
 
     const colors = pathname !== href ? "bg-transparent text-black hover:bg-gray-200" : "bg-black text-white";
 

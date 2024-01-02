@@ -1,0 +1,20 @@
+import { LanguageDictionary } from "../type";
+
+export const deDict: LanguageDictionary = {
+    navigation: {
+        home: "Home",
+        work: "Arbeit",
+        about: "Über",
+        contact: "Kontakt",
+    },
+    contact: {
+        title: "Kontaktseite",
+        paragraph: "Füllen Sie das untenstehende Formular aus, um mit mir in Kontakt zu treten. Ich werde so schnell wie möglich auf Sie zurückkommen!",
+        placeholders: {
+            name: "Geben Sie hier Ihren Namen ein...",
+            email: "Geben Sie hier Ihren E-Mail-Adresse ein...",
+            message: "Geben Sie hier Ihren Nachricht ein..."
+        },
+        send: "Senden"
+    },
+};
