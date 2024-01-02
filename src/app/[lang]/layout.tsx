@@ -4,6 +4,7 @@ import { poppins } from '@/fonts';
 import { Navbar } from '@/components/shared/Navbar';
 import { MetaBar } from '@/components/shared/Metabar';
 import { locales } from '@/locales';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 
 interface RootLayoutProps extends ChildrenProps {
     params: {
@@ -22,13 +23,13 @@ const RootLayout = ({ children, params }: RootLayoutProps) => {
     return (
         <html lang={lang}>
             <body className={`relative flex flex-col justify-between ${poppins.className}`}>
-                <MetaBar />
-
-                <div className='relative w-full h-[calc(100vh-140px)] p-10'>
-                    {children}
-                </div>
-
-                <Navbar />
+                <ThemeProvider>
+                    <MetaBar />
+                    <div className='relative w-full h-[calc(100vh-140px)] p-10'>
+                        {children}
+                    </div>
+                    <Navbar />
+                </ThemeProvider>
             </body>
         </html>
     )

@@ -8,6 +8,9 @@ export const locales = ['en-US', 'fr-CH', 'de-DE'] as const;
 /** The default locale to use (`en-US`). */
 export const DEFAULT_LOCALE = 'en-US';
 
+/** The supported keys for the locales. */
+export type LocaleKey = typeof locales[number];
+
 /** The dictionary containing all the texts. */
 export const dictionary = {
     en: enDict,

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { DEFAULT_LOCALE } from "./locales";
+import { DEFAULT_LOCALE, locales } from "./locales";
 
 const unprefixedRoutes = [
     "/",

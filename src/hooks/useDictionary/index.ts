@@ -1,4 +1,4 @@
-import { dictionary, locales, type LanguageDictionary, DictionaryKey } from "@/locales";
+import { dictionary, locales, type LanguageDictionary, DictionaryKey, LocaleKey } from "@/locales";
 
 /**
  * Returns the correct dictionary for the given locale.
@@ -9,7 +9,7 @@ import { dictionary, locales, type LanguageDictionary, DictionaryKey } from "@/l
 export const useDictionary = (locale: string): LanguageDictionary => {
     let key: DictionaryKey = "en";
 
-    if (locales.includes(locale)) {
+    if (locales.includes(locale as LocaleKey)) {
         key = locale.split("-").at(0)! as DictionaryKey;
     }
 

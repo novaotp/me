@@ -23,7 +23,7 @@ export const Link = ({ icon, href, label }: LinkProps) => {
 
     pathname = hasLocale ? pathname : `/${DEFAULT_LOCALE}${pathname === "/" ? "" : pathname}`;
 
-    const colors = pathname !== href ? "bg-transparent text-black hover:bg-gray-200" : "bg-black text-white";
+    const colors = pathname !== href ? "bg-transparent text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" : "bg-black dark:bg-white text-white dark:text-black";
 
     return (
         <li className="relative h-full aspect-square sm:w-auto">

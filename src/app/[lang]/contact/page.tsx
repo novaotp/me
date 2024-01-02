@@ -12,7 +12,7 @@ const Page = ({ params }: { params: { lang: string } }) => {
     return (
         <div className="relative w-full h-full flex flex-col justify-evenly items-center">
             <h1 className="text-3xl font-bold text-center">{dictionary.contact.title}</h1>
-            <p className="text-justify text-sm xsm:text-base">{dictionary.contact.paragraph}</p>
+            <p className="text-center text-sm xsm:text-base">{dictionary.contact.paragraph}</p>
             <Form />
         </div>
     )

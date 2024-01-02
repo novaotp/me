@@ -1,6 +1,6 @@
 {
   "name": "me",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,6 +16,7 @@
     "@mui/material": "^5.15.2",
     "next": "14.0.4",
     "next-intl": "^3.4.0",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18"
   },
