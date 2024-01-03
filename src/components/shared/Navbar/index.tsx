@@ -2,7 +2,7 @@
 
 import HomeIcon from '@mui/icons-material/HomeWorkRounded';
 import WorkIcon from '@mui/icons-material/WorkRounded';
-import AboutIcon from '@mui/icons-material/AccountCircleRounded';
+import BlogIcon from '@mui/icons-material/ArticleRounded';
 import ContactIcon from '@mui/icons-material/MailRounded';
 
 import { useParams } from "next/navigation";
@@ -21,7 +21,7 @@ export const Navbar = () => {
             <ul className="relative w-full h-full py-5 flex justify-evenly items-center">
                 <Link href={`/${locale}`} icon={<HomeIcon />} label={dictionary.navigation.home} />
                 <Link href={`/${locale}/work`} icon={<WorkIcon />} label={dictionary.navigation.work} />
-                <Link href={`/${locale}/blog`} icon={<AboutIcon />} label={dictionary.navigation.blog} />
+                <Link href={`/${locale}/blog`} icon={<BlogIcon />} label={dictionary.navigation.blog} />
                 <Link href={`/${locale}/contact`} icon={<ContactIcon />} label={dictionary.navigation.contact} />
             </ul>
         </nav>

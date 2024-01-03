@@ -26,7 +26,7 @@ export const Link = ({ icon, href, label }: LinkProps) => {
     const colors = pathname !== href ? "bg-transparent text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" : "bg-black dark:bg-white text-white dark:text-black";
 
     return (
-        <li className="relative h-full aspect-square sm:w-auto">
+        <li className="relative h-full aspect-square sm:aspect-auto">
             <NextLink href={href} className={`relative h-full flex justify-center items-center rounded-md ${colors} sm:px-5`}>
                 {icon}
                 <p className="hidden sm:flex ml-[10px] relative h-full justify-center items-center">

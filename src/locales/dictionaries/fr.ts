@@ -12,7 +12,7 @@ export const frDict: LanguageDictionary = {
         paragraph: "[Insérez un texte sur ma vie ici]"
     },
     work: {
-        greeting: "Voici les travaux sur lesquels je travaille en ce moment/ai travaillé dans le passé...",
+        greeting: "Voici mes travaux...",
         paragraph: "[Insérez des projets ici]"
     },
     blog: {

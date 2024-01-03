@@ -23,7 +23,7 @@ export const LanguageSwitcher = () => {
     const pathnameWithoutLocale = pathname.split("/").slice(hasLocale ? 2 : 1).join("/"); // 2 because 0 is empty and 1 is the locale
 
     return (
-        <div className="relative h-full flex">
+        <div className="relative h-full w-[120px] flex">
             <Link href={`/de-DE/${pathnameWithoutLocale}`} className="relative h-full aspect-square flex justify-center items-center border border-black dark:border-gray-400 border-r-0 rounded-l-md">
                 <Image
                     src="/flags/germany.svg"

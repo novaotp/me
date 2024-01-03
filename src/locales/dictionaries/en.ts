@@ -12,7 +12,7 @@ export const enDict: LanguageDictionary = {
         paragraph: "[Insert text about my life here]"
     },
     work: {
-        greeting: "Here are the projects I am working/have worked on...",
+        greeting: "Here are my projects...",
         paragraph: "[Insert projects here]"
     },
     blog: {

@@ -12,7 +12,7 @@ export const deDict: LanguageDictionary = {
         paragraph: "[Hier Text über mein Leben einfügen]"
     },
     work: {
-        greeting: "Hier sind die Projekte, an denen ich arbeite/gearbeitet habe...",
+        greeting: "Hier sind meinen Projekte...",
         paragraph: "[Hier Projekte einfügen]"
     },
     blog: {

@@ -15,7 +15,7 @@ export const ThemeSwitcher = () => {
     }
 
     return (
-        <div className="relative h-full w-[120px] flex justify-start items-center">
+        <div className="relative h-full aspect-square lg:w-[120px] flex justify-start items-center">
             <button onClick={handleSwitchTheme} className="relative h-full aspect-square flex justify-center items-center">
                 {theme === "light" ? <LightModeIcon /> : <DarkModeIcon />}
             </button>
