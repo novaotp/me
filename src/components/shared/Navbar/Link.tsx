@@ -27,14 +27,10 @@ export const Link = ({ icon, href, label }: LinkProps) => {
 
     return (
         <li className="relative h-full aspect-square sm:w-auto">
-            <NextLink href={href} className={`relative h-full w-full flex justify-center items-center rounded-md ${colors} sm:px-5`}>
+            <NextLink href={href} className={`relative h-full flex justify-center items-center rounded-md ${colors} sm:px-5`}>
                 {icon}
-                <p className="hidden sm:flex relative h-full justify-center items-center">
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <span>{label}</span>
+                <p className="hidden sm:flex ml-[10px] relative h-full justify-center items-center">
+                    {label}
                 </p>
             </NextLink>
         </li>

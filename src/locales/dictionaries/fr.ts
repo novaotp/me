@@ -4,7 +4,7 @@ export const frDict: LanguageDictionary = {
     navigation: {
         home: "Home",
         work: "Travaux",
-        about: "À propos",
+        blog: "Blog",
         contact: "Contact",
     },
     contact: {

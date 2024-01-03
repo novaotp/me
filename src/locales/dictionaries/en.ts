@@ -4,7 +4,7 @@ export const enDict: LanguageDictionary = {
     navigation: {
         home: "Home",
         work: "Work",
-        about: "About",
+        blog: "Blog",
         contact: "Contact",
     },
     contact: {

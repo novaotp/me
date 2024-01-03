@@ -25,7 +25,7 @@ const RootLayout = ({ children, params }: RootLayoutProps) => {
             <body className={`relative flex flex-col justify-between ${poppins.className}`}>
                 <ThemeProvider>
                     <MetaBar />
-                    <div className='relative w-full h-[calc(100vh-140px)] p-10'>
+                    <div className='relative w-full flex-grow p-10 flex justify-center items-center'>
                         {children}
                     </div>
                     <Navbar />

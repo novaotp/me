@@ -4,7 +4,7 @@ import { DEFAULT_LOCALE, locales } from "./locales";
 const unprefixedRoutes = [
     "/",
     "/work",
-    "/about",
+    "/blog",
     "/contact"
 ];
 

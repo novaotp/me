@@ -4,7 +4,7 @@ export const deDict: LanguageDictionary = {
     navigation: {
         home: "Home",
         work: "Arbeit",
-        about: "Über",
+        blog: "Blog",
         contact: "Kontakt",
     },
     contact: {

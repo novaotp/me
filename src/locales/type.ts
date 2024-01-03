@@ -2,7 +2,7 @@ export interface LanguageDictionary {
     navigation: {
         home: string;
         work: string;
-        about: string;
+        blog: string;
         contact: string;
     },
     contact: {
