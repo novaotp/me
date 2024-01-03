@@ -1,3 +1,4 @@
+import { useDictionary } from "@/hooks/useDictionary";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,12 +7,12 @@ export const metadata: Metadata = {
 
 const Page = ({ params }: { params: { lang: string } }) => {
     const { lang } = params;
-
-    console.log(lang);
+    const dictionary = useDictionary(lang);
 
     return (
         <div>
-            <h1>Hi, I'm Sajidur Rahman</h1>
+            <h1 className="text-center font-bold text-3xl mb-10">{dictionary.home.greeting}</h1>
+            <p className="text-center">{dictionary.home.paragraph}</p>
         </div>
     )
 }

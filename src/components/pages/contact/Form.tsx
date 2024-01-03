@@ -34,7 +34,7 @@ export const Form = () => {
         <form ref={ref} onSubmit={handleFormSubmission} className="relative w-full flex flex-col justify-center items-center">
             <div className="relative w-full flex flex-col gap-5 mb-5 sm:flex-row">
                 <Input value={name} setValue={setName} placeholder={dictionary.contact.placeholders.name} />
-                <Input value={email} setValue={setEmail} placeholder={dictionary.contact.placeholders.email} />
+                <Input value={email} setValue={setEmail} placeholder={dictionary.contact.placeholders.email} type="email" />
             </div>
             <Input value={message} setValue={setMessage} placeholder={dictionary.contact.placeholders.message} asText={true} />
             <button type="submit" className="relative h-[50px] mt-5 px-10 rounded-full bg-blue-500 text-white flex items-center text-sm">

@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 interface InputProps {
+    type?: "text" | "email";
     value: string;
     setValue: Dispatch<SetStateAction<string>>;
     placeholder: string;
@@ -8,7 +9,7 @@ interface InputProps {
     asText?: boolean;
 }
 
-export const Input = ({ value, setValue, placeholder, asText = false }: InputProps) => {
+export const Input = ({ value, setValue, placeholder, type = "text", asText = false }: InputProps) => {
     const Tag = asText ? 'textarea' : 'input';
 
     const height = asText ? 'h-[150px] xsm:h-[200px]' : 'h-[50px]';
@@ -16,7 +17,7 @@ export const Input = ({ value, setValue, placeholder, asText = false }: InputPro
 
     return (
         <Tag
-            type="text"
+            type={type}
             name="name"
             value={value}
             onChange={event => setValue(event.target.value)}
