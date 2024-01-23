@@ -5,17 +5,17 @@
 </script>
 
 {#if type === 'text'}
-<input
-	type="text"
-	bind:value={value}
-	{placeholder}
-	class="relative w-full h-[50px] rounded-md border border-gray-400 px-5 text-[14px] resize-none"
-/>
+	<input
+		type="text"
+		bind:value
+		{placeholder}
+		class="relative w-full h-[50px] rounded-md border border-gray-400 px-5 text-[14px] resize-none"
+	/>
 {:else}
-<input
-	type="email"
-	bind:value={value}
-	{placeholder}
-	class="relative w-full h-[50px] rounded-md border border-gray-400 px-5 text-[14px] resize-none"
-/>
+	<input
+		type="email"
+		bind:value
+		{placeholder}
+		class="relative w-full h-[50px] rounded-md border border-gray-400 px-5 text-[14px] resize-none"
+	/>
 {/if}

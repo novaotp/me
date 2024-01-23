@@ -1,6 +1,11 @@
 <script lang="ts">
 	import Link from './Link.svelte';
-	import { IconHome as Home, IconLuggage as Work, IconArticle as Blog, IconMailForward as Contact } from '@tabler/icons-svelte';
+	import {
+		IconHome as Home,
+		IconLuggage as Work,
+		IconArticle as Blog,
+		IconMailForward as Contact
+	} from '@tabler/icons-svelte';
 </script>
 
 <!--

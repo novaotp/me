@@ -4,9 +4,9 @@ export default {
 	theme: {
 		extend: {
 			screens: {
-			  'xsm': '480px',
+				xsm: '480px'
 			}
-		},
+		}
 	},
 	plugins: []
 };

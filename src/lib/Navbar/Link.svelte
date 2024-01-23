@@ -6,10 +6,7 @@
 	export let href: string;
 	export let label: string;
 
-	$: colors =
-		$page.url.pathname === href
-			? 'text-white bg-black'
-			: 'text-black hover:bg-gray-200';
+	$: colors = $page.url.pathname === href ? 'text-white bg-black' : 'text-black hover:bg-gray-200';
 </script>
 
 <!--
