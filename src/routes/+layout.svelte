@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import Navbar from '$lib/Navbar/Navbar.svelte';
+	import Navbar from '$lib/shared/Navbar/Navbar.svelte';
 	import ToastContainer from '$lib/shared/Toast/ToastContainer.svelte';
 </script>
 
