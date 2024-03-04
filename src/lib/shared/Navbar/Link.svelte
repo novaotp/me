@@ -6,7 +6,7 @@
 	export let href: string;
 	export let label: string;
 
-	$: colors = $page.url.pathname === href ? 'text-white bg-black' : 'text-black hover:bg-gray-200';
+	$: colors = $page.url.pathname === href ? 'text-[#fff6ea] bg-black' : 'text-black';
 </script>
 
 <!--
@@ -18,8 +18,10 @@ If the current path is the same as the href, the css will highlight it.
 -->
 
 <li class="relative h-full aspect-square sm:aspect-auto">
-	<a {href} class="relative h-full flex justify-center items-center rounded-md {colors} sm:px-5">
-		<svelte:component this={icon} />
+	<a {href} class="relative h-full flex justify-center items-center rounded-md {colors} sm:px-5" aria-label="Go to the {label} page">
+		<span role="img" class={colors}>
+			<svelte:component this={icon} class="bg-transparent" />
+		</span>
 		<p class="hidden sm:flex ml-[10px] relative h-full justify-center items-center">
 			{label}
 		</p>
