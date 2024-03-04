@@ -43,7 +43,7 @@
 <div
 	class="relative w-full max-w-[800px] h-full max-h-[600px] flex flex-col justify-evenly items-center"
 >
-	<h1 class="text-3xl font-bold text-center">Page de contact</h1>
+	<h1 class="text-3xl font-medium text-center">Commençons un projet ensemble</h1>
 	<p class="text-center text-sm xsm:text-base">
 		Complétez le formulaire ci-dessous pour me contacter.
 	</p>
