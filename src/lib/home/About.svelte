@@ -1,8 +1,8 @@
 <div class="relative w-full h-full flex justify-center items-center flex-col gap-10">
 	<h2 class="text-center text-3xl">À propos</h2>
     <p>
-        Passionné par la création d'interfaces web intuitives et performantes, je suis actuellement en 2ème année en développement à l'EPTM de Sion, Suisse.
-        Je suis animé par l'envie d'apprendre et de me perfectionner constamment dans ce domaine en pleine évolution.
+        Passionné par la création de sites web intuitifs et performants, j'étudie actuellement à l'EPTM de Sion, Suisse.
+        Je souhaite continuer à apprendre et me perfectionner dans ce domaine en pleine évolution.
     </p>
     <div class="relative flex flex-col gap-2">
         <p>Mes compétences principales incluent</p>
