@@ -4,11 +4,6 @@
 
 <svelte:head>
 	<title>Home - Sajidur Rahman</title>
-	<meta
-		name="description"
-		content="Découvrez le portfolio de Sajidur Rahman, développeur web axé sur les interfaces utilisateur pour un design fluide et une satisfaction
-	client optimale. Explorez les projets uniques que j'ai créés et contactez-moi pour une collaboration."
-	/>
 </svelte:head>
 
 <div class="relative w-full h-full flex justify-center items-start flex-col gap-10">

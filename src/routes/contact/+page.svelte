@@ -4,11 +4,6 @@
 	import emailjs from '@emailjs/browser';
 	import { PUBLIC_EMAILJS_ACCOUNT_PUBLIC_KEY as API_KEY } from '$env/static/public';
 	import { addToast } from '$stores/toast';
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		document.title = "Contact - Sajidur Rahman";
-	})
 
 	let name: string = '';
 	let email: string = '';
@@ -40,6 +35,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Contact - Sajidur Rahman</title>
+</svelte:head>
+
 <div
 	class="relative w-full max-w-[800px] h-full max-h-[600px] flex flex-col justify-evenly items-center"
 >
@@ -56,7 +55,7 @@
 		<button
 			on:click={handleFormSubmission}
 			type="submit"
-			class="relative h-[50px] mt-5 px-10 rounded-full bg-blue-500 text-white flex items-center text-sm"
+			class="relative h-[50px] mt-5 px-10 rounded-full bg-indigo-700 text-white flex items-center text-sm"
 		>
 			Envoyer
 		</button>

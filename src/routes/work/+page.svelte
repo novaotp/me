@@ -1,12 +1,8 @@
-<script lang="ts">
-	import { onMount } from "svelte";
+<svelte:head>
+	<title>Mes projets - Sajidur Rahman</title>
+</svelte:head>
 
-	onMount(() => {
-		document.title = "Mes projets - Sajidur Rahman";
-	})
-</script>
-
-<div class="relative w-full h-full flex justify-center items-center flex-col">
-	<h1 class="text-center font-bold text-3xl mb-10">Voici mes travaux...</h1>
-	<p class="text-center">[Insérez des projets ici]</p>
+<div class="relative w-full h-full flex justify-center items-center flex-col gap-10">
+	<h1 class="text-center font-medium text-3xl">Mes travaux</h1>
+	<p class="text-xl text-justify">Je n'ai pas encore pu développer de sites web pour des clients. Revenez prochainement !</p>
 </div>
