@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { IconX } from '@tabler/icons-svelte';
+	import { IconCopyright, IconX } from '@tabler/icons-svelte';
 	import { fly } from 'svelte/transition';
 	import Link from './Link.svelte';
 
@@ -45,5 +45,8 @@
                 >
             </a>
         </article>
+        <footer class="flex mb-10 gap-2">
+            <IconCopyright /> 2024 - Sajidur Rahman
+        </footer>
 	</aside>
 {/if}
