@@ -3,7 +3,7 @@
 </script>
 
 <div class="relative w-full h-full flex justify-center items-center flex-col gap-10">
-	<h1 class="text-center text-3xl">Services</h1>
+	<h2 class="text-center text-3xl">Services</h2>
 	<Card title="Prestations & Services">
 		Design web, développement web, SEO, suivi régulier, sites web responsives.
 	</Card>

@@ -1,5 +1,5 @@
 <div class="relative w-full h-full flex justify-center items-center flex-col gap-10">
-	<h1 class="text-center text-3xl">À propos</h1>
+	<h2 class="text-center text-3xl">À propos</h2>
     <p>
         Passionné par la création d'interfaces web intuitives et performantes, je suis actuellement en 2ème année en développement à l'EPTM de Sion, Suisse.
         Je suis animé par l'envie d'apprendre et de me perfectionner constamment dans ce domaine en pleine évolution.

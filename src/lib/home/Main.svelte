@@ -3,11 +3,11 @@
 </script>
 
 <div class="relative w-full h-full flex justify-center items-start flex-col gap-14">
-	<h1>Bonjour, je suis Sajidur Rahman.</h1>
-	<p class="text-justify text-3xl">
+	<p>Bonjour, je suis Sajidur Rahman.</p>
+	<h1 class="text-justify text-3xl">
 		Un développeur web axé sur les interfaces utilisateur pour un design fluide et une satisfaction
 		client optimale.
-	</p>
+	</h1>
 	<ul class="relative flex flex-wrap">
 		<li>Design</li>
 		<li><IconPointFilled /></li>
