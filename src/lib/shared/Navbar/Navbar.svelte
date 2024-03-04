@@ -3,7 +3,10 @@
 
 	export let show: boolean;
 
-	const showMenu = () => (show = true);
+	const showMenu = () => {
+		show = true;
+		document.body.style.overflow = 'hidden';
+	};
 </script>
 
 <!--
