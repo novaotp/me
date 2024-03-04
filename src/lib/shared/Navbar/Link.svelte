@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { ComponentType } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
 
-	export let icon: ComponentType;
 	export let href: string;
 	export let label: string;
+
+	const dispatch = createEventDispatcher();
 
 	$: colors = $page.url.pathname === href ? 'text-[#fff6ea] bg-black' : 'text-black';
 </script>
@@ -17,13 +18,8 @@ Renders a link represented as an icon for the navbar.
 If the current path is the same as the href, the css will highlight it.
 -->
 
-<li class="relative h-full aspect-square sm:aspect-auto">
-	<a {href} class="relative h-full flex justify-center items-center rounded-md {colors} sm:px-5" aria-label="Go to the {label} page">
-		<span role="img" class={colors}>
-			<svelte:component this={icon} class="bg-transparent" />
-		</span>
-		<p class="hidden sm:flex ml-[10px] relative h-full justify-center items-center">
-			{label}
-		</p>
+<li class="relative">
+	<a {href} on:click={() => dispatch("click")} class="relative px-10 p-4 flex justify-center items-center rounded-md {colors} sm:px-5" aria-label="Go to the {label} page">
+		{label}
 	</a>
 </li>
