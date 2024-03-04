@@ -7,7 +7,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			"$stores": "./src/stores"
+			$stores: './src/stores'
 		}
 	}
 };

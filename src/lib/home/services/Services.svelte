@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from "./Card.svelte";
+	import Card from './Card.svelte';
 </script>
 
 <div class="relative w-full h-full flex justify-center items-center flex-col gap-10">

@@ -10,6 +10,8 @@
 <NavPage bind:show />
 <Navbar bind:show />
 <ToastContainer />
-<main class="relative w-full min-h-[calc(100%-5rem)] flex-grow p-10 flex justify-center items-center flex-col">
+<main
+	class="relative w-full min-h-[calc(100%-5rem)] flex-grow p-10 flex justify-center items-center flex-col"
+>
 	<slot />
 </main>

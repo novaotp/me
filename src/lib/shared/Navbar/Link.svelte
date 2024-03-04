@@ -19,7 +19,12 @@ If the current path is the same as the href, the css will highlight it.
 -->
 
 <li class="relative">
-	<a {href} on:click={() => dispatch("click")} class="relative px-10 p-4 flex justify-center items-center rounded-md {colors} sm:px-5" aria-label="Go to the {label} page">
+	<a
+		{href}
+		on:click={() => dispatch('click')}
+		class="relative px-10 p-4 flex justify-center items-center rounded-md {colors} sm:px-5"
+		aria-label="Go to the {label} page"
+	>
 		{label}
 	</a>
 </li>

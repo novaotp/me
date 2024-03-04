@@ -6,9 +6,9 @@
 	export let show: boolean;
 
 	const closeMenu = () => {
-        show = false;
-        document.body.style.overflow = 'auto';
-    };
+		show = false;
+		document.body.style.overflow = 'auto';
+	};
 </script>
 
 {#if show}

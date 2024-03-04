@@ -12,8 +12,8 @@
 	const handleFormSubmission = async (event: MouseEvent) => {
 		event.preventDefault();
 
-		if (name === "" || email === "" || message === "") {
-			addToast({ type: "info", message: "Veuillez compléter tous les champs." });
+		if (name === '' || email === '' || message === '') {
+			addToast({ type: 'info', message: 'Veuillez compléter tous les champs.' });
 			return;
 		}
 
@@ -22,7 +22,10 @@
 		const { status } = await emailjs.send('service_d2nryqt', 'template_gt9dp3g', data, API_KEY);
 
 		if (status === 200) {
-			addToast({ type: "success", message: "Email envoyé avec succès, je reviendrai vers vous dès que possible." });
+			addToast({
+				type: 'success',
+				message: 'Email envoyé avec succès, je reviendrai vers vous dès que possible.'
+			});
 
 			name = '';
 			email = '';
@@ -31,7 +34,7 @@
 			return;
 		}
 
-		addToast({ type: "error", message: "Une erreur s'est produite. Réessayez plus tard." });
+		addToast({ type: 'error', message: "Une erreur s'est produite. Réessayez plus tard." });
 	};
 </script>
 

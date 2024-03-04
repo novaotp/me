@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { IconPointFilled } from "@tabler/icons-svelte";
+	import { IconPointFilled } from '@tabler/icons-svelte';
 </script>
 
 <div class="relative w-full h-full flex justify-center items-start flex-col gap-14">
