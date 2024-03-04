@@ -3,6 +3,7 @@
 	import Text from '$lib/contact/Text.svelte';
 	import emailjs from '@emailjs/browser';
 	import { PUBLIC_EMAILJS_ACCOUNT_PUBLIC_KEY as API_KEY } from '$env/static/public';
+	import { addToast } from '$stores/toast';
 
 	let name: string = '';
 	let email: string = '';
@@ -18,7 +19,7 @@
 		const { status } = await emailjs.send('service_d2nryqt', 'template_gt9dp3g', data, API_KEY);
 
 		if (status === 200) {
-			alert("Email sent successfully. I'll get back to you soon.");
+			addToast({ type: "success", message: "Email sent successfully. I'll get back to you soon." });
 
 			name = '';
 			email = '';
@@ -27,7 +28,7 @@
 			return;
 		}
 
-		alert('Something went wrong. Please try again later.');
+		addToast({ type: "error", message: 'Something went wrong. Please try again later.' });
 	};
 </script>
 
@@ -38,7 +39,7 @@
 	<p class="text-center text-sm xsm:text-base">
 		Complétez le formulaire ci-dessous pour me contacter. Je reviendrai vers vous dès que possible !
 	</p>
-	<form method="post" class="relative w-full flex flex-col justify-center items-center">
+	<form class="relative w-full flex flex-col justify-center items-center">
 		<div class="relative w-full flex flex-col gap-5 mb-5 sm:flex-row">
 			<Input bind:value={name} placeholder="Entrez votre nom ici..." />
 			<Input type="email" bind:value={email} placeholder="Entrez votre email ici..." />
