@@ -12,14 +12,17 @@
 	const handleFormSubmission = async (event: MouseEvent) => {
 		event.preventDefault();
 
-		const data = { name, email, message };
+		if (name === "" || email === "" || message === "") {
+			addToast({ type: "info", message: "Veuillez compléter tous les champs." });
+			return;
+		}
 
-		console.log(data);
+		const data = { name, email, message };
 
 		const { status } = await emailjs.send('service_d2nryqt', 'template_gt9dp3g', data, API_KEY);
 
 		if (status === 200) {
-			addToast({ type: "success", message: "Email sent successfully. I'll get back to you soon." });
+			addToast({ type: "success", message: "Email envoyé avec succès, je reviendrai vers vous dès que possible." });
 
 			name = '';
 			email = '';
@@ -28,7 +31,7 @@
 			return;
 		}
 
-		addToast({ type: "error", message: 'Something went wrong. Please try again later.' });
+		addToast({ type: "error", message: "Une erreur s'est produite. Réessayez plus tard." });
 	};
 </script>
 
@@ -37,7 +40,7 @@
 >
 	<h1 class="text-3xl font-bold text-center">Page de contact</h1>
 	<p class="text-center text-sm xsm:text-base">
-		Complétez le formulaire ci-dessous pour me contacter. Je reviendrai vers vous dès que possible !
+		Complétez le formulaire ci-dessous pour me contacter.
 	</p>
 	<form class="relative w-full flex flex-col justify-center items-center">
 		<div class="relative w-full flex flex-col gap-5 mb-5 sm:flex-row">
