@@ -13,7 +13,7 @@
 
 {#if show}
 	<aside
-		class="fixed w-full h-full flex flex-col justify-center items-center z-50 bg-[#fff6ea]"
+		class="lg:hidden fixed w-full h-full flex flex-col justify-center items-center z-50 bg-[#fff6ea]"
 		transition:fly={{ x: 400 }}
 	>
 		<nav class="lg:hidden relative w-full h-20 px-10 py-5 flex justify-end">
