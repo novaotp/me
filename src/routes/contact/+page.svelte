@@ -17,6 +17,13 @@
 			return;
 		}
 
+		const regexp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+		if (!email.match(regexp)) {
+			addToast({ type: 'error', message: 'Entrez un email valide.' });
+			return;
+		}
+
 		const data = { name, email, message };
 
 		const { status } = await emailjs.send('service_d2nryqt', 'template_gt9dp3g', data, API_KEY);
