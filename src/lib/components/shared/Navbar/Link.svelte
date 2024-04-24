@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
+    import { locale } from '$i18n/i18n-svelte';
 	import { createEventDispatcher } from 'svelte';
 
 	export let href: string;
@@ -20,7 +22,7 @@ If the current path is the same as the href, the css will highlight it.
 
 <li class="relative">
 	<a
-		{href}
+		href="{base}/{$locale}{href}"
 		on:click={() => dispatch('click')}
 		class="relative px-10 p-4 flex justify-center items-center rounded-md {colors} sm:px-5"
 		aria-label="Go to the {label} page"

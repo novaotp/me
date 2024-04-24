@@ -1,17 +1,19 @@
 {
 	"name": "me",
-	"version": "0.5.4",
+	"version": "0.6.0",
 	"private": false,
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "npm-run-all --parallel vite typesafe-i18n",
+		"vite": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test": "vitest",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"typesafe-i18n": "typesafe-i18n"
 	},
 	"dependencies": {
 		"@emailjs/browser": "^4.3.1",
@@ -25,6 +27,7 @@
 		"remark-html": "^16.0.1",
 		"remark-parse": "^11.0.0",
 		"remark-rehype": "^11.1.0",
+		"typesafe-i18n": "^5.26.2",
 		"unified": "^11.0.4"
 	},
 	"devDependencies": {
@@ -41,6 +44,7 @@
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
+		"npm-run-all": "^4.1.5",
 		"postcss": "^8.4.35",
 		"prettier": "^3.2.5",
 		"prettier-plugin-svelte": "^3.2.2",

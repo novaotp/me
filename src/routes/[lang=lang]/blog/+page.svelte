@@ -1,4 +1,5 @@
 <script lang="ts">
+    import LL from "$i18n/i18n-svelte";
     import ArticleCard from "$lib/components/blog/ArticleCard.svelte";
     import type { PageServerData } from "./$types";
 
@@ -6,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog - Sajidur Rahman</title>
+	<title>{$LL.blogPage.meta.title()}</title>
 </svelte:head>
 
 <div class="relative w-full h-full flex justify-center items-center flex-col gap-10">
