@@ -7,7 +7,8 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$stores: './src/stores'
+			$stores: './src/lib/stores',
+			$i18n: './src/i18n'
 		}
 	}
 };
