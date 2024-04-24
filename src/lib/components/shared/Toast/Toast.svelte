@@ -12,7 +12,7 @@
     export let type: 'success' | 'error' | 'info';
 
     $: icon = type === 'success' ? SuccessIcon : type === 'error' ? ErrorIcon : InfoIcon;
-    $: bgColor = type === 'success' ? 'bg-accent-success-600' : type === 'error' ? 'bg-accent-danger-500' : 'bg-primary-500';
+    $: bgColor = type === 'success' ? 'bg-green-600' : type === 'error' ? 'bg-red-500' : 'bg-blue-500';
 </script>
 
 <article class="relative w-full flex items-center gap-4 rounded px-4 py-2 text-neutral-50 {bgColor}" role="alert" transition:fade>
