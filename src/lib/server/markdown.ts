@@ -6,13 +6,15 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import html from 'rehype-stringify';
 
-interface MarkdownAttributes {
+export interface MarkdownAttributes {
     title: string,
-    description: string
+    description: string,
+    creationDate: Date
 }
 
 export interface MarkdownData {
     path: string,
+    filename: string,
     attributes: MarkdownAttributes,
     html: any
 }
@@ -26,7 +28,7 @@ export function importMarkdowns(path: string): MarkdownData[] {
     return fileNames.map((path) => convertMarkdown(path));
 }
 
-/**
+/**W
  * Convert a markdown file to an object with attributes and html.
  * @param path The path to the markdown file.
  */
@@ -41,11 +43,5 @@ export function convertMarkdown(path: string): MarkdownData {
                 .processSync(body)
                 .value;
 
-    return { path: path.split("/").at(-1)!, attributes, html: result.toString() };
-}
-
-export function convertToArticlePreview(data: MarkdownData) {
-    const url = data.path.replace(".md", "").replace("src\\lib\\blog-posts\\", "blog\\");
-
-    return { ...data.attributes, url };
+    return { path: path, filename: path.split("\\").at(-1)!.split(".").at(0)!, attributes, html: result.toString() };
 }
