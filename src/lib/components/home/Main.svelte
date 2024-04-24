@@ -1,7 +1,7 @@
 <script lang="ts">
+    import IconPointFilled from "@tabler/icons-svelte/IconPointFilled.svelte";
     import { base } from '$app/paths';
     import LL, { locale } from '$i18n/i18n-svelte';
-    import { IconPointFilled } from '@tabler/icons-svelte';
 </script>
 
 <div class="relative w-full h-full flex justify-center items-start flex-col gap-14">

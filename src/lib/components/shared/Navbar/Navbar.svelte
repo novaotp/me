@@ -1,6 +1,8 @@
 <script lang="ts">
+	import IconArrowRight from "@tabler/icons-svelte/IconArrowRight.svelte";
+	import IconMenu from "@tabler/icons-svelte/IconMenu.svelte";
+	
 	import { page } from '$app/stores';
-	import { IconArrowRight, IconMenu } from '@tabler/icons-svelte';
 
 	export let show: boolean;
 

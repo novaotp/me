@@ -1,5 +1,7 @@
 <script lang="ts">
-    import { IconCopyright, IconX } from '@tabler/icons-svelte';
+    import IconCopyright from "@tabler/icons-svelte/IconCopyright.svelte";
+    import IconX from "@tabler/icons-svelte/IconX.svelte";
+
     import { fly } from 'svelte/transition';
     import Link from './Link.svelte';
     import LocaleSwitcher from '../LocaleSwitcher.svelte';
