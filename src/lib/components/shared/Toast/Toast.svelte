@@ -1,32 +1,27 @@
 <script lang="ts">
-	import {
-		IconCheck as SuccessIcon,
-		IconExclamationCircle as ErrorIcon,
-		IconInfoCircle as InfoIcon,
-		IconX as CloseIcon
-	} from '@tabler/icons-svelte';
-	import { createEventDispatcher } from 'svelte';
-	import { fade } from 'svelte/transition';
+    import {
+        IconCheck as SuccessIcon,
+        IconExclamationCircle as ErrorIcon,
+        IconInfoCircle as InfoIcon,
+        IconX as CloseIcon
+    } from '@tabler/icons-svelte';
+    import { createEventDispatcher } from 'svelte';
+    import { fade } from 'svelte/transition';
 
-	const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher<{ dismiss: null }>();
 
-	export let type: 'success' | 'error' | 'info';
+    export let type: 'success' | 'error' | 'info';
 
-	$: icon = type === 'success' ? SuccessIcon : type === 'error' ? ErrorIcon : InfoIcon;
-	$: bgColor =
-		type === 'success' ? 'bg-green-500' : type === 'error' ? 'bg-red-500' : 'bg-blue-300';
+    $: icon = type === 'success' ? SuccessIcon : type === 'error' ? ErrorIcon : InfoIcon;
+    $: bgColor = type === 'success' ? 'bg-accent-success-600' : type === 'error' ? 'bg-accent-danger-500' : 'bg-primary-500';
 </script>
 
-<article
-	class="w-auto max-w-[500px] mb-2 flex items-center rounded px-6 py-3 gap-5 text-white {bgColor} shadow-lg"
-	role="alert"
-	transition:fade
->
-	<svelte:component this={icon} class="w-[1.1em]" />
-	<div>
-		<slot />
-	</div>
-	<button class="border-none bg-transparent text-white" on:click={() => dispatch('dismiss')}>
-		<CloseIcon class="w-[0.8em]" />
-	</button>
+<article class="relative w-full flex items-center gap-4 rounded px-4 py-2 text-neutral-50 {bgColor}" role="alert" transition:fade>
+    <svelte:component this={icon} class="size-6" />
+    <p class="text-sm flex-grow">
+        <slot />
+    </p>
+    <button class="border-none bg-transparent text-neutral-50" on:click={() => dispatch('dismiss')}>
+        <CloseIcon class="size-6" />
+    </button>
 </article>

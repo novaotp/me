@@ -14,9 +14,9 @@
 {#if show}
 	<aside
 		class="lg:hidden fixed w-full h-full flex flex-col justify-center items-center z-50 bg-[#fff6ea]"
-		transition:fly={{ x: 400 }}
+		transition:fly={{ x: -100 }}
 	>
-		<nav class="lg:hidden relative w-full h-20 px-10 py-5 flex justify-end">
+		<nav class="lg:hidden relative w-full h-20 px-10 py-5 flex justify-start">
 			<button on:click={closeMenu} aria-label="Close the menu">
 				<span role="img">
 					<IconX size={32} />
@@ -30,14 +30,12 @@
 			<Link label="Mes travaux" href="/work" on:click={closeMenu} />
 			<Link label="Blog" href="/blog" on:click={closeMenu} />
 			<a href="/contact" aria-label="Go to the contact page" on:click={closeMenu}>
-				<span
-					class="relative py-3 px-10 flex justify-center items-center bg-indigo-700 text-white rounded-t-lg"
-					>Un projet en tête ?</span
-				>
-				<span
-					class="relative py-3 px-10 flex justify-center items-center border-2 border-indigo-700 rounded-b-lg"
-					>Parlons-en</span
-				>
+				<span class="relative py-3 px-10 flex justify-center items-center bg-indigo-700 text-white rounded-t-lg">
+					Un projet en tête ?
+				</span>
+				<span class="relative py-3 px-10 flex justify-center items-center border-2 border-indigo-700 rounded-b-lg">
+					Parlons-en
+				</span>
 			</a>
 		</article>
 		<footer class="flex mb-10 gap-2">

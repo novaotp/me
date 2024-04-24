@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { globSync } from "glob";
 import frontmatter from "front-matter";
-import rehypePrism from "@mapbox/rehype-prism";
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
