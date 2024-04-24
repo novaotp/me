@@ -41,7 +41,7 @@ export function convertMarkdown(path: string): MarkdownData {
                 .processSync(body)
                 .value;
 
-    return { path, attributes, html: result.toString() };
+    return { path: path.split("/").at(-1)!, attributes, html: result.toString() };
 }
 
 export function convertToArticlePreview(data: MarkdownData) {
