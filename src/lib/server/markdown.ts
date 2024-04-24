@@ -5,6 +5,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import html from 'rehype-stringify';
+import { dev } from '$app/environment';
 
 export interface MarkdownAttributes {
     title: string,
@@ -43,5 +44,5 @@ export function convertMarkdown(path: string): MarkdownData {
                 .processSync(body)
                 .value;
 
-    return { path: path, filename: path.split("\\").at(-1)!.split(".").at(0)!, attributes, html: result.toString() };
+    return { path: path, filename: path.split(dev ? "\\": "/").at(-1)!.split(".").at(0)!, attributes, html: result.toString() };
 }
