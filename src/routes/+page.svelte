@@ -1,7 +1,7 @@
 <script lang="ts">
-	import About from '$lib/home/About.svelte';
-	import Main from '$lib/home/Main.svelte';
-	import Services from '$lib/home/services/Services.svelte';
+	import About from '$lib/components/home/About.svelte';
+	import Main from '$lib/components/home/Main.svelte';
+	import Services from '$lib/components/home/services/Services.svelte';
 	import { IconCopyright } from '@tabler/icons-svelte';
 </script>
 

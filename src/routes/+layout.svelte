@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css';
-	import ToastContainer from '$lib/shared/Toast/ToastContainer.svelte';
-	import Navbar from '$lib/shared/Navbar/Navbar.svelte';
-	import NavPage from '$lib/shared/Navbar/NavPage.svelte';
+	import ToastContainer from '$lib/components/shared/Toast/ToastContainer.svelte';
+	import Navbar from '$lib/components/shared/Navbar/Navbar.svelte';
+	import NavPage from '$lib/components/shared/Navbar/NavPage.svelte';
 
 	let show: boolean = false;
 </script>

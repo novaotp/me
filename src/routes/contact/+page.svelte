@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Input from '$lib/contact/Input.svelte';
-	import Text from '$lib/contact/Text.svelte';
+	import Input from '$lib/components/contact/Input.svelte';
+	import Text from '$lib/components/contact/Text.svelte';
 	import emailjs from '@emailjs/browser';
 	import { PUBLIC_EMAILJS_ACCOUNT_PUBLIC_KEY as API_KEY } from '$env/static/public';
-	import { addToast } from '$stores/toast';
+	import { addToast } from '$lib/stores/toast';
 
 	let name: string = '';
 	let email: string = '';
