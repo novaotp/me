@@ -14,6 +14,24 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
+	footer: {
+		language: {
+			/**
+			 * L​a​n​g​a​g​e
+			 */
+			title: string
+		}
+	}
+	languages: {
+		/**
+		 * F​r​a​n​ç​a​i​s
+		 */
+		french: string
+		/**
+		 * A​n​g​l​a​i​s
+		 */
+		english: string
+	}
 	navigation: {
 		/**
 		 * H​o​m​e
@@ -36,6 +54,10 @@ type RootTranslation = {
 			 * P​a​r​l​o​n​s​-​e​n
 			 */
 			letsTalk: string
+			/**
+			 * C​o​n​t​a​c​t
+			 */
+			page: string
 		}
 	}
 	homePage: {
@@ -219,6 +241,24 @@ type RootTranslation = {
 }
 
 export type TranslationFunctions = {
+	footer: {
+		language: {
+			/**
+			 * Langage
+			 */
+			title: () => LocalizedString
+		}
+	}
+	languages: {
+		/**
+		 * Français
+		 */
+		french: () => LocalizedString
+		/**
+		 * Anglais
+		 */
+		english: () => LocalizedString
+	}
 	navigation: {
 		/**
 		 * Home
@@ -241,6 +281,10 @@ export type TranslationFunctions = {
 			 * Parlons-en
 			 */
 			letsTalk: () => LocalizedString
+			/**
+			 * Contact
+			 */
+			page: () => LocalizedString
 		}
 	}
 	homePage: {

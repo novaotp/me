@@ -14,6 +14,3 @@
 	<Services />
 	<About />
 </div>
-<footer class="flex gap-2 mt-10">
-	<IconCopyright /> 2024 - Sajidur Rahman
-</footer>

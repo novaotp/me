@@ -1,13 +1,23 @@
 import type { BaseTranslation } from '../i18n-types'
 
 const fr = {
+	footer: {
+		language: {
+			title: "Langage"
+		}
+	},
+	languages: {
+		french: "Français",
+		english: "Anglais"
+	},
 	navigation: {
 		homePage: "Home",
 		workPage: "Mes travaux",
 		blogPage: "Mon blog",
 		contact: {
 			idea: "Un projet en tête ?",
-			letsTalk: "Parlons-en"
+			letsTalk: "Parlons-en",
+			page: "Contact"
 		},
 	},
 	homePage: {

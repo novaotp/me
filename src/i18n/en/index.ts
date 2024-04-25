@@ -1,13 +1,23 @@
 import type { Translation } from '../i18n-types'
 
 const en = {
+	footer: {
+		language: {
+			title: "Language"
+		}
+	},
+	languages: {
+		french: "French",
+		english: "English"
+	},
 	navigation: {
 		homePage: "Home",
 		workPage: "My works",
 		blogPage: "My blog",
 		contact: {
 			idea: "Have an idea ?",
-			letsTalk: "Let's talk"
+			letsTalk: "Let's talk",
+			page: "Contact"
 		},
 	},
 	homePage: {

@@ -3,9 +3,12 @@ import { convertMarkdown, importMarkdowns } from "$lib/server/markdown";
 
 export async function load({ params }) {
     const article = convertMarkdown(`./src/lib/articles/${params.filename}.md`);
-    const otherArticles = importMarkdowns("./src/lib/articles/").filter(a => a.filename !== params.filename);
+    const latest = importMarkdowns("./src/lib/articles/")
+                    .filter(a => a.filename !== params.filename)
+                    .sort((a, b) => b.attributes.creationDate.getTime() - a.attributes.creationDate.getTime())
+                    .slice(0, 3);
 
-    return { article, otherArticles };
+    return { article, latest };
 }
 
 export const entries: EntryGenerator = () => {

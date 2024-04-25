@@ -26,10 +26,10 @@
         </div>
         {@html html}
     </article>
-    {#if data.otherArticles.length > 0}
+    {#if data.latest.length > 0}
         <aside class="flex flex-col gap-5">
-            <h2 class="text-3xl font-semibold">Other Articles</h2>
-            {#each data.otherArticles as { attributes, filename }}
+            <h2 class="text-3xl font-semibold">Latest Articles</h2>
+            {#each data.latest as { attributes, filename }}
                 <ArticleCard {attributes} {filename} />
             {/each}
         </aside>
