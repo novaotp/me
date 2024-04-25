@@ -61,7 +61,7 @@
 		<Text bind:value={message} placeholder={$LL.contactPage.form.fields.message.placeholder()} />
 		<button
 			type="submit"
-			class="relative h-[50px] mt-5 px-10 rounded-full bg-indigo-700 text-white flex items-center text-sm"
+			class="relative px-6 py-3 mt-5 rounded bg-indigo-700 text-white flex items-center text-sm"
 		>
 			{$LL.contactPage.form.send()}
 		</button>

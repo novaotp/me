@@ -2,6 +2,8 @@ import type { BaseTranslation } from '../i18n-types'
 
 const fr = {
 	footer: {
+		quickLinks: "Liens rapides",
+		latestArticles: "Mes Derniers Articles",
 		language: {
 			title: "Langage"
 		}
@@ -17,7 +19,8 @@ const fr = {
 		contact: {
 			idea: "Un projet en tête ?",
 			letsTalk: "Parlons-en",
-			page: "Contact"
+			page: "Contact",
+			letsWorkTogether: "Travaillons ensemble"
 		},
 	},
 	homePage: {
@@ -70,6 +73,9 @@ const fr = {
 			title: "Blog - Sajidur Rahman"
 		},
 		summary: "Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais."
+	},
+	articlePage: {
+		back: "Retour"
 	},
 	contactPage: {
 		meta: {

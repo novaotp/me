@@ -10,12 +10,12 @@
 	<title>{$LL.blogPage.meta.title()}</title>
 </svelte:head>
 
-<div class="relative w-full h-full flex justify-center items-center flex-col gap-10">
+<div class="relative w-full max-w-[1000px] h-full flex justify-center items-center flex-col gap-10">
 	<h1 class="text-center font-medium text-3xl">Blog</h1>
-	<p class="w-full text-justify">{$LL.blogPage.summary()}</p>
-	<div class="relative w-full grid grid-cols-1 gap-5">
-	{#each data.articles as { attributes, filename }}
-			<ArticleCard {attributes} {filename} />
-	{/each}
+	<p class="w-full text-justify lg:text-center">{$LL.blogPage.summary()}</p>
+	<div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+		{#each data.articles as { attributes, filename }}
+				<ArticleCard {attributes} {filename} />
+		{/each}
 	</div>
 </div>

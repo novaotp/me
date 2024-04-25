@@ -2,6 +2,8 @@ import type { Translation } from '../i18n-types'
 
 const en = {
 	footer: {
+		quickLinks: "Quick Links",
+		latestArticles: "My Last Articles",
 		language: {
 			title: "Language"
 		}
@@ -17,7 +19,8 @@ const en = {
 		contact: {
 			idea: "Have an idea ?",
 			letsTalk: "Let's talk",
-			page: "Contact"
+			page: "Contact",
+			letsWorkTogether: "Let's Work Together"
 		},
 	},
 	homePage: {
@@ -70,6 +73,9 @@ const en = {
 			title: "Blog - Sajidur Rahman"
 		},
 		summary: "Here, you'll find articles I've written."
+	},
+	articlePage: {
+		back: "Back"
 	},
 	contactPage: {
 		meta: {

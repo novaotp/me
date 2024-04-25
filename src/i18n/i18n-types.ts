@@ -15,6 +15,14 @@ export type Translations = RootTranslation
 
 type RootTranslation = {
 	footer: {
+		/**
+		 * L​i​e​n​s​ ​r​a​p​i​d​e​s
+		 */
+		quickLinks: string
+		/**
+		 * M​e​s​ ​D​e​r​n​i​e​r​s​ ​A​r​t​i​c​l​e​s
+		 */
+		latestArticles: string
 		language: {
 			/**
 			 * L​a​n​g​a​g​e
@@ -58,6 +66,10 @@ type RootTranslation = {
 			 * C​o​n​t​a​c​t
 			 */
 			page: string
+			/**
+			 * T​r​a​v​a​i​l​l​o​n​s​ ​e​n​s​e​m​b​l​e
+			 */
+			letsWorkTogether: string
 		}
 	}
 	homePage: {
@@ -182,6 +194,12 @@ type RootTranslation = {
 		 */
 		summary: string
 	}
+	articlePage: {
+		/**
+		 * R​e​t​o​u​r
+		 */
+		back: string
+	}
 	contactPage: {
 		meta: {
 			/**
@@ -246,6 +264,14 @@ type RootTranslation = {
 
 export type TranslationFunctions = {
 	footer: {
+		/**
+		 * Liens rapides
+		 */
+		quickLinks: () => LocalizedString
+		/**
+		 * Mes Derniers Articles
+		 */
+		latestArticles: () => LocalizedString
 		language: {
 			/**
 			 * Langage
@@ -289,6 +315,10 @@ export type TranslationFunctions = {
 			 * Contact
 			 */
 			page: () => LocalizedString
+			/**
+			 * Travaillons ensemble
+			 */
+			letsWorkTogether: () => LocalizedString
 		}
 	}
 	homePage: {
@@ -412,6 +442,12 @@ export type TranslationFunctions = {
 		 * Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais.
 		 */
 		summary: () => LocalizedString
+	}
+	articlePage: {
+		/**
+		 * Retour
+		 */
+		back: () => LocalizedString
 	}
 	contactPage: {
 		meta: {

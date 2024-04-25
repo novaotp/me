@@ -1,6 +1,7 @@
 <script lang="ts">
+    import IconChevronLeft from "@tabler/icons-svelte/IconChevronLeft.svelte";
     import { goto } from "$app/navigation";
-    import { locale } from "$i18n/i18n-svelte";
+    import LL, { locale } from "$i18n/i18n-svelte";
     import ArticleCard from "$lib/components/blog/ArticleCard.svelte";
     import type { PageServerData } from "./$types";
 
@@ -13,9 +14,10 @@
     <meta name="description" content="{attributes.description}" />
 </svelte:head>
   
-<div class="relative h-full w-full flex flex-col justify-start items-start gap-10 mb-10">
-    <button on:click={() => goto(`/${$locale}/blog`)}>
-        Back
+<div class="relative h-full w-full max-w-[800px] mt-20 flex flex-col justify-start items-start gap-10 mb-10">
+    <button on:click={() => goto(`/${$locale}/blog`)} class="flex gap-5">
+        <IconChevronLeft />
+        <span>{$LL.articlePage.back()}</span>
     </button>
     <article class="blog-article relative w-full flex flex-col justify-start items-start gap-5 text-justify">
         <div class="relative w-full flex flex-col justify-start items-start gap-5">
@@ -50,6 +52,6 @@
     }
 
     :global(article.blog-article a) {
-        @apply text-cyan-500 underline;
+        @apply text-cyan-600 underline;
     }
 </style>

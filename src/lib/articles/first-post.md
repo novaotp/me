@@ -1,7 +1,7 @@
 ---
 title: Hello, World
 description: An introduction to my blog.
-creationDate: 2024-04-25
+creationDate: 2024-04-24
 banner: /article-images/blog.jpeg
 ---
 
@@ -28,7 +28,7 @@ Well.. *that's a great question*. Mostly to practise my writing skills, but also
 I primarily use [Sveltekit](https://kit.svelte.dev) as my full-stack framework, but I often find myself using [ExpressJS](https://expressjs.com)
 as a backend server. My favorite database is PostgreSQL, although I have played around with MySQL, MongoDB and Cassandra.
 
-So my articles will mostly talk about these. However, I'm always to open to learn and might post about new experiences as well.
+So my articles will mostly talk about these. However, I'm always open to learn and might post about new experiences as well.
 
 ## Conclusion
 
