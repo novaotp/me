@@ -25,7 +25,7 @@ type RootTranslation = {
 		latestArticles: string
 		language: {
 			/**
-			 * L​a​n​g​a​g​e
+			 * L​a​n​g​u​e
 			 */
 			title: string
 		}
@@ -284,7 +284,7 @@ export type TranslationFunctions = {
 		latestArticles: () => LocalizedString
 		language: {
 			/**
-			 * Langage
+			 * Langue
 			 */
 			title: () => LocalizedString
 		}

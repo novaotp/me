@@ -5,7 +5,7 @@ const fr = {
 		quickLinks: "Liens rapides",
 		latestArticles: "Mes Derniers Articles",
 		language: {
-			title: "Langage"
+			title: "Langue"
 		}
 	},
 	languages: {
