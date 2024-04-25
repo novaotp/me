@@ -1,6 +1,7 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
     import { locale } from "$i18n/i18n-svelte";
+    import ArticleCard from "$lib/components/blog/ArticleCard.svelte";
     import type { PageServerData } from "./$types";
 
     export let data: PageServerData;
@@ -12,16 +13,43 @@
     <meta name="description" content="{attributes.description}" />
 </svelte:head>
   
-<div class="">
-    <button on:click={() => goto(`/${$locale}/blog`)}>Back</button>
-    <article>
-        <h1 class="section-header">{attributes.title}</h1>
+<div class="relative h-full w-full flex flex-col justify-start items-start gap-10 mb-10">
+    <button on:click={() => goto(`/${$locale}/blog`)}>
+        Back
+    </button>
+    <article class="blog-article relative w-full flex flex-col justify-start items-start gap-5 text-justify">
+        <div class="relative w-full flex flex-col justify-start items-start gap-5">
+            <h1>{attributes.title}</h1>
+            <p>{attributes.description}</p>
+            <span class="text-sm rounded text-gray-500">Posted on the {attributes.creationDate.toLocaleDateString("fr-CH")}</span>
+            <img src="{attributes.banner}" alt="{attributes.title}" class="w-full" />
+        </div>
         {@html html}
     </article>
+    {#if data.otherArticles.length > 0}
+        <aside class="flex flex-col gap-5">
+            <h2 class="text-3xl font-semibold">Other Articles</h2>
+            {#each data.otherArticles as { attributes, filename }}
+                <ArticleCard {attributes} {filename} />
+            {/each}
+        </aside>
+    {/if}
 </div>
 
 <style lang="postcss">
-    :global(article h2) {
-        font-size: 24px;
+    :global(article.blog-article h1) {
+        @apply text-3xl font-semibold;
+    }
+
+    :global(article.blog-article h2) {
+        @apply underline text-2xl my-5;
+    }
+
+    :global(article.blog-article ul) {
+        @apply list-disc pl-10;
+    }
+
+    :global(article.blog-article a) {
+        @apply text-cyan-500 underline;
     }
 </style>

@@ -10,7 +10,8 @@ import { dev } from '$app/environment';
 export interface MarkdownAttributes {
     title: string,
     description: string,
-    creationDate: Date
+    creationDate: Date,
+    banner: string
 }
 
 export interface MarkdownData {

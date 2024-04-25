@@ -2,9 +2,10 @@ import type { EntryGenerator } from "./$types";
 import { convertMarkdown, importMarkdowns } from "$lib/server/markdown";
 
 export async function load({ params }) {
-    const article = convertMarkdown(`./src/lib/articles/${params.filename}.md`)
+    const article = convertMarkdown(`./src/lib/articles/${params.filename}.md`);
+    const otherArticles = importMarkdowns("./src/lib/articles/").filter(a => a.filename !== params.filename);
 
-    return { article };
+    return { article, otherArticles };
 }
 
 export const entries: EntryGenerator = () => {
