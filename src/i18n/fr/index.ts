@@ -68,7 +68,8 @@ const fr = {
 	blogPage: {
 		meta: {
 			title: "Blog - Sajidur Rahman"
-		}
+		},
+		summary: "Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais."
 	},
 	contactPage: {
 		meta: {

@@ -68,7 +68,8 @@ const en = {
 	blogPage: {
 		meta: {
 			title: "Blog - Sajidur Rahman"
-		}
+		},
+		summary: "Here, you'll find articles I've written."
 	},
 	contactPage: {
 		meta: {
