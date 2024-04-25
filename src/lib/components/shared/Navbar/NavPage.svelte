@@ -1,10 +1,8 @@
 <script lang="ts">
     import IconCopyright from "@tabler/icons-svelte/IconCopyright.svelte";
     import IconX from "@tabler/icons-svelte/IconX.svelte";
-
     import { fly } from 'svelte/transition';
     import Link from './Link.svelte';
-    import LocaleSwitcher from '../LocaleSwitcher.svelte';
     import LL, { locale } from '$i18n/i18n-svelte';
     import { base } from '$app/paths';
 
@@ -37,7 +35,6 @@
                     {$LL.navigation.contact.letsTalk()}
                 </span>
             </a>
-            <LocaleSwitcher on:click={closeMenu} />
         </article>
         <footer class="flex mb-10 gap-2">
             <IconCopyright /> 2024 - Sajidur Rahman

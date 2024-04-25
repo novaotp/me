@@ -9,7 +9,7 @@
 	<title>Home - Sajidur Rahman</title>
 </svelte:head>
 
-<div class="relative flex flex-col items-center gap-32">
+<div class="relative flex flex-col items-center gap-32 mb-10">
 	<Main />
 	<Services />
 	<About />
