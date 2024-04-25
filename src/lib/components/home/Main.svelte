@@ -1,5 +1,6 @@
 <script lang="ts">
-    import IconPointFilled from "@tabler/icons-svelte/IconPointFilled.svelte";
+    import IconPointFilled from '@tabler/icons-svelte/IconPointFilled.svelte';
+    import IconArrowNarrowRight from '@tabler/icons-svelte/IconArrowNarrowRight.svelte';
     import { base } from '$app/paths';
     import LL, { locale } from '$i18n/i18n-svelte';
 </script>
@@ -14,12 +15,15 @@
         <li><IconPointFilled /></li>
         <li>{$LL.homePage.keywords.maintenance()}</li>
     </ul>
-    <a href="{base}/{$locale}/contact" aria-label="Go to the contact page" class="sm:flex">
-        <span class="relative py-3 px-10 flex justify-center items-center bg-indigo-700 text-white rounded-t-lg sm:rounded-tr-none sm:rounded-l-lg">
-            {$LL.homePage.contact.idea()}
-        </span>
-        <span class="relative py-3 px-10 flex justify-center items-center border-2 border-indigo-700 rounded-b-lg sm:rounded-bl-none sm:rounded-r-lg">
-            {$LL.homePage.contact.letsTalk()}
-        </span>
+    <a
+        href="{base}/{$locale}/contact"
+        aria-label="Go to the contact page"
+        class="relative py-3 px-10 flex gap-[6px] flex-col xsm:flex-row justify-center items-center bg-indigo-700 text-white rounded"
+    >
+        <span>{$LL.homePage.contact.idea()}</span>
+        <div class="flex gap-2">
+            <span>{$LL.homePage.contact.letsTalk()}</span>
+            <IconArrowNarrowRight />
+        </div>
     </a>
 </div>

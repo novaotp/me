@@ -41,7 +41,7 @@ Renders a navbar adapted for devices under 1024px wide.
 		<a href="{base}/{$locale}/blog" class="py-1 border-b-2 hover:border-black {pathname === "/blog" ? "border-black" : "border-transparent"}">
 			{$LL.navigation.blogPage()}
 		</a>
-		<a href="{base}/{$locale}/contact" class="bg-indigo-700 py-2 px-6 rounded-lg text-[#fff6ea] flex gap-5 items-center">
+		<a href="{base}/{$locale}/contact" class="bg-indigo-700 py-2 px-6 rounded text-[#fff6ea] flex gap-5 items-center">
 			{$LL.navigation.contact.letsWorkTogether()} <IconArrowRight />
 		</a>
 	</div>
