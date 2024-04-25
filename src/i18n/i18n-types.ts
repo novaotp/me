@@ -132,11 +132,21 @@ type RootTranslation = {
 			}
 			collaboration: {
 				/**
-				 * C​o​l​l​a​b​o​r​a​t​i​o​n
+				 * C​o​l​l​a​b​o​r​a​t​i​o​n​ ​&​ ​É​v​o​l​u​t​i​o​n
 				 */
 				title: string
 				/**
 				 * C​o​l​l​a​b​o​r​a​t​i​o​n​ ​e​n​ ​c​o​n​t​i​n​u​ ​p​o​u​r​ ​r​é​p​o​n​d​r​e​ ​à​ ​d​e​s​ ​b​e​s​o​i​n​s​ ​q​u​i​ ​é​v​o​l​u​e​n​t​.
+				 */
+				description: string
+			}
+			accessibility: {
+				/**
+				 * A​c​c​e​s​s​i​b​i​l​i​t​é​ ​&​ ​U​X
+				 */
+				title: string
+				/**
+				 * N​a​v​i​g​a​t​i​o​n​ ​i​n​t​u​i​t​i​v​e​,​ ​e​r​g​o​n​o​m​i​e​ ​e​t​ ​c​l​a​r​t​é​.
 				 */
 				description: string
 			}
@@ -381,11 +391,21 @@ export type TranslationFunctions = {
 			}
 			collaboration: {
 				/**
-				 * Collaboration
+				 * Collaboration & Évolution
 				 */
 				title: () => LocalizedString
 				/**
 				 * Collaboration en continu pour répondre à des besoins qui évoluent.
+				 */
+				description: () => LocalizedString
+			}
+			accessibility: {
+				/**
+				 * Accessibilité & UX
+				 */
+				title: () => LocalizedString
+				/**
+				 * Navigation intuitive, ergonomie et clarté.
 				 */
 				description: () => LocalizedString
 			}

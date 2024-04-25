@@ -46,8 +46,12 @@ const fr = {
 				description: "Création de sites web performants et optimisés pour le référencement."
 			},
 			collaboration: {
-				title: "Collaboration",
+				title: "Collaboration & Évolution",
 				description: "Collaboration en continu pour répondre à des besoins qui évoluent."
+			},
+			accessibility: {
+				title: "Accessibilité & UX",
+				description: "Navigation intuitive, ergonomie et clarté."
 			}
 		},
 		aboutMe: {

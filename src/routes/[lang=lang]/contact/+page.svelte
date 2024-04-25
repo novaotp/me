@@ -49,7 +49,7 @@
 </svelte:head>
 
 <div
-	class="relative w-full max-w-[800px] h-full max-h-[600px] flex flex-col justify-evenly items-center gap-10"
+	class="relative w-full max-w-[900px] h-full flex flex-col justify-evenly items-center gap-10"
 >
 	<h1 class="text-3xl font-medium text-center">{$LL.contactPage.letsWorkTogether()}</h1>
 	<p class="text-center text-sm xsm:text-base">{$LL.contactPage.completeTheForm()}</p>

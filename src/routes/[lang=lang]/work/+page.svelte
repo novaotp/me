@@ -6,7 +6,7 @@
     <title>{$LL.workPage.meta.title()}</title>
 </svelte:head>
 
-<div class="relative w-full h-full flex justify-center items-center flex-col gap-10">
+<div class="relative w-full max-w-[900px] h-full flex justify-center items-center flex-col gap-10">
     <h1 class="text-center font-medium text-3xl">{$LL.workPage.title()}</h1>
-    <p class="text-xl text-justify">{$LL.workPage.notYet()}</p>
+    <p class="text-justify">{$LL.workPage.notYet()}</p>
 </div>

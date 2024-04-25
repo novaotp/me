@@ -6,7 +6,7 @@
     <h3 class="text-xl font-medium">
         {title}
     </h3>
-    <p class="text-justify">
+    <p class="text-justify text-gray-500">
         <slot />
     </p>
 </div>

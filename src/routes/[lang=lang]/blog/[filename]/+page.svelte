@@ -14,7 +14,7 @@
     <meta name="description" content="{attributes.description}" />
 </svelte:head>
   
-<div class="relative h-full w-full max-w-[800px] mt-20 flex flex-col justify-start items-start gap-10 mb-10">
+<div class="relative h-full w-full max-w-[680px] mt-20 flex flex-col justify-start items-start gap-10 mb-10">
     <button on:click={() => goto(`/${$locale}/blog`)} class="flex gap-5">
         <IconChevronLeft />
         <span>{$LL.articlePage.back()}</span>

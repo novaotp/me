@@ -48,6 +48,10 @@ const en = {
 			collaboration: {
 				title: "Collaboration",
 				description: "Continuous collaboration to meet evolving needs."
+			},
+			accessibility: {
+				title: "Accessibility & UX",
+				description: "Intuitive navigation, ergonomics and clarity."
 			}
 		},
 		aboutMe: {
