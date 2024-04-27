@@ -76,7 +76,7 @@ const fr = {
 		meta: {
 			title: "Blog - Sajidur Rahman"
 		},
-		summary: "Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais."
+		summary: "Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais pour l'instant."
 	},
 	articlePage: {
 		back: "Retour"

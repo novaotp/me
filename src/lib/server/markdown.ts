@@ -8,17 +8,19 @@ import html from 'rehype-stringify';
 import { dev } from '$app/environment';
 
 export interface MarkdownAttributes {
+    shortTitle?: string,
     title: string,
     description: string,
     creationDate: Date,
-    banner: string
+    banner: string,
+    bannerAlt?: string
 }
 
 export interface MarkdownData {
     path: string,
     filename: string,
     attributes: MarkdownAttributes,
-    html: any
+    html: string
 }
 
 /**

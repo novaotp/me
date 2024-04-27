@@ -5,6 +5,8 @@ creationDate: 2024-04-24
 banner: /article-images/blog.jpeg
 ---
 
+## Introduction
+
 Hey there, dear reader. This articles serves as the entry point for me in the blogging world.
 
 In this article, I will cover :

@@ -200,7 +200,7 @@ type RootTranslation = {
 			title: string
 		}
 		/**
-		 * I​c​i​,​ ​v​o​u​s​ ​t​r​o​u​v​e​r​e​z​ ​q​u​e​l​q​u​e​s​ ​a​r​t​i​c​l​e​s​ ​q​u​e​ ​j​'​a​i​ ​r​é​d​i​g​é​s​.​ ​N​é​a​n​m​o​i​n​s​,​ ​i​l​s​ ​n​e​ ​s​o​n​t​ ​d​i​s​p​o​n​i​b​l​e​s​ ​q​u​'​e​n​ ​a​n​g​l​a​i​s​.
+		 * I​c​i​,​ ​v​o​u​s​ ​t​r​o​u​v​e​r​e​z​ ​q​u​e​l​q​u​e​s​ ​a​r​t​i​c​l​e​s​ ​q​u​e​ ​j​'​a​i​ ​r​é​d​i​g​é​s​.​ ​N​é​a​n​m​o​i​n​s​,​ ​i​l​s​ ​n​e​ ​s​o​n​t​ ​d​i​s​p​o​n​i​b​l​e​s​ ​q​u​'​e​n​ ​a​n​g​l​a​i​s​ ​p​o​u​r​ ​l​'​i​n​s​t​a​n​t​.
 		 */
 		summary: string
 	}
@@ -459,7 +459,7 @@ export type TranslationFunctions = {
 			title: () => LocalizedString
 		}
 		/**
-		 * Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais.
+		 * Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais pour l'instant.
 		 */
 		summary: () => LocalizedString
 	}

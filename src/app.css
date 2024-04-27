@@ -17,4 +17,5 @@ body {
 	width: 100%;
 	height: 100vh;
 	background-color: #fffaf4;
+	scroll-behavior: smooth;
 }
