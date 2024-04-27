@@ -2,6 +2,9 @@ import type { LayoutLoad } from './$types'
 import type { Locales } from '../i18n/i18n-types'
 import { loadLocaleAsync } from '../i18n/i18n-util.async'
 import { i18nObject } from '../i18n/i18n-util.js'
+import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+injectSpeedInsights();
 
 export const load: LayoutLoad<{ locale: Locales }> = async ({ data: { locale } }) => {
 	// load dictionary into memory

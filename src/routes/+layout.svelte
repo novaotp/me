@@ -2,9 +2,6 @@
 	import '../app.css';
    	import { setLocale } from '../i18n/i18n-svelte'
     import type { LayoutData } from './$types';
-	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
-
-	injectSpeedInsights();
 
 	export let data: LayoutData;
 
