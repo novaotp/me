@@ -1,12 +1,8 @@
-<script lang="ts">
-    export let title: string;
-</script>
-
-<div class="relative w-full flex-grow p-5 flex flex-col justify-center items-start gap-3 border-2 border-black rounded-lg">
-    <h3 class="text-xl font-medium">
-        {title}
+<div class="relative w-full flex-grow flex flex-col justify-center items-start gap-3">
+    <h3 class="text-xl font-medium flex items-center gap-5">
+        <slot name="title" />
     </h3>
-    <p class="text-justify text-gray-500">
-        <slot />
+    <p class="text-start text-gray-500">
+        <slot name="content" />
     </p>
 </div>

@@ -112,27 +112,27 @@ type RootTranslation = {
 			title: string
 			benefits: {
 				/**
-				 * P​r​e​s​t​a​t​i​o​n​s​ ​&​ ​S​e​r​v​i​c​e​s
+				 * R​e​s​p​o​n​s​i​v​e
 				 */
 				title: string
 				/**
-				 * D​e​s​i​g​n​ ​w​e​b​,​ ​d​é​v​e​l​o​p​p​e​m​e​n​t​ ​w​e​b​,​ ​S​E​O​,​ ​s​u​i​v​i​ ​r​é​g​u​l​i​e​r​,​ ​s​i​t​e​s​ ​w​e​b​ ​r​e​s​p​o​n​s​i​v​e​s​.
+				 * S​i​t​e​s​ ​w​e​b​ ​a​d​a​p​t​é​s​ ​à​ ​t​o​u​t​ ​t​y​p​e​ ​d​'​é​c​r​a​n​,​ ​g​a​r​a​n​t​i​s​s​a​n​t​ ​u​n​e​ ​e​x​p​é​r​i​e​n​c​e​ ​f​l​u​i​d​e​.
 				 */
 				description: string
 			}
 			performance: {
 				/**
-				 * O​p​t​i​m​i​s​é​ ​&​ ​P​e​r​f​o​r​m​a​n​t
+				 * P​e​r​f​o​r​m​a​n​t
 				 */
 				title: string
 				/**
-				 * C​r​é​a​t​i​o​n​ ​d​e​ ​s​i​t​e​s​ ​w​e​b​ ​p​e​r​f​o​r​m​a​n​t​s​ ​e​t​ ​o​p​t​i​m​i​s​é​s​ ​p​o​u​r​ ​l​e​ ​r​é​f​é​r​e​n​c​e​m​e​n​t​.
+				 * C​r​é​a​t​i​o​n​ ​d​e​ ​s​i​t​e​s​ ​w​e​b​ ​p​e​r​f​o​r​m​a​n​t​s​ ​e​t​ ​o​p​t​i​m​i​s​é​s​ ​p​o​u​r​ ​l​e​ ​r​é​f​é​r​e​n​c​e​m​e​n​t​ ​(​S​E​O​)​.
 				 */
 				description: string
 			}
 			collaboration: {
 				/**
-				 * C​o​l​l​a​b​o​r​a​t​i​o​n​ ​&​ ​É​v​o​l​u​t​i​o​n
+				 * C​o​l​l​a​b​o​r​a​t​i​f
 				 */
 				title: string
 				/**
@@ -142,11 +142,11 @@ type RootTranslation = {
 			}
 			accessibility: {
 				/**
-				 * A​c​c​e​s​s​i​b​i​l​i​t​é​ ​&​ ​U​X
+				 * A​c​c​e​s​s​i​b​l​e
 				 */
 				title: string
 				/**
-				 * N​a​v​i​g​a​t​i​o​n​ ​i​n​t​u​i​t​i​v​e​,​ ​e​r​g​o​n​o​m​i​e​ ​e​t​ ​c​l​a​r​t​é​.
+				 * U​n​ ​d​e​s​i​g​n​ ​a​c​c​e​s​s​i​b​l​e​ ​e​t​ ​i​n​t​u​i​t​i​f​.​ ​E​r​g​o​n​o​m​i​q​u​e​ ​e​t​ ​f​a​c​i​l​i​t​é​ ​d​'​u​t​i​l​i​s​a​t​i​o​n​.
 				 */
 				description: string
 			}
@@ -371,27 +371,27 @@ export type TranslationFunctions = {
 			title: () => LocalizedString
 			benefits: {
 				/**
-				 * Prestations & Services
+				 * Responsive
 				 */
 				title: () => LocalizedString
 				/**
-				 * Design web, développement web, SEO, suivi régulier, sites web responsives.
+				 * Sites web adaptés à tout type d'écran, garantissant une expérience fluide.
 				 */
 				description: () => LocalizedString
 			}
 			performance: {
 				/**
-				 * Optimisé & Performant
+				 * Performant
 				 */
 				title: () => LocalizedString
 				/**
-				 * Création de sites web performants et optimisés pour le référencement.
+				 * Création de sites web performants et optimisés pour le référencement (SEO).
 				 */
 				description: () => LocalizedString
 			}
 			collaboration: {
 				/**
-				 * Collaboration & Évolution
+				 * Collaboratif
 				 */
 				title: () => LocalizedString
 				/**
@@ -401,11 +401,11 @@ export type TranslationFunctions = {
 			}
 			accessibility: {
 				/**
-				 * Accessibilité & UX
+				 * Accessible
 				 */
 				title: () => LocalizedString
 				/**
-				 * Navigation intuitive, ergonomie et clarté.
+				 * Un design accessible et intuitif. Ergonomique et facilité d'utilisation.
 				 */
 				description: () => LocalizedString
 			}

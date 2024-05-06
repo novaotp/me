@@ -1,6 +1,10 @@
 <script lang="ts">
     import IconPointFilled from '@tabler/icons-svelte/IconPointFilled.svelte';
     import IconArrowNarrowRight from '@tabler/icons-svelte/IconArrowNarrowRight.svelte';
+    import IconBolt from '@tabler/icons-svelte/IconBolt.svelte';
+    import IconAccessible from '@tabler/icons-svelte/IconAccessible.svelte';
+    import IconMessages from '@tabler/icons-svelte/IconMessages.svelte';
+    import IconPerspective from '@tabler/icons-svelte/IconPerspective.svelte';
     import Card from './Card.svelte';
     import { base } from '$app/paths';
     import LL, { locale } from '$i18n/i18n-svelte';
@@ -36,10 +40,42 @@
     <div class="relative w-full h-full flex flex-col justify-center items-center gap-16">
         <h2 class="w-full text-start text-3xl">{$LL.homePage.services.title()}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
-            <Card title={$LL.homePage.services.benefits.title()}>{$LL.homePage.services.benefits.description()}</Card>
-            <Card title={$LL.homePage.services.performance.title()}>{$LL.homePage.services.performance.description()}</Card>
-            <Card title={$LL.homePage.services.collaboration.title()}>{$LL.homePage.services.collaboration.description()}</Card>
-            <Card title={$LL.homePage.services.accessibility.title()}>{$LL.homePage.services.accessibility.description()}</Card>
+            <Card>
+                <svelte:fragment slot="title">
+                    <IconPerspective />
+                    <span>{$LL.homePage.services.benefits.title()}</span>
+                </svelte:fragment>
+                <svelte:fragment slot="content">
+                    {$LL.homePage.services.benefits.description()}
+                </svelte:fragment>
+            </Card>
+            <Card>
+                <svelte:fragment slot="title">
+                    <IconBolt />
+                    <span>{$LL.homePage.services.performance.title()}</span>
+                </svelte:fragment>
+                <svelte:fragment slot="content">
+                    {$LL.homePage.services.performance.description()}
+                </svelte:fragment>
+            </Card>
+            <Card>
+                <svelte:fragment slot="title">
+                    <IconMessages />
+                    <span>{$LL.homePage.services.collaboration.title()}</span>
+                </svelte:fragment>
+                <svelte:fragment slot="content">
+                    {$LL.homePage.services.collaboration.description()}
+                </svelte:fragment>
+            </Card>
+            <Card>
+                <svelte:fragment slot="title">
+                    <IconAccessible />
+                    <span>{$LL.homePage.services.accessibility.title()}</span>
+                </svelte:fragment>
+                <svelte:fragment slot="content">
+                    {$LL.homePage.services.accessibility.description()}
+                </svelte:fragment>
+            </Card>
         </div>
     </div>
     <div class="relative w-full h-full flex justify-center items-start flex-col gap-10">

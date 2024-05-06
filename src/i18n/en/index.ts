@@ -38,20 +38,20 @@ const en = {
         services: {
             title: 'Services',
             benefits: {
-                title: 'Provisions & Services',
-                description: 'Web design, web development, SEO, regular monitoring, responsive websites.'
+                title: 'Adaptive',
+                description: 'Websites adapted to any type of screen, ensuring a seamless experience.'
             },
             performance: {
-                title: 'Optimized & Efficient',
+                title: 'Performant',
                 description: 'Creating high-performance, SEO-optimized websites.'
             },
-            collaboration: {
-                title: 'Collaboration',
+            collaboration : {
+                title: 'Collaborative',
                 description: 'Continuous collaboration to meet evolving needs.'
             },
             accessibility: {
-                title: 'Accessibility & UX',
-                description: 'Intuitive navigation, ergonomics and clarity.'
+                title: "Accessible",
+                description: 'An accessible and intuitive design. Ergonomic and ease of use.'
             }
         },
         aboutMe: {

@@ -38,20 +38,20 @@ const fr = {
         services: {
             title: 'Services',
             benefits: {
-                title: 'Prestations & Services',
-                description: 'Design web, développement web, SEO, suivi régulier, sites web responsives.'
+                title: 'Responsive',
+                description: 'Sites web adaptés à tout type d\'écran, garantissant une expérience fluide.'
             },
             performance: {
-                title: 'Optimisé & Performant',
-                description: 'Création de sites web performants et optimisés pour le référencement.'
+                title: 'Performant',
+                description: 'Création de sites web performants et optimisés pour le référencement (SEO).'
             },
             collaboration: {
-                title: 'Collaboration & Évolution',
+                title: 'Collaboratif',
                 description: 'Collaboration en continu pour répondre à des besoins qui évoluent.'
             },
             accessibility: {
-                title: 'Accessibilité & UX',
-                description: 'Navigation intuitive, ergonomie et clarté.'
+                title: 'Accessible',
+                description: 'Un design accessible et intuitif. Ergonomique et facilité d\'utilisation.'
             }
         },
         aboutMe: {
