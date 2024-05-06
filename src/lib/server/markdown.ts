@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { globSync } from "glob";
-import frontmatter from "front-matter";
+import { globSync } from 'glob';
+import frontmatter from 'front-matter';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
@@ -8,19 +8,19 @@ import html from 'rehype-stringify';
 import { dev } from '$app/environment';
 
 export interface MarkdownAttributes {
-    shortTitle?: string,
-    title: string,
-    description: string,
-    creationDate: Date,
-    banner: string,
-    bannerAlt?: string
+    shortTitle?: string;
+    title: string;
+    description: string;
+    creationDate: Date;
+    banner: string;
+    bannerAlt?: string;
 }
 
 export interface MarkdownData {
-    path: string,
-    filename: string,
-    attributes: MarkdownAttributes,
-    html: string
+    path: string;
+    filename: string;
+    attributes: MarkdownAttributes;
+    html: string;
 }
 
 /**
@@ -40,12 +40,16 @@ export function convertMarkdown(path: string): MarkdownData {
     let file = fs.readFileSync(path, 'utf8');
     let { attributes, body } = frontmatter<MarkdownAttributes>(file);
 
-    let result = unified()
-                .use(remarkParse)
-                .use(remarkRehype)
-                .use(html)
-                .processSync(body)
-                .value;
+    let result = unified().use(remarkParse).use(remarkRehype).use(html).processSync(body).value;
 
-    return { path: path, filename: path.split(dev ? "\\": "/").at(-1)!.split(".").at(0)!, attributes, html: result.toString() };
+    return {
+        path: path,
+        filename: path
+            .split(dev ? '\\' : '/')
+            .at(-1)!
+            .split('.')
+            .at(0)!,
+        attributes,
+        html: result.toString()
+    };
 }

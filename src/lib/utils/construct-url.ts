@@ -1,5 +1,5 @@
-import { base } from "$app/paths"
-import type { Locales } from "$i18n/i18n-types"
+import { base } from '$app/paths';
+import type { Locales } from '$i18n/i18n-types';
 
 /**
  * Constructs a cross-locale url from the given params.
@@ -8,9 +8,9 @@ import type { Locales } from "$i18n/i18n-types"
  * @returns The contructed url.
  */
 export const constructUrl = (locale: Locales, relativeHref: string): string => {
-    if (relativeHref.startsWith("/")) {
+    if (relativeHref.startsWith('/')) {
         relativeHref = relativeHref.substring(1);
     }
 
     return `${base}/${locale}/${relativeHref}`;
-}
+};

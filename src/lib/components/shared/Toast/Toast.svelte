@@ -1,9 +1,9 @@
 <script lang="ts">
-    import SuccessIcon from "@tabler/icons-svelte/IconCheck.svelte";
-    import ErrorIcon from "@tabler/icons-svelte/IconExclamationMark.svelte";
-    import InfoIcon from "@tabler/icons-svelte/IconInfoCircle.svelte";
-    import CloseIcon from "@tabler/icons-svelte/IconX.svelte";
-    
+    import SuccessIcon from '@tabler/icons-svelte/IconCheck.svelte';
+    import ErrorIcon from '@tabler/icons-svelte/IconExclamationMark.svelte';
+    import InfoIcon from '@tabler/icons-svelte/IconInfoCircle.svelte';
+    import CloseIcon from '@tabler/icons-svelte/IconX.svelte';
+
     import { createEventDispatcher } from 'svelte';
     import { fade } from 'svelte/transition';
 

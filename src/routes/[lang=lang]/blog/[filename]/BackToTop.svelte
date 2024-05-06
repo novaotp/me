@@ -1,6 +1,6 @@
 <script lang="ts">
-    import IconArrowNarrowUp from "@tabler/icons-svelte/IconArrowNarrowUp.svelte";
-    import { fade } from "svelte/transition";
+    import IconArrowNarrowUp from '@tabler/icons-svelte/IconArrowNarrowUp.svelte';
+    import { fade } from 'svelte/transition';
 
     let showAfterYScroll = 150;
     let hidden = false;

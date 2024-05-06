@@ -40,27 +40,35 @@
         history.replaceState({ ...history.state, locale: lang }, '', replaceLocaleInUrl($page.url, lang));
     }
 
-	function changeLang(newLocale: string) {
-		showList = false;
-		goto(replaceLocaleInUrl($page.url, newLocale), { noScroll: true });
-	}
+    function changeLang(newLocale: string) {
+        showList = false;
+        goto(replaceLocaleInUrl($page.url, newLocale), { noScroll: true });
+    }
 </script>
 
 <div class="relative">
-    <button bind:this={currentLanguageNode} on:click={() => (showList = !showList)} class="bg-gray-700 px-4 py-2 rounded {showList ? "rounded-b-none" : ""}">
+    <button
+        bind:this={currentLanguageNode}
+        on:click={() => (showList = !showList)}
+        class="bg-gray-700 px-4 py-2 rounded {showList ? 'rounded-b-none' : ''}"
+    >
         {$locale === 'fr' ? $LL.languages.french() : $LL.languages.english()}
     </button>
     {#if showList}
-        <div on:emit={() => (showList = false)} use:clickOutside={{ avoid: [currentLanguageNode] }} class="absolute w-full top-full left-0 flex flex-col z-20">
-			{#if $locale === "en"}
-				<button on:click={() => changeLang("fr")} class="relative w-full bg-gray-700 px-4 py-2 rounded {showList ? "rounded-t-none" : ""}">
-					{$LL.languages.french()}
-				</button>
-			{:else}
-				<button on:click={() => changeLang("en")} class="relative w-full bg-gray-700 px-4 py-2 rounded {showList ? "rounded-t-none" : ""}">
-					{$LL.languages.english()}
-				</button>
-			{/if}
+        <div
+            on:emit={() => (showList = false)}
+            use:clickOutside={{ avoid: [currentLanguageNode] }}
+            class="absolute w-full top-full left-0 flex flex-col z-20"
+        >
+            {#if $locale === 'en'}
+                <button on:click={() => changeLang('fr')} class="relative w-full bg-gray-700 px-4 py-2 rounded {showList ? 'rounded-t-none' : ''}">
+                    {$LL.languages.french()}
+                </button>
+            {:else}
+                <button on:click={() => changeLang('en')} class="relative w-full bg-gray-700 px-4 py-2 rounded {showList ? 'rounded-t-none' : ''}">
+                    {$LL.languages.english()}
+                </button>
+            {/if}
         </div>
     {/if}
 </div>

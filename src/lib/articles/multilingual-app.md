@@ -48,7 +48,7 @@ the `i18n` folder from wherever we want without worrying about relative paths.
 
 ```js
 alias: {
-    $i18n: "./src/i18n"
+    $i18n: './src/i18n';
 }
 ```
 
@@ -78,14 +78,14 @@ same with your other locales. Here are mines.
 ```ts
 // en/index.ts
 const en = {
-	hello: 'Hi ! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n',
-} satisfies BaseTranslation
+    hello: 'Hi ! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n'
+} satisfies BaseTranslation;
 
 export default en;
 
 // fr/index.ts
 const fr = {
-	hello: 'Salut ! Merci de laisser une étoile si vous aimez ce projet: https://github.com/ivanhofer/typesafe-i18n',
+    hello: 'Salut ! Merci de laisser une étoile si vous aimez ce projet: https://github.com/ivanhofer/typesafe-i18n'
 } satisfies Translation;
 
 export default fr;
@@ -96,33 +96,33 @@ export default fr;
 Let's add a `utils.ts` file in the `src` folder with the following content.
 
 ```ts
-import { base } from '$app/paths'
+import { base } from '$app/paths';
 
 // e.g. https://mywebsite.com/en/blog/article-1 => /de/blog/article-1
 export const replaceLocaleInUrl = (url: URL, locale: string, full = false): string => {
-	const [, , ...rest] = getPathnameWithoutBase(url).split('/')
-	const new_pathname = `/${[locale, ...rest].join('/')}`
-	if (!full) {
-		return `${new_pathname}${url.search}`
-	}
-	const newUrl = new URL(url.toString())
-	newUrl.pathname = base + new_pathname
-	return newUrl.toString()
-}
+    const [, , ...rest] = getPathnameWithoutBase(url).split('/');
+    const new_pathname = `/${[locale, ...rest].join('/')}`;
+    if (!full) {
+        return `${new_pathname}${url.search}`;
+    }
+    const newUrl = new URL(url.toString());
+    newUrl.pathname = base + new_pathname;
+    return newUrl.toString();
+};
 
 // ----------------------------------------------------------------------------
 
-const REGEX_START_WITH_BASE = new RegExp(`^${base}`)
+const REGEX_START_WITH_BASE = new RegExp(`^${base}`);
 
-export const getPathnameWithoutBase = (url: URL) => url.pathname.replace(REGEX_START_WITH_BASE, '')
+export const getPathnameWithoutBase = (url: URL) => url.pathname.replace(REGEX_START_WITH_BASE, '');
 ```
 
 Let's uncomment the `Locals` interface inside `app.d.ts` and add the following.
 
 ```ts
 interface Locals {
-    locale: Locales
-    LL: TranslationFunctions
+    locale: Locales;
+    LL: TranslationFunctions;
 }
 ```
 
@@ -130,13 +130,13 @@ Let's handle invalid locales by creating a new file `lang.ts` inside
 `src/params/lang.ts`.
 
 ```ts
-import type { ParamMatcher } from '@sveltejs/kit'
+import type { ParamMatcher } from '@sveltejs/kit';
 import { isLocale } from '../i18n/i18n-util';
 
 // only accept valid languages as a segment in the URL
 export const match: ParamMatcher = (param) => {
-	return isLocale(param)
-}
+    return isLocale(param);
+};
 ```
 
 And add this inside `hooks.server.ts` (create it if needed). This will handle
@@ -144,47 +144,47 @@ preferred locale, invalid locales (by redirecting to the preferred locale) and
 adding the locale and translation functions inside the request.
 
 ```ts
-import { base } from '$app/paths'
-import type { Locales } from './i18n/i18n-types'
-import { detectLocale, i18n, isLocale } from './i18n/i18n-util'
-import { loadAllLocales } from './i18n/i18n-util.sync'
-import { redirect, type Handle, type RequestEvent } from '@sveltejs/kit'
-import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors'
-import { getPathnameWithoutBase } from './utils'
+import { base } from '$app/paths';
+import type { Locales } from './i18n/i18n-types';
+import { detectLocale, i18n, isLocale } from './i18n/i18n-util';
+import { loadAllLocales } from './i18n/i18n-util.sync';
+import { redirect, type Handle, type RequestEvent } from '@sveltejs/kit';
+import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors';
+import { getPathnameWithoutBase } from './utils';
 
-loadAllLocales()
-const L = i18n()
+loadAllLocales();
+const L = i18n();
 
 export const handle: Handle = async ({ event, resolve }) => {
-	// read language slug
-	const [, lang] = getPathnameWithoutBase(event.url).split('/')
+    // read language slug
+    const [, lang] = getPathnameWithoutBase(event.url).split('/');
 
-	// redirect to base locale if no locale slug was found
-	if (!lang) {
-		const locale = getPreferredLocale(event)
+    // redirect to base locale if no locale slug was found
+    if (!lang) {
+        const locale = getPreferredLocale(event);
 
-		throw redirect(307, `${base}/${locale}`)
-	}
+        throw redirect(307, `${base}/${locale}`);
+    }
 
-	// if slug is not a locale, use base locale (e.g. api endpoints)
-	const locale = isLocale(lang) ? (lang as Locales) : getPreferredLocale(event)
-	const LL = L[locale]
+    // if slug is not a locale, use base locale (e.g. api endpoints)
+    const locale = isLocale(lang) ? (lang as Locales) : getPreferredLocale(event);
+    const LL = L[locale];
 
-	// bind locale and translation functions to current request
-	event.locals.locale = locale
-	event.locals.LL = LL;
+    // bind locale and translation functions to current request
+    event.locals.locale = locale;
+    event.locals.LL = LL;
 
-	// replace html lang attribute with correct language
-	return resolve(event, { transformPageChunk: ({ html }) => html.replace('%lang%', locale) })
-}
+    // replace html lang attribute with correct language
+    return resolve(event, { transformPageChunk: ({ html }) => html.replace('%lang%', locale) });
+};
 
 const getPreferredLocale = ({ request }: RequestEvent) => {
-	// detect the preferred language the user has configured in his browser
-	// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
-	const acceptLanguageDetector = initAcceptLanguageHeaderDetector(request)
+    // detect the preferred language the user has configured in his browser
+    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
+    const acceptLanguageDetector = initAcceptLanguageHeaderDetector(request);
 
-	return detectLocale(acceptLanguageDetector)
-}
+    return detectLocale(acceptLanguageDetector);
+};
 ```
 
 Now, let's set up a root `+layout.server.ts` file, in which we will return the
@@ -194,22 +194,22 @@ locale, retrieved from `locals`.
 import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = ({ locals: { locale } }) => {
-	return { locale };
-}
+    return { locale };
+};
 ```
 
 Then, let's load the translations inside our `+layout.ts` file. This will allow
 us to access the translations in every route.
 
 ```ts
-import { loadLocaleAsync } from "$i18n/i18n-util.async";
-import type { LayoutLoad } from "./$types";
+import { loadLocaleAsync } from '$i18n/i18n-util.async';
+import type { LayoutLoad } from './$types';
 
 export const load: LayoutLoad = async ({ data: { locale } }) => {
     // load dictionary into memory
-	await loadLocaleAsync(locale)
+    await loadLocaleAsync(locale);
 
-    return { locale }
+    return { locale };
 };
 ```
 
@@ -218,12 +218,12 @@ mut be happen before accessing any translations.
 
 ```svelte
 <script lang="ts">
-   	import { setLocale } from '$i18n/i18n-svelte'
+    import { setLocale } from '$i18n/i18n-svelte';
     import type { LayoutServerData } from './$types';
 
-	export let data: LayoutServerData;
+    export let data: LayoutServerData;
 
-	setLocale(data.locale)
+    setLocale(data.locale);
 </script>
 
 <slot />
@@ -252,20 +252,20 @@ First, let's add some translations for the languages.
 ```ts
 // en/index.ts
 const en = {
-	hello: 'Hi ! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n',
-	navigation: {
-		frenchLocale: "French",
-		englishLocale: "English"
-	}
+    hello: 'Hi ! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n',
+    navigation: {
+        frenchLocale: 'French',
+        englishLocale: 'English'
+    }
 } satisfies BaseTranslation;
 
 // fr/index.ts
 const fr = {
-	hello: 'Salut ! Merci de laisser une étoile si vous aimez ce projet: https://github.com/ivanhofer/typesafe-i18n',
-	navigation: {
-		frenchLocale: "Français",
-		englishLocale: "Anglais"
-	}
+    hello: 'Salut ! Merci de laisser une étoile si vous aimez ce projet: https://github.com/ivanhofer/typesafe-i18n',
+    navigation: {
+        frenchLocale: 'Français',
+        englishLocale: 'Anglais'
+    }
 } satisfies Translation;
 ```
 
@@ -317,8 +317,8 @@ Now, let's adapt our root `+layout.svelte` file to add a navbar.
 </script>
 
 <nav>
-    <a rel="alternate" href="{replaceLocaleInUrl($page.url, "en")}">{$LL.navigation.englishLocale()}</a>
-    <a rel="alternate" href="{replaceLocaleInUrl($page.url, "fr")}">{$LL.navigation.frenchLocale()}</a>
+    <a rel="alternate" href={replaceLocaleInUrl($page.url, 'en')}>{$LL.navigation.englishLocale()}</a>
+    <a rel="alternate" href={replaceLocaleInUrl($page.url, 'fr')}>{$LL.navigation.frenchLocale()}</a>
 </nav>
 <main>
     <slot />

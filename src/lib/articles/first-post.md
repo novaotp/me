@@ -10,9 +10,10 @@ banner: /article-images/blog.jpeg
 Hey there, dear reader. This articles serves as the entry point for me in the blogging world.
 
 In this article, I will cover :
-* Who I am
-* Why I am starting to blog
-* What I will cover in future articles
+
+-   Who I am
+-   Why I am starting to blog
+-   What I will cover in future articles
 
 ## Who am I
 
@@ -23,7 +24,7 @@ My hobbies include drawing and international politics.
 
 ## Why am I starting to blog
 
-Well.. *that's a great question*. Mostly to practise my writing skills, but also to help people with future articles related to tech.
+Well.. _that's a great question_. Mostly to practise my writing skills, but also to help people with future articles related to tech.
 
 ## What I will cover in future articles
 
