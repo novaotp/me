@@ -1,6 +1,9 @@
 import type { BaseTranslation } from '../i18n-types';
 
 const fr = {
+    meta: {
+        keywords: "développement web, conception web, portfolio, freelance, développeur, conception UI/UX, solutions créatives, développement axé client"
+    },
     footer: {
         quickLinks: 'Liens rapides',
         latestArticles: 'Mes Derniers Articles',
@@ -24,6 +27,10 @@ const fr = {
         }
     },
     homePage: {
+        meta: {
+            title: "Home - Sajidur Rahman",
+            description: "Bienvenue dans mon monde! Explorez mon site Web pour découvrir mes passions, mes projets et mes articles en développement Web."
+        },
         greet: 'Bonjour, je suis Sajidur Rahman.',
         briefDescription: 'Un développeur web axé sur les interfaces utilisateur pour un design fluide et une satisfaction client optimale.',
         keywords: {
@@ -70,14 +77,16 @@ const fr = {
     },
     workPage: {
         meta: {
-            title: 'Mes projets - Sajidur Rahman'
+            title: 'Mes projets - Sajidur Rahman',
+            description: "Découvrez comment j'ai transformé des idées en projets réussis. Explorez mon portfolio pour vous inspirer."
         },
         title: 'Mes travaux',
         notYet: "Je n'ai pas encore pu développer de sites web pour des clients. Revenez prochainement !"
     },
     blogPage: {
         meta: {
-            title: 'Blog - Sajidur Rahman'
+            title: 'Blog - Sajidur Rahman',
+            description: "Libérez la puissance du développement Web moderne avec des guides clairs sur SvelteKit, Tailwind CSS, PostgreSQL et plus encore ! Apprenez les compétences essentielles pour créer des sites Web incroyables. Commencez votre voyage aujourd'hui !"
         },
         summary: "Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais pour l'instant."
     },
@@ -86,7 +95,8 @@ const fr = {
     },
     contactPage: {
         meta: {
-            title: 'Contact - Sajidur Rahman'
+            title: 'Contact - Sajidur Rahman',
+            description: "Prêt à collaborer ? Discutons ! Utilisez notre formulaire de contact pratique pour nous contacter dès aujourd'hui."
         },
         letsWorkTogether: 'Commençons un projet ensemble',
         completeTheForm: 'Complétez le formulaire ci-dessous pour me contacter.',

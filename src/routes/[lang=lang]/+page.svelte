@@ -11,7 +11,8 @@
 </script>
 
 <svelte:head>
-    <title>Home - Sajidur Rahman</title>
+    <title>{$LL.homePage.meta.title()}</title>
+    <meta name="description" content={$LL.homePage.meta.description()} />
 </svelte:head>
 
 <div class="relative w-full max-w-[900px] flex flex-col items-center gap-32 my-10">

@@ -14,6 +14,12 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
+	meta: {
+		/**
+		 * d​é​v​e​l​o​p​p​e​m​e​n​t​ ​w​e​b​,​ ​c​o​n​c​e​p​t​i​o​n​ ​w​e​b​,​ ​p​o​r​t​f​o​l​i​o​,​ ​f​r​e​e​l​a​n​c​e​,​ ​d​é​v​e​l​o​p​p​e​u​r​,​ ​c​o​n​c​e​p​t​i​o​n​ ​U​I​/​U​X​,​ ​s​o​l​u​t​i​o​n​s​ ​c​r​é​a​t​i​v​e​s​,​ ​d​é​v​e​l​o​p​p​e​m​e​n​t​ ​a​x​é​ ​c​l​i​e​n​t
+		 */
+		keywords: string
+	}
 	footer: {
 		/**
 		 * L​i​e​n​s​ ​r​a​p​i​d​e​s
@@ -73,6 +79,16 @@ type RootTranslation = {
 		}
 	}
 	homePage: {
+		meta: {
+			/**
+			 * H​o​m​e​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
+			 */
+			title: string
+			/**
+			 * B​i​e​n​v​e​n​u​e​ ​d​a​n​s​ ​m​o​n​ ​m​o​n​d​e​!​ ​E​x​p​l​o​r​e​z​ ​m​o​n​ ​s​i​t​e​ ​W​e​b​ ​p​o​u​r​ ​d​é​c​o​u​v​r​i​r​ ​m​e​s​ ​p​a​s​s​i​o​n​s​,​ ​m​e​s​ ​p​r​o​j​e​t​s​ ​e​t​ ​m​e​s​ ​a​r​t​i​c​l​e​s​ ​e​n​ ​d​é​v​e​l​o​p​p​e​m​e​n​t​ ​W​e​b​.
+			 */
+			description: string
+		}
 		/**
 		 * B​o​n​j​o​u​r​,​ ​j​e​ ​s​u​i​s​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n​.
 		 */
@@ -182,6 +198,10 @@ type RootTranslation = {
 			 * M​e​s​ ​p​r​o​j​e​t​s​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
 			 */
 			title: string
+			/**
+			 * D​é​c​o​u​v​r​e​z​ ​c​o​m​m​e​n​t​ ​j​'​a​i​ ​t​r​a​n​s​f​o​r​m​é​ ​d​e​s​ ​i​d​é​e​s​ ​e​n​ ​p​r​o​j​e​t​s​ ​r​é​u​s​s​i​s​.​ ​E​x​p​l​o​r​e​z​ ​m​o​n​ ​p​o​r​t​f​o​l​i​o​ ​p​o​u​r​ ​v​o​u​s​ ​i​n​s​p​i​r​e​r​.
+			 */
+			description: string
 		}
 		/**
 		 * M​e​s​ ​t​r​a​v​a​u​x
@@ -198,6 +218,10 @@ type RootTranslation = {
 			 * B​l​o​g​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
 			 */
 			title: string
+			/**
+			 * L​i​b​é​r​e​z​ ​l​a​ ​p​u​i​s​s​a​n​c​e​ ​d​u​ ​d​é​v​e​l​o​p​p​e​m​e​n​t​ ​W​e​b​ ​m​o​d​e​r​n​e​ ​a​v​e​c​ ​d​e​s​ ​g​u​i​d​e​s​ ​c​l​a​i​r​s​ ​s​u​r​ ​S​v​e​l​t​e​K​i​t​,​ ​T​a​i​l​w​i​n​d​ ​C​S​S​,​ ​P​o​s​t​g​r​e​S​Q​L​ ​e​t​ ​p​l​u​s​ ​e​n​c​o​r​e​ ​!​ ​A​p​p​r​e​n​e​z​ ​l​e​s​ ​c​o​m​p​é​t​e​n​c​e​s​ ​e​s​s​e​n​t​i​e​l​l​e​s​ ​p​o​u​r​ ​c​r​é​e​r​ ​d​e​s​ ​s​i​t​e​s​ ​W​e​b​ ​i​n​c​r​o​y​a​b​l​e​s​.​ ​C​o​m​m​e​n​c​e​z​ ​v​o​t​r​e​ ​v​o​y​a​g​e​ ​a​u​j​o​u​r​d​'​h​u​i​ ​!
+			 */
+			description: string
 		}
 		/**
 		 * I​c​i​,​ ​v​o​u​s​ ​t​r​o​u​v​e​r​e​z​ ​q​u​e​l​q​u​e​s​ ​a​r​t​i​c​l​e​s​ ​q​u​e​ ​j​'​a​i​ ​r​é​d​i​g​é​s​.​ ​N​é​a​n​m​o​i​n​s​,​ ​i​l​s​ ​n​e​ ​s​o​n​t​ ​d​i​s​p​o​n​i​b​l​e​s​ ​q​u​'​e​n​ ​a​n​g​l​a​i​s​ ​p​o​u​r​ ​l​'​i​n​s​t​a​n​t​.
@@ -216,6 +240,10 @@ type RootTranslation = {
 			 * C​o​n​t​a​c​t​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
 			 */
 			title: string
+			/**
+			 * P​r​ê​t​ ​à​ ​c​o​l​l​a​b​o​r​e​r​ ​?​ ​D​i​s​c​u​t​o​n​s​ ​!​ ​U​t​i​l​i​s​e​z​ ​n​o​t​r​e​ ​f​o​r​m​u​l​a​i​r​e​ ​d​e​ ​c​o​n​t​a​c​t​ ​p​r​a​t​i​q​u​e​ ​p​o​u​r​ ​n​o​u​s​ ​c​o​n​t​a​c​t​e​r​ ​d​è​s​ ​a​u​j​o​u​r​d​'​h​u​i​.
+			 */
+			description: string
 		}
 		/**
 		 * C​o​m​m​e​n​ç​o​n​s​ ​u​n​ ​p​r​o​j​e​t​ ​e​n​s​e​m​b​l​e
@@ -273,6 +301,12 @@ type RootTranslation = {
 }
 
 export type TranslationFunctions = {
+	meta: {
+		/**
+		 * développement web, conception web, portfolio, freelance, développeur, conception UI/UX, solutions créatives, développement axé client
+		 */
+		keywords: () => LocalizedString
+	}
 	footer: {
 		/**
 		 * Liens rapides
@@ -332,6 +366,16 @@ export type TranslationFunctions = {
 		}
 	}
 	homePage: {
+		meta: {
+			/**
+			 * Home - Sajidur Rahman
+			 */
+			title: () => LocalizedString
+			/**
+			 * Bienvenue dans mon monde! Explorez mon site Web pour découvrir mes passions, mes projets et mes articles en développement Web.
+			 */
+			description: () => LocalizedString
+		}
 		/**
 		 * Bonjour, je suis Sajidur Rahman.
 		 */
@@ -441,6 +485,10 @@ export type TranslationFunctions = {
 			 * Mes projets - Sajidur Rahman
 			 */
 			title: () => LocalizedString
+			/**
+			 * Découvrez comment j'ai transformé des idées en projets réussis. Explorez mon portfolio pour vous inspirer.
+			 */
+			description: () => LocalizedString
 		}
 		/**
 		 * Mes travaux
@@ -457,6 +505,10 @@ export type TranslationFunctions = {
 			 * Blog - Sajidur Rahman
 			 */
 			title: () => LocalizedString
+			/**
+			 * Libérez la puissance du développement Web moderne avec des guides clairs sur SvelteKit, Tailwind CSS, PostgreSQL et plus encore ! Apprenez les compétences essentielles pour créer des sites Web incroyables. Commencez votre voyage aujourd'hui !
+			 */
+			description: () => LocalizedString
 		}
 		/**
 		 * Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais pour l'instant.
@@ -475,6 +527,10 @@ export type TranslationFunctions = {
 			 * Contact - Sajidur Rahman
 			 */
 			title: () => LocalizedString
+			/**
+			 * Prêt à collaborer ? Discutons ! Utilisez notre formulaire de contact pratique pour nous contacter dès aujourd'hui.
+			 */
+			description: () => LocalizedString
 		}
 		/**
 		 * Commençons un projet ensemble

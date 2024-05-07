@@ -46,6 +46,7 @@
 
 <svelte:head>
     <title>{$LL.contactPage.meta.title()}</title>
+    <meta name="description" content={$LL.contactPage.meta.description()} />
 </svelte:head>
 
 <div class="relative w-full max-w-[900px] h-full flex flex-col justify-evenly items-center gap-10">

@@ -13,6 +13,10 @@
     let show: boolean = false;
 </script>
 
+<svelte:head>
+    <meta name="keywords" content="web development, web design, portfolio, freelancer, developer, UI/UX design, creative solutions, client-focused development">
+</svelte:head>
+
 <NavPage bind:show />
 <Navbar bind:show />
 <ToastContainer />

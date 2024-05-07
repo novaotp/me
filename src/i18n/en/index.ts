@@ -1,6 +1,9 @@
 import type { Translation } from '../i18n-types';
 
 const en = {
+    meta: {
+        keywords: "web development, web design, portfolio, freelancer, developer, UI/UX design, creative solutions, client-focused development"
+    },
     footer: {
         quickLinks: 'Quick Links',
         latestArticles: 'My Latest Articles',
@@ -24,6 +27,10 @@ const en = {
         }
     },
     homePage: {
+        meta: {
+            title: "Home - Sajidur Rahman",
+            description: "Welcome to My World! Explore my website to learn about my passions, projects, and articles in web development."
+        },
         greet: 'Hello, I am Sajidur Rahman.',
         briefDescription: 'A web developer focused on user interfaces for fluid design and optimal customer satisfaction.',
         keywords: {
@@ -68,14 +75,16 @@ const en = {
     },
     workPage: {
         meta: {
-            title: 'My projects - Sajidur Rahman'
+            title: 'My projects - Sajidur Rahman',
+            description: "See how I've transformed ideas into successful projects. Explore my portfolio for inspiration."
         },
         title: 'My works',
         notYet: "I haven't been able to develop any websites for clients yet. Check back soon!"
     },
     blogPage: {
         meta: {
-            title: 'Blog - Sajidur Rahman'
+            title: 'Blog - Sajidur Rahman',
+            description: "Unlock the Power of Modern Web Dev with clear guides on SvelteKit, Tailwind CSS, PostgreSQL, and more! Learn essential skills to build amazing websites. Start your journey today!"
         },
         summary: "Here, you'll find articles I've written."
     },
@@ -84,7 +93,8 @@ const en = {
     },
     contactPage: {
         meta: {
-            title: 'Contact - Sajidur Rahman'
+            title: 'Contact - Sajidur Rahman',
+            description: "Ready to Collaborate? Let's chat! Use our convenient contact form to reach out today."
         },
         letsWorkTogether: "Let's start a project together",
         completeTheForm: 'Complete the form below to contact me.',

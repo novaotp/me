@@ -4,6 +4,7 @@
 
 <svelte:head>
     <title>{$LL.workPage.meta.title()}</title>
+    <meta name="description" content={$LL.workPage.meta.description()} />
 </svelte:head>
 
 <div class="relative w-full max-w-[900px] h-full flex justify-center items-center flex-col gap-10">
