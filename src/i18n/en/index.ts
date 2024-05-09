@@ -9,6 +9,13 @@ const en = {
         latestArticles: 'My Latest Articles',
         language: {
             title: 'Language'
+        },
+        themes: {
+            title: "Mode",
+            options: {
+                light: "Light",
+                dark: "Dark"
+            }
         }
     },
     languages: {

@@ -7,6 +7,7 @@
     import { constructUrl } from '$lib/utils/construct-url';
     import LanguageSelect from './LanguageSelect.svelte';
     import type { LayoutServerData } from './$types';
+    import ThemeSelect from './ThemeSelect.svelte';
 
     export let data: LayoutServerData;
 
@@ -24,8 +25,8 @@
     <slot />
 </main>
 <footer class="relative flex flex-col justify-center items-center p-10 gap-10 mt-10 bg-gray-900 text-white">
-    <div class="w-full xsm:w-auto md:flex-row flex flex-col items-start xsm:items-center md:items-start gap-10 md:gap-20">
-        <div class="flex flex-col xsm:flex-row gap-10 xsm:gap-20 justify-between">
+    <div class="w-full sm:w-auto md:flex-row flex flex-col items-start sm:items-center md:items-start gap-10 md:gap-20">
+        <div class="w-full flex flex-col sm:flex-row gap-10 sm:gap-20 justify-between">
             <div class="flex flex-col gap-5">
                 <h3 class="font-semibold text-xl">{$LL.footer.quickLinks()}</h3>
                 <a href={constructUrl($locale, '')}>{$LL.navigation.homePage()}</a>
@@ -42,9 +43,15 @@
                 {/each}
             </div>
         </div>
-        <div class="relative w-full md:w-auto md:flex-col flex justify-between items-start gap-5">
-            <h3 class="font-semibold text-xl">{$LL.footer.language.title()}</h3>
-            <LanguageSelect />
+        <div class="relative w-full md:w-auto flex flex-col sm:flex-row md:flex-col justify-between gap-5">
+            <div class="relative w-full sm:w-auto md:flex-col flex justify-between items-center md:items-start gap-5">
+                <h3 class="font-semibold text-xl">{$LL.footer.language.title()}</h3>
+                <LanguageSelect />
+            </div>
+            <div class="relative w-full sm:w-auto md:flex-col flex justify-between items-center md:items-start gap-5">
+                <h3 class="font-semibold text-xl">{$LL.footer.themes.title()}</h3>
+                <ThemeSelect />
+            </div>
         </div>
     </div>
     <span class="w-full flex justify-center items-center gap-5 mt-5"><IconCopyright /> {new Date().getFullYear()} - Sajidur Rahman</span>

@@ -39,8 +39,6 @@ export async function load({ params }) {
     article.html = addSlugifiedId(article.html);
     article.html = addTargetBlank(article.html);
 
-    console.log(article.html)
-
     return { article, latest, summary };
 }
 

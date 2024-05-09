@@ -35,6 +35,22 @@ type RootTranslation = {
 			 */
 			title: string
 		}
+		themes: {
+			/**
+			 * T​h​è​m​e
+			 */
+			title: string
+			options: {
+				/**
+				 * C​l​a​i​r
+				 */
+				light: string
+				/**
+				 * S​o​m​b​r​e
+				 */
+				dark: string
+			}
+		}
 	}
 	languages: {
 		/**
@@ -321,6 +337,22 @@ export type TranslationFunctions = {
 			 * Langue
 			 */
 			title: () => LocalizedString
+		}
+		themes: {
+			/**
+			 * Thème
+			 */
+			title: () => LocalizedString
+			options: {
+				/**
+				 * Clair
+				 */
+				light: () => LocalizedString
+				/**
+				 * Sombre
+				 */
+				dark: () => LocalizedString
+			}
 		}
 	}
 	languages: {

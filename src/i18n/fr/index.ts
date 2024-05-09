@@ -9,6 +9,13 @@ const fr = {
         latestArticles: 'Mes Derniers Articles',
         language: {
             title: 'Langue'
+        },
+        themes: {
+            title: "Thème",
+            options: {
+                light: "Clair",
+                dark: "Sombre"
+            }
         }
     },
     languages: {
