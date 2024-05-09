@@ -58,7 +58,11 @@
             <Input type="email" bind:value={email} placeholder={$LL.contactPage.form.fields.email.placeholder()} />
         </div>
         <Text bind:value={message} placeholder={$LL.contactPage.form.fields.message.placeholder()} />
-        <button type="submit" class="relative px-6 py-3 mt-5 rounded bg-indigo-700 text-white flex items-center text-sm">
+        <button
+            type="submit"
+            class="relative px-6 py-3 mt-5 rounded flex items-center text-sm
+                 bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800"
+        >
             {$LL.contactPage.form.send()}
         </button>
     </form>

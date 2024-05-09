@@ -29,7 +29,8 @@
         <a
             href="{base}/{$locale}/contact"
             aria-label="Go to the contact page"
-            class="relative py-3 px-10 flex gap-[6px] flex-col xsm:flex-row justify-center items-center bg-indigo-700 text-white rounded"
+            class="relative py-3 px-10 flex gap-[6px] flex-col xsm:flex-row justify-center items-center
+                 bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800 rounded"
         >
             <span>{$LL.homePage.contact.idea()}</span>
             <div class="flex gap-2">

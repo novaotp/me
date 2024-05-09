@@ -18,7 +18,9 @@
     $: $page.url.pathname;
 
     function colors(href: string, page: Page<Record<string, string>, string | null>) {
-        return page.url.pathname === stripTrailingSlash(`${base}/${$locale}${href}`) ? 'text-indigo-700' : 'text-gray-500';
+        return page.url.pathname === stripTrailingSlash(`${base}/${$locale}${href}`)
+            ? 'text-indigo-700 dark:text-sky-300'
+            : 'text-gray-500 dark:text-gray-400';
     }
 </script>
 
@@ -37,17 +39,18 @@ Renders a navbar adapted for devices under 1024px wide.
 </nav>
 
 <nav class="lg:flex hidden w-full h-20 px-10 py-5 justify-between items-center">
-    <a href="{base}/{$locale}" class="py-1 duration-150 hover:text-indigo-700 {colors("/", $page)}">
-        Sajidur Rahman
-    </a>
+    <a href="{base}/{$locale}" class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/', $page)}"> Sajidur Rahman </a>
     <div class="flex items-center gap-12">
-        <a href="{base}/{$locale}/work" class="py-1 duration-150 hover:text-indigo-700 {colors("/work", $page)}">
+        <a href="{base}/{$locale}/work" class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/work', $page)}">
             {$LL.navigation.workPage()}
         </a>
-        <a href="{base}/{$locale}/blog" class="py-1 duration-150 hover:text-indigo-700 {colors("/blog", $page)}">
+        <a href="{base}/{$locale}/blog" class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/blog', $page)}">
             {$LL.navigation.blogPage()}
         </a>
-        <a href="{base}/{$locale}/contact" class="bg-indigo-700 py-2 px-6 rounded text-[#fff6ea] flex gap-5 items-center">
+        <a
+            href="{base}/{$locale}/contact"
+            class="bg-indigo-700 dark:bg-sky-300 py-2 px-6 rounded text-white dark:text-zinc-800 flex gap-5 items-center"
+        >
             {$LL.navigation.contact.letsWorkTogether()}
             <IconArrowRight />
         </a>

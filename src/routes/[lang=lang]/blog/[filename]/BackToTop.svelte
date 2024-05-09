@@ -37,7 +37,11 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 {#if !hidden}
-    <button class="fixed bottom-5 right-5 bg-blue-700 p-5 rounded-full text-white shadow-lg z-10" on:click|self={goTop} transition:fade>
+    <button
+        on:click|self={goTop}
+        transition:fade
+        class="fixed bottom-5 right-5 bg-blue-700 dark:bg-sky-300 p-5 rounded-full text-white dark:text-zinc-800 shadow-lg z-10"
+    >
         <IconArrowNarrowUp class="pointer-events-none" />
     </button>
 {/if}

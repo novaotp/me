@@ -20,8 +20,11 @@
 
 {#if show}
     <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-    <div role="dialog" class="lg:hidden fixed w-full h-full bg-[rgba(0,0,0,0.1)] z-50" transition:fade on:click|self={closeMenu}>
-        <aside class="lg:hidden relative w-full px-10 pb-10 flex flex-col justify-center items-center z-50 shadow-2xl bg-white" transition:fly={{ y: -100 }}>
+    <div role="dialog" class="lg:hidden fixed w-full h-full bg-[rgba(0,0,0,0.1)] dark:bg-[rgba(0,0,0,0.2)] z-50" transition:fade on:click|self={closeMenu}>
+        <aside
+            transition:fly={{ y: -100 }}
+            class="lg:hidden relative w-full px-10 pb-10 flex flex-col justify-center items-center z-50 shadow-2xl bg-white dark:bg-zinc-700"
+        >
             <nav class="lg:hidden relative w-full h-20 py-5 flex justify-start">
                 <button on:click={closeMenu} aria-label="Close the menu">
                     <span role="img">
@@ -45,7 +48,8 @@
                 <a
                     href="{base}/{$locale}/contact"
                     aria-label="Go to the contact page"
-                    class="relative w-full py-3 px-10 flex gap-[6px] xsm:flex-row justify-center items-center bg-indigo-700 text-white rounded"
+                    class="relative w-full py-3 px-10 flex gap-[6px] xsm:flex-row justify-center items-center
+                         bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800 rounded"
                     on:click={closeMenu}
                 >
                     <IconHeartHandshake />

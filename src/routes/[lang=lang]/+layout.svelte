@@ -24,7 +24,7 @@
 <main class="relative w-full min-h-[calc(100%-7.5rem)] flex-grow px-10 lg:px-[120px] flex justify-center items-center flex-col">
     <slot />
 </main>
-<footer class="relative flex flex-col justify-center items-center p-10 gap-10 mt-10 bg-gray-900 text-white">
+<footer class="relative flex flex-col justify-center items-center p-10 gap-10 mt-10 bg-gray-900 dark:bg-zinc-900 text-white">
     <div class="w-full sm:w-auto md:flex-row flex flex-col items-start sm:items-center md:items-start gap-10 md:gap-20">
         <div class="w-full flex flex-col sm:flex-row gap-10 sm:gap-20 justify-between">
             <div class="flex flex-col gap-5">

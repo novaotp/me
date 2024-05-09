@@ -9,7 +9,10 @@
 
     const dispatch = createEventDispatcher();
 
-    $: colors = $page.url.pathname === stripTrailingSlash(`${base}/${$locale}${href}`) ? 'text-indigo-700' : 'text-gray-500';
+    $: colors =
+        $page.url.pathname === stripTrailingSlash(`${base}/${$locale}${href}`)
+            ? 'text-indigo-700 dark:text-sky-300'
+            : 'text-gray-500 dark:text-gray-400';
 </script>
 
 <!--

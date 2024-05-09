@@ -16,3 +16,8 @@ html,
 body {
     @apply w-full h-[100vh] bg-white scroll-smooth;
 }
+
+html.dark,
+html.dark body {
+    @apply bg-zinc-800 text-white;
+}
