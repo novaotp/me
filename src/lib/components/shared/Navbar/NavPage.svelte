@@ -3,6 +3,7 @@
     import IconBuildingEstate from '@tabler/icons-svelte/IconBuildingEstate.svelte';
     import IconNews from '@tabler/icons-svelte/IconNews.svelte';
     import IconArrowNarrowRight from '@tabler/icons-svelte/IconArrowNarrowRight.svelte';
+    import IconHeartHandshake from '@tabler/icons-svelte/IconHeartHandshake.svelte';
     import IconX from '@tabler/icons-svelte/IconX.svelte';
     import { fly, fade } from 'svelte/transition';
     import Link from './Link.svelte';
@@ -44,14 +45,12 @@
                 <a
                     href="{base}/{$locale}/contact"
                     aria-label="Go to the contact page"
-                    class="relative w-full py-3 px-10 flex gap-[6px] flex-col xsm:flex-row justify-center items-center bg-indigo-700 text-white rounded"
+                    class="relative w-full py-3 px-10 flex gap-[6px] xsm:flex-row justify-center items-center bg-indigo-700 text-white rounded"
                     on:click={closeMenu}
                 >
-                    <span>{$LL.homePage.contact.idea()}</span>
-                    <div class="flex gap-2">
-                        <span>{$LL.homePage.contact.letsTalk()}</span>
-                        <IconArrowNarrowRight />
-                    </div>
+                    <IconHeartHandshake />
+                    <span>{$LL.navigation.contact.letsWorkTogether()}</span>
+                    <IconArrowNarrowRight />
                 </a>
             </article>
         </aside>

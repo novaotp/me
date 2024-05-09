@@ -31,12 +31,20 @@ npm init -y
 
 Next, modify/add the following inside the `package.json` file.
 
-```json
-"main": "src/app.ts",
-"type": "module",
-"scripts": {
-"start": "nodemon --exec \"node --import ./ts-loader.js\" --experimental-specifier-resolution=node src/app.ts"
-},
+```json {5-9} showLineNumbers
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/app.ts",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon --exec \"node --import ./ts-loader.js\" --experimental-specifier-resolution=node src/app.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
 ```
 
 Let's install the necessary dependencies.
@@ -55,35 +63,35 @@ It will also add the necessary types for our app.
 Create a `tsconfig.json` file manually or with `npx tsc --init` and modify its
 content with the following. Feel free to adjust anything.
 
-```json
+```json showLineNumbers
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "ES6",
-    "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
-    "allowJs": false,
-    "noEmit": true,
-    "verbatimModuleSyntax": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "useUnknownInCatchVariables": false,
-    "skipLibCheck": true
-  },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["./node_modules/**"]
+    "compilerOptions": {
+        "target": "es2016",
+        "module": "ES6",
+        "moduleResolution": "Bundler",
+        "allowImportingTsExtensions": true,
+        "allowJs": false,
+        "noEmit": true,
+        "verbatimModuleSyntax": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "useUnknownInCatchVariables": false,
+        "skipLibCheck": true
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": ["./node_modules/**"]
 }
 ```
 
 Now, add `ts-loader.js` file in the root of the express app. This will allow
 us to not encounter issues with esm and ts.
 
-```js
+```js showLineNumbers
 import { register } from 'node:module';
 import { pathToFileURL } from 'node:url';
 
@@ -92,14 +100,14 @@ register('ts-node/esm', pathToFileURL('./'));
 
 Add a `.env` file and fill it with the port you'll use.
 
-```.env
+```.env showLineNumbers
 FRONTEND_URL=localhost:5174
 SERVER_PORT=4000
 ```
 
 Then, let's define our main `src/app.ts` file.
 
-```ts
+```ts showLineNumbers
 import express from "express";
 import dotenv from 'dotenv';
 import cors from "cors";
@@ -140,7 +148,7 @@ Now, let's add SocketIO inside our server and our frontend.
 
 Adapt our express app with the following.
 
-```ts
+```ts {4-5,12-15,22-35} showLineNumbers
 import express from "express";
 import dotenv from 'dotenv';
 import cors from "cors";
@@ -191,7 +199,7 @@ npm install socket.io-client
 
 Next, create a `socket.ts` file from which we'll import our socket.
 
-```ts
+```ts showLineNumbers
 import { Socket, io } from "socket.io-client";
 
 /** The socket client. */
@@ -218,7 +226,7 @@ export async function initSocket() {
 Now, import the `initSocket` function inside the page and call it after it
 mounts. Adapt it to your frontend.
 
-```svelte
+```svelte showLineNumbers
 <script lang="ts">
     import { initSocket } from "$lib/socket";
     import { onMount } from "svelte";
@@ -248,10 +256,46 @@ call, we'll have a socket event to receive a message and broadcast it to
 everyone else including ourselves. Usually, you'd hook up a database to store
 the messages since they will disappear after a page reload.
 
-```ts
-// Receives a message and broadcasts it to everyone else, including the sender.
-socket.on("message", (message: string) => {
-    io.emit("message", { sender: socket.id, message });
+```ts showLineNumbers {31-34}
+import express from "express";
+import dotenv from 'dotenv';
+import cors from "cors";
+import { createServer } from "http";
+import { Server } from "socket.io";
+
+// Load the env variables inside our app.
+dotenv.config();
+
+// Create the express app.
+const app = express();
+// Create an http server from the express app.
+const server = createServer(app);
+// Create an io server.
+const io = new Server(server);
+
+// Authorize any requests coming from our frontend url.
+app.use(cors({
+    origin: process.env.FRONTEND_URL
+}));
+
+// Fires when a new connection with the server has been created.
+io.on("connection", (socket) => {
+    console.log("New user connected.")
+
+    // Fires when a connection has been severed from the server, e.g. a page reload.
+    socket.on('disconnect', () => {
+        console.log('A user disconnected.');
+    });
+
+    // Receives a message and broadcasts it to everyone else, including the sender.
+    socket.on("message", (message: string) => {
+        io.emit("message", { sender: socket.id, message });
+    });
+});
+
+// Listen to our app at our defined port.
+server.listen(process.env.SERVER_PORT, () => {
+    console.log(`[Server] Running on port ${process.env.SERVER_PORT}`);
 });
 ```
 
@@ -259,7 +303,7 @@ socket.on("message", (message: string) => {
 
 Let's update our page to send messages, receive and display them.
 
-```svelte
+```svelte showLineNumbers {5-6,11-14,17-21,25-30}
 <script lang="ts">
     import { initSocket, socket } from "$lib/socket";
     import { onMount } from "svelte";

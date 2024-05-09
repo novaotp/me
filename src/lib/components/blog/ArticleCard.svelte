@@ -18,7 +18,7 @@
     </div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
         <h1 class="relative w-full text-start text-xl">{shortTitle ?? title}</h1>
-        <time class="text-gray-500 text-sm">{creationDate.toLocaleDateString($locale)}</time>
+        <time class="text-gray-500 text-sm">{creationDate.toLocaleDateString("fr-CH")}</time>
         <p class="text-justify text-gray-500 line-clamp-3">{description}</p>
     </div>
 </button>

@@ -28,7 +28,7 @@
             <img src={attributes.banner} alt={attributes.bannerAlt ?? attributes.shortTitle ?? attributes.title} class="w-full" />
         </div>
         <aside class="flex flex-col gap-5">
-            <h2 class="underline text-2xl py-5">Summary</h2>
+            <h2 class="text-2xl font-semibold pt-5">Summary</h2>
             <ul class="flex flex-col gap-2 list-decimal">
                 {#each data.summary as { original, slug }}
                     <li class="ml-5">
@@ -37,7 +37,7 @@
                 {/each}
             </ul>
         </aside>
-        <div class="blog-article relative w-full flex flex-col justify-start items-start gap-5 text-justify">
+        <div class="blog-article relative w-full flex flex-col justify-start items-start text-justify">
             {@html html}
         </div>
     </article>
@@ -53,19 +53,60 @@
 </div>
 
 <style lang="postcss">
+    @import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+    :global(div.blog-article code) {
+        @apply py-5;
+        counter-reset: line;
+    }
+
+    :global(div.blog-article code *) {
+        font-family: "Cascadia Code", sans-serif;
+    }
+
+    :global(div.blog-article span[data-highlighted-line]) {
+        background-color: rgba(200,200,255,.1);
+    }
+
+    :global(div.blog-article code > [data-line]) {
+        @apply px-5 py-[2px];
+    }
+
+    :global(div.blog-article code[data-line-numbers] > [data-line]::before) {
+        counter-increment: line;
+        content: counter(line);
+        display: inline-block;
+        width: 1rem;
+        margin-right: 2rem;
+        text-align: right;
+        color: gray;
+    }
+    
     :global(div.blog-article h2) {
-        @apply underline text-2xl py-5;
+        @apply text-2xl font-semibold py-5;
+    }
+
+    :global(div.blog-article h3) {
+        @apply text-xl font-semibold py-5;
     }
 
     :global(div.blog-article ul) {
-        @apply list-disc pl-10;
+        @apply list-disc ml-10;
     }
 
     :global(div.blog-article a) {
-        @apply underline;
+        @apply text-indigo-700 font-semibold;
     }
 
-    :global(div.blog-article pre) {
-        @apply relative w-full rounded bg-gray-900 text-white p-4 overflow-auto;
+    :global(div.blog-article p) {
+        @apply mb-5;
+    }
+
+    :global(div.blog-article h2 > p) {
+        @apply mb-0;
+    }
+
+    :global(div.blog-article figure) {
+        @apply relative w-full rounded text-white overflow-auto mb-5 bg-[#282c34];
     }
 </style>

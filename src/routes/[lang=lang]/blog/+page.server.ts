@@ -2,7 +2,7 @@ import { importMarkdowns } from '$lib/server/markdown';
 import type { EntryGenerator } from './$types';
 
 export async function load() {
-    let articles = importMarkdowns('./src/lib/articles/');
+    let articles = await importMarkdowns('./src/lib/articles/');
 
     return { articles };
 }
