@@ -95,7 +95,7 @@
     }
 
     :global(div.blog-article a) {
-        @apply text-indigo-700 dark:bg-sky-300 font-semibold;
+        @apply text-indigo-700 dark:text-sky-300 font-semibold;
     }
 
     :global(div.blog-article p) {
