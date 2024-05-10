@@ -1,7 +1,7 @@
 import type { EntryGenerator } from './$types';
 import { convertMarkdown, importMarkdowns } from '$lib/server/markdown';
 import { slugify } from '$/lib/utils/slugify';
-import { locales } from '$/i18n/i18n-util';
+import { locales } from '$i18n/i18n-util';
 
 /** Adds a slug id to the h2, so you can navigate to it. */
 function addSlugifiedId(html: string): string {
@@ -52,7 +52,7 @@ export const entries: EntryGenerator = async () => {
     /** Generates article paths for each locale. */
     function generateArticlePaths(): Promise<{ lang: string, filename: string }[]>[] {
         return locales.map(async (locale) => {
-                            const markdowns = await importMarkdowns(`./src/articles/${locale}`)
+                            const markdowns = await importMarkdowns(`./src/articles/${locale}/`)
 
                             return markdowns.map((markdown) => {
                                 return { lang: locale, filename: markdown.filename };
