@@ -7,7 +7,7 @@
     import { constructUrl } from '$lib/utils/construct-url';
     import LanguageSelect from './LanguageSelect.svelte';
     import type { LayoutServerData } from './$types';
-    import ThemeSelect from './ThemeSelect.svelte';
+    import ThemeSwitch from './ThemeSwitch.svelte';
 
     export let data: LayoutServerData;
 
@@ -50,7 +50,7 @@
             </div>
             <div class="relative w-full sm:w-auto md:flex-col flex justify-between items-center md:items-start gap-5">
                 <h3 class="font-semibold text-xl">{$LL.footer.themes.title()}</h3>
-                <ThemeSelect />
+                <ThemeSwitch />
             </div>
         </div>
     </div>
