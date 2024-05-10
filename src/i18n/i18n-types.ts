@@ -240,7 +240,7 @@ type RootTranslation = {
 			description: string
 		}
 		/**
-		 * I​c​i​,​ ​v​o​u​s​ ​t​r​o​u​v​e​r​e​z​ ​q​u​e​l​q​u​e​s​ ​a​r​t​i​c​l​e​s​ ​q​u​e​ ​j​'​a​i​ ​r​é​d​i​g​é​s​.​ ​N​é​a​n​m​o​i​n​s​,​ ​i​l​s​ ​n​e​ ​s​o​n​t​ ​d​i​s​p​o​n​i​b​l​e​s​ ​q​u​'​e​n​ ​a​n​g​l​a​i​s​ ​p​o​u​r​ ​l​'​i​n​s​t​a​n​t​.
+		 * I​c​i​,​ ​v​o​u​s​ ​t​r​o​u​v​e​r​e​z​ ​q​u​e​l​q​u​e​s​ ​a​r​t​i​c​l​e​s​ ​q​u​e​ ​j​'​a​i​ ​r​é​d​i​g​é​s​.
 		 */
 		summary: string
 	}
@@ -249,6 +249,18 @@ type RootTranslation = {
 		 * R​e​t​o​u​r
 		 */
 		back: string
+		/**
+		 * S​o​m​m​a​i​r​e
+		 */
+		summary: string
+		/**
+		 * P​u​b​l​i​é​ ​l​e
+		 */
+		postedAt: string
+		/**
+		 * R​é​c​e​n​t​s​ ​A​r​t​i​c​l​e​s
+		 */
+		latestArticles: string
 	}
 	contactPage: {
 		meta: {
@@ -543,7 +555,7 @@ export type TranslationFunctions = {
 			description: () => LocalizedString
 		}
 		/**
-		 * Ici, vous trouverez quelques articles que j'ai rédigés. Néanmoins, ils ne sont disponibles qu'en anglais pour l'instant.
+		 * Ici, vous trouverez quelques articles que j'ai rédigés.
 		 */
 		summary: () => LocalizedString
 	}
@@ -552,6 +564,18 @@ export type TranslationFunctions = {
 		 * Retour
 		 */
 		back: () => LocalizedString
+		/**
+		 * Sommaire
+		 */
+		summary: () => LocalizedString
+		/**
+		 * Publié le
+		 */
+		postedAt: () => LocalizedString
+		/**
+		 * Récents Articles
+		 */
+		latestArticles: () => LocalizedString
 	}
 	contactPage: {
 		meta: {

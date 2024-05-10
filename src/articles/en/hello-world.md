@@ -1,13 +1,14 @@
 ---
 title: Hello, World
-description: An introduction to my blog.
+description: An brief introduction to my blog.
 creationDate: 2024-04-24
 banner: /article-images/blog.jpeg
+bannerAlt: Image for Hello, World
 ---
 
 ## Introduction
 
-Hey there, dear reader. This articles serves as the entry point for me in the blogging world.
+Hey there, dear reader. This article serves as the entry point for me in the blogging world.
 
 In this article, I will cover :
 

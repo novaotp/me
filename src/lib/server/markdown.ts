@@ -30,7 +30,7 @@ export interface MarkdownData {
  * @param path The path to the folder containing the markdown files.
  */
 export async function importMarkdowns(path: string): Promise<MarkdownData[]> {
-    let fileNames = globSync(`${path}*.md`);
+    const fileNames = globSync(`${path}*.md`);
     return await Promise.all(fileNames.map(async (path) => await convertMarkdown(path)));
 }
 
@@ -39,10 +39,10 @@ export async function importMarkdowns(path: string): Promise<MarkdownData[]> {
  * @param path The path to the markdown file.
  */
 export async function convertMarkdown(path: string): Promise<MarkdownData> {
-    let file = fs.readFileSync(path, 'utf8');
-    let { attributes, body } = frontmatter<MarkdownAttributes>(file);
+    const file = fs.readFileSync(path, 'utf8');
+    const { attributes, body } = frontmatter<MarkdownAttributes>(file);
 
-    let result = (await unified()
+    const result = (await unified()
                     .use(remarkParse)
                     .use(remarkRehype)
                     .use(html)

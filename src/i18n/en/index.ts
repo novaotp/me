@@ -96,7 +96,10 @@ const en = {
         summary: "Here, you'll find articles I've written."
     },
     articlePage: {
-        back: 'Back'
+        back: 'Back',
+        summary: "Summary",
+        postedAt: "Posted on the",
+        latestArticles: "Latest Articles"
     },
     contactPage: {
         meta: {

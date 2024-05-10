@@ -1,6 +1,7 @@
 import type { EntryGenerator } from './$types';
 import { convertMarkdown, importMarkdowns } from '$lib/server/markdown';
 import { slugify } from '$/lib/utils/slugify';
+import { locales } from '$/i18n/i18n-util';
 
 /** Adds a slug id to the h2, so you can navigate to it. */
 function addSlugifiedId(html: string): string {
@@ -17,24 +18,29 @@ function addTargetBlank(html: string): string {
     });
 }
 
-export async function load({ params }) {
-    const article = await convertMarkdown(`./src/lib/articles/${params.filename}.md`);
-    const latest = (await importMarkdowns('./src/lib/articles/'))
+/** Generates a summary using the h2 headers. */
+function generateSummary(html: string): { original: string, slug: string }[] {
+    return html
+            .split('\n')
+            .filter((line) => line.startsWith('<h2>') && line.endsWith('</h2>'))
+            .map((h2) => h2.replaceAll('<h2>', ''))
+            .map((h2) => h2.replaceAll('</h2>', ''))
+            .map((h2) => {
+                return {
+                    original: h2,
+                    slug: slugify(h2)
+                };
+            });
+}
+
+export async function load({ params, locals: { locale } }) {
+    const article = await convertMarkdown(`./src/articles/${locale}/${params.filename}.md`);
+    const latest = (await importMarkdowns(`./src/articles/${locale}/`))
         .filter((a) => a.filename !== params.filename)
         .sort((a, b) => b.attributes.creationDate.getTime() - a.attributes.creationDate.getTime())
         .slice(0, 3);
 
-    const summary = article.html
-        .split('\n')
-        .filter((line) => line.startsWith('<h2>') && line.endsWith('</h2>'))
-        .map((h2) => h2.replaceAll('<h2>', ''))
-        .map((h2) => h2.replaceAll('</h2>', ''))
-        .map((h2) => {
-            return {
-                original: h2,
-                slug: slugify(h2)
-            };
-        });
+    const summary = generateSummary(article.html);
 
     article.html = addSlugifiedId(article.html);
     article.html = addTargetBlank(article.html);
@@ -43,13 +49,19 @@ export async function load({ params }) {
 }
 
 export const entries: EntryGenerator = async () => {
-    const markdowns = await importMarkdowns('./src/lib/articles/');
+    /** Generates article paths for each locale. */
+    function generateArticlePaths(): Promise<{ lang: string, filename: string }[]>[] {
+        return locales.map(async (locale) => {
+                            const markdowns = await importMarkdowns(`./src/articles/${locale}`)
 
-    return (['en', 'fr'] as const)
-        .map((lang) => {
-            return markdowns.map((markdown) => {
-                return { lang: lang, filename: markdown.filename };
-            });
-        })
-        .flat();
+                            return markdowns.map((markdown) => {
+                                return { lang: locale, filename: markdown.filename };
+                            });
+                        });
+    }
+
+    const asyncArticlePaths = generateArticlePaths();
+    const articlePaths = await Promise.all(asyncArticlePaths);
+
+    return articlePaths.flat();
 };

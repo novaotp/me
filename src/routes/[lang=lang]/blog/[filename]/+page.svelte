@@ -24,11 +24,11 @@
         <div class="relative w-full flex flex-col justify-start items-start gap-5">
             <h1 class="text-3xl font-semibold">{attributes.title}</h1>
             <p>{attributes.description}</p>
-            <span class="text-sm rounded text-gray-500">Posted on the {attributes.creationDate.toLocaleDateString('fr-CH')}</span>
+            <span class="text-sm rounded text-gray-500">{$LL.articlePage.postedAt()} {attributes.creationDate.toLocaleDateString('fr-CH')}</span>
             <img src={attributes.banner} alt={attributes.bannerAlt ?? attributes.shortTitle ?? attributes.title} class="w-full" />
         </div>
         <aside class="flex flex-col gap-5">
-            <h2 class="text-2xl font-semibold pt-5">Summary</h2>
+            <h2 class="text-2xl font-semibold pt-5">{$LL.articlePage.summary()}</h2>
             <ul class="flex flex-col gap-2 list-decimal">
                 {#each data.summary as { original, slug }}
                     <li class="ml-5">
@@ -43,7 +43,7 @@
     </article>
     {#if data.latest.length > 0}
         <aside class="relative w-full flex flex-col gap-5">
-            <h2 class="text-3xl font-semibold">Latest Articles</h2>
+            <h2 class="text-3xl font-semibold">{$LL.articlePage.latestArticles()}</h2>
             {#each data.latest as { attributes, filename }}
                 <ArticleCard {attributes} {filename} class="w-full" />
             {/each}
