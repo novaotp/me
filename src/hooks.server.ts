@@ -4,7 +4,7 @@ import { detectLocale, i18n, isLocale } from './i18n/i18n-util';
 import { loadAllLocales } from './i18n/i18n-util.sync';
 import { redirect, type Handle, type RequestEvent } from '@sveltejs/kit';
 import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors';
-import { getPathnameWithoutBase } from './utils';
+import { getPathnameWithoutBase } from '$lib/utils/locale';
 
 loadAllLocales();
 const L = i18n();
@@ -32,9 +32,12 @@ export const handle: Handle = async ({ event, resolve }) => {
     return resolve(event, { transformPageChunk: ({ html }) => html.replace('%lang%', locale) });
 };
 
-const getPreferredLocale = ({ request }: RequestEvent) => {
-    // detect the preferred language the user has configured in his browser
-    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
+/**
+ * Detect the preferred language the user has configured in his browser.
+ * @returns The preferred locale.
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
+ */
+function getPreferredLocale({ request }: RequestEvent) {
     const acceptLanguageDetector = initAcceptLanguageHeaderDetector(request);
 
     return detectLocale(acceptLanguageDetector);

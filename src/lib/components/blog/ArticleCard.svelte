@@ -19,7 +19,7 @@
         <img src="{banner}" alt="{bannerAlt}" class="w-full bg-center bg-cover bg-no-repeat" />
     </div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
-        <h1 class="relative w-full text-start text-xl">{shortTitle ?? title}</h1>
+        <h2 class="relative w-full text-start text-xl">{shortTitle ?? title}</h2>
         <time class="text-gray-500 dark:text-gray-400 text-sm">{creationDate.toLocaleDateString("fr-CH")}</time>
         <p class="text-justify text-gray-500 dark:text-gray-400 line-clamp-3">{description}</p>
     </div>

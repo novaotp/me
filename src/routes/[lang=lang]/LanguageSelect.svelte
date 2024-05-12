@@ -4,7 +4,7 @@
     import { locales } from '$/i18n/i18n-util';
     import { loadLocaleAsync } from '$/i18n/i18n-util.async';
     import { clickOutside } from '$/lib/utils/click-outside';
-    import { replaceLocaleInUrl } from '$/utils';
+    import { replaceLocaleInUrl } from '$/lib/utils/locale';
     import { browser } from '$app/environment';
     import { goto, invalidateAll } from '$app/navigation';
     import { page } from '$app/stores';

@@ -7,7 +7,7 @@ import type { Locales } from '$i18n/i18n-types';
  * @param relativeHref The relative href.
  * @returns The contructed url.
  */
-export const constructUrl = (locale: Locales, relativeHref: string): string => {
+export function constructUrl(locale: Locales, relativeHref: string): string {
     if (relativeHref.startsWith('/')) {
         relativeHref = relativeHref.substring(1);
     }

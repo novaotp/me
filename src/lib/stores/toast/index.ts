@@ -1,12 +1,19 @@
 import { writable } from 'svelte/store';
 
+/**
+ * Dismisses a toast after x milliseconds.
+ * 
+ * **INTERNAL, ONLY EXPORTED FOR TESTING.**
+ */
+export const DISMISS_AFTER = 3000;
+
 interface Toast {
     id: string;
     type: 'success' | 'error' | 'info';
     message: string;
 }
 
-type ToastData = Omit<Toast, 'id'>;
+export type ToastData = Omit<Toast, 'id'>;
 
 export const toasts = writable<Toast[]>([]);
 
@@ -18,7 +25,7 @@ export const addToast = (toast: ToastData) => {
 
     setTimeout(() => {
         dismissToast(id);
-    }, 3000);
+    }, DISMISS_AFTER);
 };
 
 /** Removes a toast from the stack. */

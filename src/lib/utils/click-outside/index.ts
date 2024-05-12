@@ -16,7 +16,7 @@ export const clickOutside: Action<HTMLElement, ClickOutsideParams | undefined, {
 ) => {
     const handleClick = (event: MouseEvent) => {
         /* @ts-expect-error event.target works */
-        if (node && !node.contains(event.target) && !event.defaultPrevented && !params.avoid.find((el) => el === event.target)) {
+        if (node && !node.contains(event.target) && !event.defaultPrevented && (params.avoid.length === 0 || !params.avoid.find((el) => el === event.target))) {
             node.dispatchEvent(new CustomEvent('emit', { detail: node }));
         }
     };

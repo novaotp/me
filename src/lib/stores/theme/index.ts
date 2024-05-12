@@ -5,8 +5,12 @@ export type Theme = "light" | "dark";
 /** The current theme. */
 export const theme = writable<Theme>(localStorage.theme);
 
-/** Returns the system's preferences. */
-function getSystemPreference(): Theme {
+/**
+ * Returns the system's preference.
+ * 
+ * **INTERNAL, ONLY EXPORTED FOR TESTING.**
+ */
+export function getSystemPreference(): Theme {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
 }
 
