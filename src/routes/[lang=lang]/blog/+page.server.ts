@@ -1,8 +1,8 @@
-import { importMarkdowns } from '$lib/server/markdown';
+import { importArticles } from '$/lib/server/article';
 import type { EntryGenerator } from './$types';
 
 export async function load({ locals: { locale } }) {
-    const articles = await importMarkdowns(`./src/articles/${locale}/`);
+    const articles = await importArticles(`./src/articles/${locale}/`);
 
     return { articles };
 }

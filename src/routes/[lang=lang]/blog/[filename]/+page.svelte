@@ -7,12 +7,12 @@
     import BackToTop from './BackToTop.svelte';
 
     export let data: PageServerData;
-    $: ({ attributes, html } = data.article);
+    $: ({ metadata, html } = data.article);
 </script>
 
 <svelte:head>
-    <title>{attributes.shortTitle ?? attributes.title} - Sajidur Rahman</title>
-    <meta name="description" content={attributes.description} />
+    <title>{metadata.shortTitle ?? metadata.title} - Sajidur Rahman</title>
+    <meta name="description" content={metadata.description} />
 </svelte:head>
 
 <div class="relative h-full w-full max-w-[680px] mt-10 lg:mt-20 flex flex-col justify-start items-start gap-10 mb-10">
@@ -22,17 +22,17 @@
     </button>
     <article class="relative w-full flex flex-col justify-start items-start gap-5 text-justify">
         <div class="relative w-full flex flex-col justify-start items-start gap-5">
-            <h1 class="text-3xl font-semibold">{attributes.title}</h1>
-            <p>{attributes.description}</p>
-            <span class="text-sm rounded text-gray-500">{$LL.articlePage.postedAt()} {attributes.creationDate.toLocaleDateString('fr-CH')}</span>
-            <img src={attributes.banner} alt={attributes.bannerAlt ?? attributes.shortTitle ?? attributes.title} class="w-full" />
+            <h1 class="text-3xl font-semibold">{metadata.title}</h1>
+            <p>{metadata.description}</p>
+            <span class="text-sm rounded text-gray-500">{$LL.articlePage.postedAt()} {metadata.creationDate.toLocaleDateString('fr-CH')}</span>
+            <img src={metadata.banner} alt={metadata.bannerAlt ?? metadata.shortTitle ?? metadata.title} class="w-full" />
         </div>
         <aside class="flex flex-col gap-5">
             <h2 class="text-2xl font-semibold pt-5">{$LL.articlePage.summary()}</h2>
             <ul class="flex flex-col gap-2 list-decimal">
-                {#each data.summary as { original, slug }}
+                {#each data.summary as { heading, slug }}
                     <li class="ml-5">
-                        <a href="#{slug}" class="text-start no-underline">{original}</a>
+                        <a href="#{slug}" class="text-start no-underline">{heading}</a>
                     </li>
                 {/each}
             </ul>
@@ -44,8 +44,8 @@
     {#if data.latest.length > 0}
         <aside class="relative w-full flex flex-col gap-5">
             <h2 class="text-3xl font-semibold">{$LL.articlePage.latestArticles()}</h2>
-            {#each data.latest as { attributes, filename }}
-                <ArticleCard {attributes} {filename} class="w-full" />
+            {#each data.latest as { metadata, filename }}
+                <ArticleCard {metadata} {filename} class="w-full" />
             {/each}
         </aside>
     {/if}

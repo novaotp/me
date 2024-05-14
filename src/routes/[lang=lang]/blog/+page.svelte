@@ -15,8 +15,8 @@
     <h1 class="text-center font-medium text-3xl mt-10">Blog</h1>
     <p class="w-full text-center text-gray-500 dark:text-gray-400">{$LL.blogPage.summary()}</p>
     <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10">
-        {#each data.articles as { attributes, filename }}
-            <ArticleCard {attributes} {filename} />
+        {#each data.articles as { metadata, filename }}
+            <ArticleCard {metadata} {filename} />
         {/each}
     </div>
 </div>

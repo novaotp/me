@@ -2,11 +2,11 @@
     import { goto } from '$app/navigation';
     import { base } from '$app/paths';
     import { locale } from '$i18n/i18n-svelte';
-    import type { MarkdownAttributes } from '$lib/server/markdown';
+    import type { ArticleMetadata } from '$/lib/server/article';
 
     export let filename: string;
-    export let attributes: MarkdownAttributes;
-    $: ({ title, description, banner, bannerAlt, shortTitle, creationDate } = attributes);
+    export let metadata: ArticleMetadata;
+    $: ({ title, description, banner, bannerAlt, shortTitle, creationDate } = metadata);
 </script>
 
 <button
