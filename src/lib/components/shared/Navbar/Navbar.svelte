@@ -30,16 +30,21 @@
 Renders a navbar adapted for devices under 1024px wide.
 -->
 
-<nav class="lg:hidden relative w-full h-20 px-10 py-5 flex justify-start items-center">
+<nav class="lg:hidden relative w-full h-20 px-10 py-5 flex justify-between items-center">
     <button on:click={showMenu} aria-label="Open the menu">
         <span role="img">
             <IconMenu class="size-6" />
         </span>
     </button>
+    <a href="{base}/{$locale}" class="relative h-5">
+        <img src="/logos/logo_only_name.png" alt="Sajidur Rahman's Logo" class="relative h-5" />
+    </a>
 </nav>
 
 <nav class="lg:flex hidden w-full h-20 px-10 py-5 justify-between items-center">
-    <a href="{base}/{$locale}" class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/', $page)}"> Sajidur Rahman </a>
+    <a href="{base}/{$locale}" class="relative h-5">
+        <img src="/logos/logo_one_line.png" alt="Sajidur Rahman's Logo" class="relative h-10" />
+    </a>
     <div class="flex items-center gap-12">
         <a href="{base}/{$locale}/work" class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/work', $page)}">
             {$LL.navigation.workPage()}
