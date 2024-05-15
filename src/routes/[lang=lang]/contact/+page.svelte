@@ -50,7 +50,7 @@
     <meta name="description" content={$LL.contactPage.meta.description()} />
 </svelte:head>
 
-<div class="relative w-full max-w-[900px] h-full flex flex-col justify-evenly items-center gap-10">
+<div class="relative w-full max-w-[900px] h-full flex flex-col justify-evenly items-center px-10 gap-10">
     <h1 class="text-3xl font-medium text-center">{$LL.contactPage.letsWorkTogether()}</h1>
     <p class="text-center text-sm xsm:text-base">{$LL.contactPage.completeTheForm()}</p>
     <form class="relative w-full flex flex-col justify-center items-center" on:submit|preventDefault={handleFormSubmission}>

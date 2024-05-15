@@ -8,6 +8,7 @@
     import LanguageSelect from './LanguageSelect.svelte';
     import type { LayoutServerData } from './$types';
     import ThemeSwitch from './ThemeSwitch.svelte';
+    import { goto } from '$app/navigation';
 
     export let data: LayoutServerData;
 
@@ -21,7 +22,7 @@
 <NavPage bind:show />
 <Navbar bind:show />
 <ToastContainer />
-<main class="relative w-full min-h-[calc(100%-7.5rem)] flex-grow px-10 lg:px-[120px] flex justify-center items-center flex-col">
+<main class="relative w-full min-h-[calc(100%-7.5rem)] flex-grow flex justify-center items-center flex-col">
     <slot />
 </main>
 <footer class="relative flex flex-col justify-center items-center p-10 gap-10 mt-10 bg-gray-900 dark:bg-zinc-900 text-white">
@@ -54,5 +55,15 @@
             </div>
         </div>
     </div>
-    <span class="w-full flex justify-center items-center gap-5 mt-5"><IconCopyright /> {new Date().getFullYear()} - Sajidur Rahman</span>
+    <div class="w-full flex flex-col justify-center items-center gap-2 mt-5">
+        <div class="w-full flex justify-center items-center gap-5">
+            <IconCopyright />
+            <span>{new Date().getFullYear()} - Sajidur Rahman</span>
+        </div>
+        <div class="w-full flex justify-center items-center gap-5">
+            <a href="{constructUrl($locale, "/privacy-policy")}" class="text-xs underline">
+                {$LL.footer.policy()}
+            </a>
+        </div>
+    </div>
 </footer>

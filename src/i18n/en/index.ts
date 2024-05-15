@@ -16,7 +16,8 @@ const en = {
                 light: "Light",
                 dark: "Dark"
             }
-        }
+        },
+        policy: "Privacy Policy"
     },
     languages: {
         french: 'French',
@@ -128,6 +129,17 @@ const en = {
             },
             send: 'Send'
         }
+    },
+    privacyPolicyPage: {
+        meta: {
+            title: "Privacy Policy - Sajidur Rahman",
+            description: "Transparency and data protection are our top priorities. Our detailed privacy policy explains how we handle your information, ensuring your privacy is always respected."
+        },
+        banner: {
+            title: "Important Notice",
+            content: "Our privacy policy is a work in progress. We're committed to providing clear information about how we handle your data. To help us improve, let us know if you have any questions or suggestions at"
+        },
+        onThisPage: "On this page"
     }
 } satisfies Translation;
 

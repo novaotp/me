@@ -51,6 +51,10 @@ type RootTranslation = {
 				dark: string
 			}
 		}
+		/**
+		 * P​o​l​i​t​i​q​u​e​ ​d​e​ ​c​o​n​f​i​d​e​n​t​i​a​l​i​t​é
+		 */
+		policy: string
 	}
 	languages: {
 		/**
@@ -326,6 +330,32 @@ type RootTranslation = {
 			send: string
 		}
 	}
+	privacyPolicyPage: {
+		meta: {
+			/**
+			 * P​o​l​i​t​i​q​u​e​ ​d​e​ ​c​o​n​f​i​d​e​n​t​i​a​l​i​t​é​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
+			 */
+			title: string
+			/**
+			 * L​a​ ​t​r​a​n​s​p​a​r​e​n​c​e​ ​e​t​ ​l​a​ ​p​r​o​t​e​c​t​i​o​n​ ​d​e​s​ ​d​o​n​n​é​e​s​ ​s​o​n​t​ ​n​o​s​ ​p​r​i​n​c​i​p​a​l​e​s​ ​p​r​i​o​r​i​t​é​s​.​ ​N​o​t​r​e​ ​p​o​l​i​t​i​q​u​e​ ​d​e​ ​c​o​n​f​i​d​e​n​t​i​a​l​i​t​é​ ​d​é​t​a​i​l​l​é​e​ ​e​x​p​l​i​q​u​e​ ​c​o​m​m​e​n​t​ ​n​o​u​s​ ​t​r​a​i​t​o​n​s​ ​v​o​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​,​ ​e​n​ ​v​e​i​l​l​a​n​t​ ​à​ ​c​e​ ​q​u​e​ ​v​o​t​r​e​ ​v​i​e​ ​p​r​i​v​é​e​ ​s​o​i​t​ ​t​o​u​j​o​u​r​s​ ​r​e​s​p​e​c​t​é​e​.
+			 */
+			description: string
+		}
+		banner: {
+			/**
+			 * A​v​i​s​ ​i​m​p​o​r​t​a​n​t
+			 */
+			title: string
+			/**
+			 * N​o​t​r​e​ ​p​o​l​i​t​i​q​u​e​ ​d​e​ ​c​o​n​f​i​d​e​n​t​i​a​l​i​t​é​ ​e​s​t​ ​e​n​ ​c​o​u​r​s​ ​d​'​é​l​a​b​o​r​a​t​i​o​n​.​ ​N​o​u​s​ ​n​o​u​s​ ​e​n​g​a​g​e​o​n​s​ ​à​ ​f​o​u​r​n​i​r​ ​d​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​c​l​a​i​r​e​s​ ​s​u​r​ ​l​a​ ​m​a​n​i​è​r​e​ ​d​o​n​t​ ​n​o​u​s​ ​t​r​a​i​t​o​n​s​ ​v​o​s​ ​d​o​n​n​é​e​s​.​ ​P​o​u​r​ ​n​o​u​s​ ​a​i​d​e​r​ ​à​ ​n​o​u​s​ ​a​m​é​l​i​o​r​e​r​,​ ​f​a​i​t​e​s​-​n​o​u​s​ ​p​a​r​t​ ​d​e​ ​v​o​s​ ​q​u​e​s​t​i​o​n​s​ ​o​u​ ​s​u​g​g​e​s​t​i​o​n​s​ ​à​ ​l​'​a​d​r​e​s​s​e​ ​s​u​i​v​a​n​t​e
+			 */
+			content: string
+		}
+		/**
+		 * S​u​r​ ​c​e​t​t​e​ ​p​a​g​e
+		 */
+		onThisPage: string
+	}
 }
 
 export type TranslationFunctions = {
@@ -366,6 +396,10 @@ export type TranslationFunctions = {
 				dark: () => LocalizedString
 			}
 		}
+		/**
+		 * Politique de confidentialité
+		 */
+		policy: () => LocalizedString
 	}
 	languages: {
 		/**
@@ -640,6 +674,32 @@ export type TranslationFunctions = {
 			 */
 			send: () => LocalizedString
 		}
+	}
+	privacyPolicyPage: {
+		meta: {
+			/**
+			 * Politique de confidentialité - Sajidur Rahman
+			 */
+			title: () => LocalizedString
+			/**
+			 * La transparence et la protection des données sont nos principales priorités. Notre politique de confidentialité détaillée explique comment nous traitons vos informations, en veillant à ce que votre vie privée soit toujours respectée.
+			 */
+			description: () => LocalizedString
+		}
+		banner: {
+			/**
+			 * Avis important
+			 */
+			title: () => LocalizedString
+			/**
+			 * Notre politique de confidentialité est en cours d'élaboration. Nous nous engageons à fournir des informations claires sur la manière dont nous traitons vos données. Pour nous aider à nous améliorer, faites-nous part de vos questions ou suggestions à l'adresse suivante
+			 */
+			content: () => LocalizedString
+		}
+		/**
+		 * Sur cette page
+		 */
+		onThisPage: () => LocalizedString
 	}
 }
 

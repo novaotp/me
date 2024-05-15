@@ -16,7 +16,8 @@ const fr = {
                 light: "Clair",
                 dark: "Sombre"
             }
-        }
+        },
+        policy: "Politique de confidentialité"
     },
     languages: {
         french: 'Français',
@@ -130,6 +131,17 @@ const fr = {
             },
             send: 'Envoyer'
         }
+    },
+    privacyPolicyPage: {
+        meta: {
+            title: "Politique de confidentialité - Sajidur Rahman",
+            description: "La transparence et la protection des données sont nos principales priorités. Notre politique de confidentialité détaillée explique comment nous traitons vos informations, en veillant à ce que votre vie privée soit toujours respectée."
+        },
+        banner: {
+            title: "Avis important",
+            content: "Notre politique de confidentialité est en cours d'élaboration. Nous nous engageons à fournir des informations claires sur la manière dont nous traitons vos données. Pour nous aider à nous améliorer, faites-nous part de vos questions ou suggestions à l'adresse suivante"
+        },
+        onThisPage: "Sur cette page"
     }
 } satisfies BaseTranslation;
 

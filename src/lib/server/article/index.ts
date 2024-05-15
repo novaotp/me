@@ -56,7 +56,7 @@ export async function latestArticles(path: string, currentFilename: string, coun
     return articles
             .filter((a) => a.filename !== currentFilename)
             .sort((a, b) => b.metadata.creationDate.getTime() - a.metadata.creationDate.getTime())
-            .slice(0, 3)
+            .slice(0, count)
 }
 
 /**
