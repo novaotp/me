@@ -11,7 +11,7 @@
     <meta name="description" content={$LL.blogPage.meta.description()} />
 </svelte:head>
 
-<div class="relative w-full max-w-[900px] h-full flex justify-center items-center px-10 lg:px-[120px] flex-col gap-10">
+<div class="relative w-full max-w-[980px] h-full flex justify-center items-center px-10 flex-col gap-10">
     <h1 class="text-center font-medium text-3xl mt-10">Blog</h1>
     <p class="w-full text-center text-gray-500 dark:text-gray-400">{$LL.blogPage.summary()}</p>
     <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10">

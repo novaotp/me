@@ -42,7 +42,7 @@ Renders a navbar adapted for devices under 1024px wide.
 </nav>
 
 <nav class="lg:flex hidden w-full h-20 px-10 py-5 justify-between items-center">
-    <a href="{base}/{$locale}" class="relative h-5">
+    <a href="{base}/{$locale}" class="relative h-10">
         <img src="/logos/logo_one_line.png" alt="Sajidur Rahman's Logo" class="relative h-10" />
     </a>
     <div class="flex items-center gap-12">

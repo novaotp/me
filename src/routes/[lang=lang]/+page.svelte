@@ -15,7 +15,7 @@
     <meta name="description" content={$LL.homePage.meta.description()} />
 </svelte:head>
 
-<div class="relative w-full max-w-[900px] flex flex-col items-center px-10 lg:px-[120px] gap-32 my-10">
+<div class="relative w-full max-w-[980px] flex flex-col items-center px-10 gap-32 my-10">
     <div class="relative w-full h-full flex justify-center items-start flex-col gap-14">
         <p>{$LL.homePage.greet()}</p>
         <h1 class="text-justify text-3xl max-w-[1400px] 2xl:text-5xl">{$LL.homePage.briefDescription()}</h1>
