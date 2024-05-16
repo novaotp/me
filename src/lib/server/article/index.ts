@@ -10,6 +10,7 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
 import { stripTrailingSlash } from '$/lib/utils/strip-trailing-slash';
 import { slugify } from '$/lib/utils/slugify';
+import { transform } from './transformers';
 
 export interface ArticleMetadata {
     shortTitle?: string;
@@ -54,9 +55,9 @@ export async function importArticles(path: string): Promise<Article[]> {
 export async function latestArticles(path: string, currentFilename: string, count: number = 3): Promise<Article[]> {
     const articles = await importArticles(path);
     return articles
-            .filter((a) => a.filename !== currentFilename)
-            .sort((a, b) => b.metadata.creationDate.getTime() - a.metadata.creationDate.getTime())
-            .slice(0, count)
+        .filter((a) => a.filename !== currentFilename)
+        .sort((a, b) => b.metadata.creationDate.getTime() - a.metadata.creationDate.getTime())
+        .slice(0, count);
 }
 
 /**
@@ -73,7 +74,12 @@ export async function convertMarkdown(path: string): Promise<Article> {
             .use(remarkParse)
             .use(remarkRehype)
             .use(htmlify)
-            .use(rehypePrettyCode, { theme: 'one-dark-pro' })
+            .use(rehypePrettyCode, {
+                theme: {
+                    light: 'catppuccin-latte',
+                    dark: 'one-dark-pro'
+                }
+            })
             .use(rehypeStringify)
             .process(body)
     ).value.toString();
@@ -89,39 +95,6 @@ export async function convertMarkdown(path: string): Promise<Article> {
         html: transform(html),
         summary: generateSummary(html)
     };
-}
-
-/**
- * Transforms the HTML with more features.
- *
- * **INTERNAL, ONLY EXPORTED FOR TESTING.**
- */
-export function transform(html: string): string {
-    return addTargetBlank(addSlugifiedId(html));
-}
-
-/**
- * Adds a slugified id to the h2 heading, so you can navigate to it.
- * @param html The HTML in which to modify the h2 heading.
- * @returns The modified HTML.
- */
-export function addSlugifiedId(html: string): string {
-    return html.replace(/<h2([^>]*?)>(.*?)<\/h2>/gis, (match, attributes, content) => {
-        const id = slugify(content.trim());
-        return `<h2 id="${id}"${attributes}>${content}</h2>`;
-    });
-}
-
-/**
- * Adds `target="_blank"` to all the anchor tags of the given HTML.
- * @param html The HTML in which to modify the anchor tags.
- * @returns The modified HTML.
- */
-export function addTargetBlank(html: string): string {
-    return html.replace(/<a([^>]+)>/g, (match) => {
-        const hasTargetBlank = match.includes('target="_blank"');
-        return hasTargetBlank ? match : match.replace(/>/, ' target="_blank">');
-    });
 }
 
 export type Summary = { heading: string; slug: string }[];

@@ -26,13 +26,13 @@ d'autres frameworks tels que NextJS ou NuxtJS, ou même en vanilla JS.
 
 D'abord, initialisons le fichier `package.json`.
 
-```bash
+```bash title="Terminal"
 npm init -y
 ```
 
 Ensuite, modifions/ajoutons ce qui suit dans le fichier `package.json`.
 
-```json {5-9} showLineNumbers
+```json {5-9} showLineNumbers title="package.json"
 {
     "name": "server",
     "version": "1.0.0",
@@ -50,7 +50,7 @@ Ensuite, modifions/ajoutons ce qui suit dans le fichier `package.json`.
 
 Puis, installons les dépendances nécessaires pour notre serveur.
 
-```bash
+```bash title="Terminal"
 npm install cors dotenv express socket.io
 npm install --save-dev @types/node @types/express ts-node typescript nodemon
 ```
@@ -66,7 +66,7 @@ Créons un fichier `tsconfig.json` manuellement ou avec `npx tsc --init` et
 modifions son contenu avec ce qui suit. N'hésite pas à ajuster quoi que ce
 soit.
 
-```json showLineNumbers
+```json showLineNumbers title="tsconfig.json"
 {
     "compilerOptions": {
         "target": "es2016",
@@ -94,7 +94,7 @@ soit.
 Maintenant, ajoutons une fichier `ts-loader.js` à la racine de l'application
 express. Cela nous permettra de ne pas recontrer de problèmes avec esm et ts.
 
-```js showLineNumbers
+```js showLineNumbers title="ts-loader.js"
 import { register } from 'node:module';
 import { pathToFileURL } from 'node:url';
 
@@ -103,14 +103,14 @@ register('ts-node/esm', pathToFileURL('./'));
 
 Ajoute un fichier `.env` et remplis-le avec les ports que t'utiliseras.
 
-```.env showLineNumbers
+```env showLineNumbers title=".env"
 FRONTEND_URL=localhost:5174
 SERVER_PORT=4000
 ```
 
 Ensuite, définissons notre fichier principal `src/app.ts`.
 
-```ts showLineNumbers
+```ts showLineNumbers title="app.ts"
 import express from "express";
 import dotenv from 'dotenv';
 import cors from "cors";
@@ -140,7 +140,7 @@ app.listen(process.env.SERVER_PORT, () => {
 Enfin, démarre l'application et accéde à l'URL du serveur. Tu seras accueilli
 par Express.
 
-```bash
+```bash title="Terminal"
 npm start
 ```
 
@@ -152,7 +152,7 @@ Maintenant, ajoutons SocketIO dans notre serveur et dans notre frontend.
 
 Adaptons notre application Express avec ce qui suit.
 
-```ts {4-5,12-15,22-35} showLineNumbers
+```ts {4-5,12-15,22-35} showLineNumbers title="app.ts"
 import express from "express";
 import dotenv from 'dotenv';
 import cors from "cors";
@@ -198,14 +198,14 @@ connexions et déconnexions.
 
 Commençons par installer le module client pour `socket.io`.
 
-```bash
+```bash title="Terminal"
 npm install socket.io-client
 ```
 
 Ensuite, créons un fichier `socket.ts` à partir duquel nous importerons notre
 socket.
 
-```ts showLineNumbers
+```ts showLineNumbers title="socket.ts"
 import { Socket, io } from "socket.io-client";
 
 /** Le client socket. */
@@ -233,7 +233,7 @@ Maintenant, importons la fonction `initSocket` dans la page et appelons-la
 après que l'application soit montée sur le navigateur. Adapte-le à ton
 frontend.
 
-```svelte showLineNumbers
+```svelte showLineNumbers title="+page.svelte"
 <script lang="ts">
     import { initSocket } from "$lib/socket";
     import { onMount } from "svelte";
@@ -266,7 +266,7 @@ message et le diffuser à tout le monde, y compris nous-mêmes. Habituellement,
 tu connecteras une base de données pour stocker les messages puisqu’ils
 disparaîtront après un rechargement de page.
 
-```ts showLineNumbers {31-34}
+```ts showLineNumbers {31-34} title="app.ts"
 import express from "express";
 import dotenv from 'dotenv';
 import cors from "cors";
@@ -309,7 +309,7 @@ io.on("connection", (socket) => {
 Mettons à jour notre page pour envoyer des messages, les recevoir et les
 afficher.
 
-```svelte showLineNumbers {5-6,11-14,17-21,25-30}
+```svelte showLineNumbers {5-6,11-14,17-21,25-30} title="+page.svelte"
 <script lang="ts">
     import { initSocket, socket } from "$lib/socket";
     import { onMount } from "svelte";

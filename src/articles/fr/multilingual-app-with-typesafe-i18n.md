@@ -11,7 +11,7 @@ bannerAlt: Image pour Prise en charge de plusieurs langues dans SvelteKit
 
 Commençons par créer le project Sveltekit.
 
-```bash
+```bash title="Terminal"
 npm create svelte@latest multilingual-app
 ```
 
@@ -22,7 +22,7 @@ pas besoin pour ce projet. Sois libre d'en ajouter si nécessaire.
 
 Entre dans le dossier et installe les dépendances.
 
-```bash
+```bash title="Terminal"
 cd multilingual-app && npm install
 ```
 
@@ -32,14 +32,14 @@ Ajoute `typesafe-i18n` avec cette commande. Cela générera un fichier
 `.typesafe-i18n.json` à la racine du projet et un nouveau script sera ajouté
 dans le fichier `packaged.json`, nommé `typesafe-i18n`.
 
-```bash
+```bash title="Terminal"
 npx typesafe-i18n --setup-auto
 ```
 
 Ajoutons une langue de base dans notre fichier `.typesafe-i18n.json`. J'irai avec
 `en` mais n'hésite pas à en choisir une autre.
 
-```json showLineNumbers {4}
+```json showLineNumbers {4} title=".typesafe-i18n.json"
 {
     "adapter": "svelte",
     "$schema": "https://unpkg.com/typesafe-i18n@5.26.2/schema/typesafe-i18n.json",
@@ -51,7 +51,7 @@ Dans le fichier `svelte.config.js`, ajoutons un nouvel alias. Nous
 l'utiliserons pour accéder au dossier `i18n` depuis n'importe où, sans nous
 soucier des chemins relatifs.
 
-```js showLineNumbers {9-11}
+```js showLineNumbers {9-11} title="svelte.config.js"
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -77,14 +77,14 @@ paramètres de langue de base et `de`. Tu peux le supprimer ou le remplacer par
 un autre paramètre de langue. Je vais le changer en `fr`. N'hésite pas à
 explorer à l'intérieur du dossier.
 
-```bash
+```bash title="Terminal"
 npm run typesafe-i18n
 ```
 
 Et exécute le serveur de développement `vite` pour afficher notre site web dans
 le navigateur.
 
-```bash
+```bash title="Terminal"
 npm run dev
 ```
 
@@ -94,7 +94,7 @@ Ajoutons quelques traductions. Dans le dossier de ta langue de base à
 l'intérieur de `i18n`, ajoute une clé pour la traduction et et sa valeur.
 Ensuite, effectue la même chose avec tes autres langues. Voici les miennes.
 
-```ts showLineNumbers
+```ts showLineNumbers title="i18n/en/index.ts"
 // en/index.ts
 const en = {
     hello: 'Hi ! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n'
@@ -103,7 +103,7 @@ const en = {
 export default en;
 ```
 
-```ts showLineNumbers
+```ts showLineNumbers title="i18n/fr/index.ts"
 // fr/index.ts
 const fr = {
     hello: 'Salut ! Merci de laisser une étoile si vous aimez ce projet: https://github.com/ivanhofer/typesafe-i18n'
@@ -116,7 +116,7 @@ export default fr;
 
 Ajoutons un fichier `utils.ts` dans le dossier `src` avec le contenu suivant.
 
-```ts showLineNumbers
+```ts showLineNumbers title="utils.ts"
 import { base } from '$app/paths';
 
 // e.g. https://mywebsite.com/en/blog/article-1 => /de/blog/article-1
@@ -140,7 +140,7 @@ export const getPathnameWithoutBase = (url: URL) => url.pathname.replace(REGEX_S
 
 Décommentons l'interface `Locals` dans `app.d.ts` et ajoutons ce qui suit.
 
-```ts showLineNumbers {4-7}
+```ts showLineNumbers {4-7} title="app.d.ts"
 declare global {
     namespace App {
         // interface Error {}
@@ -160,7 +160,7 @@ export {};
 Gérons les langues invalides en créant un nouveau fichier `lang.ts` à
 l'intérieur du dossier `src/params`.
 
-```ts showLineNumbers
+```ts showLineNumbers title="params/lang.ts"
 import type { ParamMatcher } from '@sveltejs/kit';
 import { isLocale } from '../i18n/i18n-util';
 
@@ -174,7 +174,7 @@ Et ajoute ceci dans `hooks.server.ts` (crée-le si nécessaire). Cela gérera la
 langue préférée, les langues invalides (en redirigeant vers la langue préférée)
 et ajoutera les fonctions de langue et de traduction dans la requête.
 
-```ts showLineNumbers
+```ts showLineNumbers title="hooks.server.ts"
 import { base } from '$app/paths';
 import type { Locales } from './i18n/i18n-types';
 import { detectLocale, i18n, isLocale } from './i18n/i18n-util';
@@ -221,7 +221,7 @@ const getPreferredLocale = ({ request }: RequestEvent) => {
 Maintenant, créons un fichier à la racine nommé `+layout.server.ts`, dans
 lequel nous renverrons la langue, extrait de `locals`.
 
-```ts showLineNumbers
+```ts showLineNumbers title="+layout.server.ts"
 import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = ({ locals: { locale } }) => {
@@ -232,7 +232,7 @@ export const load: LayoutServerLoad = ({ locals: { locale } }) => {
 Ensuite, chargeons les traductions dans notre fichier `+layout.ts`. Cela
 nous permettra d'accéder aux traductions depuis n'importe quelle route.
 
-```ts showLineNumbers
+```ts showLineNumbers title="+layout.ts"
 import { loadLocaleAsync } from '$i18n/i18n-util.async';
 import type { LayoutLoad } from './$types';
 
@@ -247,7 +247,7 @@ export const load: LayoutLoad = async ({ data: { locale } }) => {
 Enfin, dans ton fichier racine `+layout.svelte`, définissez la langue. Note que
 cela doit être effectué avant d'accéder à des traductions.
 
-```svelte showLineNumbers
+```svelte showLineNumbers title="+layout.svelte"
 <script lang="ts">
     import { setLocale } from '$i18n/i18n-svelte';
     import type { LayoutData } from './$types';
@@ -264,7 +264,7 @@ Maintenant, créons un dossier `[lang=lang]` dans `src/routes` et mettons-y
 notre page principale. Supprimons le contenu par défaut et affichons du texte
 personnalisé. `LL` est un store qui contient nos traductions.
 
-```svelte showLineNumbers
+```svelte showLineNumbers title="+page.svelte"
 <script lang="ts">
     import LL, { locale } from '$i18n/i18n-svelte';
 </script>
@@ -281,7 +281,7 @@ pour la changer.
 
 D'abord, ajoutons de nouvelles traductions pour les langues.
 
-```ts showLineNumbers {4-7}
+```ts showLineNumbers {4-7} title="i18n/en/index.ts"
 // en/index.ts
 const en = {
     hello: 'Hi ! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n',
@@ -292,7 +292,7 @@ const en = {
 } satisfies BaseTranslation;
 ```
 
-```ts showLineNumbers {4-7}
+```ts showLineNumbers {4-7} title="i18n/fr/index.ts"
 // fr/index.ts
 const fr = {
     hello: 'Salut ! Merci de laisser une étoile si vous aimez ce projet: https://github.com/ivanhofer/typesafe-i18n',
@@ -306,7 +306,7 @@ const fr = {
 Puis, adaptons notre fichier `+layout.svelte` à la racine du dossier
 `src/routes` pour y ajouter notre barre de navigation.
 
-```svelte showLineNumbers {3-38,45-49,51}
+```svelte showLineNumbers {3-38,45-49,51} title="+layout.svelte"
 <script lang="ts">
     import type { LayoutData } from './$types';
     import LL, { locale, setLocale } from '$i18n/i18n-svelte';
