@@ -104,7 +104,7 @@ export type Summary = { heading: string; slug: string }[];
  * @param html The HTML from which to generate the summary.
  * @returns A summary containing the headings and their slug equivalent.
  */
-export function generateSummary(html: string): Summary {
+function generateSummary(html: string): Summary {
     const summary: Summary = [];
     const regex = /<h2([^>]*?)>(.*?)<\/h2>/gis;
     let match;
