@@ -4,6 +4,7 @@ description: Une brève introduction à mon blog.
 creationDate: 2024-04-24
 banner: /article-images/blog.jpeg
 bannerAlt: Image pour Bonjour, Le Monde
+tags: ["personnel"]
 ---
 
 ## Introduction

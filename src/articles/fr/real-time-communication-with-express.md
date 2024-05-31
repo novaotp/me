@@ -5,6 +5,7 @@ description: Créons une application de messagerie, en utilisant SocketIO + Expr
 creationDate: 2024-05-08
 banner: /article-images/real-time-communication.webp
 bannerAlt: Image pour Communication en temps réel avec Express
+tags: ["express", "guide", "socket.io"]
 ---
 
 ## Une introduction au CTR

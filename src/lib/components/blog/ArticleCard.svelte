@@ -3,10 +3,11 @@
     import { base } from '$app/paths';
     import { locale } from '$i18n/i18n-svelte';
     import type { ArticleMetadata } from '$/lib/server/article';
+    import { mapTagToColor } from './utils';
 
     export let filename: string;
     export let metadata: ArticleMetadata;
-    $: ({ title, description, banner, bannerAlt, shortTitle, creationDate } = metadata);
+    $: ({ title, description, banner, bannerAlt, shortTitle, creationDate, tags } = metadata);
 </script>
 
 <button
@@ -19,6 +20,12 @@
         <img src="{banner}" alt="{bannerAlt}" class="w-full bg-center bg-cover bg-no-repeat" />
     </div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
+        <div class="relative w-full flex flex-wrap gap-2">
+            {#each tags as tag}
+                {@const colors = mapTagToColor(tag)}
+                <span class="relative px-3 py-1 {colors} rounded-full">#{tag}</span>
+            {/each}
+        </div>
         <h2 class="relative w-full text-start text-xl">{shortTitle ?? title}</h2>
         <time class="text-gray-500 dark:text-gray-400 text-sm">{creationDate.toLocaleDateString("fr-CH")}</time>
         <p class="text-justify text-gray-500 dark:text-gray-400 line-clamp-3">{description}</p>

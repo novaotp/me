@@ -19,6 +19,7 @@ export interface ArticleMetadata {
     creationDate: Date;
     banner: string;
     bannerAlt?: string;
+    tags: string[]
 }
 
 export interface Article {
