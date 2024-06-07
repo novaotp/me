@@ -2,7 +2,6 @@
     import { page } from '$app/stores';
     import LL from '$i18n/i18n-svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
-    import { onMount } from 'svelte';
     import type { PageServerData } from './$types';
     import { goto } from '$app/navigation';
 
@@ -37,7 +36,7 @@
 </svelte:head>
 
 <div class="relative w-full h-full flex justify-center items-start gap-40 pt-10">
-    <ul class="sticky top-0 left-0 flex flex-col pt-[120px] gap-2">
+    <ul class="hidden sticky top-0 left-0 2xl:flex flex-col pt-[120px] gap-2">
         <h2 class="text-xl mb-5">Tags</h2>
         <button
             class="relative w-full flex gap-5 {selectedTags.length === 0
