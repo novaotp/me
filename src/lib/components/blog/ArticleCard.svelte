@@ -16,9 +16,7 @@
            hover:scale-105 hover:shadow-[0_0_25px_0px_rgba(0,0,0,0.25)]
            dark:bg-zinc-700"
 >
-    <div class="relative w-full h-[200px] flex justify-center items-center overflow-hidden">
-        <img src="{banner}" alt="{bannerAlt}" class="w-full bg-center bg-cover bg-no-repeat" />
-    </div>
+    <div style="background-image: url('{base}{banner}');" class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"></div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
         <div class="relative w-full flex flex-wrap gap-2">
             {#each tags as tag}
