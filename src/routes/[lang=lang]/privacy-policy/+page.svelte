@@ -17,8 +17,8 @@
     <span>{$LL.privacyPolicyPage.banner.content()}</span>
     <a href="mailto:contact@sajidur.dev" class="underline">contact@sajidur.dev</a>.
 </Banner>
-<div class="relative mt-10 w-full flex justify-center items-start gap-40">
-    <aside class="sticky h-[calc(100%-7.5rem)] max-w-[400px] left-0 top-0 pt-20 flex flex-col gap-5 pb-5">
+<div class="relative mt-5 w-full flex justify-center items-start gap-20 2xl:gap-40">
+    <aside class="hidden xl:flex sticky h-[calc(100%-7.5rem)] max-w-[400px] left-0 top-0 pt-20 flex-col gap-5 pb-5">
         <span>{$LL.privacyPolicyPage.onThisPage()}</span>
         <ul class="flex flex-col gap-2">
             {#each data.summary as { heading, slug }}
@@ -33,7 +33,7 @@
             {/each}
         </ul>
     </aside>
-    <article id="privacy-policy" class="relative mt-10 w-full max-w-[680px] flex flex-col items-start">
+    <article id="privacy-policy" class="relative mt-10 w-full max-w-[760px] flex flex-col items-start px-10">
         {@html data.html}
     </article>
 </div>
