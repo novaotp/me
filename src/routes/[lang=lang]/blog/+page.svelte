@@ -40,8 +40,8 @@
         <h2 class="text-xl mb-5">Tags</h2>
         <button
             class="relative w-full flex gap-5 {selectedTags.length === 0
-                ? 'text-sky-300'
-                : 'text-gray-500'} rounded hover:text-sky-300 group"
+                ? 'dark:text-sky-300 text-indigo-700'
+                : 'text-gray-500'} rounded hover:dark:text-sky-300 hover:text-indigo-700 group"
             on:click={() => {
                 selectedTags = [];
                 goto($page.url.pathname);
@@ -49,23 +49,23 @@
         >
             <span
                 class="size-6 text-sm flex justify-center items-center {selectedTags.length === 0
-                    ? 'text-sky-300'
-                    : 'text-gray-500'} group-hover:text-sky-300 rounded-full"
+                    ? 'dark:text-sky-300 text-indigo-700'
+                    : 'text-gray-500'} group-hover:dark:text-sky-300 group-hover:text-indigo-700 rounded-full"
             >
                 {data.articles.length}
             </span>
             <span>All</span>
         </button>
         {#each data.tagsWithCount as [tag, count]}
-            {@const liColors = selectedTags.includes(tag) ? 'text-sky-300' : 'text-gray-500'}
-            {@const countColors = selectedTags.includes(tag) ? 'text-sky-300' : 'text-gray-500'}
+            {@const liColors = selectedTags.includes(tag) ? 'dark:text-sky-300 text-indigo-700' : 'text-gray-500'}
+            {@const countColors = selectedTags.includes(tag) ? 'dark:text-sky-300 text-indigo-700' : 'text-gray-500'}
             <li class="relative w-full">
                 <button
-                    class="relative w-full flex gap-5 {liColors} rounded hover:text-sky-300 group"
+                    class="relative w-full flex gap-5 {liColors} rounded hover:dark:text-sky-300 hover:text-indigo-700 group"
                     on:click={() => toggleTag(tag)}
                 >
                     <span
-                        class="size-6 text-sm flex justify-center items-center {countColors} group-hover:text-sky-300 rounded-full"
+                        class="size-6 text-sm flex justify-center items-center {countColors} group-hover:dark:text-sky-300 group-hover:text-indigo-700 rounded-full"
                     >
                         {count}
                     </span>
