@@ -1,18 +1,35 @@
 <script lang="ts">
     import IconChevronLeft from '@tabler/icons-svelte/IconChevronLeft.svelte';
+    import IconCopy from '@tabler/icons-svelte/IconCopy.svelte';
+    import IconCopyCheck from '@tabler/icons-svelte/IconCopyCheck.svelte';
     import { goto } from '$app/navigation';
     import LL, { locale } from '$i18n/i18n-svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
     import type { PageServerData } from './$types';
     import BackToTop from './BackToTop.svelte';
-    import { afterUpdate, onMount } from 'svelte';
-    import { customizeCodeBlocks } from './utils';
+    import { afterUpdate } from 'svelte';
+    import { addToast } from '$/lib/stores/toast';
 
     export let data: PageServerData;
     $: ({ metadata, html } = data.article);
 
     afterUpdate(() => {
-        customizeCodeBlocks();
+        document.querySelectorAll<HTMLButtonElement>('button.codeblock-copy-button').forEach(async (copyButton: HTMLButtonElement) => {
+            copyButton.addEventListener('click', () => {
+                if (navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(copyButton.getAttribute('data-content')!);
+                    addToast({ type: 'success', message: $LL.articlePage.copy.success() });
+                    copyButton.innerHTML = '';
+                    new IconCopyCheck({ target: copyButton });
+                    setTimeout(() => {
+                        copyButton.innerHTML = '';
+                        new IconCopy({ target: copyButton });
+                    }, 2000);
+                } else {
+                    addToast({ type: 'error', message: $LL.articlePage.copy.fail() });
+                }
+            });
+        });
     });
 </script>
 
@@ -70,7 +87,7 @@
         font-family: 'Cascadia Code', sans-serif;
     }
 
-    :global(div.blog-article span[data-highlighted-line]="") {
+    :global(div.blog-article span[data-highlighted-line]='') {
         background-color: rgba(200, 200, 255, 0.1);
     }
 

@@ -102,7 +102,11 @@ const fr = {
         back: 'Retour',
         summary: "Sommaire",
         postedAt: "Publié le",
-        latestArticles: "Récents Articles"
+        latestArticles: "Récents Articles",
+        copy: {
+            success: "Copié avec succès",
+            fail: "Échec de la copie"
+        }
     },
     contactPage: {
         meta: {

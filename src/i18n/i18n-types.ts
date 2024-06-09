@@ -265,6 +265,16 @@ type RootTranslation = {
 		 * R​é​c​e​n​t​s​ ​A​r​t​i​c​l​e​s
 		 */
 		latestArticles: string
+		copy: {
+			/**
+			 * C​o​p​i​é​ ​a​v​e​c​ ​s​u​c​c​è​s
+			 */
+			success: string
+			/**
+			 * É​c​h​e​c​ ​d​e​ ​l​a​ ​c​o​p​i​e
+			 */
+			fail: string
+		}
 	}
 	contactPage: {
 		meta: {
@@ -610,6 +620,16 @@ export type TranslationFunctions = {
 		 * Récents Articles
 		 */
 		latestArticles: () => LocalizedString
+		copy: {
+			/**
+			 * Copié avec succès
+			 */
+			success: () => LocalizedString
+			/**
+			 * Échec de la copie
+			 */
+			fail: () => LocalizedString
+		}
 	}
 	contactPage: {
 		meta: {

@@ -100,7 +100,11 @@ const en = {
         back: 'Back',
         summary: "Summary",
         postedAt: "Posted on the",
-        latestArticles: "Latest Articles"
+        latestArticles: "Latest Articles",
+        copy: {
+            success: "Copied successfully",
+            fail: "Failed to copy"
+        }
     },
     contactPage: {
         meta: {
