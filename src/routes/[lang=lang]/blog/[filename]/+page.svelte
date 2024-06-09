@@ -6,35 +6,51 @@
     import LL, { locale } from '$i18n/i18n-svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
     import type { PageServerData } from './$types';
-    import BackToTop from './BackToTop.svelte';
+    import BackToTop from '../../../../lib/components/blog/BackToTop.svelte';
     import { afterUpdate } from 'svelte';
     import { addToast } from '$/lib/stores/toast';
 
     export let data: PageServerData;
     $: ({ metadata, html } = data.article);
 
+    const ICON_CHECKED_MS = 3000;
+
     afterUpdate(() => {
+        function copyTextToClipboard(text: string): boolean {
+            if (navigator?.clipboard?.writeText) {
+                navigator.clipboard.writeText(text);
+                return true;
+            }
+
+            return false;
+        }
+
+        function swapIconAfterCopy(copyButton: HTMLButtonElement): void {
+            copyButton.innerHTML = '';
+            new IconCopyCheck({ target: copyButton });
+            setTimeout(() => {
+                copyButton.innerHTML = '';
+                new IconCopy({ target: copyButton });
+            }, ICON_CHECKED_MS);
+        }
+
         document.querySelectorAll<HTMLButtonElement>('button.codeblock-copy-button').forEach(async (copyButton: HTMLButtonElement) => {
-            copyButton.addEventListener('click', () => {
-                if (navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(copyButton.getAttribute('data-content')!);
-                    addToast({ type: 'success', message: $LL.articlePage.copy.success() });
-                    copyButton.innerHTML = '';
-                    new IconCopyCheck({ target: copyButton });
-                    setTimeout(() => {
-                        copyButton.innerHTML = '';
-                        new IconCopy({ target: copyButton });
-                    }, 2000);
-                } else {
-                    addToast({ type: 'error', message: $LL.articlePage.copy.fail() });
+            copyButton.addEventListener('click', async () => {
+                const copied = copyTextToClipboard(copyButton.getAttribute('data-content')!);
+
+                if (!copied) {
+                    return addToast({ type: 'error', message: $LL.articlePage.copy.fail() });
                 }
+
+                addToast({ type: 'success', message: $LL.articlePage.copy.success() });
+                swapIconAfterCopy(copyButton);
             });
         });
     });
 </script>
 
 <svelte:head>
-    <title>{metadata.shortTitle ?? metadata.title} - Sajidur Rahman</title>
+    <title>{metadata.title} - Sajidur Rahman</title>
     <meta name="description" content={metadata.description} />
 </svelte:head>
 

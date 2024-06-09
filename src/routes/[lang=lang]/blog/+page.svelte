@@ -79,7 +79,7 @@
         <p class="w-full text-center text-gray-500 dark:text-gray-400">{$LL.blogPage.summary()}</p>
         <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-10">
             {#each data.articles as { metadata, filename }}
-                {#if selectedTags.length === 0 || metadata.tags.some((t) => selectedTags.includes(t))}
+                {#if selectedTags.length === 0 || selectedTags.every((t) => metadata.tags.includes(t))}
                     <ArticleCard {metadata} {filename} />
                 {/if}
             {/each}

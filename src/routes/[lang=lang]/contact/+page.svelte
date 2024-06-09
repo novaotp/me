@@ -2,7 +2,6 @@
     import Input from '$lib/components/contact/Input.svelte';
     import Text from '$lib/components/contact/Text.svelte';
     import emailjs from '@emailjs/browser';
-    /** @ts-expect-error A weird issue arises where SvelteKit cannot find the env variable, even if it's there and works */
     import { PUBLIC_EMAILJS_ACCOUNT_PUBLIC_KEY as API_KEY } from '$env/static/public';
     import { addToast } from '$lib/stores/toast';
     import LL from '$i18n/i18n-svelte';

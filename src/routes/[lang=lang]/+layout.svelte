@@ -1,14 +1,13 @@
 <script lang="ts">
-    import ToastContainer from '$lib/components/shared/Toast/ToastContainer.svelte';
-    import Navbar from '$lib/components/shared/Navbar/Navbar.svelte';
-    import NavPage from '$lib/components/shared/Navbar/NavPage.svelte';
+    import ToastContainer from '$/lib/components/shared/toast/ToastContainer.svelte';
+    import Navbar from '$/lib/components/shared/navbar/Navbar.svelte';
+    import NavPage from '$/lib/components/shared/navbar/NavPage.svelte';
     import LL, { locale } from '$i18n/i18n-svelte';
     import IconCopyright from '@tabler/icons-svelte/IconCopyright.svelte';
     import { constructUrl } from '$lib/utils/construct-url';
-    import LanguageSelect from './LanguageSelect.svelte';
+    import LanguageSelect from '$/lib/components/shared/footer/LanguageSelect.svelte';
     import type { LayoutServerData } from './$types';
-    import ThemeSwitch from './ThemeSwitch.svelte';
-    import { goto } from '$app/navigation';
+    import ThemeSwitch from '$components/shared/footer/ThemeSwitch.svelte';
 
     export let data: LayoutServerData;
 
@@ -22,9 +21,9 @@
 <NavPage bind:show />
 <Navbar bind:show />
 <ToastContainer />
-<main class="relative w-full min-h-[calc(100%-7.5rem)] flex-grow flex justify-center items-center flex-col">
+<div class="relative w-full min-h-[calc(100%-7.5rem)] flex-grow flex justify-center items-center flex-col">
     <slot />
-</main>
+</div>
 <footer class="relative flex flex-col justify-center items-center p-10 gap-10 mt-10 bg-gray-900 dark:bg-zinc-900 text-white">
     <div class="w-full sm:w-auto md:flex-row flex flex-col items-start sm:items-center md:items-start gap-10 md:gap-20">
         <div class="w-full flex flex-col sm:flex-row gap-10 sm:gap-20 justify-between">
