@@ -5,19 +5,10 @@ export async function load({ locals: { locale } }) {
     const articles = await importArticles(`./src/articles/${locale}/`);
     const sortedArticles = articles.sort((a, b) => b.metadata.creationDate.getTime() - a.metadata.creationDate.getTime());
 
-    const tagsWithCount: Record<string, number> = {};
+    const duplicateCategories = sortedArticles.reduce((acc, curr) => [...acc, curr.metadata.category], [] as string[]);
+    const uniqueCategories = Array.from(new Set(duplicateCategories));
 
-    sortedArticles.forEach(article => {
-        article.metadata.tags.forEach(tag => {
-            if (Object.keys(tagsWithCount).includes(tag)) {
-                tagsWithCount[tag]++;
-            } else {
-                tagsWithCount[tag] = 1;
-            }
-        })
-    });
-
-    return { articles: sortedArticles, tagsWithCount: Object.entries(tagsWithCount) };
+    return { articles: sortedArticles, categories: uniqueCategories };
 }
 
 export const entries: EntryGenerator = () => {

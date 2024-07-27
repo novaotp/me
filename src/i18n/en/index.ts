@@ -94,7 +94,12 @@ const en = {
             title: 'Blog - Sajidur Rahman',
             description: "Unlock the Power of Modern Web Dev with clear guides on SvelteKit, Tailwind CSS, PostgreSQL, and more! Learn essential skills to build amazing websites. Start your journey today!"
         },
-        summary: "Here, you'll find articles I've written."
+        summary: "Here, you'll find articles I've written.",
+        categories: {
+            all: "All",
+            personal: "Personal",
+            guide: "Guide"
+        }
     },
     articlePage: {
         back: 'Back',

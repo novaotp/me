@@ -18,8 +18,8 @@ export interface ArticleMetadata {
     description: string;
     creationDate: Date;
     banner: string;
-    bannerAlt?: string;
-    tags: string[]
+    bannerAlt: string;
+    category: string;
 }
 
 export interface Article {

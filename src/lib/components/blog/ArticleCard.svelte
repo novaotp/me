@@ -8,7 +8,7 @@
 
     export let filename: string;
     export let metadata: ArticleMetadata;
-    $: ({ title, description, banner, bannerAlt, creationDate, tags } = metadata);
+    $: ({ title, description, banner, bannerAlt, creationDate, category } = metadata);
 </script>
 
 <button
@@ -17,14 +17,8 @@
            hover:scale-105 hover:shadow-[0_0_25px_0px_rgba(0,0,0,0.25)]
            dark:bg-zinc-700"
 >
-    <div style="background-image: url('{base}{banner}');" class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"></div>
+    <div role="img" style="background-image: url('{base}{banner}');" class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"></div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
-        <div class="relative w-full flex flex-wrap gap-2">
-            {#each tags as tag}
-                {@const colors = mapTagToColor(tag)}
-                <span class="relative px-3 py-1 {colors} rounded-full">#{tag}</span>
-            {/each}
-        </div>
         <h2 class="relative w-full text-start text-xl">{title}</h2>
         <time class="text-gray-500 dark:text-gray-400 text-sm">{creationDate.toLocaleDateString("fr-CH")}</time>
         <p class="text-justify text-gray-500 dark:text-gray-400 line-clamp-3">{description}</p>

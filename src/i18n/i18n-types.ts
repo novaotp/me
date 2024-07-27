@@ -247,6 +247,20 @@ type RootTranslation = {
 		 * I​c​i​,​ ​v​o​u​s​ ​t​r​o​u​v​e​r​e​z​ ​q​u​e​l​q​u​e​s​ ​a​r​t​i​c​l​e​s​ ​q​u​e​ ​j​'​a​i​ ​r​é​d​i​g​é​s​.
 		 */
 		summary: string
+		categories: {
+			/**
+			 * T​o​u​t
+			 */
+			all: string
+			/**
+			 * P​e​r​s​o​n​n​e​l
+			 */
+			personal: string
+			/**
+			 * G​u​i​d​e
+			 */
+			guide: string
+		}
 	}
 	articlePage: {
 		/**
@@ -602,6 +616,20 @@ export type TranslationFunctions = {
 		 * Ici, vous trouverez quelques articles que j'ai rédigés.
 		 */
 		summary: () => LocalizedString
+		categories: {
+			/**
+			 * Tout
+			 */
+			all: () => LocalizedString
+			/**
+			 * Personnel
+			 */
+			personal: () => LocalizedString
+			/**
+			 * Guide
+			 */
+			guide: () => LocalizedString
+		}
 	}
 	articlePage: {
 		/**
