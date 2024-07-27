@@ -3,7 +3,7 @@ import { writable } from "svelte/store";
 export type Theme = "light" | "dark";
 
 /** The current theme. */
-export const theme = writable<Theme>(localStorage.theme);
+export const theme = writable<Theme>("light");
 
 /**
  * Returns the system's preference.

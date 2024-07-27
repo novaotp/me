@@ -1,5 +1,5 @@
-import type { Locales } from "$/i18n/i18n-types";
-import { privacyPolicy } from "$/lib/server/privacy-policy";
+import type { Locales } from "$i18n/i18n-types";
+import { privacyPolicy } from "$lib/server/privacy-policy";
 import type { EntryGenerator, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ params }) => {

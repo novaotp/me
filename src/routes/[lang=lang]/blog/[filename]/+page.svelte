@@ -8,7 +8,7 @@
     import type { PageServerData } from './$types';
     import BackToTop from '../../../../lib/components/blog/BackToTop.svelte';
     import { afterUpdate } from 'svelte';
-    import { addToast } from '$/lib/stores/toast';
+    import { addToast } from '$lib/stores/toast';
 
     export let data: PageServerData;
     $: ({ metadata, html } = data.article);

@@ -1,4 +1,4 @@
-import type { Locales } from "$/i18n/i18n-types";
+import type { Locales } from "$i18n/i18n-types";
 import { getPathnameWithoutBase, replaceLocaleInUrl } from ".";
 
 describe("Checks that utils for manipulating the locale work correctly", () => {

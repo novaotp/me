@@ -1,11 +1,11 @@
 <script lang="ts">
-    import ToastContainer from '$/lib/components/shared/toast/ToastContainer.svelte';
-    import Navbar from '$/lib/components/shared/navbar/Navbar.svelte';
-    import NavPage from '$/lib/components/shared/navbar/NavPage.svelte';
+    import ToastContainer from '$lib/components/shared/toast/ToastContainer.svelte';
+    import Navbar from '$lib/components/shared/navbar/Navbar.svelte';
+    import NavPage from '$lib/components/shared/navbar/NavPage.svelte';
     import LL, { locale } from '$i18n/i18n-svelte';
     import IconCopyright from '@tabler/icons-svelte/IconCopyright.svelte';
     import { constructUrl } from '$lib/utils/construct-url';
-    import LanguageSelect from '$/lib/components/shared/footer/LanguageSelect.svelte';
+    import LanguageSelect from '$lib/components/shared/footer/LanguageSelect.svelte';
     import type { LayoutServerData } from './$types';
     import ThemeSwitch from '$components/shared/footer/ThemeSwitch.svelte';
 

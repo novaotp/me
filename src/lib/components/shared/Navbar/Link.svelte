@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { stripTrailingSlash } from '$/lib/utils/strip-trailing-slash';
+    import { stripTrailingSlash } from '$lib/utils/strip-trailing-slash';
     import { base } from '$app/paths';
     import { page } from '$app/stores';
     import { locale } from '$i18n/i18n-svelte';

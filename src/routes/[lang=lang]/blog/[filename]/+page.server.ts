@@ -1,5 +1,5 @@
 import type { EntryGenerator } from './$types';
-import { convertMarkdown, importArticles, latestArticles } from '$/lib/server/article';
+import { convertMarkdown, importArticles, latestArticles } from '$lib/server/article';
 import { locales } from '$i18n/i18n-util';
 
 export async function load({ params, locals: { locale } }) {

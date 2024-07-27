@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { theme, switchTheme, type Theme } from "$/lib/stores/theme";
+    import { theme, switchTheme, type Theme } from "$lib/stores/theme";
     import type { ChangeEventHandler } from "svelte/elements";
 
     const _switchTheme: ChangeEventHandler<HTMLInputElement> = (event) => {

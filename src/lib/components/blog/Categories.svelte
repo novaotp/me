@@ -1,6 +1,6 @@
 <script lang="ts">
-    import LL from "$/i18n/i18n-svelte";
-    import { changeSearchParams } from "$/lib/utils/change-search-params";
+    import LL from "$i18n/i18n-svelte";
+    import { changeSearchParams } from "$lib/utils/change-search-params";
     import { page } from "$app/stores";
 
     export let categories: string[];

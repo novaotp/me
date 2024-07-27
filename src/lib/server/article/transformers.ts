@@ -1,4 +1,4 @@
-import { slugify } from '$/lib/utils/slugify';
+import { slugify } from '$lib/utils/slugify';
 
 type HTMLTransformer = (html: string) => string;
 

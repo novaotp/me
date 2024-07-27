@@ -1,9 +1,8 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
     import { locale } from '$i18n/i18n-svelte';
-    import type { ArticleMetadata } from '$/lib/server/article';
-    import { mapTagToColor } from './utils';
-    import { constructUrl } from '$/lib/utils/construct-url';
+    import type { ArticleMetadata } from '$lib/server/article';
+    import { constructUrl } from '$lib/utils/construct-url';
     import { base } from '$app/paths';
 
     export let filename: string;

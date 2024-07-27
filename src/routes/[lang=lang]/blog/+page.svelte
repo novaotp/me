@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import LL from '$i18n/i18n-svelte';
-    import Categories from '$/lib/components/blog/Categories.svelte';
+    import Categories from '$lib/components/blog/Categories.svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
     import type { PageServerData } from './$types';
 

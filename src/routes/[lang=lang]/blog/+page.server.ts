@@ -1,4 +1,4 @@
-import { importArticles } from '$/lib/server/article';
+import { importArticles } from '$lib/server/article';
 import type { EntryGenerator } from './$types';
 
 export async function load({ locals: { locale } }) {
