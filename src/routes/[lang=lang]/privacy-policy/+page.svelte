@@ -1,6 +1,6 @@
 <script lang="ts">
     import LL from '$i18n/i18n-svelte';
-    import Banner from '$lib/components/shared/banner/Banner.svelte';
+    import Banner from '$lib/components/shared/Banner/Banner.svelte';
     import type { PageServerData } from './$types';
 
     export let data: PageServerData;
