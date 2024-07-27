@@ -6,7 +6,7 @@
     import LL, { locale } from '$i18n/i18n-svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
     import type { PageServerData } from './$types';
-    import BackToTop from '../../../../lib/components/blog/BackToTop.svelte';
+    import BackToTop from '$lib/components/blog/BackToTop.svelte';
     import { afterUpdate } from 'svelte';
     import { addToast } from '$lib/stores/toast';
 

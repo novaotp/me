@@ -1,5 +1,5 @@
 <script lang="ts">
-    import ToastContainer from '$lib/components/shared/toast/ToastContainer.svelte';
+    import ToastContainer from '$lib/components/shared/Toast/ToastContainer.svelte';
     import Navbar from '$lib/components/shared/navbar/Navbar.svelte';
     import NavPage from '$lib/components/shared/navbar/NavPage.svelte';
     import LL, { locale } from '$i18n/i18n-svelte';
