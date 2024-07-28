@@ -20,7 +20,7 @@
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
         <div class="flex gap-3 items-center">
             <time class="text-gray-400 text-sm">{creationDate.toLocaleDateString($locale)}</time>
-            <div class="h-full w-[1px] bg-gray-400 dark:bg-gray-500"></div>
+            <div class="h-5 w-[1px] bg-gray-400 dark:bg-gray-500"></div>
             <time class="text-blue-700 dark:text-sky-300 text-sm">{$LL.blogPage.readTime(readTime).toUpperCase()}</time>
         </div>
         <h2 class="relative w-full text-start text-xl">{title}</h2>
