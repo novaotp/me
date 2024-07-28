@@ -1,13 +1,13 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
-    import { locale } from '$i18n/i18n-svelte';
+    import LL, { locale } from '$i18n/i18n-svelte';
     import type { ArticleMetadata } from '$lib/server/article';
     import { constructUrl } from '$lib/utils/construct-url';
     import { base } from '$app/paths';
 
     export let filename: string;
     export let metadata: ArticleMetadata;
-    $: ({ title, description, banner, bannerAlt, creationDate, category } = metadata);
+    $: ({ title, description, banner, creationDate, readTime } = metadata);
 </script>
 
 <button
@@ -18,8 +18,12 @@
 >
     <div role="img" style="background-image: url('{base}{banner}');" class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"></div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
+        <div class="flex gap-3 items-center">
+            <time class="text-gray-400 text-sm">{creationDate.toLocaleDateString($locale)}</time>
+            <div class="h-full w-[1px] bg-gray-400 dark:bg-gray-500"></div>
+            <time class="text-blue-700 dark:text-sky-300 text-sm">{$LL.blogPage.readTime(readTime).toUpperCase()}</time>
+        </div>
         <h2 class="relative w-full text-start text-xl">{title}</h2>
-        <time class="text-gray-500 dark:text-gray-400 text-sm">{creationDate.toLocaleDateString("fr-CH")}</time>
         <p class="text-justify text-gray-500 dark:text-gray-400 line-clamp-3">{description}</p>
     </div>
 </button>

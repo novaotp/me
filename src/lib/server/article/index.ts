@@ -20,6 +20,8 @@ export interface ArticleMetadata {
     banner: string;
     bannerAlt: string;
     category: string;
+    /** The time it takes to read the article in minutes. */
+    readTime: number;
 }
 
 export interface Article {
@@ -34,6 +36,9 @@ export interface Article {
     /** The article's summary. */
     summary: Summary;
 }
+
+/** The number of words an adult can read in a minute. */
+const WORDS_PER_MIN = 200;
 
 /**
  * Imports all the articles in the given path.
@@ -92,7 +97,10 @@ export async function convertMarkdown(path: string): Promise<Article> {
             .at(-1)!
             .split('.')
             .at(0)!,
-        metadata: attributes,
+        metadata: {
+            ...attributes,
+            readTime: Math.ceil(countWords(html) / WORDS_PER_MIN)
+        },
         html: transform(html),
         summary: generateSummary(html)
     };
@@ -118,4 +126,12 @@ function generateSummary(html: string): Summary {
     }
 
     return summary;
+}
+
+/** Counts the number of words in an HTML string. */
+function countWords(html: string): number {
+    const textContent = html.replace(/<[^>]*>/g, ' ');
+    const words = textContent.trim().split(/\s+/);
+
+    return words.filter(word => word.length > 0).length;
 }
