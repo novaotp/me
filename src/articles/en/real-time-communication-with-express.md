@@ -5,7 +5,7 @@ description: Let's create a chat app, using SocketIO and Express for our backend
 creationDate: 2024-05-08
 banner: /article-images/real-time-communication.webp
 bannerAlt: Real-Time Communication Image
-tags: ["express", "guide", "socket.io"]
+category: guide
 ---
 
 ## An introduction to RTC

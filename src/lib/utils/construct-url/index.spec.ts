@@ -1,4 +1,4 @@
-import type { Locales } from "$/i18n/i18n-types";
+import type { Locales } from "$i18n/i18n-types";
 import { base } from "$app/paths";
 import { constructUrl } from ".";
 

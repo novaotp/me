@@ -1,11 +1,10 @@
 <script lang="ts">
     import IconArrowRight from '@tabler/icons-svelte/IconArrowRight.svelte';
     import IconMenu from '@tabler/icons-svelte/IconMenu.svelte';
-
     import { page } from '$app/stores';
     import LL, { locale } from '$i18n/i18n-svelte';
     import { base } from '$app/paths';
-    import { stripTrailingSlash } from '$/lib/utils/strip-trailing-slash';
+    import { stripTrailingSlash } from '$lib/utils/strip-trailing-slash';
     import type { Page } from '@sveltejs/kit';
 
     export let show: boolean;

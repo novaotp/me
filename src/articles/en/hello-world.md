@@ -4,7 +4,7 @@ description: An brief introduction to my blog.
 creationDate: 2024-04-24
 banner: /article-images/blog.jpeg
 bannerAlt: Image for Hello, World
-tags: ["personal"]
+category: personal
 ---
 
 ## Introduction

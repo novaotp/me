@@ -5,7 +5,7 @@ description: In this post, we'll cover how to set up typesafe-i18n in a SvelteKi
 creationDate: 2024-04-27
 banner: /article-images/multilingual.jpg
 bannerAlt: Multi-lingual support image
-tags: ["sveltekit", "guide"]
+category: guide
 ---
 
 ## Create the SvelteKit project

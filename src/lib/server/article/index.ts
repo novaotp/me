@@ -8,8 +8,8 @@ import htmlify from 'rehype-stringify';
 import { dev } from '$app/environment';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
-import { stripTrailingSlash } from '$/lib/utils/strip-trailing-slash';
-import { slugify } from '$/lib/utils/slugify';
+import { stripTrailingSlash } from '$lib/utils/strip-trailing-slash';
+import { slugify } from '$lib/utils/slugify';
 import { transform } from './transformers';
 
 export interface ArticleMetadata {
@@ -18,8 +18,8 @@ export interface ArticleMetadata {
     description: string;
     creationDate: Date;
     banner: string;
-    bannerAlt?: string;
-    tags: string[]
+    bannerAlt: string;
+    category: string;
 }
 
 export interface Article {

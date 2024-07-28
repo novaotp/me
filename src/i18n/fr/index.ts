@@ -96,13 +96,22 @@ const fr = {
             title: 'Blog - Sajidur Rahman',
             description: "Libérez la puissance du développement Web moderne avec des guides clairs sur SvelteKit, Tailwind CSS, PostgreSQL et plus encore ! Apprenez les compétences essentielles pour créer des sites Web incroyables. Commencez votre voyage aujourd'hui !"
         },
-        summary: "Ici, vous trouverez quelques articles que j'ai rédigés."
+        summary: "Ici, vous trouverez quelques articles que j'ai rédigés.",
+        categories: {
+            all: "Tout",
+            personal: "Personnel",
+            guide: "Guide"
+        }
     },
     articlePage: {
         back: 'Retour',
         summary: "Sommaire",
         postedAt: "Publié le",
-        latestArticles: "Récents Articles"
+        latestArticles: "Récents Articles",
+        copy: {
+            success: "Copié avec succès",
+            fail: "Échec de la copie"
+        }
     },
     contactPage: {
         meta: {

@@ -5,7 +5,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import htmlify from 'rehype-stringify';;
 import rehypeStringify from 'rehype-stringify';
-import type { Locales } from '$/i18n/i18n-types';
+import type { Locales } from '$i18n/i18n-types';
 import { slugify } from '../utils/slugify';
 
 /**
