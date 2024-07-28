@@ -101,12 +101,13 @@ const fr = {
             all: "Tout",
             personal: "Personnel",
             guide: "Guide"
-        }
+        },
+        readTime: "{0} min de lecture"
     },
     articlePage: {
         back: 'Retour',
         summary: "Sommaire",
-        postedAt: "Publié le",
+        postedAt: "Publié le {0}",
         latestArticles: "Récents Articles",
         copy: {
             success: "Copié avec succès",

@@ -99,12 +99,13 @@ const en = {
             all: "All",
             personal: "Personal",
             guide: "Guide"
-        }
+        },
+        readTime: "{0} min read"
     },
     articlePage: {
         back: 'Back',
         summary: "Summary",
-        postedAt: "Posted on the",
+        postedAt: "Published on {0}",
         latestArticles: "Latest Articles",
         copy: {
             success: "Copied successfully",

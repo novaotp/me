@@ -61,9 +61,15 @@
     </button>
     <article class="relative w-full flex flex-col justify-start items-start gap-5 text-justify">
         <div class="relative w-full flex flex-col justify-start items-start gap-5">
+            <div class="flex gap-3 items-center">
+                <time class="text-sm">
+                    {$LL.articlePage.postedAt(metadata.creationDate.toLocaleDateString($locale, { day: "numeric", month: "long", year: "numeric" }))}
+                </time>
+                <div class="h-5 w-[1px] bg-gray-500"></div>
+                <time class="text-blue-700 dark:text-sky-300 text-sm">{$LL.blogPage.readTime(metadata.readTime).toUpperCase()}</time>
+            </div>
             <h1 class="text-3xl font-semibold">{metadata.title}</h1>
             <p>{metadata.description}</p>
-            <span class="text-sm rounded text-gray-500">{$LL.articlePage.postedAt()} {metadata.creationDate.toLocaleDateString('fr-CH')}</span>
             <img src={metadata.banner} alt={metadata.bannerAlt ?? metadata.shortTitle ?? metadata.title} class="w-full" />
         </div>
         <aside class="flex flex-col gap-5">
