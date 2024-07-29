@@ -117,8 +117,15 @@ const en = {
             title: 'Contact - Sajidur Rahman',
             description: "Ready to Collaborate? Let's chat! Use our convenient contact form to reach out today."
         },
-        letsWorkTogether: "Let's start a project together",
-        completeTheForm: 'Complete the form below to contact me.',
+        title: "Let's start a project together",
+        content: {
+            email: "Send an email at",
+            or: "or",
+            form: "Complete the form below to contact me."
+        },
+        email: {
+            subject: "Contact Form - Sajidur Rahman"
+        },
         form: {
             notifications: {
                 fillAll: 'Please complete all fields.',

@@ -310,11 +310,27 @@ type RootTranslation = {
 		/**
 		 * C​o​m​m​e​n​ç​o​n​s​ ​u​n​ ​p​r​o​j​e​t​ ​e​n​s​e​m​b​l​e
 		 */
-		letsWorkTogether: string
-		/**
-		 * C​o​m​p​l​é​t​e​z​ ​l​e​ ​f​o​r​m​u​l​a​i​r​e​ ​c​i​-​d​e​s​s​o​u​s​ ​p​o​u​r​ ​m​e​ ​c​o​n​t​a​c​t​e​r​.
-		 */
-		completeTheForm: string
+		title: string
+		content: {
+			/**
+			 * E​n​v​o​y​e​z​ ​u​n​ ​e​m​a​i​l​ ​à​ ​l​'​a​d​r​e​s​s​e
+			 */
+			email: string
+			/**
+			 * o​u
+			 */
+			or: string
+			/**
+			 * C​o​m​p​l​é​t​e​z​ ​l​e​ ​f​o​r​m​u​l​a​i​r​e​ ​c​i​-​d​e​s​s​o​u​s​ ​p​o​u​r​ ​m​e​ ​c​o​n​t​a​c​t​e​r​.
+			 */
+			form: string
+		}
+		email: {
+			/**
+			 * F​o​r​m​u​l​a​i​r​e​ ​d​e​ ​c​o​n​t​a​c​t​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
+			 */
+			subject: string
+		}
 		form: {
 			notifications: {
 				/**
@@ -683,11 +699,27 @@ export type TranslationFunctions = {
 		/**
 		 * Commençons un projet ensemble
 		 */
-		letsWorkTogether: () => LocalizedString
-		/**
-		 * Complétez le formulaire ci-dessous pour me contacter.
-		 */
-		completeTheForm: () => LocalizedString
+		title: () => LocalizedString
+		content: {
+			/**
+			 * Envoyez un email à l'adresse
+			 */
+			email: () => LocalizedString
+			/**
+			 * ou
+			 */
+			or: () => LocalizedString
+			/**
+			 * Complétez le formulaire ci-dessous pour me contacter.
+			 */
+			form: () => LocalizedString
+		}
+		email: {
+			/**
+			 * Formulaire de contact - Sajidur Rahman
+			 */
+			subject: () => LocalizedString
+		}
 		form: {
 			notifications: {
 				/**
