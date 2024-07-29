@@ -119,8 +119,15 @@ const fr = {
             title: 'Contact - Sajidur Rahman',
             description: "Prêt à collaborer ? Discutons ! Utilisez notre formulaire de contact pratique pour nous contacter dès aujourd'hui."
         },
-        letsWorkTogether: 'Commençons un projet ensemble',
-        completeTheForm: 'Complétez le formulaire ci-dessous pour me contacter.',
+        title: 'Commençons un projet ensemble',
+        content: {
+            email: "Envoyez un email à l'adresse",
+            or: "ou",
+            form: "Complétez le formulaire ci-dessous pour me contacter."
+        },
+        email: {
+            subject: "Formulaire de contact - Sajidur Rahman"
+        },
         form: {
             notifications: {
                 fillAll: 'Veuillez compléter tous les champs.',

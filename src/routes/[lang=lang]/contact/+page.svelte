@@ -5,6 +5,7 @@
     import { PUBLIC_EMAILJS_ACCOUNT_PUBLIC_KEY as API_KEY } from '$env/static/public';
     import { addToast } from '$lib/stores/toast';
     import LL from '$i18n/i18n-svelte';
+    import IconExternalLink from "@tabler/icons-svelte/IconExternalLink.svelte";
 
     let name: string = '';
     let email: string = '';
@@ -50,8 +51,20 @@
 </svelte:head>
 
 <div class="relative w-full max-w-[980px] h-full flex flex-col justify-evenly items-center px-10 gap-10">
-    <h1 class="text-3xl font-medium text-center">{$LL.contactPage.letsWorkTogether()}</h1>
-    <p class="text-center text-sm xsm:text-base">{$LL.contactPage.completeTheForm()}</p>
+    <h1 class="text-3xl font-medium text-center">{$LL.contactPage.title()}</h1>
+    <div class="relative flex flex-col items-center gap-5">
+        <p class="text-center text-sm xsm:text-base min-[512px]:flex gap-1">
+            {$LL.contactPage.content.email()}
+            <a href="mailto:contact@sajidur.dev?subject={$LL.contactPage.email.subject()}" class="relative flex gap-1 justify-center items-center">
+                <span class="font-semibold">contact@sajidur.dev</span>
+                <IconExternalLink />
+            </a>
+        </p>
+        <span class="separator relative w-full text-center text-neutral-300 dark:text-neutral-500">
+            ou
+        </span>
+        <p class="text-center text-sm xsm:text-base">{$LL.contactPage.content.form()}</p>
+    </div>
     <form class="relative w-full flex flex-col justify-center items-center" on:submit|preventDefault={handleFormSubmission}>
         <div class="relative w-full flex flex-col gap-5 mb-5 sm:flex-row">
             <Input bind:value={name} placeholder={$LL.contactPage.form.fields.name.placeholder()} />
@@ -67,3 +80,25 @@
         </button>
     </form>
 </div>
+
+<style lang="postcss">
+    .separator::before {
+        @apply bg-neutral-300 dark:bg-neutral-500;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 1px;
+        width: 40%;
+    }
+
+    .separator::after {
+        @apply bg-neutral-300 dark:bg-neutral-500;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 1px;
+        width: 40%;
+    }
+</style>

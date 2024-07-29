@@ -8,6 +8,8 @@
     import LanguageSelect from '$lib/components/shared/footer/LanguageSelect.svelte';
     import type { LayoutServerData } from './$types';
     import ThemeSwitch from '$components/shared/footer/ThemeSwitch.svelte';
+    import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
+    import IconBrandLinkedin from "@tabler/icons-svelte/IconBrandLinkedin.svelte";
 
     export let data: LayoutServerData;
 
@@ -38,7 +40,7 @@
                 <h3 class="font-semibold text-xl">{$LL.footer.latestArticles()}</h3>
                 {#each data.latest as { filename, metadata } (filename)}
                     <a href={constructUrl($locale, `blog/${filename}`)}>
-                        {metadata.shortTitle ? metadata.shortTitle : metadata.title}
+                        {metadata.shortTitle ?? metadata.title}
                     </a>
                 {/each}
             </div>
@@ -54,7 +56,15 @@
             </div>
         </div>
     </div>
-    <div class="w-full flex flex-col justify-center items-center gap-2 mt-5">
+    <div class="flex gap-10">
+        <a href="https://www.github.com/novaotp" target="_blank">
+            <IconBrandGithub class="size-8" />
+        </a>
+        <a href="https://www.linkedin.com/in/sajidur-rahman-b495ba2b9" target="_blank">
+            <IconBrandLinkedin class="size-8" />
+        </a>
+    </div>
+    <div class="w-full flex flex-col justify-center items-center gap-2">
         <div class="w-full flex justify-center items-center gap-5">
             <IconCopyright />
             <span>{new Date().getFullYear()} - Sajidur Rahman</span>
