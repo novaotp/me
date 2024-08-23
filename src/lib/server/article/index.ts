@@ -40,6 +40,9 @@ export interface Article {
 /** The number of words an adult can read in a minute. */
 const WORDS_PER_MIN = 200;
 
+/** Relative to the root of the project. */
+export const CONTENT_DIR = "./content";
+
 /**
  * Imports all the articles in the given path.
  * @param path The path to the folder containing the articles.

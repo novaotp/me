@@ -1,8 +1,8 @@
-import { importArticles } from '$lib/server/article';
+import { CONTENT_DIR, importArticles } from '$lib/server/article';
 import type { EntryGenerator } from './$types';
 
 export async function load({ locals: { locale } }) {
-    const articles = await importArticles(`./src/articles/${locale}/`);
+    const articles = await importArticles(`${CONTENT_DIR}/${locale}/`);
     const sortedArticles = articles.sort((a, b) => b.metadata.creationDate.getTime() - a.metadata.creationDate.getTime());
 
     const duplicateCategories = sortedArticles.reduce((acc, curr) => [...acc, curr.metadata.category], [] as string[]);
