@@ -108,7 +108,7 @@ const surchargeAnchorTags: HTMLTransformer = (html) => {
 
         if (href && href.startsWith('https')) {
             return `
-            <a href="${href}"${attributes} target="_blank" class="relative inline-flex gap-2">
+            <a href="${href}"${attributes} rel="nofollow" target="_blank" class="relative inline-flex gap-2">
                 <span>${content}</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
