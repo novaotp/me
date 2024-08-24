@@ -41,7 +41,7 @@ export interface Article {
 const WORDS_PER_MIN = 200;
 
 /** Relative to the root of the project. */
-export const CONTENT_DIR = "./content";
+export const CONTENT_DIR = "./content/articles";
 
 /**
  * Imports all the articles in the given path.

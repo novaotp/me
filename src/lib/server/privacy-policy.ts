@@ -22,7 +22,7 @@ function addSlugifiedId(html: string): string {
 
 /** Imports the privacy policy based on the locale. */
 export async function privacyPolicy(locale: Locales) {
-    const file = fs.readFileSync(`./legal/${locale}/privacy-policy.md`, 'utf8');
+    const file = fs.readFileSync(`./content/legal/${locale}/privacy-policy.md`, 'utf8');
     const { body } = frontmatter(file);
 
     const html = (
