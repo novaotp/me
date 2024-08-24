@@ -61,7 +61,7 @@
             </a>
         </p>
         <span class="separator relative w-full text-center text-neutral-300 dark:text-neutral-500">
-            ou
+            {$LL.contactPage.content.or()}
         </span>
         <p class="text-center text-sm xsm:text-base">{$LL.contactPage.content.form()}</p>
     </div>
