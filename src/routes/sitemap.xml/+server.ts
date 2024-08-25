@@ -5,7 +5,7 @@ export async function GET({ url }) {
     const paths = [
         "/",
         "/work",
-        "contact",
+        "/contact",
         "/privacy-policy",
         "/blog",
         (await allCategories()).map(category => `/blog/${category}`),
