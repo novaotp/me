@@ -5,7 +5,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import htmlify from 'rehype-stringify';
-import { building, dev } from '$app/environment';
+import { dev } from '$app/environment';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
 import { slugify } from '$lib/utils/slugify';
@@ -117,7 +117,7 @@ export async function convertMarkdown(path: string): Promise<Article> {
     return {
         path: path,
         filename: path
-            .split((dev || building) ? '\\' : '/')
+            .split(dev ? '\\' : '/')
             .at(-1)!
             .split('.')
             .at(0)!,
