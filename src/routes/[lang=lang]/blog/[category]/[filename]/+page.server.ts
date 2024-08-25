@@ -4,7 +4,7 @@ import { baseLocale, locales } from '$i18n/i18n-util';
 
 export async function load({ params, locals: { locale } }) {
     const article = await convertMarkdown(`${CONTENT_DIR}/${locale}/${params.filename}.md`);
-    const latest = await latestArticles(`${CONTENT_DIR}/${locale}/`, params.filename, 4);
+    const latest = await latestArticles(locale, params.filename, 2);
 
     return { article, latest, summary: article.summary };
 }
