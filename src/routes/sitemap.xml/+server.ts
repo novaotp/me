@@ -1,16 +1,16 @@
-import { allCategories, importArticles } from "$lib/server/article";
-import { baseLocale } from "$i18n/i18n-util";
+import { allCategories, importArticles } from '$lib/server/article';
+import { baseLocale, locales } from '$i18n/i18n-util';
 
 export async function GET({ url }) {
     const paths = [
-        "/",
-        "/work",
-        "/contact",
-        "/privacy-policy",
-        "/blog",
-        (await allCategories()).map(category => `/blog/${category}`),
+        '',
+        'work',
+        'contact',
+        'privacy-policy',
+        'blog',
+        (await allCategories()).map((category) => `blog/${category}`),
         // The locale itself doesn't matter.
-        (await importArticles(baseLocale)).map(article => `/blog/${article.metadata.category}/${article.filename}`)
+        (await importArticles(baseLocale)).map((article) => `blog/${article.metadata.category}/${article.filename}`)
     ].flat();
 
     return new Response(
@@ -24,12 +24,14 @@ export async function GET({ url }) {
                 xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
                 xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
             >
-                ${paths.map(path => {
-                    return `
-                        <url>
-                            <loc>${url.hostname}${path}</loc>
-                        </url>
-                    `
+                ${locales.map((locale) => {
+                    return paths.map((path) => {
+                        return `
+                            <url>
+                                <loc>${url.hostname}/${locale}/${path}</loc>
+                            </url>
+                        `;
+                    });
                 })}
             </urlset>
         `.trim(),
