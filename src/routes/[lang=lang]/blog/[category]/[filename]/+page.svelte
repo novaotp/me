@@ -72,7 +72,7 @@
             </div>
             <h1 class="text-3xl font-semibold">{metadata.title}</h1>
             <p>{metadata.description}</p>
-            <img src={metadata.banner} alt={metadata.bannerAlt ?? metadata.shortTitle ?? metadata.title} class="w-full" />
+            <img src={metadata.banner} alt={metadata.bannerAlt ?? metadata.shortTitle ?? metadata.title} class="w-full" fetchpriority="high" />
         </div>
         <aside class="flex flex-col gap-5">
             <h2 class="text-2xl font-semibold pt-5">{$LL.articlePage.summary()}</h2>
@@ -111,7 +111,7 @@
         font-family: 'Cascadia Code', sans-serif;
     }
 
-    :global(div.blog-article span[data-highlighted-line]='') {
+    :global(div.blog-article span[data-highlighted-line]) {
         background-color: rgba(200, 200, 255, 0.1);
     }
 

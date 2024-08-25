@@ -3,7 +3,7 @@ shortTitle: Multi-lingual support in SvelteKit
 title: Adding multi-lingual support in SvelteKit, using typesafe-i18n
 description: In this post, we'll cover how to set up typesafe-i18n in a SvelteKit app to support multiple languages.
 creationDate: 2024-04-27
-banner: /article-images/multilingual.jpg
+banner: /article-images/multilingual.webp
 bannerAlt: Multi-lingual support image
 category: guide
 ---

@@ -10,6 +10,10 @@
     $: ({ title, description, banner, creationDate, category, readTime } = metadata);
 </script>
 
+<svelte:head>
+    <link rel="preload" href="{base}{banner}" as="image" type="image/webp">
+</svelte:head>
+
 <button
     on:click={() => goto(constructUrl($locale, `/blog/${category}/${filename}`), { noScroll: false })}
     class="relative rounded-lg shadow-[0_0_15px_0px_rgba(0,0,0,0.25)] duration-150 flex flex-col items-start overflow-hidden {$$restProps.class ?? ''}
@@ -19,7 +23,7 @@
     <div role="img" style="background-image: url('{base}{banner}');" class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"></div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
         <div class="flex gap-3 items-center">
-            <time class="text-gray-400 text-sm">{creationDate.toLocaleDateString($locale)}</time>
+            <time class="text-gray-500 dark:text-gray-400 text-sm">{creationDate.toLocaleDateString($locale)}</time>
             <div class="h-5 w-[1px] bg-gray-400 dark:bg-gray-500"></div>
             <time class="text-blue-700 dark:text-sky-300 text-sm">{$LL.blogPage.readTime(readTime).toUpperCase()}</time>
         </div>

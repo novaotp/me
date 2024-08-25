@@ -2,7 +2,7 @@
 title: Hello, World
 description: An brief introduction to my blog.
 creationDate: 2024-04-24
-banner: /article-images/blog.jpeg
+banner: /article-images/blog.webp
 bannerAlt: Image for Hello, World
 category: personal
 ---

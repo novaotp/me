@@ -57,10 +57,10 @@
         </div>
     </div>
     <div class="flex gap-10">
-        <a href="https://www.github.com/novaotp" target="_blank">
+        <a href="https://www.github.com/novaotp" target="_blank" aria-label="Go to my Github page">
             <IconBrandGithub class="size-8" />
         </a>
-        <a href="https://www.linkedin.com/in/sajidur-rahman-b495ba2b9" target="_blank">
+        <a href="https://www.linkedin.com/in/sajidur-rahman-b495ba2b9" target="_blank" aria-label="Go to my LinkedIn page">
             <IconBrandLinkedin class="size-8" />
         </a>
     </div>

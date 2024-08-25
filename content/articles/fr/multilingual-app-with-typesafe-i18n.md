@@ -3,7 +3,7 @@ shortTitle: Prise en charge de plusieurs langues dans SvelteKit
 title: Prise en charge de plusieurs langues dans SvelteKit, avec typesafe-i18n
 description: Dans ce post, nous regarderons comment mettre en place typesafe-i18n dans une application avec SvelteKit pour couvrir plusieurs langues.
 creationDate: 2024-04-27
-banner: /article-images/multilingual.jpg
+banner: /article-images/multilingual.webp
 bannerAlt: Image pour Prise en charge de plusieurs langues dans SvelteKit
 category: guide
 ---

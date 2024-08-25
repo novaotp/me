@@ -64,6 +64,7 @@ const surroundCodeBlocks: HTMLTransformer = (html) => {
                     <span class="text-sm">${title}</span>
                 </div>
                 <button
+                    aria-label="Copy to clipboard"
                     data-content="${contentToCopy}"
                     class="codeblock-copy-button relative h-10 aspect-square rounded hover:bg-slate-300 dark:hover:bg-zinc-800 flex justify-center items-center duration-150"
                 >

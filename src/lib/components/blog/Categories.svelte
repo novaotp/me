@@ -14,7 +14,7 @@
     };
 </script>
 
-<ul class="relative w-full flex flex-nowrap gap-5 overflow-auto">
+<div class="relative w-full flex flex-nowrap gap-5 overflow-auto">
     <button
         on:click={() => goto(constructUrl($locale, '/blog'))}
         class="relative px-4 py-2 rounded-lg {selectedCategory === 'all'
@@ -33,4 +33,4 @@
             {categoryName(category)}
         </button>
     {/each}
-</ul>
+</div>

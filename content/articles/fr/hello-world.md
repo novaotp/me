@@ -2,7 +2,7 @@
 title: Bonjour, Le Monde
 description: Une brève introduction à mon blog.
 creationDate: 2024-04-24
-banner: /article-images/blog.jpeg
+banner: /article-images/blog.webp
 bannerAlt: Image pour Bonjour, Le Monde
 category: personal
 ---

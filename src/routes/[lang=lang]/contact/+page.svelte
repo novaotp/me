@@ -60,7 +60,7 @@
                 <IconExternalLink />
             </a>
         </p>
-        <span class="separator relative w-full text-center text-neutral-300 dark:text-neutral-500">
+        <span class="separator relative w-full text-center">
             {$LL.contactPage.content.or()}
         </span>
         <p class="text-center text-sm xsm:text-base">{$LL.contactPage.content.form()}</p>
@@ -83,7 +83,7 @@
 
 <style lang="postcss">
     .separator::before {
-        @apply bg-neutral-300 dark:bg-neutral-500;
+        @apply bg-black dark:bg-white;
         content: "";
         position: absolute;
         left: 0;
@@ -93,7 +93,7 @@
     }
 
     .separator::after {
-        @apply bg-neutral-300 dark:bg-neutral-500;
+        @apply bg-black dark:bg-white;
         content: "";
         position: absolute;
         right: 0;
