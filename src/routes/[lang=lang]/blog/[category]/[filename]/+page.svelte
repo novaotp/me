@@ -2,13 +2,15 @@
     import IconChevronLeft from '@tabler/icons-svelte/IconChevronLeft.svelte';
     import IconCopy from '@tabler/icons-svelte/IconCopy.svelte';
     import IconCopyCheck from '@tabler/icons-svelte/IconCopyCheck.svelte';
-    import { goto } from '$app/navigation';
+    import { afterNavigate, goto } from '$app/navigation';
     import LL, { locale } from '$i18n/i18n-svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
     import type { PageServerData } from './$types';
     import BackToTop from '$lib/components/blog/BackToTop.svelte';
     import { afterUpdate } from 'svelte';
     import { addToast } from '$lib/stores/toast';
+    import { constructUrl } from '$lib/utils/construct-url';
+    import type { Locales } from '$i18n/i18n-types';
 
     export let data: PageServerData;
     $: ({ metadata, html } = data.article);
@@ -55,7 +57,7 @@
 </svelte:head>
 
 <div class="relative h-full w-full max-w-[760px] mt-10 px-10 lg:mt-20 flex flex-col justify-start items-start gap-10 mb-10">
-    <button on:click={() => goto(`/${$locale}/blog`)} class="flex gap-5">
+    <button on:click={() => history.back()} class="flex gap-5">
         <IconChevronLeft />
         <span>{$LL.articlePage.back()}</span>
     </button>
@@ -63,7 +65,7 @@
         <div class="relative w-full flex flex-col justify-start items-start gap-5">
             <div class="flex gap-3 items-center">
                 <time class="text-sm">
-                    {$LL.articlePage.postedAt(metadata.creationDate.toLocaleDateString($locale, { day: "numeric", month: "long", year: "numeric" }))}
+                    {$LL.articlePage.postedAt(metadata.creationDate.toLocaleDateString($locale, { day: 'numeric', month: 'long', year: 'numeric' }))}
                 </time>
                 <div class="h-5 w-[1px] bg-gray-500"></div>
                 <time class="text-blue-700 dark:text-sky-300 text-sm">{$LL.blogPage.readTime(metadata.readTime).toUpperCase()}</time>

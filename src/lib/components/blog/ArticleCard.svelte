@@ -7,11 +7,11 @@
 
     export let filename: string;
     export let metadata: ArticleMetadata;
-    $: ({ title, description, banner, creationDate, readTime } = metadata);
+    $: ({ title, description, banner, creationDate, category, readTime } = metadata);
 </script>
 
 <button
-    on:click={() => goto(constructUrl($locale, `/blog/${filename}`), { noScroll: false })}
+    on:click={() => goto(constructUrl($locale, `/blog/${category}/${filename}`), { noScroll: false })}
     class="relative rounded-lg shadow-[0_0_15px_0px_rgba(0,0,0,0.25)] duration-150 flex flex-col items-start overflow-hidden {$$restProps.class ?? ''}
            hover:scale-105 hover:shadow-[0_0_25px_0px_rgba(0,0,0,0.25)]
            dark:bg-zinc-700"

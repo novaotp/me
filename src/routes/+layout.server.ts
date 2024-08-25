@@ -5,4 +5,3 @@ export const load: LayoutServerLoad = ({ locals: { locale } }) => {
 };
 
 export const prerender = true;
-export const ssr = false;

@@ -1,16 +1,16 @@
 import fs from 'fs';
-import { globSync } from 'glob';
+import { glob } from 'glob';
 import frontmatter from 'front-matter';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import htmlify from 'rehype-stringify';
-import { dev } from '$app/environment';
+import { building, dev } from '$app/environment';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
-import { stripTrailingSlash } from '$lib/utils/strip-trailing-slash';
 import { slugify } from '$lib/utils/slugify';
 import { transform } from './transformers';
+import { baseLocale } from '$i18n/i18n-util';
 
 export interface ArticleMetadata {
     shortTitle?: string;
@@ -44,14 +44,35 @@ const WORDS_PER_MIN = 200;
 export const CONTENT_DIR = "./content/articles";
 
 /**
- * Imports all the articles in the given path.
- * @param path The path to the folder containing the articles.
+ * Imports all the articles for the given locale.
+ * @param locale The locale to use to fetch articles. If not set, will return all articles.
  * @returns An array of articles.
  */
-export async function importArticles(path: string): Promise<Article[]> {
-    const fileNames = globSync(`${stripTrailingSlash(path)}/*.md`);
-    const asyncArticles = fileNames.map(async (path) => await convertMarkdown(path));
+export async function importArticles(locale?: string): Promise<Article[]> {
+    let paths: string[];
+    if (!locale) {
+        paths = await glob(`${CONTENT_DIR}/*.md`);
+    } else {
+        paths = await glob(`${CONTENT_DIR}/${locale}/*.md`);
+    }
+
+    const asyncArticles = paths.map(async (path) => await convertMarkdown(path));
     return await Promise.all(asyncArticles);
+}
+
+/**
+ * Retrieves all the existing categories.
+ * @description The categories are sorted alphabetically and are unique.
+ */
+export async function allCategories() {
+    // * The locale doesn't matter.
+    // * There's simply no need to have articles in both locale.
+    const articles = await importArticles(baseLocale);
+
+    const duplicateCategories = articles.reduce((acc, curr) => [...acc, curr.metadata.category], [] as string[]);
+    const uniqueCategories = Array.from(new Set(duplicateCategories)).sort((a, b) => a.localeCompare(b));
+
+    return uniqueCategories;
 }
 
 /**
@@ -61,8 +82,8 @@ export async function importArticles(path: string): Promise<Article[]> {
  * @param count The number of articles to get.
  * @returns An amount of the latest articles.
  */
-export async function latestArticles(path: string, currentFilename: string, count: number = 3): Promise<Article[]> {
-    const articles = await importArticles(path);
+export async function latestArticles(locale: string, currentFilename: string = "", count: number = 4): Promise<Article[]> {
+    const articles = await importArticles(locale);
     return articles
         .filter((a) => a.filename !== currentFilename)
         .sort((a, b) => b.metadata.creationDate.getTime() - a.metadata.creationDate.getTime())
@@ -96,7 +117,7 @@ export async function convertMarkdown(path: string): Promise<Article> {
     return {
         path: path,
         filename: path
-            .split(dev ? '\\' : '/')
+            .split((dev || building) ? '\\' : '/')
             .at(-1)!
             .split('.')
             .at(0)!,

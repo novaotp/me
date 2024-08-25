@@ -8,5 +8,5 @@ export function slugify(value: string): string {
         .trim()
         .toLowerCase()
         .replace(/\s+/g, '-')
-        .replace(/[^\w-]+/g, '');
+        .replace(/[^a-zA-Z0-9À-ž-]+/g, '');
 };

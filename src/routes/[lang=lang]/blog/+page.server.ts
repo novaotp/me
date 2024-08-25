@@ -1,16 +1,16 @@
-import { CONTENT_DIR, importArticles } from '$lib/server/article';
+import { locales } from '$i18n/i18n-util';
+import { allCategories, importArticles } from '$lib/server/article';
 import type { EntryGenerator } from './$types';
 
 export async function load({ locals: { locale } }) {
-    const articles = await importArticles(`${CONTENT_DIR}/${locale}/`);
+    const articles = await importArticles(locale);
     const sortedArticles = articles.sort((a, b) => b.metadata.creationDate.getTime() - a.metadata.creationDate.getTime());
 
-    const duplicateCategories = sortedArticles.reduce((acc, curr) => [...acc, curr.metadata.category], [] as string[]);
-    const uniqueCategories = Array.from(new Set(duplicateCategories));
-
-    return { articles: sortedArticles, categories: uniqueCategories };
+    return { articles: sortedArticles, categories: await allCategories() };
 }
 
 export const entries: EntryGenerator = () => {
-    return [{ lang: 'fr' }, { lang: 'en' }];
+    return locales.map((locale) => {
+        return { lang: locale };
+    });
 };

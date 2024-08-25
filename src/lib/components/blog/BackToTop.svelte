@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { browser } from '$app/environment';
     import IconArrowNarrowUp from '@tabler/icons-svelte/IconArrowNarrowUp.svelte';
     import { fade } from 'svelte/transition';
 
@@ -6,7 +7,7 @@
     let hidden = false;
 
     $: {
-        if (scrollContainer() && scrollContainer().scrollTop > showAfterYScroll) {
+        if (browser && scrollContainer() && scrollContainer().scrollTop > showAfterYScroll) {
             hidden = false;
         } else {
             hidden = true;
