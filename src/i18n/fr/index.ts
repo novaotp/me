@@ -159,6 +159,15 @@ const fr = {
             content: "Notre politique de confidentialité est en cours d'élaboration. Nous nous engageons à fournir des informations claires sur la manière dont nous traitons vos données. Pour nous aider à nous améliorer, faites-nous part de vos questions ou suggestions à l'adresse suivante"
         },
         onThisPage: "Sur cette page"
+    },
+    pageNotFound: {
+        meta : {
+            title: "Page non trouvée - Sajidur Rahman",
+            description: "La page que tu recherches n'existe pas..."
+        },
+        title: "Mauvais chemin...",
+        paragraph: "Il semble que tu t'es trompé de chemin...",
+        backToHome: "Retour à la page principale"
     }
 } satisfies BaseTranslation;
 
