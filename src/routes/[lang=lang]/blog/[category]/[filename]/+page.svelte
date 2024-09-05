@@ -1,23 +1,21 @@
 <script lang="ts">
-    import IconChevronLeft from '@tabler/icons-svelte/IconChevronLeft.svelte';
-    import IconCopy from '@tabler/icons-svelte/IconCopy.svelte';
-    import IconCopyCheck from '@tabler/icons-svelte/IconCopyCheck.svelte';
-    import { afterNavigate, goto } from '$app/navigation';
+    import { mount } from 'svelte';
+    import { addToast } from '$stores/toast.svelte';
+    import IconChevronLeft from '@tabler/icons-svelte/icons/chevron-left';
+    import IconCopy from '@tabler/icons-svelte/icons/copy';
+    import IconCopyCheck from '@tabler/icons-svelte/icons/copy-check';
     import LL, { locale } from '$i18n/i18n-svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
-    import type { PageServerData } from './$types';
     import BackToTop from '$lib/components/blog/BackToTop.svelte';
-    import { afterUpdate } from 'svelte';
-    import { addToast } from '$lib/stores/toast';
-    import { constructUrl } from '$lib/utils/construct-url';
-    import type { Locales } from '$i18n/i18n-types';
 
-    export let data: PageServerData;
-    $: ({ metadata, html } = data.article);
+    let { data } = $props();
 
     const ICON_CHECKED_MS = 3000;
 
-    afterUpdate(() => {
+    let metadata = $derived(data.article.metadata);
+    let html = $derived(data.article.html);
+
+    $effect(() => {
         function copyTextToClipboard(text: string): boolean {
             if (navigator?.clipboard?.writeText) {
                 navigator.clipboard.writeText(text);
@@ -29,25 +27,27 @@
 
         function swapIconAfterCopy(copyButton: HTMLButtonElement): void {
             copyButton.innerHTML = '';
-            new IconCopyCheck({ target: copyButton });
+            mount(IconCopyCheck, { target: copyButton });
             setTimeout(() => {
                 copyButton.innerHTML = '';
-                new IconCopy({ target: copyButton });
+                mount(IconCopy, { target: copyButton });
             }, ICON_CHECKED_MS);
         }
 
-        document.querySelectorAll<HTMLButtonElement>('button.codeblock-copy-button').forEach(async (copyButton: HTMLButtonElement) => {
-            copyButton.addEventListener('click', async () => {
-                const copied = copyTextToClipboard(copyButton.getAttribute('data-content')!);
+        document
+            .querySelectorAll<HTMLButtonElement>('button.codeblock-copy-button')
+            .forEach(async (copyButton: HTMLButtonElement) => {
+                copyButton.addEventListener('click', async () => {
+                    const copied = copyTextToClipboard(copyButton.getAttribute('data-content')!);
 
-                if (!copied) {
-                    return addToast({ type: 'error', message: $LL.articlePage.copy.fail() });
-                }
+                    if (!copied) {
+                        return addToast({ type: 'error', message: $LL.articlePage.copy.fail() });
+                    }
 
-                addToast({ type: 'success', message: $LL.articlePage.copy.success() });
-                swapIconAfterCopy(copyButton);
+                    addToast({ type: 'success', message: $LL.articlePage.copy.success() });
+                    swapIconAfterCopy(copyButton);
+                });
             });
-        });
     });
 </script>
 
@@ -56,8 +56,10 @@
     <meta name="description" content={metadata.description} />
 </svelte:head>
 
-<div class="relative h-full w-full max-w-[760px] mt-10 px-10 lg:mt-20 flex flex-col justify-start items-start gap-10 mb-10">
-    <button on:click={() => history.back()} class="flex gap-5">
+<div
+    class="relative h-full w-full max-w-[760px] mt-10 px-10 lg:mt-20 flex flex-col justify-start items-start gap-10 mb-10"
+>
+    <button onclick={() => history.back()} class="flex gap-5">
         <IconChevronLeft />
         <span>{$LL.articlePage.back()}</span>
     </button>
@@ -65,14 +67,27 @@
         <div class="relative w-full flex flex-col justify-start items-start gap-5">
             <div class="flex gap-3 items-center">
                 <time class="text-sm">
-                    {$LL.articlePage.postedAt(metadata.creationDate.toLocaleDateString($locale, { day: 'numeric', month: 'long', year: 'numeric' }))}
+                    {$LL.articlePage.postedAt(
+                        metadata.creationDate.toLocaleDateString($locale, {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric'
+                        })
+                    )}
                 </time>
                 <div class="h-5 w-[1px] bg-gray-500"></div>
-                <time class="text-blue-700 dark:text-sky-300 text-sm">{$LL.blogPage.readTime(metadata.readTime).toUpperCase()}</time>
+                <time class="text-blue-700 dark:text-sky-300 text-sm"
+                    >{$LL.blogPage.readTime(metadata.readTime).toUpperCase()}</time
+                >
             </div>
             <h1 class="text-3xl font-semibold">{metadata.title}</h1>
             <p>{metadata.description}</p>
-            <img src={metadata.banner} alt={metadata.bannerAlt ?? metadata.shortTitle ?? metadata.title} class="w-full" fetchpriority="high" />
+            <img
+                src={metadata.banner}
+                alt={metadata.bannerAlt ?? metadata.shortTitle ?? metadata.title}
+                class="w-full"
+                fetchpriority="high"
+            />
         </div>
         <aside class="flex flex-col gap-5">
             <h2 class="text-2xl font-semibold pt-5">{$LL.articlePage.summary()}</h2>
@@ -99,11 +114,11 @@
     <BackToTop />
 </div>
 
-<style lang="postcss">
+<style>
     @import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
     :global(div.blog-article code) {
-        @apply py-5;
+        padding: 20px 0;
         counter-reset: line;
     }
 
@@ -116,7 +131,7 @@
     }
 
     :global(div.blog-article code > [data-line]) {
-        @apply px-5 py-[2px];
+        padding: 2px 20px;
     }
 
     :global(div.blog-article code[data-line-numbers] > [data-line]::before) {
@@ -130,35 +145,54 @@
     }
 
     :global(div.blog-article h2) {
-        @apply text-2xl font-semibold py-5;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
     }
 
     :global(div.blog-article h3) {
-        @apply text-xl font-semibold py-5;
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
     }
 
     :global(div.blog-article ul) {
-        @apply list-disc ml-10 mb-5;
+        list-style-type: disc;
+        margin-left: 2.5rem;
+        margin-bottom: 1.25rem;
     }
 
-    :global(div.blog-article a) {
-        @apply text-indigo-700 dark:text-sky-300 font-semibold;
+    :global(div.blog-article a span, div.blog-article a svg) {
+        color: #4f46e5;
+        font-weight: 600;
+    }
+
+    :global(html.dark div.blog-article a span, html.dark div.blog-article a svg) {
+        color: #38bdf8;
+        font-weight: 600;
     }
 
     :global(div.blog-article p) {
-        @apply mb-5;
+        margin-bottom: 1.25rem;
     }
 
     :global(div.blog-article h2 > p) {
-        @apply mb-0;
+        margin-bottom: 0;
     }
 
     :global(div.blog-article figure) {
-        @apply relative w-full text-white mb-5;
+        position: relative;
+        width: 100%;
+        color: #ffffff;
+        margin-bottom: 1.25rem;
     }
 
     :global(div.blog-article figure pre code) {
-        @apply overflow-auto rounded-b-lg;
+        overflow: auto;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
     }
 
     :global(div.blog-article code),

@@ -1,24 +1,29 @@
 <script lang="ts">
-    import SuccessIcon from '@tabler/icons-svelte/IconCheck.svelte';
-    import ErrorIcon from '@tabler/icons-svelte/IconExclamationMark.svelte';
-    import InfoIcon from '@tabler/icons-svelte/IconInfoCircle.svelte';
-    import CloseIcon from '@tabler/icons-svelte/IconX.svelte';
+    import CloseIcon from '@tabler/icons-svelte/icons/x';
+    import { BG_COLOR_MAP, ICONS_MAP } from './defaults';
+    import type { Snippet } from 'svelte';
 
-    export let type: 'success' | 'error' | 'info';
-    let show = true;
+    interface Props {
+        children: Snippet;
+        type: 'success' | 'error' | 'info';
+    }
 
-    $: icon = type === 'success' ? SuccessIcon : type === 'error' ? ErrorIcon : InfoIcon;
-    $: bgColor = type === 'success' ? 'bg-green-600' : type === 'error' ? 'bg-red-500' : 'bg-blue-500';
+    let { children, type }: Props = $props();
+
+    let show = $state(true);
+
+    let Icon = $derived(ICONS_MAP[type]);
+    let bgColor = $derived(BG_COLOR_MAP[type]);
 </script>
 
 {#if show}
     <aside role="banner" class="relative w-full flex justify-center items-center gap-4 px-4 py-2 {bgColor}">
         <div class="relative w-full max-w-[1200px] h-full flex justify-center items-center gap-4 px-4 py-2 text-neutral-50">
-            <svelte:component this={icon} class="min-h-6 min-w-6" />
+            <Icon class="min-h-6 min-w-6" />
             <p class="text-sm flex-grow">
-                <slot />
+                {@render children()}
             </p>
-            <button class="border-none bg-transparent text-neutral-50" on:click={() => (show = false)}>
+            <button class="border-none bg-transparent text-neutral-50" onclick={() => (show = false)}>
                 <CloseIcon class="size-6" />
             </button>
         </div>

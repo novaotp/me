@@ -25,8 +25,8 @@ const en = {
     },
     navigation: {
         homePage: 'Home',
-        workPage: 'My works',
-        blogPage: 'My blog',
+        workPage: 'Works',
+        blogPage: 'Blog',
         contact: {
             idea: 'Have an idea ?',
             letsTalk: "Let's talk",
@@ -40,34 +40,25 @@ const en = {
             description: "Welcome to My World! Explore my website to learn about my passions, projects, and articles in web development."
         },
         greet: 'Hello, I am Sajidur Rahman.',
-        briefDescription: 'A web developer focused on user interfaces for fluid design and optimal customer satisfaction.',
-        keywords: {
-            design: 'Design',
-            development: 'Development',
-            maintenance: 'Maintenance'
-        },
+        briefDescription: 'A developer focused on performant applications for <span class="text-indigo-700 dark:text-sky-300">optimal customer satisfaction</span>.',
         contact: {
             idea: 'Have an idea ?',
             letsTalk: "Let's talk"
         },
         services: {
             title: 'Services',
-            benefits: {
-                title: 'Adaptive',
-                description: 'Websites adapted to any type of screen, ensuring a seamless experience.'
+            design: {
+                title: 'Design',
+                description: 'Custom-made and modern designs that perfectly reflect your brand identity.'
             },
-            performance: {
-                title: 'Performant',
-                description: 'Creating high-performance, SEO-optimized websites.'
+            development: {
+                title: 'Development',
+                description: 'High-performing and dynamic applications designed to deliver a smooth user experience.'
             },
-            collaboration : {
-                title: 'Collaborative',
-                description: 'Continuous collaboration to meet evolving needs.'
-            },
-            accessibility: {
-                title: "Accessible",
-                description: 'An accessible and intuitive design. Ergonomic and ease of use.'
-            }
+            maintenance: {
+                title: 'Maintenance',
+                description: 'Comprehensive site maintenance to ensure it stays updated, secure, and performs optimally at all times.'
+            }            
         },
         aboutMe: {
             title: 'About Me',

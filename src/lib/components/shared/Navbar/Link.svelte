@@ -3,16 +3,21 @@
     import { base } from '$app/paths';
     import { page } from '$app/stores';
     import { locale } from '$i18n/i18n-svelte';
-    import { createEventDispatcher } from 'svelte';
+    import { type Snippet } from 'svelte';
 
-    export let href: string;
+    interface Props {
+        children: Snippet;
+        href: string;
+        onclick: () => void;
+    }
 
-    const dispatch = createEventDispatcher();
+    let { children, href, onclick }: Props = $props();
 
-    $: colors =
-        $page.url.pathname === stripTrailingSlash(`${base}/${$locale}${href}`)
+    let colors = $derived.by(() => {
+        return $page.url.pathname === stripTrailingSlash(`${base}/${$locale}${href}`)
             ? 'text-indigo-700 dark:text-sky-300'
             : 'text-gray-500 dark:text-gray-400';
+    });
 </script>
 
 <!--
@@ -24,11 +29,7 @@ If the current path is the same as the href, the css will highlight it.
 -->
 
 <li class="relative w-full">
-    <a
-        href="{base}/{$locale}{href}"
-        on:click={() => dispatch('click')}
-        class="relative w-full py-2 flex gap-10 justify-start items-center rounded-md {colors} sm:px-5"
-    >
-        <slot />
+    <a href="{base}/{$locale}{href}" {onclick} class="relative w-full py-2 flex gap-10 justify-start items-center rounded-md {colors} sm:px-5">
+        {@render children()}
     </a>
 </li>

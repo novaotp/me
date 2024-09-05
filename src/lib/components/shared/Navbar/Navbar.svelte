@@ -1,20 +1,26 @@
 <script lang="ts">
-    import IconArrowRight from '@tabler/icons-svelte/IconArrowRight.svelte';
-    import IconMenu from '@tabler/icons-svelte/IconMenu.svelte';
     import { page } from '$app/stores';
-    import LL, { locale } from '$i18n/i18n-svelte';
     import { base } from '$app/paths';
+    import IconArrowRight from '@tabler/icons-svelte/icons/arrow-right';
+    import IconMenu from '@tabler/icons-svelte/icons/menu';
+    import LL, { locale } from '$i18n/i18n-svelte';
     import { stripTrailingSlash } from '$lib/utils/strip-trailing-slash';
     import type { Page } from '@sveltejs/kit';
 
-    export let show: boolean;
+    interface Props {
+        show: boolean;
+    }
+
+    let { show = $bindable() }: Props = $props();
+
+    $effect(() => {
+        $page.url.pathname;
+    });
 
     const showMenu = () => {
         show = true;
         document.body.style.overflow = 'hidden';
     };
-
-    $: $page.url.pathname;
 
     function colors(href: string, page: Page<Record<string, string>, string | null>) {
         return page.url.pathname === stripTrailingSlash(`${base}/${$locale}${href}`)
@@ -30,7 +36,7 @@ Renders a navbar adapted for devices under 1024px wide.
 -->
 
 <nav class="lg:hidden relative w-full h-20 px-10 py-5 flex justify-between items-center">
-    <button on:click={showMenu} aria-label="Open the menu">
+    <button onclick={showMenu} aria-label="Open the menu">
         <span role="img">
             <IconMenu class="size-6" />
         </span>

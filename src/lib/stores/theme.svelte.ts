@@ -1,19 +1,20 @@
 import { browser } from "$app/environment";
-import { writable } from "svelte/store";
-
-export type Theme = "light" | "dark";
-
-/** The current theme. */
-export const theme = writable<Theme>(browser ? (localStorage.theme ?? getSystemPreference()) : "light");
 
 /**
  * Returns the system's preference.
  * 
  * **INTERNAL, ONLY EXPORTED FOR TESTING.**
  */
-export function getSystemPreference(): Theme {
+export const getSystemPreference = (): Theme => {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
 }
+
+export type Theme = "light" | "dark";
+
+/** The current theme. */
+let theme = $state<Theme>(browser ? (localStorage.theme ?? getSystemPreference()) : "light");
+
+export const getTheme = () => theme;
 
 /**
  * Initializes the theme of the website based on their preferences.
@@ -22,10 +23,10 @@ export function getSystemPreference(): Theme {
  * 
  * Use this before accessing the `theme` store.
  */
-export function initTheme(): void {
+export const initTheme = (): void => {
     if (!('theme' in localStorage)) {
         localStorage.theme = getSystemPreference();
-        theme.set(localStorage.theme);
+        theme = localStorage.theme;
     }
 
     if (localStorage.theme === "dark") {
@@ -39,8 +40,8 @@ export function initTheme(): void {
  * Switches the theme to the given one.
  * @param newTheme The new theme to set
  */
-export function switchTheme(newTheme: "light" | "dark"): void {
+export const switchTheme = (newTheme: "light" | "dark"): void => {
     localStorage.theme = newTheme;
-    theme.set(newTheme);
+    theme = newTheme;
     initTheme();
 }

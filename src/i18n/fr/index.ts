@@ -25,8 +25,8 @@ const fr = {
     },
     navigation: {
         homePage: 'Home',
-        workPage: 'Mes travaux',
-        blogPage: 'Mon blog',
+        workPage: 'Travaux',
+        blogPage: 'Blog',
         contact: {
             idea: 'Un projet en tête ?',
             letsTalk: 'Parlons-en',
@@ -40,33 +40,24 @@ const fr = {
             description: "Bienvenue dans mon monde! Explorez mon site Web pour découvrir mes passions, mes projets et mes articles en développement Web."
         },
         greet: 'Bonjour, je suis Sajidur Rahman.',
-        briefDescription: 'Un développeur web axé sur les interfaces utilisateur pour un design fluide et une satisfaction client optimale.',
-        keywords: {
-            design: 'Design',
-            development: 'Développement',
-            maintenance: 'Maintenance'
-        },
+        briefDescription: 'Un développeur axé sur des applications performantes pour une <span class="text-indigo-700 dark:text-sky-300">satisfaction client optimale</span>.',
         contact: {
             idea: 'Un projet en tête ?',
             letsTalk: 'Parlons-en'
         },
         services: {
             title: 'Services',
-            benefits: {
-                title: 'Responsive',
-                description: 'Sites web adaptés à tout type d\'écran, garantissant une expérience fluide.'
+            design: {
+                title: 'Design',
+                description: 'Des designs modernes et faits sur mesure, qui reflètent parfaitement l\'identité de votre marque.'
             },
-            performance: {
-                title: 'Performant',
-                description: 'Création de sites web performants et optimisés pour le référencement (SEO).'
+            development: {
+                title: 'Développement',
+                description: 'Des applications performantes et dynamiques, conçues pour offrir une expérience utilisateur fluide.'
             },
-            collaboration: {
-                title: 'Collaboratif',
-                description: 'Collaboration en continu pour répondre à des besoins qui évoluent.'
-            },
-            accessibility: {
-                title: 'Accessible',
-                description: 'Un design accessible et intuitif. Ergonomique et facilité d\'utilisation.'
+            maintenance: {
+                title: 'Maintenance',
+                description: 'Maintenance complète de votre site, pour qu\'il reste à jour, sécurisé et performant en tout temps.'
             }
         },
         aboutMe: {

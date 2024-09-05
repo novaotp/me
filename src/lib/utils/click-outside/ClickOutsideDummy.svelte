@@ -5,7 +5,7 @@
 </script>
 
 <button
-    on:emit={() => (clicked = true)}
+    onemit={() => (clicked = true)}
     use:clickOutside
     class="absolute w-full top-full left-0 flex flex-col z-20"
     id="button"

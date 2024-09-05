@@ -3,30 +3,34 @@
     import Navbar from '$lib/components/shared/Navbar/Navbar.svelte';
     import NavPage from '$lib/components/shared/Navbar/NavPage.svelte';
     import LL, { locale } from '$i18n/i18n-svelte';
-    import IconCopyright from '@tabler/icons-svelte/IconCopyright.svelte';
     import { constructUrl } from '$lib/utils/construct-url';
     import LanguageSelect from '$lib/components/shared/footer/LanguageSelect.svelte';
-    import type { LayoutServerData } from './$types';
     import ThemeSwitch from '$components/shared/footer/ThemeSwitch.svelte';
-    import IconBrandGithub from "@tabler/icons-svelte/IconBrandGithub.svelte";
-    import IconBrandLinkedin from "@tabler/icons-svelte/IconBrandLinkedin.svelte";
+    import IconCopyright from '@tabler/icons-svelte/icons/copyright';
+    import IconBrandGithub from '@tabler/icons-svelte/icons/brand-github';
+    import IconBrandLinkedin from '@tabler/icons-svelte/icons/brand-linkedin';
 
-    export let data: LayoutServerData;
+    let { children, data } = $props();
 
-    let show: boolean = false;
+    let show = $state(false);
 </script>
 
 <svelte:head>
-    <meta name="keywords" content="web development, web design, portfolio, freelancer, developer, UI/UX design, creative solutions, client-focused development">
+    <meta
+        name="keywords"
+        content="web development, web design, portfolio, freelancer, developer, UI/UX design, creative solutions, client-focused development"
+    />
 </svelte:head>
 
 <NavPage bind:show />
 <Navbar bind:show />
 <ToastContainer />
 <div class="relative w-full min-h-[calc(100%-7.5rem)] flex-grow flex justify-center items-center flex-col">
-    <slot />
+    {@render children()}
 </div>
-<footer class="relative flex flex-col justify-center items-center p-10 gap-10 mt-10 bg-gray-900 dark:bg-zinc-900 text-white">
+<footer
+    class="relative flex flex-col justify-center items-center p-10 gap-10 mt-10 bg-gray-900 dark:bg-zinc-900 text-white"
+>
     <div class="w-full sm:w-auto md:flex-row flex flex-col items-start sm:items-center md:items-start gap-10 md:gap-20">
         <div class="w-full flex flex-col sm:flex-row gap-10 sm:gap-20 justify-between">
             <div class="flex flex-col gap-5">
@@ -60,7 +64,11 @@
         <a href="https://www.github.com/novaotp" target="_blank" aria-label="Go to my Github page">
             <IconBrandGithub class="size-8" />
         </a>
-        <a href="https://www.linkedin.com/in/sajidur-rahman-b495ba2b9" target="_blank" aria-label="Go to my LinkedIn page">
+        <a
+            href="https://www.linkedin.com/in/sajidur-rahman-b495ba2b9"
+            target="_blank"
+            aria-label="Go to my LinkedIn page"
+        >
             <IconBrandLinkedin class="size-8" />
         </a>
     </div>
@@ -70,7 +78,7 @@
             <span>{new Date().getFullYear()} - Sajidur Rahman</span>
         </div>
         <div class="w-full flex justify-center items-center gap-5">
-            <a href="{constructUrl($locale, "/privacy-policy")}" class="text-xs underline">
+            <a href={constructUrl($locale, '/privacy-policy')} class="text-xs underline">
                 {$LL.footer.policy()}
             </a>
         </div>

@@ -3,15 +3,19 @@
     import Text from '$lib/components/contact/Text.svelte';
     import emailjs from '@emailjs/browser';
     import { PUBLIC_EMAILJS_ACCOUNT_PUBLIC_KEY as API_KEY } from '$env/static/public';
-    import { addToast } from '$lib/stores/toast';
+    import { addToast } from '$stores/toast.svelte';
     import LL from '$i18n/i18n-svelte';
-    import IconExternalLink from "@tabler/icons-svelte/IconExternalLink.svelte";
+    import IconExternalLink from '@tabler/icons-svelte/icons/external-link';
+    import type { EventHandler } from 'svelte/elements';
+    import { cn } from '$lib/utils/cn';
 
-    let name: string = '';
-    let email: string = '';
-    let message: string = '';
+    let name = $state('');
+    let email = $state('');
+    let message = $state('');
 
-    const handleFormSubmission = async () => {
+    const handleFormSubmission: EventHandler<SubmitEvent, HTMLFormElement> = async (event) => {
+        event.preventDefault();
+
         if (name === '' || email === '' || message === '') {
             addToast({ type: 'info', message: $LL.contactPage.form.notifications.fillAll() });
             return;
@@ -55,17 +59,26 @@
     <div class="relative flex flex-col items-center gap-5">
         <p class="text-center text-sm xsm:text-base min-[512px]:flex gap-1">
             {$LL.contactPage.content.email()}
-            <a href="mailto:contact@sajidur.dev?subject={$LL.contactPage.email.subject()}" class="relative flex gap-1 justify-center items-center">
+            <a
+                href="mailto:contact@sajidur.dev?subject={$LL.contactPage.email.subject()}"
+                class="relative flex gap-1 justify-center items-center"
+            >
                 <span class="font-semibold">contact@sajidur.dev</span>
                 <IconExternalLink />
             </a>
         </p>
-        <span class="separator relative w-full text-center">
+        <span
+            class={cn(
+                'relative w-full text-center',
+                'before:absolute before:left-0 before:top-1/2 before:h-px before:w-[40%] before:bg-black dark:before:bg-white',
+                'after:absolute after:right-0 after:top-1/2 after:h-px after:w-[40%] after:bg-black dark:after:bg-white'
+            )}
+        >
             {$LL.contactPage.content.or()}
         </span>
         <p class="text-center text-sm xsm:text-base">{$LL.contactPage.content.form()}</p>
     </div>
-    <form class="relative w-full flex flex-col justify-center items-center" on:submit|preventDefault={handleFormSubmission}>
+    <form class="relative w-full flex flex-col justify-center items-center" onsubmit={handleFormSubmission}>
         <div class="relative w-full flex flex-col gap-5 mb-5 sm:flex-row">
             <Input bind:value={name} placeholder={$LL.contactPage.form.fields.name.placeholder()} />
             <Input type="email" bind:value={email} placeholder={$LL.contactPage.form.fields.email.placeholder()} />
@@ -80,25 +93,3 @@
         </button>
     </form>
 </div>
-
-<style lang="postcss">
-    .separator::before {
-        @apply bg-black dark:bg-white;
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        height: 1px;
-        width: 40%;
-    }
-
-    .separator::after {
-        @apply bg-black dark:bg-white;
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 50%;
-        height: 1px;
-        width: 40%;
-    }
-</style>

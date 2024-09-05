@@ -3,17 +3,16 @@
     import LL from '$i18n/i18n-svelte';
     import Categories from '$lib/components/blog/Categories.svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
-    import type { PageServerData } from './$types';
-    import { beforeUpdate } from 'svelte';
 
-    export let data: PageServerData;
+    let { data } = $props();
 
-    let selectedCategory = "all";
+    let selectedCategory = $state('all');
+    let filteredArticles = $derived.by(() => {
+        return data.articles.filter(({ metadata }) => selectedCategory === 'all' || metadata.category === selectedCategory);
+    });
 
-    $: filteredArticles = data.articles.filter(({ metadata }) => selectedCategory === "all" || metadata.category === selectedCategory);
-
-    beforeUpdate(() => {
-        selectedCategory = $page.url.searchParams.get("category") ?? "all"
+    $effect.pre(() => {
+        selectedCategory = $page.url.searchParams.get('category') ?? 'all';
     });
 </script>
 

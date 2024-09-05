@@ -1,14 +1,17 @@
 <script lang="ts">
-    import LL from '$i18n/i18n-svelte';
+    import LL, { locale } from '$i18n/i18n-svelte';
     import Banner from '$lib/components/shared/Banner/Banner.svelte';
-    import type { PageServerData } from './$types';
 
-    export let data: PageServerData;
+    let { data } = $props();
+
+    $effect(() => {
+        $locale;
+    })
 </script>
 
 <svelte:head>
     <title>{$LL.privacyPolicyPage.meta.title()}</title>
-    <meta name="description" content="{$LL.privacyPolicyPage.meta.description()}" />
+    <meta name="description" content={$LL.privacyPolicyPage.meta.description()} />
 </svelte:head>
 
 <Banner type="info">
@@ -23,10 +26,7 @@
         <ul class="flex flex-col gap-2">
             {#each data.summary as { heading, slug }}
                 <li>
-                    <a
-                        href="#{slug}"
-                        class="text-gray-500 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-sky-300"
-                    >
+                    <a href="#{slug}" class="text-gray-500 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-sky-300">
                         {heading}
                     </a>
                 </li>
@@ -67,8 +67,12 @@
         @apply list-decimal ml-10 mb-5;
     }
 
-    :global(article#privacy-policy a) {
-        @apply text-indigo-700 dark:text-sky-300 font-semibold;
+    :global(html:not(.dark) article#privacy-policy a) {
+        @apply text-indigo-700 font-semibold;
+    }
+
+    :global(html.dark article#privacy-policy a) {
+        @apply text-sky-300 font-semibold;
     }
 
     :global(article#privacy-policy p) {

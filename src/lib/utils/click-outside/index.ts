@@ -10,7 +10,7 @@ interface ClickOutsideParams {
  * @param node The node on which the action was to attached, automatically supplied.
  * @param params Additional properties.
  */
-export const clickOutside: Action<HTMLElement, ClickOutsideParams | undefined, { 'on:emit': (e: CustomEvent<HTMLElement>) => void }> = (
+export const clickOutside: Action<HTMLElement, ClickOutsideParams | undefined, { 'onemit': (e: CustomEvent<HTMLElement>) => void }> = (
     node,
     params = { avoid: [] }
 ) => {
