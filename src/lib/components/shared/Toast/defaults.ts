@@ -1,7 +1,7 @@
 import SuccessIcon from '@tabler/icons-svelte/icons/check';
 import ErrorIcon from '@tabler/icons-svelte/icons/exclamation-mark';
 import InfoIcon from '@tabler/icons-svelte/icons/info-circle';
-import type { Toast } from "$stores/toast/index.svelte"
+import type { Toast } from "$stores/toast.svelte"
 
 export const ICONS_MAP: Record<Toast["type"], typeof SuccessIcon> = {
     'success': SuccessIcon,

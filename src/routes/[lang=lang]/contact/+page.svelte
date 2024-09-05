@@ -3,7 +3,7 @@
     import Text from '$lib/components/contact/Text.svelte';
     import emailjs from '@emailjs/browser';
     import { PUBLIC_EMAILJS_ACCOUNT_PUBLIC_KEY as API_KEY } from '$env/static/public';
-    import { addToast } from '$stores/toast/index.svelte';
+    import { addToast } from '$stores/toast.svelte';
     import LL from '$i18n/i18n-svelte';
     import IconExternalLink from '@tabler/icons-svelte/icons/external-link';
     import type { EventHandler } from 'svelte/elements';
