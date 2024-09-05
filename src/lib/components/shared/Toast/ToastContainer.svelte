@@ -1,6 +1,6 @@
 <script lang="ts">
     import Toast from './Toast.svelte';
-    import { dismissToast, getToasts } from '$stores/toast/index.svelte';
+    import { dismissToast, getToasts } from '$stores/toast.svelte';
 </script>
 
 <section class="fixed bottom-5 right-5 w-[calc(100%-40px)] md:max-w-[300px] flex flex-col justify-center gap-2 z-[1000]">

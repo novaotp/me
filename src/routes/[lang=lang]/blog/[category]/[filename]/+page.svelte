@@ -1,12 +1,12 @@
 <script lang="ts">
+    import { mount } from 'svelte';
+    import { addToast } from '$stores/toast.svelte';
     import IconChevronLeft from '@tabler/icons-svelte/icons/chevron-left';
     import IconCopy from '@tabler/icons-svelte/icons/copy';
     import IconCopyCheck from '@tabler/icons-svelte/icons/copy-check';
     import LL, { locale } from '$i18n/i18n-svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
     import BackToTop from '$lib/components/blog/BackToTop.svelte';
-    import { addToast } from '$stores/toast/index.svelte.js';
-    import { mount } from 'svelte';
 
     let { data } = $props();
 
@@ -164,13 +164,14 @@
         margin-bottom: 1.25rem;
     }
 
-    :global(div.blog-article a) {
+    :global(div.blog-article a span, div.blog-article a svg) {
         color: #4f46e5;
         font-weight: 600;
     }
 
-    :global(html.dark div.blog-article a) {
+    :global(html.dark div.blog-article a span, html.dark div.blog-article a svg) {
         color: #38bdf8;
+        font-weight: 600;
     }
 
     :global(div.blog-article p) {

@@ -8,18 +8,6 @@ import rehypeStringify from 'rehype-stringify';
 import type { Locales } from '$i18n/i18n-types';
 import { slugify } from '../utils/slugify';
 
-/**
- * Adds a slugified id to the h2 heading, so you can navigate to it.
- * @param html The HTML in which to modify the h2 heading.
- * @returns The modified HTML.
- */
-function addSlugifiedId(html: string): string {
-    return html.replace(/<h([2-3])([^>]*?)>(.*?)<\/h([2-3])>/gis, (match, level, attributes, content) => {
-        const id = slugify(content.trim());
-        return `<h${level} id="${id}"${attributes}>${content}</h${level}>`;
-    });
-}
-
 /** Imports the privacy policy based on the locale. */
 export async function privacyPolicy(locale: Locales) {
     const file = fs.readFileSync(`./content/legal/${locale}/privacy-policy.md`, 'utf8');
@@ -38,6 +26,18 @@ export async function privacyPolicy(locale: Locales) {
         html: addSlugifiedId(html),
         summary: generateHeadingsWithSlugs(html)
     }
+}
+
+/**
+ * Adds a slugified id to the h2 heading, so you can navigate to it.
+ * @param html The HTML in which to modify the h2 heading.
+ * @returns The modified HTML.
+ */
+function addSlugifiedId(html: string): string {
+    return html.replace(/<h([2-3])([^>]*?)>(.*?)<\/h([2-3])>/gis, (match, level, attributes, content) => {
+        const id = slugify(content.trim());
+        return `<h${level} id="${id}"${attributes}>${content}</h${level}>`;
+    });
 }
 
 function generateHeadingsWithSlugs(htmlString: string): { heading: string; level: number; slug: string }[] {

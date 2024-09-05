@@ -1,15 +1,8 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
-import { svelteTesting } from '@testing-library/svelte/vite';
 
 export default defineConfig({
-    plugins: [sveltekit(), svelteTesting()],
-    test: {
-        include: ['src/**/*.{test,spec}.{js,ts}'],
-        globals: true,
-        environment: 'jsdom',
-        setupFiles: ['tests/setupTests.ts']
-    },
+    plugins: [sveltekit()],
     optimizeDeps: {
         exclude: [
             '@tabler/icons-svelte',
@@ -22,8 +15,5 @@ export default defineConfig({
             'tailwind-merge',
             'clsx',
         ]
-    },
-    server: {
-        host: '127.0.0.1'
     }
 });

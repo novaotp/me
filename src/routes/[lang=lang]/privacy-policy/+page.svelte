@@ -1,8 +1,12 @@
 <script lang="ts">
-    import LL from '$i18n/i18n-svelte';
+    import LL, { locale } from '$i18n/i18n-svelte';
     import Banner from '$lib/components/shared/Banner/Banner.svelte';
 
     let { data } = $props();
+
+    $effect(() => {
+        $locale;
+    })
 </script>
 
 <svelte:head>
@@ -63,8 +67,12 @@
         @apply list-decimal ml-10 mb-5;
     }
 
-    :global(article#privacy-policy a) {
-        @apply text-indigo-700 dark:text-sky-300 font-semibold;
+    :global(html:not(.dark) article#privacy-policy a) {
+        @apply text-indigo-700 font-semibold;
+    }
+
+    :global(html.dark article#privacy-policy a) {
+        @apply text-sky-300 font-semibold;
     }
 
     :global(article#privacy-policy p) {

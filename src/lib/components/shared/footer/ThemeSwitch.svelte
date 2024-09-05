@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getTheme, switchTheme } from '$stores/theme/index.svelte';
+    import { getTheme, switchTheme } from '$stores/theme.svelte';
 </script>
 
 <!-- By https://uiverse.io/Galahhad/strong-squid-82 -->
