@@ -378,6 +378,30 @@ type RootTranslation = {
 		 */
 		onThisPage: string
 	}
+	pageNotFound: {
+		meta: {
+			/**
+			 * P​a​g​e​ ​n​o​n​ ​t​r​o​u​v​é​e​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
+			 */
+			title: string
+			/**
+			 * L​a​ ​p​a​g​e​ ​q​u​e​ ​t​u​ ​r​e​c​h​e​r​c​h​e​s​ ​n​'​e​x​i​s​t​e​ ​p​a​s​.​.​.
+			 */
+			description: string
+		}
+		/**
+		 * M​a​u​v​a​i​s​ ​c​h​e​m​i​n​.​.​.
+		 */
+		title: string
+		/**
+		 * I​l​ ​s​e​m​b​l​e​ ​q​u​e​ ​t​u​ ​t​'​e​s​ ​t​r​o​m​p​é​ ​d​e​ ​c​h​e​m​i​n​.​.​.
+		 */
+		paragraph: string
+		/**
+		 * R​e​t​o​u​r​ ​à​ ​l​a​ ​p​a​g​e​ ​p​r​i​n​c​i​p​a​l​e
+		 */
+		backToHome: string
+	}
 }
 
 export type TranslationFunctions = {
@@ -742,6 +766,30 @@ export type TranslationFunctions = {
 		 * Sur cette page
 		 */
 		onThisPage: () => LocalizedString
+	}
+	pageNotFound: {
+		meta: {
+			/**
+			 * Page non trouvée - Sajidur Rahman
+			 */
+			title: () => LocalizedString
+			/**
+			 * La page que tu recherches n'existe pas...
+			 */
+			description: () => LocalizedString
+		}
+		/**
+		 * Mauvais chemin...
+		 */
+		title: () => LocalizedString
+		/**
+		 * Il semble que tu t'es trompé de chemin...
+		 */
+		paragraph: () => LocalizedString
+		/**
+		 * Retour à la page principale
+		 */
+		backToHome: () => LocalizedString
 	}
 }
 

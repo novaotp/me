@@ -148,6 +148,15 @@ const en = {
             content: "Our privacy policy is a work in progress. We're committed to providing clear information about how we handle your data. To help us improve, let us know if you have any questions or suggestions at"
         },
         onThisPage: "On this page"
+    },
+    pageNotFound: {
+        meta : {
+            title: "Page not found - Sajidur Rahman",
+            description: "The page you're looking for doesn't exist..."
+        },
+        title: "Wrong path...",
+        paragraph: "It seems that you got lost...",
+        backToHome: "Back to home"
     }
 } satisfies Translation;
 
