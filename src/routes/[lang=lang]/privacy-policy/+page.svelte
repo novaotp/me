@@ -1,14 +1,13 @@
 <script lang="ts">
     import LL from '$i18n/i18n-svelte';
     import Banner from '$lib/components/shared/Banner/Banner.svelte';
-    import type { PageServerData } from './$types';
 
-    export let data: PageServerData;
+    let { data } = $props();
 </script>
 
 <svelte:head>
     <title>{$LL.privacyPolicyPage.meta.title()}</title>
-    <meta name="description" content="{$LL.privacyPolicyPage.meta.description()}" />
+    <meta name="description" content={$LL.privacyPolicyPage.meta.description()} />
 </svelte:head>
 
 <Banner type="info">
@@ -23,10 +22,7 @@
         <ul class="flex flex-col gap-2">
             {#each data.summary as { heading, slug }}
                 <li>
-                    <a
-                        href="#{slug}"
-                        class="text-gray-500 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-sky-300"
-                    >
+                    <a href="#{slug}" class="text-gray-500 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-sky-300">
                         {heading}
                     </a>
                 </li>

@@ -1,5 +1,5 @@
 import { get } from "svelte/store";
-import { addToast, toasts, type ToastData, DISMISS_AFTER } from ".";
+import { addToast, toasts, type ToastData, DISMISS_AFTER } from "./index.svelte";
 
 beforeEach(() => {
     toasts.set([]);

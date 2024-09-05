@@ -40,7 +40,7 @@ const fr = {
             description: "Bienvenue dans mon monde! Explorez mon site Web pour découvrir mes passions, mes projets et mes articles en développement Web."
         },
         greet: 'Bonjour, je suis Sajidur Rahman.',
-        briefDescription: 'Un développeur web axé sur les interfaces utilisateur pour un design fluide et une satisfaction client optimale.',
+        briefDescription: 'Un développeur axé sur des applications performantes pour une <span class="text-indigo-700 dark:text-sky-300">satisfaction client optimale</span>.',
         keywords: {
             design: 'Design',
             development: 'Développement',

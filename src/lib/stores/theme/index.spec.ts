@@ -1,4 +1,4 @@
-import { getSystemPreference, switchTheme, type Theme } from ".";
+import { getSystemPreference, switchTheme, type Theme } from "./index.svelte";
 
 describe("Checks that the theme is initialized and changed correctly", () => {
     it("Checks that there is no theme in localStorage by default", () => {

@@ -1,16 +1,15 @@
 <script lang="ts">
-    import { theme, switchTheme, type Theme } from "$lib/stores/theme";
-    import type { ChangeEventHandler } from "svelte/elements";
-
-    const _switchTheme: ChangeEventHandler<HTMLInputElement> = (event) => {
-        const newTheme: Theme = event.currentTarget.checked ? "dark" : "light";
-        switchTheme(newTheme);
-    };
+    import { getTheme, switchTheme } from '$stores/theme/index.svelte';
 </script>
 
 <!-- By https://uiverse.io/Galahhad/strong-squid-82 -->
 <label class="theme-switch">
-    <input type="checkbox" checked={$theme !== "light"} on:change={_switchTheme} class="theme-switch__checkbox" />
+    <input
+        type="checkbox"
+        checked={getTheme() !== 'light'}
+        onchange={(event) => switchTheme(event.currentTarget.checked ? 'dark' : 'light')}
+        class="theme-switch__checkbox"
+    />
     <div class="theme-switch__container">
         <div class="theme-switch__clouds"></div>
         <div class="theme-switch__stars-container">

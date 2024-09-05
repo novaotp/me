@@ -7,8 +7,8 @@ export default defineConfig({
     test: {
         include: ['src/**/*.{test,spec}.{js,ts}'],
         globals: true,
-        environment: "jsdom",
-        setupFiles: ["tests/setupTests.ts"],
+        environment: 'jsdom',
+        setupFiles: ['tests/setupTests.ts']
     },
     optimizeDeps: {
         exclude: [
@@ -18,10 +18,12 @@ export default defineConfig({
             'typesafe-i18n/utils',
             '@vercel/speed-insights/sveltekit',
             '@vercel/analytics',
-            'typesafe-i18n/svelte'
+            'typesafe-i18n/svelte',
+            'tailwind-merge',
+            'clsx',
         ]
     },
     server: {
-        host: "127.0.0.1"
+        host: '127.0.0.1'
     }
 });

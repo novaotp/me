@@ -1,13 +1,19 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
-    import LL, { locale } from '$i18n/i18n-svelte';
-    import type { ArticleMetadata } from '$lib/server/article';
-    import { constructUrl } from '$lib/utils/construct-url';
     import { base } from '$app/paths';
+    import LL, { locale } from '$i18n/i18n-svelte';
+    import { constructUrl } from '$lib/utils/construct-url';
+    import { cn } from '$lib/utils/cn';
+    import type { ArticleMetadata } from '$lib/server/article';
 
-    export let filename: string;
-    export let metadata: ArticleMetadata;
-    $: ({ title, description, banner, creationDate, category, readTime } = metadata);
+    interface Props {
+        class?: string,
+        filename: string,
+        metadata: ArticleMetadata;
+    }
+
+    let { class: className, filename, metadata }: Props = $props();
+    let { title, description, banner, creationDate, category, readTime } = $derived(metadata);
 </script>
 
 <svelte:head>
@@ -15,10 +21,10 @@
 </svelte:head>
 
 <button
-    on:click={() => goto(constructUrl($locale, `/blog/${category}/${filename}`), { noScroll: false })}
-    class="relative rounded-lg shadow-[0_0_15px_0px_rgba(0,0,0,0.25)] duration-150 flex flex-col items-start overflow-hidden {$$restProps.class ?? ''}
-           hover:scale-105 hover:shadow-[0_0_25px_0px_rgba(0,0,0,0.25)]
-           dark:bg-zinc-700"
+    onclick={() => goto(constructUrl($locale, `/blog/${category}/${filename}`), { noScroll: false })}
+    class={cn("relative rounded-lg shadow-[0_0_15px_0px_rgba(0,0,0,0.25)] duration-150 flex flex-col items-start",
+            "overflow-hidden hover:scale-105 hover:shadow-[0_0_25px_0px_rgba(0,0,0,0.25)] dark:bg-zinc-700",
+            className)}
 >
     <div role="img" style="background-image: url('{base}{banner}');" class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"></div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">

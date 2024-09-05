@@ -114,7 +114,7 @@ type RootTranslation = {
 		 */
 		greet: string
 		/**
-		 * U​n​ ​d​é​v​e​l​o​p​p​e​u​r​ ​w​e​b​ ​a​x​é​ ​s​u​r​ ​l​e​s​ ​i​n​t​e​r​f​a​c​e​s​ ​u​t​i​l​i​s​a​t​e​u​r​ ​p​o​u​r​ ​u​n​ ​d​e​s​i​g​n​ ​f​l​u​i​d​e​ ​e​t​ ​u​n​e​ ​s​a​t​i​s​f​a​c​t​i​o​n​ ​c​l​i​e​n​t​ ​o​p​t​i​m​a​l​e​.
+		 * U​n​ ​d​é​v​e​l​o​p​p​e​u​r​ ​a​x​é​ ​s​u​r​ ​d​e​s​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​p​e​r​f​o​r​m​a​n​t​e​s​ ​p​o​u​r​ ​u​n​e​ ​<​s​p​a​n​ ​c​l​a​s​s​=​"​t​e​x​t​-​i​n​d​i​g​o​-​7​0​0​ ​d​a​r​k​:​t​e​x​t​-​s​k​y​-​3​0​0​"​>​s​a​t​i​s​f​a​c​t​i​o​n​ ​c​l​i​e​n​t​ ​o​p​t​i​m​a​l​e​<​/​s​p​a​n​>​.
 		 */
 		briefDescription: string
 		keywords: {
@@ -505,7 +505,7 @@ export type TranslationFunctions = {
 		 */
 		greet: () => LocalizedString
 		/**
-		 * Un développeur web axé sur les interfaces utilisateur pour un design fluide et une satisfaction client optimale.
+		 * Un développeur axé sur des applications performantes pour une <span class="text-indigo-700 dark:text-sky-300">satisfaction client optimale</span>.
 		 */
 		briefDescription: () => LocalizedString
 		keywords: {

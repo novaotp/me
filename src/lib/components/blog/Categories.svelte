@@ -4,9 +4,13 @@
     import LL, { locale } from '$i18n/i18n-svelte';
     import { constructUrl } from '$lib/utils/construct-url';
 
-    export let categories: string[];
+    interface Props {
+        categories: string[];
+    }
 
-    $: selectedCategory = $page.params.category ?? 'all';
+    let { categories }: Props = $props();
+
+    let selectedCategory = $derived($page.params.category ?? 'all');
 
     const categoryName = (category: string) => {
         // @ts-expect-error
@@ -16,7 +20,7 @@
 
 <div class="relative w-full flex flex-nowrap gap-5 overflow-auto">
     <button
-        on:click={() => goto(constructUrl($locale, '/blog'))}
+        onclick={() => goto(constructUrl($locale, '/blog'))}
         class="relative px-4 py-2 rounded-lg {selectedCategory === 'all'
             ? 'bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800'
             : 'text-black dark:text-white'}"
@@ -25,7 +29,7 @@
     </button>
     {#each categories as category}
         <button
-            on:click={() => goto(constructUrl($locale, `/blog/${category}`))}
+            onclick={() => goto(constructUrl($locale, `/blog/${category}`))}
             class="relative px-4 py-2 rounded-lg {selectedCategory === category
                 ? 'bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800'
                 : 'text-black dark:text-white'}"

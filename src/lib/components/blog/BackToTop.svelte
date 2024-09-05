@@ -1,45 +1,33 @@
 <script lang="ts">
-    import { browser } from '$app/environment';
-    import IconArrowNarrowUp from '@tabler/icons-svelte/IconArrowNarrowUp.svelte';
+    import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
+    import IconArrowNarrowUp from '@tabler/icons-svelte/icons/arrow-narrow-up';
 
-    let showAfterYScroll = 150;
-    let hidden = false;
+    let minY = $state(150);
+    let isShown = $state(false);
 
-    $: {
-        if (browser && scrollContainer() && scrollContainer().scrollTop > showAfterYScroll) {
-            hidden = false;
-        } else {
-            hidden = true;
-        }
-    }
-
-    function goTop() {
+    const goTop = () => {
         document.body.scrollIntoView();
     }
 
-    function scrollContainer() {
-        return document.documentElement || document.body;
-    }
-
-    function handleOnScroll() {
-        if (!scrollContainer()) {
+    const handleOnScroll = () => {
+        if (!document.documentElement) {
             return;
         }
 
-        if (scrollContainer().scrollTop > showAfterYScroll) {
-            hidden = false;
-        } else {
-            hidden = true;
-        }
+        isShown = document.documentElement.scrollTop > minY;
     }
+
+    onMount(() => {
+        handleOnScroll();
+    });
 </script>
 
-<svelte:window on:scroll={handleOnScroll} />
+<svelte:window onscroll={handleOnScroll} />
 
-{#if !hidden}
+{#if isShown}
     <button
-        on:click|self={goTop}
+        onclick={goTop}
         transition:fade
         class="fixed bottom-5 right-5 bg-blue-700 dark:bg-sky-300 p-5 rounded-full text-white dark:text-zinc-800 shadow-lg z-10"
     >
