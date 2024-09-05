@@ -117,20 +117,6 @@ type RootTranslation = {
 		 * U​n​ ​d​é​v​e​l​o​p​p​e​u​r​ ​a​x​é​ ​s​u​r​ ​d​e​s​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​p​e​r​f​o​r​m​a​n​t​e​s​ ​p​o​u​r​ ​u​n​e​ ​<​s​p​a​n​ ​c​l​a​s​s​=​"​t​e​x​t​-​i​n​d​i​g​o​-​7​0​0​ ​d​a​r​k​:​t​e​x​t​-​s​k​y​-​3​0​0​"​>​s​a​t​i​s​f​a​c​t​i​o​n​ ​c​l​i​e​n​t​ ​o​p​t​i​m​a​l​e​<​/​s​p​a​n​>​.
 		 */
 		briefDescription: string
-		keywords: {
-			/**
-			 * D​e​s​i​g​n
-			 */
-			design: string
-			/**
-			 * D​é​v​e​l​o​p​p​e​m​e​n​t
-			 */
-			development: string
-			/**
-			 * M​a​i​n​t​e​n​a​n​c​e
-			 */
-			maintenance: string
-		}
 		contact: {
 			/**
 			 * U​n​ ​p​r​o​j​e​t​ ​e​n​ ​t​ê​t​e​ ​?
@@ -146,43 +132,33 @@ type RootTranslation = {
 			 * S​e​r​v​i​c​e​s
 			 */
 			title: string
-			benefits: {
+			design: {
 				/**
-				 * R​e​s​p​o​n​s​i​v​e
+				 * D​e​s​i​g​n
 				 */
 				title: string
 				/**
-				 * S​i​t​e​s​ ​w​e​b​ ​a​d​a​p​t​é​s​ ​à​ ​t​o​u​t​ ​t​y​p​e​ ​d​'​é​c​r​a​n​,​ ​g​a​r​a​n​t​i​s​s​a​n​t​ ​u​n​e​ ​e​x​p​é​r​i​e​n​c​e​ ​f​l​u​i​d​e​.
+				 * D​e​s​ ​d​e​s​i​g​n​s​ ​m​o​d​e​r​n​e​s​ ​e​t​ ​f​a​i​t​s​ ​s​u​r​ ​m​e​s​u​r​e​,​ ​q​u​i​ ​r​e​f​l​è​t​e​n​t​ ​p​a​r​f​a​i​t​e​m​e​n​t​ ​l​'​i​d​e​n​t​i​t​é​ ​d​e​ ​v​o​t​r​e​ ​m​a​r​q​u​e​.
 				 */
 				description: string
 			}
-			performance: {
+			development: {
 				/**
-				 * P​e​r​f​o​r​m​a​n​t
+				 * D​é​v​e​l​o​p​p​e​m​e​n​t
 				 */
 				title: string
 				/**
-				 * C​r​é​a​t​i​o​n​ ​d​e​ ​s​i​t​e​s​ ​w​e​b​ ​p​e​r​f​o​r​m​a​n​t​s​ ​e​t​ ​o​p​t​i​m​i​s​é​s​ ​p​o​u​r​ ​l​e​ ​r​é​f​é​r​e​n​c​e​m​e​n​t​ ​(​S​E​O​)​.
+				 * D​e​s​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​p​e​r​f​o​r​m​a​n​t​e​s​ ​e​t​ ​d​y​n​a​m​i​q​u​e​s​,​ ​c​o​n​ç​u​e​s​ ​p​o​u​r​ ​o​f​f​r​i​r​ ​u​n​e​ ​e​x​p​é​r​i​e​n​c​e​ ​u​t​i​l​i​s​a​t​e​u​r​ ​f​l​u​i​d​e​.
 				 */
 				description: string
 			}
-			collaboration: {
+			maintenance: {
 				/**
-				 * C​o​l​l​a​b​o​r​a​t​i​f
+				 * M​a​i​n​t​e​n​a​n​c​e
 				 */
 				title: string
 				/**
-				 * C​o​l​l​a​b​o​r​a​t​i​o​n​ ​e​n​ ​c​o​n​t​i​n​u​ ​p​o​u​r​ ​r​é​p​o​n​d​r​e​ ​à​ ​d​e​s​ ​b​e​s​o​i​n​s​ ​q​u​i​ ​é​v​o​l​u​e​n​t​.
-				 */
-				description: string
-			}
-			accessibility: {
-				/**
-				 * A​c​c​e​s​s​i​b​l​e
-				 */
-				title: string
-				/**
-				 * U​n​ ​d​e​s​i​g​n​ ​a​c​c​e​s​s​i​b​l​e​ ​e​t​ ​i​n​t​u​i​t​i​f​.​ ​E​r​g​o​n​o​m​i​q​u​e​ ​e​t​ ​f​a​c​i​l​i​t​é​ ​d​'​u​t​i​l​i​s​a​t​i​o​n​.
+				 * M​a​i​n​t​e​n​a​n​c​e​ ​c​o​m​p​l​è​t​e​ ​d​e​ ​v​o​t​r​e​ ​s​i​t​e​,​ ​p​o​u​r​ ​q​u​'​i​l​ ​r​e​s​t​e​ ​à​ ​j​o​u​r​,​ ​s​é​c​u​r​i​s​é​ ​e​t​ ​p​e​r​f​o​r​m​a​n​t​ ​e​n​ ​t​o​u​t​ ​t​e​m​p​s​.
 				 */
 				description: string
 			}
@@ -508,20 +484,6 @@ export type TranslationFunctions = {
 		 * Un développeur axé sur des applications performantes pour une <span class="text-indigo-700 dark:text-sky-300">satisfaction client optimale</span>.
 		 */
 		briefDescription: () => LocalizedString
-		keywords: {
-			/**
-			 * Design
-			 */
-			design: () => LocalizedString
-			/**
-			 * Développement
-			 */
-			development: () => LocalizedString
-			/**
-			 * Maintenance
-			 */
-			maintenance: () => LocalizedString
-		}
 		contact: {
 			/**
 			 * Un projet en tête ?
@@ -537,43 +499,33 @@ export type TranslationFunctions = {
 			 * Services
 			 */
 			title: () => LocalizedString
-			benefits: {
+			design: {
 				/**
-				 * Responsive
+				 * Design
 				 */
 				title: () => LocalizedString
 				/**
-				 * Sites web adaptés à tout type d'écran, garantissant une expérience fluide.
+				 * Des designs modernes et faits sur mesure, qui reflètent parfaitement l'identité de votre marque.
 				 */
 				description: () => LocalizedString
 			}
-			performance: {
+			development: {
 				/**
-				 * Performant
+				 * Développement
 				 */
 				title: () => LocalizedString
 				/**
-				 * Création de sites web performants et optimisés pour le référencement (SEO).
+				 * Des applications performantes et dynamiques, conçues pour offrir une expérience utilisateur fluide.
 				 */
 				description: () => LocalizedString
 			}
-			collaboration: {
+			maintenance: {
 				/**
-				 * Collaboratif
+				 * Maintenance
 				 */
 				title: () => LocalizedString
 				/**
-				 * Collaboration en continu pour répondre à des besoins qui évoluent.
-				 */
-				description: () => LocalizedString
-			}
-			accessibility: {
-				/**
-				 * Accessible
-				 */
-				title: () => LocalizedString
-				/**
-				 * Un design accessible et intuitif. Ergonomique et facilité d'utilisation.
+				 * Maintenance complète de votre site, pour qu'il reste à jour, sécurisé et performant en tout temps.
 				 */
 				description: () => LocalizedString
 			}

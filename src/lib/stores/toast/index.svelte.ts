@@ -37,7 +37,7 @@ export const toast = {
 export const addToast = (data: Omit<Toast, 'id'>) => {
     const id = crypto.randomUUID();
 
-    toasts.unshift({ id, ...data });
+    toasts.push({ id, ...data });
 
     setTimeout(() => {
         dismissToast(id);
