@@ -2,7 +2,7 @@
     import { goto } from '$app/navigation';
     import LL, { locale } from '$i18n/i18n-svelte';
     import { constructUrl } from '$lib/utils/construct-url';
-    import IconArrowRight from '@tabler/icons-svelte/IconArrowRight.svelte';
+    import IconArrowRight from '@tabler/icons-svelte/icons/arrow-right';
 </script>
 
 <svelte:head>
