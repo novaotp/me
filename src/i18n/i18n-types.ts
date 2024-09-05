@@ -72,11 +72,11 @@ type RootTranslation = {
 		 */
 		homePage: string
 		/**
-		 * M​e​s​ ​t​r​a​v​a​u​x
+		 * T​r​a​v​a​u​x
 		 */
 		workPage: string
 		/**
-		 * M​o​n​ ​b​l​o​g
+		 * B​l​o​g
 		 */
 		blogPage: string
 		contact: {
@@ -439,11 +439,11 @@ export type TranslationFunctions = {
 		 */
 		homePage: () => LocalizedString
 		/**
-		 * Mes travaux
+		 * Travaux
 		 */
 		workPage: () => LocalizedString
 		/**
-		 * Mon blog
+		 * Blog
 		 */
 		blogPage: () => LocalizedString
 		contact: {

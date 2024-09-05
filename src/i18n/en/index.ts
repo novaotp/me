@@ -25,8 +25,8 @@ const en = {
     },
     navigation: {
         homePage: 'Home',
-        workPage: 'My works',
-        blogPage: 'My blog',
+        workPage: 'Works',
+        blogPage: 'Blog',
         contact: {
             idea: 'Have an idea ?',
             letsTalk: "Let's talk",

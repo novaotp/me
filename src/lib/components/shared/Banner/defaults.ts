@@ -11,6 +11,6 @@ export const ICONS_MAP: Record<Toast["type"], typeof SuccessIcon> = {
 
 export const BG_COLOR_MAP: Record<Toast["type"], string> = {
     'success': 'bg-green-600',
-    'info': 'bg-red-500',
-    'error': 'bg-blue-500'
+    'info': 'bg-blue-500',
+    'error': 'bg-red-500'
 }

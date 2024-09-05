@@ -25,8 +25,8 @@ const fr = {
     },
     navigation: {
         homePage: 'Home',
-        workPage: 'Mes travaux',
-        blogPage: 'Mon blog',
+        workPage: 'Travaux',
+        blogPage: 'Blog',
         contact: {
             idea: 'Un projet en tête ?',
             letsTalk: 'Parlons-en',
