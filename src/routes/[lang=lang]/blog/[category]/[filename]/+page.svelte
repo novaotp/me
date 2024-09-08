@@ -15,25 +15,25 @@
     let metadata = $derived(data.article.metadata);
     let html = $derived(data.article.html);
 
-    $effect(() => {
-        function copyTextToClipboard(text: string): boolean {
-            if (navigator?.clipboard?.writeText) {
-                navigator.clipboard.writeText(text);
-                return true;
-            }
-
-            return false;
+    const copyTextToClipboard = (text: string): boolean => {
+        if (navigator?.clipboard?.writeText) {
+            navigator.clipboard.writeText(text);
+            return true;
         }
 
-        function swapIconAfterCopy(copyButton: HTMLButtonElement): void {
+        return false;
+    };
+
+    const swapIconAfterCopy = (copyButton: HTMLButtonElement): void => {
+        copyButton.innerHTML = '';
+        mount(IconCopyCheck, { target: copyButton });
+        setTimeout(() => {
             copyButton.innerHTML = '';
-            mount(IconCopyCheck, { target: copyButton });
-            setTimeout(() => {
-                copyButton.innerHTML = '';
-                mount(IconCopy, { target: copyButton });
-            }, ICON_CHECKED_MS);
-        }
+            mount(IconCopy, { target: copyButton });
+        }, ICON_CHECKED_MS);
+    };
 
+    $effect(() => {
         document
             .querySelectorAll<HTMLButtonElement>('button.codeblock-copy-button')
             .forEach(async (copyButton: HTMLButtonElement) => {

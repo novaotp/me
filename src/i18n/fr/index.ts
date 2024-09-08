@@ -91,7 +91,8 @@ const fr = {
         categories: {
             all: "Tout",
             personal: "Personnel",
-            guide: "Guide"
+            guides: "Guides",
+            opinions: "Opinions"
         },
         readTime: "{0} min de lecture"
     },

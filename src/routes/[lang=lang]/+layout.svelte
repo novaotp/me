@@ -3,7 +3,6 @@
     import Navbar from '$lib/components/shared/Navbar/Navbar.svelte';
     import NavPage from '$lib/components/shared/Navbar/NavPage.svelte';
     import LL, { locale } from '$i18n/i18n-svelte';
-    import { constructUrl } from '$lib/utils/construct-url';
     import LanguageSelect from '$lib/components/shared/footer/LanguageSelect.svelte';
     import ThemeSwitch from '$components/shared/footer/ThemeSwitch.svelte';
     import IconCopyright from '@tabler/icons-svelte/icons/copyright';
@@ -35,15 +34,15 @@
         <div class="w-full flex flex-col sm:flex-row gap-10 sm:gap-20 justify-between">
             <div class="flex flex-col gap-5">
                 <h3 class="font-semibold text-xl">{$LL.footer.quickLinks()}</h3>
-                <a href={constructUrl($locale, '')}>{$LL.navigation.homePage()}</a>
-                <a href={constructUrl($locale, 'work')}>{$LL.navigation.workPage()}</a>
-                <a href={constructUrl($locale, 'blog')}>{$LL.navigation.blogPage()}</a>
-                <a href={constructUrl($locale, 'contact')}>{$LL.navigation.contact.page()}</a>
+                <a href="/{$locale}">{$LL.navigation.homePage()}</a>
+                <a href="/{$locale}/work">{$LL.navigation.workPage()}</a>
+                <a href="/{$locale}/blog">{$LL.navigation.blogPage()}</a>
+                <a href="/{$locale}/contact">{$LL.navigation.contact.page()}</a>
             </div>
             <div class="flex flex-col gap-5">
                 <h3 class="font-semibold text-xl">{$LL.footer.latestArticles()}</h3>
                 {#each data.latest as { filename, metadata } (filename)}
-                    <a href={constructUrl($locale, `blog/${metadata.category}/${filename}`)}>
+                    <a href="/{$locale}/blog/{metadata.category}/{filename}">
                         {metadata.shortTitle ?? metadata.title}
                     </a>
                 {/each}
@@ -78,7 +77,7 @@
             <span>{new Date().getFullYear()} - Sajidur Rahman</span>
         </div>
         <div class="w-full flex justify-center items-center gap-5">
-            <a href={constructUrl($locale, '/privacy-policy')} class="text-xs underline">
+            <a href="/{$locale}/privacy-policy" class="text-xs underline">
                 {$LL.footer.policy()}
             </a>
         </div>

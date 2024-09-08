@@ -5,7 +5,7 @@ description: Dans ce post, nous regarderons comment mettre en place typesafe-i18
 creationDate: 2024-04-27
 banner: /article-images/multilingual.webp
 bannerAlt: Image pour Prise en charge de plusieurs langues dans SvelteKit
-category: guide
+category: guides
 ---
 
 ## Création du projet Sveltekit

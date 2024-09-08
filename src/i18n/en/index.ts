@@ -89,7 +89,8 @@ const en = {
         categories: {
             all: "All",
             personal: "Personal",
-            guide: "Guide"
+            guides: "Guides",
+            opinions: "Opinions"
         },
         readTime: "{0} min read"
     },

@@ -233,9 +233,13 @@ type RootTranslation = {
 			 */
 			personal: string
 			/**
-			 * G​u​i​d​e
+			 * G​u​i​d​e​s
 			 */
-			guide: string
+			guides: string
+			/**
+			 * O​p​i​n​i​o​n​s
+			 */
+			opinions: string
 		}
 		/**
 		 * {​0​}​ ​m​i​n​ ​d​e​ ​l​e​c​t​u​r​e
@@ -624,9 +628,13 @@ export type TranslationFunctions = {
 			 */
 			personal: () => LocalizedString
 			/**
-			 * Guide
+			 * Guides
 			 */
-			guide: () => LocalizedString
+			guides: () => LocalizedString
+			/**
+			 * Opinions
+			 */
+			opinions: () => LocalizedString
 		}
 		/**
 		 * {0} min de lecture
