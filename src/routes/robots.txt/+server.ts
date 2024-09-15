@@ -7,7 +7,11 @@ export function GET() {
             Disallow: 
 
             Sitemap: ${base}/sitemap.xml
-        `.trim(),
+        `
+            .trim()
+            .split('\n')
+            .map((line) => line.trim())
+            .join('\n'),
         { headers: { 'Content-Type': 'text/plain' } }
     );
 }
