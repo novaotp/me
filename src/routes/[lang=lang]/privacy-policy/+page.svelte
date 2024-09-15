@@ -6,7 +6,7 @@
 
     $effect(() => {
         $locale;
-    })
+    });
 </script>
 
 <svelte:head>
@@ -26,14 +26,17 @@
         <ul class="flex flex-col gap-2">
             {#each data.summary as { heading, slug }}
                 <li>
-                    <a href="#{slug}" class="text-gray-500 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-sky-300">
+                    <a
+                        href="#{slug}"
+                        class="text-gray-500 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-sky-300"
+                    >
                         {heading}
                     </a>
                 </li>
             {/each}
         </ul>
     </aside>
-    <article id="privacy-policy" class="relative mt-10 w-full max-w-[760px] flex flex-col items-start px-10">
+    <article id="privacy-policy" class="relative w-full md:mt-10 max-w-[760px] flex flex-col items-start px-10">
         {@html data.html}
     </article>
 </div>
