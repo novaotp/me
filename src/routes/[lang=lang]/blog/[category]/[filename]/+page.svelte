@@ -7,6 +7,8 @@
     import LL, { locale } from '$i18n/i18n-svelte';
     import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
     import BackToTop from '$lib/components/blog/BackToTop.svelte';
+    import { goto } from '$app/navigation';
+    import { base } from '$app/paths';
 
     let { data } = $props();
 
@@ -59,7 +61,7 @@
 <div
     class="relative h-full w-full max-w-[760px] mt-10 px-10 lg:mt-20 flex flex-col justify-start items-start gap-10 mb-10"
 >
-    <button onclick={() => history.back()} class="flex gap-5">
+    <button onclick={() => goto(`${base}/${$locale}/blog`)} class="flex gap-5">
         <IconChevronLeft />
         <span>{$LL.articlePage.back()}</span>
     </button>

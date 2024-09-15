@@ -9,6 +9,12 @@ import type { Locales } from './i18n/i18n-types';
 loadAllLocales();
 const L = i18n();
 
+const redirectMap = {
+    'blog/hello-world': 'blog/personal/hello-world',
+    'blog/multilingual-app-with-typesafe-i18n': 'blog/guide/multilingual-app-with-typesafe-i18n',
+    'blog/real-time-communication-with-express': 'blog/guide/real-time-communication-with-express'
+} as const;
+
 export const handle: Handle = async ({ event, resolve }) => {
     // read language slug
     const [, lang] = getPathnameWithoutBase(event.url).split('/');
@@ -28,6 +34,13 @@ export const handle: Handle = async ({ event, resolve }) => {
     event.locals.locale = locale;
     event.locals.LL = LL;
 
+    const redirectKey = Object.keys(redirectMap).find((oldPath) =>
+        event.url.pathname.endsWith(oldPath)
+    ) as keyof typeof redirectMap;
+    if (redirectKey) {
+        throw redirect(301, `${base}/${locale}/${redirectMap[redirectKey]}`);
+    }
+
     // replace html lang attribute with correct language
     return resolve(event, { transformPageChunk: ({ html }) => html.replace('%lang%', locale) });
 };
@@ -41,4 +54,4 @@ function getPreferredLocale({ request }: RequestEvent) {
     const acceptLanguageDetector = initAcceptLanguageHeaderDetector(request);
 
     return detectLocale(acceptLanguageDetector);
-};
+}
