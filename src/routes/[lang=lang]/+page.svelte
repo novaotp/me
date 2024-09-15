@@ -13,7 +13,7 @@
 </svelte:head>
 
 <main class="relative w-full max-w-[980px] flex flex-col items-center px-10 gap-28 my-10">
-    <section class="relative w-full h-full flex justify-center items-start flex-col gap-14">
+    <section class="relative w-full h-full flex justify-center items-start flex-col gap-16">
         <p>{$LL.homePage.greet()}</p>
         <h1 class="text-3xl leading-snug max-w-[1400px] md:text-4xl md:leading-normal xl:text-5xl xl:leading-relaxed">
             <!-- Rendering as HTML to highlight parts of the text with CSS. -->
@@ -36,7 +36,7 @@
         <h2 class="w-full text-start text-3xl">{$LL.homePage.services.title()}</h2>
         <Services />
     </section>
-    <section class="relative w-full h-full flex justify-center items-start flex-col gap-10">
+    <section class="relative w-full h-full flex justify-center items-start flex-col gap-16">
         <h2 class="text-center text-3xl">{$LL.homePage.faq.title()}</h2>
         <Accordion.Root class="w-full">
             {#each Object.values($LL.homePage.faq.entries) as { question, answer }}
