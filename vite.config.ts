@@ -13,7 +13,10 @@ export default defineConfig({
             '@vercel/analytics',
             'typesafe-i18n/svelte',
             'tailwind-merge',
-            'clsx',
+            'clsx'
         ]
+    },
+    server: {
+        host: '127.0.0.1'
     }
 });
