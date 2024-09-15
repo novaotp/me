@@ -163,29 +163,73 @@ type RootTranslation = {
 				description: string
 			}
 		}
-		aboutMe: {
+		faq: {
 			/**
-			 * À​ ​p​r​o​p​o​s
+			 * F​A​Q
 			 */
 			title: string
-			/**
-			 * P​a​s​s​i​o​n​n​é​ ​p​a​r​ ​l​a​ ​c​r​é​a​t​i​o​n​ ​d​e​ ​s​i​t​e​s​ ​w​e​b​ ​i​n​t​u​i​t​i​f​s​ ​e​t​ ​p​e​r​f​o​r​m​a​n​t​s​,​ ​j​'​é​t​u​d​i​e​ ​a​c​t​u​e​l​l​e​m​e​n​t​ ​à​ ​l​'​E​P​T​M​ ​d​e​ ​S​i​o​n​ ​e​n​ ​t​a​n​t​ ​q​u​e​ ​d​é​v​e​l​o​p​p​e​u​r​ ​d​'​a​p​p​l​i​c​a​t​i​o​n​s​.​ ​J​e​ ​s​o​u​h​a​i​t​e​ ​c​o​n​t​i​n​u​e​r​ ​à​ ​a​p​p​r​e​n​d​r​e​ ​e​t​ ​m​e​ ​p​e​r​f​e​c​t​i​o​n​n​e​r​ ​d​a​n​s​ ​c​e​ ​d​o​m​a​i​n​e​ ​e​n​ ​p​l​e​i​n​e​ ​é​v​o​l​u​t​i​o​n​.
-			 */
-			studies: string
-			skills: {
-				/**
-				 * M​e​s​ ​c​o​m​p​é​t​e​n​c​e​s​ ​t​e​c​h​n​i​q​u​e​s​ ​i​n​c​l​u​e​n​t
-				 */
-				title: string
+			entries: {
+				one: {
+					/**
+					 * P​o​u​r​q​u​o​i​ ​a​i​-​j​e​ ​b​e​s​o​i​n​ ​d​'​u​n​ ​s​i​t​e​ ​w​e​b​ ​?
+					 */
+					question: string
+					/**
+					 * U​n​ ​s​i​t​e​ ​w​e​b​ ​t​e​ ​d​o​n​n​e​ ​u​n​e​ ​p​r​é​s​e​n​c​e​ ​e​n​ ​l​i​g​n​e​,​ ​o​ù​ ​t​e​s​ ​c​l​i​e​n​t​s​ ​p​e​u​v​e​n​t​ ​t​e​ ​t​r​o​u​v​e​r​ ​f​a​c​i​l​e​m​e​n​t​.​ ​I​l​ ​t​e​ ​p​e​r​m​e​t​ ​d​e​ ​t​e​ ​f​a​i​r​e​ ​c​o​n​n​a​î​t​r​e​,​ ​d​’​a​t​t​i​r​e​r​ ​d​e​s​ ​c​l​i​e​n​t​s​ ​e​t​ ​d​e​ ​m​e​t​t​r​e​ ​e​n​ ​v​a​l​e​u​r​ ​c​e​ ​q​u​e​ ​t​u​ ​p​r​o​p​o​s​e​s​ ​d​e​ ​m​a​n​i​è​r​e​ ​e​f​f​i​c​a​c​e​.
+					 */
+					answer: string
+				}
+				two: {
+					/**
+					 * C​o​m​m​e​n​t​ ​u​n​ ​s​i​t​e​ ​w​e​b​ ​p​e​u​t​-​i​l​ ​a​i​d​e​r​ ​m​o​n​ ​e​n​t​r​e​p​r​i​s​e​ ​à​ ​s​e​ ​d​é​v​e​l​o​p​p​e​r​ ​?
+					 */
+					question: string
+					/**
+					 * L​e​s​ ​s​i​t​e​s​ ​w​e​b​ ​a​t​t​i​r​e​n​t​ ​d​e​s​ ​c​l​i​e​n​t​s​ ​p​o​t​e​n​t​i​e​l​s​ ​2​4​/​7​,​ ​f​o​u​r​n​i​s​s​e​n​t​ ​d​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​p​r​é​c​i​e​u​s​e​s​ ​e​t​ ​c​r​é​e​n​t​ ​u​n​e​ ​p​r​é​s​e​n​c​e​ ​e​n​ ​l​i​g​n​e​ ​d​i​g​n​e​ ​d​e​ ​c​o​n​f​i​a​n​c​e​.​ ​T​u​ ​p​e​u​x​ ​a​t​t​e​i​n​d​r​e​ ​d​e​s​ ​p​u​b​l​i​c​s​ ​b​i​e​n​ ​a​u​-​d​e​l​à​ ​d​e​ ​t​o​n​ ​m​a​r​c​h​é​ ​l​o​c​a​l​,​ ​a​m​é​l​i​o​r​e​r​ ​l​a​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​v​e​c​ ​l​e​s​ ​c​l​i​e​n​t​s​ ​e​t​ ​m​ê​m​e​ ​a​u​t​o​m​a​t​i​s​e​r​ ​d​e​s​ ​t​â​c​h​e​s​ ​t​e​l​l​e​s​ ​q​u​e​ ​l​a​ ​p​l​a​n​i​f​i​c​a​t​i​o​n​ ​o​u​ ​l​e​ ​t​r​a​i​t​e​m​e​n​t​ ​d​e​s​ ​c​o​m​m​a​n​d​e​s​.
+					 */
+					answer: string
+				}
+				three: {
+					/**
+					 * Q​u​e​l​s​ ​s​o​n​t​ ​l​e​s​ ​é​l​é​m​e​n​t​s​ ​c​l​é​s​ ​d​'​u​n​ ​s​i​t​e​ ​w​e​b​ ​r​é​u​s​s​i​ ​?
+					 */
+					question: string
+					/**
+					 * U​n​ ​b​o​n​ ​s​i​t​e​ ​w​e​b​ ​d​o​i​t​ ​ê​t​r​e​ ​r​a​p​i​d​e​,​ ​f​a​c​i​l​e​ ​à​ ​n​a​v​i​g​u​e​r​,​ ​e​t​ ​a​g​r​é​a​b​l​e​ ​à​ ​r​e​g​a​r​d​e​r​ ​s​u​r​ ​t​o​u​s​ ​l​e​s​ ​é​c​r​a​n​s​,​ ​y​ ​c​o​m​p​r​i​s​ ​l​e​s​ ​s​m​a​r​t​p​h​o​n​e​s​.​ ​I​l​ ​f​a​u​t​ ​a​u​s​s​i​ ​q​u​e​ ​l​e​s​ ​i​n​f​o​s​ ​s​o​i​e​n​t​ ​c​l​a​i​r​e​s​ ​e​t​ ​b​i​e​n​ ​p​r​é​s​e​n​t​é​e​s​,​ ​e​t​ ​q​u​e​ ​l​e​ ​s​i​t​e​ ​s​o​i​t​ ​s​é​c​u​r​i​s​é​ ​p​o​u​r​ ​p​r​o​t​é​g​e​r​ ​l​e​s​ ​v​i​s​i​t​e​u​r​s​.
+					 */
+					answer: string
+				}
+				four: {
+					/**
+					 * P​u​i​s​-​j​e​ ​u​t​i​l​i​s​e​r​ ​u​n​ ​c​o​n​s​t​r​u​c​t​e​u​r​ ​d​e​ ​s​i​t​e​ ​w​e​b​ ​g​r​a​t​u​i​t​ ​?
+					 */
+					question: string
+					/**
+					 * O​u​i​,​ ​t​u​ ​p​e​u​x​ ​u​t​i​l​i​s​e​r​ ​u​n​ ​c​o​n​s​t​r​u​c​t​e​u​r​ ​g​r​a​t​u​i​t​,​ ​m​a​i​s​ ​i​l​ ​y​ ​a​ ​s​o​u​v​e​n​t​ ​d​e​s​ ​l​i​m​i​t​e​s​.​ ​L​e​ ​d​e​s​i​g​n​ ​s​e​r​a​ ​m​o​i​n​s​ ​u​n​i​q​u​e​,​ ​t​u​ ​p​o​u​r​r​a​i​s​ ​a​v​o​i​r​ ​d​e​s​ ​p​u​b​s​ ​s​u​r​ ​t​o​n​ ​s​i​t​e​,​ ​e​t​ ​t​u​ ​a​u​r​a​s​ ​m​o​i​n​s​ ​d​e​ ​c​o​n​t​r​ô​l​e​ ​s​u​r​ ​c​e​ ​q​u​e​ ​t​u​ ​p​e​u​x​ ​f​a​i​r​e​.​ ​U​n​ ​s​i​t​e​ ​p​e​r​s​o​n​n​a​l​i​s​é​ ​t​e​ ​p​e​r​m​e​t​ ​d​'​a​v​o​i​r​ ​q​u​e​l​q​u​e​ ​c​h​o​s​e​ ​q​u​i​ ​t​e​ ​c​o​r​r​e​s​p​o​n​d​ ​e​t​ ​q​u​i​ ​p​e​u​t​ ​g​r​a​n​d​i​r​ ​a​v​e​c​ ​t​o​n​ ​e​n​t​r​e​p​r​i​s​e​.
+					 */
+					answer: string
+				}
+				five: {
+					/**
+					 * C​o​m​b​i​e​n​ ​c​o​û​t​e​ ​l​a​ ​c​r​é​a​t​i​o​n​ ​d​'​u​n​ ​s​i​t​e​ ​w​e​b​ ​?
+					 */
+					question: string
+					/**
+					 * L​e​ ​p​r​i​x​ ​d​'​u​n​ ​s​i​t​e​ ​w​e​b​ ​d​é​p​e​n​d​ ​d​e​ ​c​e​ ​q​u​e​ ​t​u​ ​s​o​u​h​a​i​t​e​s​.​ ​U​n​ ​s​i​t​e​ ​v​i​t​r​i​n​e​ ​e​s​t​ ​a​s​s​e​z​ ​a​b​o​r​d​a​b​l​e​,​ ​a​l​o​r​s​ ​q​u​'​u​n​ ​s​i​t​e​ ​p​l​u​s​ ​é​l​a​b​o​r​é​,​ ​c​o​m​m​e​ ​u​n​e​ ​b​o​u​t​i​q​u​e​ ​e​n​ ​l​i​g​n​e​,​ ​c​o​û​t​e​r​a​ ​d​a​v​a​n​t​a​g​e​.​ ​C​'​e​s​t​ ​u​n​ ​i​n​v​e​s​t​i​s​s​e​m​e​n​t​ ​q​u​i​ ​v​a​r​i​e​ ​e​n​ ​f​o​n​c​t​i​o​n​ ​d​e​ ​t​e​s​ ​b​e​s​o​i​n​s​ ​e​t​ ​d​e​ ​t​o​n​ ​b​u​d​g​e​t​.
+					 */
+					answer: string
+				}
+				six: {
+					/**
+					 * Q​u​e​ ​d​o​i​s​-​j​e​ ​f​a​i​r​e​ ​p​o​u​r​ ​e​n​t​r​e​t​e​n​i​r​ ​m​o​n​ ​s​i​t​e​ ​w​e​b​ ​a​p​r​è​s​ ​s​a​ ​c​r​é​a​t​i​o​n​ ​?
+					 */
+					question: string
+					/**
+					 * A​p​r​è​s​ ​l​a​ ​c​r​é​a​t​i​o​n​ ​d​e​ ​t​o​n​ ​s​i​t​e​,​ ​i​l​ ​e​s​t​ ​i​m​p​o​r​t​a​n​t​ ​d​e​ ​l​e​ ​m​e​t​t​r​e​ ​à​ ​j​o​u​r​ ​r​é​g​u​l​i​è​r​e​m​e​n​t​,​ ​d​e​ ​v​é​r​i​f​i​e​r​ ​l​a​ ​s​é​c​u​r​i​t​é​ ​p​o​u​r​ ​é​v​i​t​e​r​ ​l​e​s​ ​p​r​o​b​l​è​m​e​s​,​ ​e​t​ ​d​e​ ​g​é​r​e​r​ ​l​e​ ​c​o​n​t​e​n​u​ ​p​o​u​r​ ​q​u​'​i​l​ ​r​e​s​t​e​ ​à​ ​j​o​u​r​ ​e​t​ ​p​e​r​t​i​n​e​n​t​.​ ​B​e​a​u​c​o​u​p​ ​c​h​o​i​s​i​s​s​e​n​t​ ​u​n​ ​p​l​a​n​ ​d​e​ ​m​a​i​n​t​e​n​a​n​c​e​ ​p​o​u​r​ ​s​’​a​s​s​u​r​e​r​ ​q​u​e​ ​t​o​u​t​ ​e​s​t​ ​g​é​r​é​ ​e​f​f​i​c​a​c​e​m​e​n​t​ ​e​t​ ​s​a​n​s​ ​s​o​u​c​i​.
+					 */
+					answer: string
+				}
 			}
-			/**
-			 * E​n​ ​d​e​h​o​r​s​ ​d​e​ ​m​e​s​ ​é​t​u​d​e​s​,​ ​j​e​ ​s​u​i​s​ ​p​a​s​s​i​o​n​n​é​ ​p​a​r​ ​l​e​ ​d​e​s​i​g​n​.​ ​J​'​a​i​m​e​ ​é​g​a​l​e​m​e​n​t​ ​l​e​ ​d​e​s​s​i​n​ ​(​a​v​e​c​ ​u​n​e​ ​t​a​b​l​e​t​t​e​ ​g​r​a​p​h​i​q​u​e​)​ ​e​t​ ​l​a​ ​p​o​l​i​t​i​q​u​e​ ​i​n​t​e​r​n​a​t​i​o​n​a​l​e​.
-			 */
-			hobbies: string
-			/**
-			 * J​e​ ​s​u​i​s​ ​d​i​s​p​o​n​i​b​l​e​ ​p​o​u​r​ ​d​e​s​ ​m​i​s​s​i​o​n​s​ ​d​e​ ​d​é​v​e​l​o​p​p​e​m​e​n​t​ ​w​e​b​ ​f​r​e​e​l​a​n​c​e​ ​o​u​ ​p​o​u​r​ ​d​e​s​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​s​ ​s​u​r​ ​d​e​s​ ​p​r​o​j​e​t​s​ ​o​p​e​n​-​s​o​u​r​c​e​.
-			 */
-			availability: string
 		}
 	}
 	workPage: {
@@ -204,7 +248,7 @@ type RootTranslation = {
 		 */
 		title: string
 		/**
-		 * J​e​ ​n​'​a​i​ ​p​a​s​ ​e​n​c​o​r​e​ ​p​u​ ​d​é​v​e​l​o​p​p​e​r​ ​d​e​ ​s​i​t​e​s​ ​w​e​b​ ​p​o​u​r​ ​d​e​s​ ​c​l​i​e​n​t​s​.​ ​R​e​v​e​n​e​z​ ​p​r​o​c​h​a​i​n​e​m​e​n​t​ ​!
+		 * J​e​ ​n​'​a​i​ ​p​a​s​ ​e​n​c​o​r​e​ ​p​u​ ​d​é​v​e​l​o​p​p​e​r​ ​d​e​ ​s​i​t​e​s​ ​w​e​b​ ​p​o​u​r​ ​d​e​s​ ​c​l​i​e​n​t​s​.​ ​R​e​v​i​e​n​s​ ​p​r​o​c​h​a​i​n​e​m​e​n​t​.​.​.​ ​o​u​ ​s​o​i​s​ ​m​o​n​ ​p​r​e​m​i​e​r​ ​c​l​i​e​n​t​ ​!
 		 */
 		notYet: string
 	}
@@ -220,7 +264,7 @@ type RootTranslation = {
 			description: string
 		}
 		/**
-		 * I​c​i​,​ ​v​o​u​s​ ​t​r​o​u​v​e​r​e​z​ ​q​u​e​l​q​u​e​s​ ​a​r​t​i​c​l​e​s​ ​q​u​e​ ​j​'​a​i​ ​r​é​d​i​g​é​s​.
+		 * I​c​i​,​ ​t​u​ ​t​r​o​u​v​e​r​a​s​ ​q​u​e​l​q​u​e​s​ ​a​r​t​i​c​l​e​s​ ​q​u​e​ ​j​'​a​i​ ​r​é​d​i​g​é​s​.
 		 */
 		summary: string
 		categories: {
@@ -289,7 +333,7 @@ type RootTranslation = {
 		title: string
 		content: {
 			/**
-			 * E​n​v​o​y​e​z​ ​u​n​ ​e​m​a​i​l​ ​à​ ​l​'​a​d​r​e​s​s​e
+			 * E​n​v​o​i​e​ ​u​n​ ​e​m​a​i​l​ ​à​ ​l​'​a​d​r​e​s​s​e
 			 */
 			email: string
 			/**
@@ -297,7 +341,7 @@ type RootTranslation = {
 			 */
 			or: string
 			/**
-			 * C​o​m​p​l​é​t​e​z​ ​l​e​ ​f​o​r​m​u​l​a​i​r​e​ ​c​i​-​d​e​s​s​o​u​s​ ​p​o​u​r​ ​m​e​ ​c​o​n​t​a​c​t​e​r​.
+			 * C​o​m​p​l​è​t​e​ ​l​e​ ​f​o​r​m​u​l​a​i​r​e​ ​c​i​-​d​e​s​s​o​u​s​ ​p​o​u​r​ ​m​e​ ​c​o​n​t​a​c​t​e​r​.
 			 */
 			form: string
 		}
@@ -310,38 +354,38 @@ type RootTranslation = {
 		form: {
 			notifications: {
 				/**
-				 * V​e​u​i​l​l​e​z​ ​c​o​m​p​l​é​t​e​r​ ​t​o​u​s​ ​l​e​s​ ​c​h​a​m​p​s​.
+				 * P​e​n​s​e​ ​à​ ​c​o​m​p​l​é​t​e​r​ ​t​o​u​s​ ​l​e​s​ ​c​h​a​m​p​s​.
 				 */
 				fillAll: string
 				/**
-				 * E​n​t​r​e​z​ ​u​n​ ​e​m​a​i​l​ ​v​a​l​i​d​e​.
+				 * E​n​t​r​e​ ​u​n​ ​e​m​a​i​l​ ​v​a​l​i​d​e​.
 				 */
 				invalidEmail: string
 				/**
-				 * E​m​a​i​l​ ​e​n​v​o​y​é​ ​a​v​e​c​ ​s​u​c​c​è​s​,​ ​j​e​ ​r​e​v​i​e​n​d​r​a​i​ ​v​e​r​s​ ​v​o​u​s​ ​d​è​s​ ​q​u​e​ ​p​o​s​s​i​b​l​e​.
+				 * E​m​a​i​l​ ​e​n​v​o​y​é​ ​a​v​e​c​ ​s​u​c​c​è​s​,​ ​j​e​ ​r​e​v​i​e​n​d​r​a​i​ ​v​e​r​s​ ​t​o​i​ ​d​è​s​ ​q​u​e​ ​p​o​s​s​i​b​l​e​.
 				 */
 				emailSent: string
 				/**
-				 * U​n​e​ ​e​r​r​e​u​r​ ​s​'​e​s​t​ ​p​r​o​d​u​i​t​e​.​ ​R​é​e​s​s​a​y​e​z​ ​p​l​u​s​ ​t​a​r​d​.
+				 * U​n​e​ ​e​r​r​e​u​r​ ​s​'​e​s​t​ ​p​r​o​d​u​i​t​e​.​ ​R​é​e​s​s​a​i​e​ ​p​l​u​s​ ​t​a​r​d​.
 				 */
 				emailError: string
 			}
 			fields: {
 				name: {
 					/**
-					 * E​n​t​r​e​z​ ​v​o​t​r​e​ ​n​o​m​ ​i​c​i​.​.​.
+					 * E​n​t​r​e​ ​t​o​n​ ​n​o​m​ ​i​c​i​.​.​.
 					 */
 					placeholder: string
 				}
 				email: {
 					/**
-					 * E​n​t​r​e​z​ ​v​o​t​r​e​ ​e​m​a​i​l​ ​i​c​i​.​.​.
+					 * E​n​t​r​e​ ​t​o​n​ ​e​m​a​i​l​ ​i​c​i​.​.​.
 					 */
 					placeholder: string
 				}
 				message: {
 					/**
-					 * E​n​t​r​e​z​ ​v​o​t​r​e​ ​m​e​s​s​a​g​e​ ​i​c​i​.​.​.
+					 * E​n​t​r​e​ ​t​o​n​ ​m​e​s​s​a​g​e​ ​i​c​i​.​.​.
 					 */
 					placeholder: string
 				}
@@ -359,7 +403,7 @@ type RootTranslation = {
 			 */
 			title: string
 			/**
-			 * L​a​ ​t​r​a​n​s​p​a​r​e​n​c​e​ ​e​t​ ​l​a​ ​p​r​o​t​e​c​t​i​o​n​ ​d​e​s​ ​d​o​n​n​é​e​s​ ​s​o​n​t​ ​n​o​s​ ​p​r​i​n​c​i​p​a​l​e​s​ ​p​r​i​o​r​i​t​é​s​.​ ​N​o​t​r​e​ ​p​o​l​i​t​i​q​u​e​ ​d​e​ ​c​o​n​f​i​d​e​n​t​i​a​l​i​t​é​ ​d​é​t​a​i​l​l​é​e​ ​e​x​p​l​i​q​u​e​ ​c​o​m​m​e​n​t​ ​n​o​u​s​ ​t​r​a​i​t​o​n​s​ ​v​o​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​,​ ​e​n​ ​v​e​i​l​l​a​n​t​ ​à​ ​c​e​ ​q​u​e​ ​v​o​t​r​e​ ​v​i​e​ ​p​r​i​v​é​e​ ​s​o​i​t​ ​t​o​u​j​o​u​r​s​ ​r​e​s​p​e​c​t​é​e​.
+			 * L​a​ ​t​r​a​n​s​p​a​r​e​n​c​e​ ​e​t​ ​l​a​ ​p​r​o​t​e​c​t​i​o​n​ ​d​e​s​ ​d​o​n​n​é​e​s​ ​e​s​t​ ​m​a​ ​p​r​i​n​c​i​p​a​l​e​s​ ​p​r​i​o​r​i​t​é​.​ ​M​a​ ​p​o​l​i​t​i​q​u​e​ ​d​e​ ​c​o​n​f​i​d​e​n​t​i​a​l​i​t​é​ ​d​é​t​a​i​l​l​é​e​ ​e​x​p​l​i​q​u​e​ ​c​o​m​m​e​n​t​ ​j​e​ ​t​r​a​i​t​o​n​s​ ​t​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​,​ ​e​n​ ​v​e​i​l​l​a​n​t​ ​à​ ​c​e​ ​q​u​e​ ​t​a​ ​v​i​e​ ​p​r​i​v​é​e​ ​s​o​i​t​ ​t​o​u​j​o​u​r​s​ ​r​e​s​p​e​c​t​é​e​.
 			 */
 			description: string
 		}
@@ -369,7 +413,7 @@ type RootTranslation = {
 			 */
 			title: string
 			/**
-			 * N​o​t​r​e​ ​p​o​l​i​t​i​q​u​e​ ​d​e​ ​c​o​n​f​i​d​e​n​t​i​a​l​i​t​é​ ​e​s​t​ ​e​n​ ​c​o​u​r​s​ ​d​'​é​l​a​b​o​r​a​t​i​o​n​.​ ​N​o​u​s​ ​n​o​u​s​ ​e​n​g​a​g​e​o​n​s​ ​à​ ​f​o​u​r​n​i​r​ ​d​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​c​l​a​i​r​e​s​ ​s​u​r​ ​l​a​ ​m​a​n​i​è​r​e​ ​d​o​n​t​ ​n​o​u​s​ ​t​r​a​i​t​o​n​s​ ​v​o​s​ ​d​o​n​n​é​e​s​.​ ​P​o​u​r​ ​n​o​u​s​ ​a​i​d​e​r​ ​à​ ​n​o​u​s​ ​a​m​é​l​i​o​r​e​r​,​ ​f​a​i​t​e​s​-​n​o​u​s​ ​p​a​r​t​ ​d​e​ ​v​o​s​ ​q​u​e​s​t​i​o​n​s​ ​o​u​ ​s​u​g​g​e​s​t​i​o​n​s​ ​à​ ​l​'​a​d​r​e​s​s​e​ ​s​u​i​v​a​n​t​e
+			 * M​a​ ​p​o​l​i​t​i​q​u​e​ ​d​e​ ​c​o​n​f​i​d​e​n​t​i​a​l​i​t​é​ ​e​s​t​ ​e​n​ ​c​o​u​r​s​ ​d​'​é​l​a​b​o​r​a​t​i​o​n​.​ ​J​e​ ​m​'​e​n​g​a​g​e​ ​à​ ​f​o​u​r​n​i​r​ ​d​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​c​l​a​i​r​e​s​ ​s​u​r​ ​l​a​ ​m​a​n​i​è​r​e​ ​d​o​n​t​ ​j​e​ ​t​r​a​i​t​e​ ​t​e​s​ ​d​o​n​n​é​e​s​.​ ​P​o​u​r​ ​m​'​a​i​d​e​r​ ​à​ ​l​'​a​m​é​l​i​o​r​e​r​,​ ​f​a​i​s​-​m​o​i​ ​p​a​r​t​ ​d​e​ ​t​e​s​ ​q​u​e​s​t​i​o​n​s​ ​o​u​ ​s​u​g​g​e​s​t​i​o​n​s​ ​à​ ​l​'​a​d​r​e​s​s​e​ ​s​u​i​v​a​n​t​e
 			 */
 			content: string
 		}
@@ -554,29 +598,73 @@ export type TranslationFunctions = {
 				description: () => LocalizedString
 			}
 		}
-		aboutMe: {
+		faq: {
 			/**
-			 * À propos
+			 * FAQ
 			 */
 			title: () => LocalizedString
-			/**
-			 * Passionné par la création de sites web intuitifs et performants, j'étudie actuellement à l'EPTM de Sion en tant que développeur d'applications. Je souhaite continuer à apprendre et me perfectionner dans ce domaine en pleine évolution.
-			 */
-			studies: () => LocalizedString
-			skills: {
-				/**
-				 * Mes compétences techniques incluent
-				 */
-				title: () => LocalizedString
+			entries: {
+				one: {
+					/**
+					 * Pourquoi ai-je besoin d'un site web ?
+					 */
+					question: () => LocalizedString
+					/**
+					 * Un site web te donne une présence en ligne, où tes clients peuvent te trouver facilement. Il te permet de te faire connaître, d’attirer des clients et de mettre en valeur ce que tu proposes de manière efficace.
+					 */
+					answer: () => LocalizedString
+				}
+				two: {
+					/**
+					 * Comment un site web peut-il aider mon entreprise à se développer ?
+					 */
+					question: () => LocalizedString
+					/**
+					 * Les sites web attirent des clients potentiels 24/7, fournissent des informations précieuses et créent une présence en ligne digne de confiance. Tu peux atteindre des publics bien au-delà de ton marché local, améliorer la communication avec les clients et même automatiser des tâches telles que la planification ou le traitement des commandes.
+					 */
+					answer: () => LocalizedString
+				}
+				three: {
+					/**
+					 * Quels sont les éléments clés d'un site web réussi ?
+					 */
+					question: () => LocalizedString
+					/**
+					 * Un bon site web doit être rapide, facile à naviguer, et agréable à regarder sur tous les écrans, y compris les smartphones. Il faut aussi que les infos soient claires et bien présentées, et que le site soit sécurisé pour protéger les visiteurs.
+					 */
+					answer: () => LocalizedString
+				}
+				four: {
+					/**
+					 * Puis-je utiliser un constructeur de site web gratuit ?
+					 */
+					question: () => LocalizedString
+					/**
+					 * Oui, tu peux utiliser un constructeur gratuit, mais il y a souvent des limites. Le design sera moins unique, tu pourrais avoir des pubs sur ton site, et tu auras moins de contrôle sur ce que tu peux faire. Un site personnalisé te permet d'avoir quelque chose qui te correspond et qui peut grandir avec ton entreprise.
+					 */
+					answer: () => LocalizedString
+				}
+				five: {
+					/**
+					 * Combien coûte la création d'un site web ?
+					 */
+					question: () => LocalizedString
+					/**
+					 * Le prix d'un site web dépend de ce que tu souhaites. Un site vitrine est assez abordable, alors qu'un site plus élaboré, comme une boutique en ligne, coûtera davantage. C'est un investissement qui varie en fonction de tes besoins et de ton budget.
+					 */
+					answer: () => LocalizedString
+				}
+				six: {
+					/**
+					 * Que dois-je faire pour entretenir mon site web après sa création ?
+					 */
+					question: () => LocalizedString
+					/**
+					 * Après la création de ton site, il est important de le mettre à jour régulièrement, de vérifier la sécurité pour éviter les problèmes, et de gérer le contenu pour qu'il reste à jour et pertinent. Beaucoup choisissent un plan de maintenance pour s’assurer que tout est géré efficacement et sans souci.
+					 */
+					answer: () => LocalizedString
+				}
 			}
-			/**
-			 * En dehors de mes études, je suis passionné par le design. J'aime également le dessin (avec une tablette graphique) et la politique internationale.
-			 */
-			hobbies: () => LocalizedString
-			/**
-			 * Je suis disponible pour des missions de développement web freelance ou pour des collaborations sur des projets open-source.
-			 */
-			availability: () => LocalizedString
 		}
 	}
 	workPage: {
@@ -595,7 +683,7 @@ export type TranslationFunctions = {
 		 */
 		title: () => LocalizedString
 		/**
-		 * Je n'ai pas encore pu développer de sites web pour des clients. Revenez prochainement !
+		 * Je n'ai pas encore pu développer de sites web pour des clients. Reviens prochainement... ou sois mon premier client !
 		 */
 		notYet: () => LocalizedString
 	}
@@ -611,7 +699,7 @@ export type TranslationFunctions = {
 			description: () => LocalizedString
 		}
 		/**
-		 * Ici, vous trouverez quelques articles que j'ai rédigés.
+		 * Ici, tu trouveras quelques articles que j'ai rédigés.
 		 */
 		summary: () => LocalizedString
 		categories: {
@@ -678,7 +766,7 @@ export type TranslationFunctions = {
 		title: () => LocalizedString
 		content: {
 			/**
-			 * Envoyez un email à l'adresse
+			 * Envoie un email à l'adresse
 			 */
 			email: () => LocalizedString
 			/**
@@ -686,7 +774,7 @@ export type TranslationFunctions = {
 			 */
 			or: () => LocalizedString
 			/**
-			 * Complétez le formulaire ci-dessous pour me contacter.
+			 * Complète le formulaire ci-dessous pour me contacter.
 			 */
 			form: () => LocalizedString
 		}
@@ -699,38 +787,38 @@ export type TranslationFunctions = {
 		form: {
 			notifications: {
 				/**
-				 * Veuillez compléter tous les champs.
+				 * Pense à compléter tous les champs.
 				 */
 				fillAll: () => LocalizedString
 				/**
-				 * Entrez un email valide.
+				 * Entre un email valide.
 				 */
 				invalidEmail: () => LocalizedString
 				/**
-				 * Email envoyé avec succès, je reviendrai vers vous dès que possible.
+				 * Email envoyé avec succès, je reviendrai vers toi dès que possible.
 				 */
 				emailSent: () => LocalizedString
 				/**
-				 * Une erreur s'est produite. Réessayez plus tard.
+				 * Une erreur s'est produite. Réessaie plus tard.
 				 */
 				emailError: () => LocalizedString
 			}
 			fields: {
 				name: {
 					/**
-					 * Entrez votre nom ici...
+					 * Entre ton nom ici...
 					 */
 					placeholder: () => LocalizedString
 				}
 				email: {
 					/**
-					 * Entrez votre email ici...
+					 * Entre ton email ici...
 					 */
 					placeholder: () => LocalizedString
 				}
 				message: {
 					/**
-					 * Entrez votre message ici...
+					 * Entre ton message ici...
 					 */
 					placeholder: () => LocalizedString
 				}
@@ -748,7 +836,7 @@ export type TranslationFunctions = {
 			 */
 			title: () => LocalizedString
 			/**
-			 * La transparence et la protection des données sont nos principales priorités. Notre politique de confidentialité détaillée explique comment nous traitons vos informations, en veillant à ce que votre vie privée soit toujours respectée.
+			 * La transparence et la protection des données est ma principales priorité. Ma politique de confidentialité détaillée explique comment je traitons tes informations, en veillant à ce que ta vie privée soit toujours respectée.
 			 */
 			description: () => LocalizedString
 		}
@@ -758,7 +846,7 @@ export type TranslationFunctions = {
 			 */
 			title: () => LocalizedString
 			/**
-			 * Notre politique de confidentialité est en cours d'élaboration. Nous nous engageons à fournir des informations claires sur la manière dont nous traitons vos données. Pour nous aider à nous améliorer, faites-nous part de vos questions ou suggestions à l'adresse suivante
+			 * Ma politique de confidentialité est en cours d'élaboration. Je m'engage à fournir des informations claires sur la manière dont je traite tes données. Pour m'aider à l'améliorer, fais-moi part de tes questions ou suggestions à l'adresse suivante
 			 */
 			content: () => LocalizedString
 		}

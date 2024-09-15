@@ -4,6 +4,7 @@
     import IconPointFilled from '@tabler/icons-svelte/icons/point-filled';
     import IconArrowNarrowRight from '@tabler/icons-svelte/icons/arrow-narrow-right';
     import Services from '$components/home/Services.svelte';
+    import * as Accordion from '$components/home/Accordion';
 </script>
 
 <svelte:head>
@@ -36,11 +37,14 @@
         <Services />
     </section>
     <section class="relative w-full h-full flex justify-center items-start flex-col gap-10">
-        <h2 class="text-center text-3xl">{$LL.homePage.aboutMe.title()}</h2>
-        <div class="text-justify flex flex-col gap-5">
-            <p>{$LL.homePage.aboutMe.studies()}</p>
-            <p>{$LL.homePage.aboutMe.hobbies()}</p>
-            <p>{$LL.homePage.aboutMe.availability()}</p>
-        </div>
+        <h2 class="text-center text-3xl">{$LL.homePage.faq.title()}</h2>
+        <Accordion.Root class="w-full">
+            {#each Object.values($LL.homePage.faq.entries) as { question, answer }}
+                <Accordion.Item value={question()}>
+                    <Accordion.Trigger>{question()}</Accordion.Trigger>
+                    <Accordion.Content>{answer()}</Accordion.Content>
+                </Accordion.Item>
+            {/each}
+        </Accordion.Root>
     </section>
 </main>
