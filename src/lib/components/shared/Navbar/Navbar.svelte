@@ -6,7 +6,6 @@
     import IconHeartHandshake from '@tabler/icons-svelte/icons/heart-handshake';
     import LL, { locale } from '$i18n/i18n-svelte';
     import { stripTrailingSlash } from '$lib/utils/strip-trailing-slash';
-    import type { Page } from '@sveltejs/kit';
     import { goto } from '$app/navigation';
 
     interface Props {
@@ -24,8 +23,8 @@
         document.body.style.overflow = 'hidden';
     };
 
-    function colors(href: string, page: Page<Record<string, string>, string | null>) {
-        return page.url.pathname === stripTrailingSlash(`${base}/${$locale}${href}`)
+    function colors(href: string) {
+        return $page.url.pathname === `${$locale}/${href}`
             ? 'text-indigo-700 dark:text-sky-300'
             : 'text-gray-500 dark:text-gray-400';
     }
@@ -55,13 +54,13 @@ Renders a navbar adapted for devices under 1024px wide.
     <div class="flex items-center gap-12">
         <a
             href="/{$locale}/work"
-            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/work', $page)}"
+            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/work')}"
         >
             {$LL.navigation.workPage()}
         </a>
         <a
             href="/{$locale}/blog"
-            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/blog', $page)}"
+            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/blog')}"
         >
             {$LL.navigation.blogPage()}
         </a>
