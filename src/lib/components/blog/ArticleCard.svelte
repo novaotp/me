@@ -2,13 +2,12 @@
     import { goto } from '$app/navigation';
     import { base } from '$app/paths';
     import LL, { locale } from '$i18n/i18n-svelte';
-    import { constructUrl } from '$lib/utils/construct-url';
     import { cn } from '$lib/utils/cn';
     import type { ArticleMetadata } from '$lib/server/article';
 
     interface Props {
-        class?: string,
-        filename: string,
+        class?: string;
+        filename: string;
         metadata: ArticleMetadata;
     }
 
@@ -17,16 +16,22 @@
 </script>
 
 <svelte:head>
-    <link rel="preload" href="{base}{banner}" as="image" type="image/webp">
+    <link rel="preload" href="{base}{banner}" as="image" type="image/webp" />
 </svelte:head>
 
 <button
-    onclick={() => goto(constructUrl($locale, `/blog/${category}/${filename}`), { noScroll: false })}
-    class={cn("relative rounded-lg shadow-[0_0_15px_0px_rgba(0,0,0,0.25)] duration-150 flex flex-col items-start",
-            "overflow-hidden hover:scale-105 hover:shadow-[0_0_25px_0px_rgba(0,0,0,0.25)] dark:bg-zinc-700",
-            className)}
+    onclick={() => goto(`/${$locale}/blog/${category}/${filename}`, { noScroll: false })}
+    class={cn(
+        'relative rounded-lg shadow-[0_0_15px_0px_rgba(0,0,0,0.25)] duration-150 flex flex-col items-start',
+        'overflow-hidden hover:scale-105 hover:shadow-[0_0_25px_0px_rgba(0,0,0,0.25)] dark:bg-zinc-700',
+        className
+    )}
 >
-    <div role="img" style="background-image: url('{base}{banner}');" class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"></div>
+    <div
+        role="img"
+        style="background-image: url('{base}{banner}');"
+        class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"
+    ></div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
         <div class="flex gap-3 items-center">
             <time class="text-gray-500 dark:text-gray-400 text-sm">{creationDate.toLocaleDateString($locale)}</time>

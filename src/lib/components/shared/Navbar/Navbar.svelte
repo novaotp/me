@@ -43,30 +43,30 @@ Renders a navbar adapted for devices under 1024px wide.
             <IconMenu class="size-6" />
         </span>
     </button>
-    <a href="{base}/{$locale}" class="relative h-5">
+    <a href="/{$locale}" class="relative h-5">
         <img src="/logos/logo_only_name.png" alt="Sajidur Rahman's Logo" class="relative h-5" />
     </a>
 </nav>
 
 <nav class="lg:flex hidden w-full h-20 px-10 py-5 justify-between items-center">
-    <a href="{base}/{$locale}" class="relative h-10">
+    <a href="/{$locale}" class="relative h-10">
         <img src="/logos/logo_one_line.png" alt="Sajidur Rahman's Logo" class="relative h-10" />
     </a>
     <div class="flex items-center gap-12">
         <a
-            href="{base}/{$locale}/work"
+            href="/{$locale}/work"
             class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/work', $page)}"
         >
             {$LL.navigation.workPage()}
         </a>
         <a
-            href="{base}/{$locale}/blog"
+            href="/{$locale}/blog"
             class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/blog', $page)}"
         >
             {$LL.navigation.blogPage()}
         </a>
         <button
-            onclick={() => goto(`${base}/${$locale}/contact`)}
+            onclick={() => goto(`/${$locale}/contact`)}
             class="bg-indigo-700 dark:bg-sky-300 py-2 px-6 rounded text-white dark:text-zinc-800 flex gap-3 items-center"
         >
             <IconHeartHandshake />

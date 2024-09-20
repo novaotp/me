@@ -18,6 +18,11 @@
             ? 'text-indigo-700 dark:text-sky-300'
             : 'text-gray-500 dark:text-gray-400';
     });
+
+    let link = $derived.by(() => {
+        const newHref = href.startsWith('/') ? href.slice(1) : href;
+        return `/${$locale}/${newHref}`;
+    });
 </script>
 
 <!--
@@ -29,7 +34,7 @@ If the current path is the same as the href, the css will highlight it.
 -->
 
 <a
-    href="{base}/{$locale}{href}"
+    href={link}
     {onclick}
     class="relative w-full py-2 flex gap-10 justify-start items-center rounded-md {colors} sm:px-5"
 >

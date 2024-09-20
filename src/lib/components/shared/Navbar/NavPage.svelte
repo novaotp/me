@@ -59,7 +59,7 @@
                 <button
                     onclick={() => {
                         closeMenu();
-                        goto(`${base}/${$locale}/contact`);
+                        goto(`/${$locale}/contact`);
                     }}
                     aria-label="Go to the contact page"
                     class="relative w-full py-3 px-10 flex gap-[6px] xsm:flex-row justify-center items-center

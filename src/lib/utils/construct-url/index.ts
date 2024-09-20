@@ -1,4 +1,3 @@
-import { base } from '$app/paths';
 import type { Locales } from '$i18n/i18n-types';
 
 /**
@@ -12,5 +11,5 @@ export function constructUrl(locale: Locales, relativeHref: string): string {
         relativeHref = relativeHref.substring(1);
     }
 
-    return `${base}/${locale}/${relativeHref}`;
-};
+    return `/${locale}/${relativeHref}`;
+}

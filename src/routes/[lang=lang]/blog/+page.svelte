@@ -8,7 +8,9 @@
 
     let selectedCategory = $state('all');
     let filteredArticles = $derived.by(() => {
-        return data.articles.filter(({ metadata }) => selectedCategory === 'all' || metadata.category === selectedCategory);
+        return data.articles.filter(
+            ({ metadata }) => selectedCategory === 'all' || metadata.category === selectedCategory
+        );
     });
 
     $effect.pre(() => {
