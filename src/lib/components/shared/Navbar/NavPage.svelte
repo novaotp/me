@@ -8,7 +8,6 @@
     import { fly, fade } from 'svelte/transition';
     import Link from './Link.svelte';
     import LL, { locale } from '$i18n/i18n-svelte';
-    import { base } from '$app/paths';
     import { goto } from '$app/navigation';
 
     interface Props {

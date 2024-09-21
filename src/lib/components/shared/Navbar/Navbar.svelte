@@ -1,6 +1,5 @@
 <script lang="ts">
     import { page } from '$app/stores';
-    import { base } from '$app/paths';
     import IconArrowRight from '@tabler/icons-svelte/icons/arrow-right';
     import IconMenu from '@tabler/icons-svelte/icons/menu';
     import IconHeartHandshake from '@tabler/icons-svelte/icons/heart-handshake';
@@ -24,7 +23,7 @@
     };
 
     function colors(href: string) {
-        return $page.url.pathname === `${$locale}/${href}`
+        return $page.url.pathname === `/${$locale}/${href}`
             ? 'text-indigo-700 dark:text-sky-300'
             : 'text-gray-500 dark:text-gray-400';
     }
@@ -54,13 +53,13 @@ Renders a navbar adapted for devices under 1024px wide.
     <div class="flex items-center gap-12">
         <a
             href="/{$locale}/work"
-            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/work')}"
+            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('work')}"
         >
             {$LL.navigation.workPage()}
         </a>
         <a
             href="/{$locale}/blog"
-            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('/blog')}"
+            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('blog')}"
         >
             {$LL.navigation.blogPage()}
         </a>

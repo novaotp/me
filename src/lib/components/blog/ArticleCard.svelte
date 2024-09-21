@@ -1,6 +1,5 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
-    import { base } from '$app/paths';
     import LL, { locale } from '$i18n/i18n-svelte';
     import { cn } from '$lib/utils/cn';
     import type { ArticleMetadata } from '$lib/server/article';
@@ -16,7 +15,7 @@
 </script>
 
 <svelte:head>
-    <link rel="preload" href="{base}{banner}" as="image" type="image/webp" />
+    <link rel="preload" href={banner} as="image" type="image/webp" />
 </svelte:head>
 
 <button
@@ -29,7 +28,7 @@
 >
     <div
         role="img"
-        style="background-image: url('{base}{banner}');"
+        style="background-image: url('{banner}');"
         class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"
     ></div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
