@@ -1,7 +1,8 @@
 import { allCategories, importArticles } from '$lib/server/article';
 import { baseLocale, locales } from '$i18n/i18n-util';
+import type { RequestHandler } from '@sveltejs/kit';
 
-export async function GET({ url }) {
+export const GET: RequestHandler = async ({ url }) => {
     const paths = [
         '',
         'work',
@@ -28,7 +29,7 @@ export async function GET({ url }) {
                     return paths.map((path) => {
                         return `
                             <url>
-                                <loc>${url.hostname}/${locale}/${path}</loc>
+                                <loc>${url.protocol}//${url.hostname}/${locale}/${path}</loc>
                             </url>
                         `;
                     });
@@ -37,4 +38,4 @@ export async function GET({ url }) {
         `.trim(),
         { headers: { 'Content-Type': 'application/xml' } }
     );
-}
+};
