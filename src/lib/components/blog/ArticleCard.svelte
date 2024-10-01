@@ -11,12 +11,8 @@
     }
 
     let { class: className, filename, metadata }: Props = $props();
-    let { title, description, banner, creationDate, category, readTime } = $derived(metadata);
+    let { title, description, banner, bannerAlt, creationDate, category, readTime } = $derived(metadata);
 </script>
-
-<svelte:head>
-    <link rel="preload" href={banner} as="image" type="image/webp" />
-</svelte:head>
 
 <button
     onclick={() => goto(`/${$locale}/blog/${category}/${filename}`, { noScroll: false })}
@@ -26,11 +22,9 @@
         className
     )}
 >
-    <div
-        role="img"
-        style="background-image: url('{banner}');"
-        class="relative w-full h-[200px] bg-center bg-cover flex justify-center items-center overflow-hidden"
-    ></div>
+    <div class="relative w-full h-[200px] flex justify-center items-center overflow-hidden">
+        <img src={banner} alt={bannerAlt} class="w-full h-full object-cover" loading="lazy" />
+    </div>
     <div class="relative w-full flex flex-col items-start gap-[10px] p-10">
         <div class="flex gap-3 items-center">
             <time class="text-gray-500 dark:text-gray-400 text-sm">{creationDate.toLocaleDateString($locale)}</time>
