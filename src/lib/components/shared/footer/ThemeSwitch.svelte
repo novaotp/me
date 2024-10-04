@@ -1,10 +1,20 @@
 <script lang="ts">
     import { getTheme, switchTheme } from '$stores/theme.svelte';
+    import type { MouseEventHandler } from 'svelte/elements';
+
+    let inputNode = $state<HTMLInputElement>();
+
+    const catchClick: MouseEventHandler<HTMLButtonElement> = (event) => {
+        event.stopPropagation();
+
+        inputNode?.click();
+    };
 </script>
 
 <!-- By https://uiverse.io/Galahhad/strong-squid-82 -->
-<label class="theme-switch">
+<button class="theme-switch" onclick={catchClick}>
     <input
+        bind:this={inputNode}
         type="checkbox"
         checked={getTheme() !== 'light'}
         onchange={(event) => switchTheme(event.currentTarget.checked ? 'dark' : 'light')}
@@ -32,7 +42,7 @@
             </div>
         </div>
     </div>
-</label>
+</button>
 
 <style>
     .theme-switch {
@@ -143,8 +153,10 @@
         box-shadow:
             0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset,
             0em -0.062em 0.062em 0em #a1872a inset;
-        -webkit-filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
-        filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+        -webkit-filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25))
+            drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25))
+            drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
         overflow: hidden;
         -webkit-transition: var(--transition);
         -o-transition: var(--transition);
