@@ -1,8 +1,8 @@
 import defaultThemes from 'tailwindcss/defaultTheme';
+import type { Config } from 'tailwindcss';
 
-/** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: "selector",
+    darkMode: 'selector',
     content: ['./src/**/*.{html,js,svelte,ts}'],
     theme: {
         screens: {
@@ -11,4 +11,4 @@ export default {
         }
     },
     plugins: []
-};
+} satisfies Config;

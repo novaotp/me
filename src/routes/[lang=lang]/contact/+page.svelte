@@ -61,7 +61,7 @@
             {$LL.contactPage.content.email()}
             <a
                 href="mailto:contact@sajidur.dev?subject={$LL.contactPage.email.subject()}"
-                class="relative flex gap-1 justify-center items-center"
+                class="relative flex items-center justify-center gap-1"
             >
                 <span class="font-semibold">contact@sajidur.dev</span>
                 <IconExternalLink />
@@ -76,18 +76,17 @@
         >
             {$LL.contactPage.content.or()}
         </span>
-        <p class="text-center text-sm xsm:text-base">{$LL.contactPage.content.form()}</p>
+        <p class="text-sm text-center xsm:text-base">{$LL.contactPage.content.form()}</p>
     </div>
-    <form class="relative w-full flex flex-col justify-center items-center" onsubmit={handleFormSubmission}>
-        <div class="relative w-full flex flex-col gap-5 mb-5 sm:flex-row">
+    <form class="relative flex flex-col items-center justify-center w-full" onsubmit={handleFormSubmission}>
+        <div class="relative flex flex-col w-full gap-5 mb-5 sm:flex-row">
             <Input bind:value={name} placeholder={$LL.contactPage.form.fields.name.placeholder()} />
             <Input type="email" bind:value={email} placeholder={$LL.contactPage.form.fields.email.placeholder()} />
         </div>
         <Text bind:value={message} placeholder={$LL.contactPage.form.fields.message.placeholder()} />
         <button
             type="submit"
-            class="relative px-6 py-3 mt-5 rounded flex items-center text-sm
-                 bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800"
+            class="relative flex items-center px-6 py-3 mt-5 text-sm text-white bg-indigo-700 rounded dark:bg-sky-300 dark:text-zinc-800"
         >
             {$LL.contactPage.form.send()}
         </button>
