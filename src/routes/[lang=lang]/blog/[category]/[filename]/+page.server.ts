@@ -6,7 +6,7 @@ export async function load({ params, locals: { locale } }) {
     const article = await convertMarkdown(`${CONTENT_DIR}/${locale}/${params.filename}.md`);
     const latest = await latestArticles(locale, params.filename, 2);
 
-    return { article, latest, summary: article.summary };
+    return { article, latest };
 }
 
 export const entries: EntryGenerator = async () => {

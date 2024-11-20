@@ -13,7 +13,13 @@ export default defineConfig({
             '@vercel/analytics',
             'typesafe-i18n/svelte',
             'tailwind-merge',
-            'clsx'
+            'clsx',
+            'dequal',
+            'nanoid/non-secure',
+            '@internationalized/date',
+            '@floating-ui/dom',
+            'focus-trap',
+            'bits-ui'
         ]
     },
     server: {

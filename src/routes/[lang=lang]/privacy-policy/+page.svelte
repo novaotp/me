@@ -1,5 +1,6 @@
 <script lang="ts">
     import LL, { locale } from '$i18n/i18n-svelte';
+    import { slugify } from '$lib/utils/slugify/index.js';
     import Banner from '$lib/components/shared/Banner/Banner.svelte';
 
     let { data } = $props();
@@ -24,13 +25,13 @@
     <aside class="hidden xl:flex sticky h-[calc(100%-7.5rem)] max-w-[400px] left-0 top-0 pt-20 flex-col gap-5 pb-5">
         <span>{$LL.privacyPolicyPage.onThisPage()}</span>
         <ul class="flex flex-col gap-2">
-            {#each data.summary as { heading, slug }}
+            {#each data.tableOfContents as item}
                 <li>
                     <a
-                        href="#{slug}"
+                        href="#{slugify(item)}"
                         class="text-gray-500 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-sky-300"
                     >
-                        {heading}
+                        {item}
                     </a>
                 </li>
             {/each}
