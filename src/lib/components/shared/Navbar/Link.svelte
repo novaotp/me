@@ -5,7 +5,7 @@
     import { type Snippet } from 'svelte';
 
     interface Props {
-        children: Snippet;
+        children?: Snippet;
         href: string;
         onclick: () => void;
     }
@@ -37,5 +37,5 @@ If the current path is the same as the href, the css will highlight it.
     {onclick}
     class="relative w-full py-2 flex gap-10 justify-start items-center rounded-md {colors} sm:px-5"
 >
-    {@render children()}
+    {@render children?.()}
 </a>

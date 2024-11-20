@@ -1,13 +1,13 @@
 <script lang="ts">
+    import { goto, invalidateAll } from '$app/navigation';
+    import { page } from '$app/stores';
+    import { browser } from '$app/environment';
     import LL, { locale, setLocale } from '$i18n/i18n-svelte';
-    import type { Locales } from '$i18n/i18n-types';
     import { locales } from '$i18n/i18n-util';
     import { loadLocaleAsync } from '$i18n/i18n-util.async';
     import { clickOutside } from '$lib/utils/click-outside';
     import { replaceLocaleInUrl } from '$lib/utils/locale';
-    import { browser } from '$app/environment';
-    import { goto, invalidateAll } from '$app/navigation';
-    import { page } from '$app/stores';
+    import type { Locales } from '$i18n/i18n-types';
 
     let showList = $state(false);
     let currentLanguageNode: HTMLButtonElement | undefined = $state<HTMLButtonElement>();
@@ -64,11 +64,17 @@
             class="absolute w-full top-full left-0 flex flex-col z-20"
         >
             {#if $locale === 'en'}
-                <button onclick={() => changeLang('fr')} class="relative w-full bg-gray-700 px-4 py-2 rounded {showList ? 'rounded-t-none' : ''}">
+                <button
+                    onclick={() => changeLang('fr')}
+                    class="relative w-full bg-gray-700 px-4 py-2 rounded {showList ? 'rounded-t-none' : ''}"
+                >
                     {$LL.languages.french()}
                 </button>
             {:else}
-                <button onclick={() => changeLang('en')} class="relative w-full bg-gray-700 px-4 py-2 rounded {showList ? 'rounded-t-none' : ''}">
+                <button
+                    onclick={() => changeLang('en')}
+                    class="relative w-full bg-gray-700 px-4 py-2 rounded {showList ? 'rounded-t-none' : ''}"
+                >
                     {$LL.languages.english()}
                 </button>
             {/if}

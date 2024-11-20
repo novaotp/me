@@ -11,6 +11,7 @@
     }
 
     let { class: className, filename, metadata }: Props = $props();
+
     let { title, description, banner, bannerAlt, creationDate, category, readTime } = $derived(metadata);
 </script>
 

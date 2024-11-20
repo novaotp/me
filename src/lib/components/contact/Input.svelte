@@ -1,17 +1,15 @@
 <script lang="ts">
-    interface Props {
-        placeholder: string;
-        type?: 'text' | 'email';
-        value: string;
-    }
+    import type { HTMLInputAttributes } from 'svelte/elements';
 
-    let { placeholder, type = 'text', value = $bindable() }: Props = $props();
+    interface Props extends HTMLInputAttributes {}
+
+    let { placeholder, type = 'text', value = $bindable(), ...restProps }: Props = $props();
 </script>
 
 <input
+    bind:value
     {type}
-    {value}
     {placeholder}
-    onchange={(event) => (value = event.currentTarget.value)}
     class="relative w-full h-[50px] rounded bg-gray-100 dark:bg-zinc-700 px-5 text-[14px] resize-none"
+    {...restProps}
 />

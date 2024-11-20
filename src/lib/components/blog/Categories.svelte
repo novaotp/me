@@ -11,7 +11,7 @@
 
     let selectedCategory = $derived($page.params.category ?? 'all');
 
-    const categoryName = (category: string) => {
+    const getCategoryName = (category: string) => {
         // @ts-expect-error
         return $LL.blogPage.categories[category]();
     };
@@ -33,7 +33,7 @@
                 ? 'bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800'
                 : 'text-black dark:text-white'}"
         >
-            {categoryName(category)}
+            {getCategoryName(category)}
         </button>
     {/each}
 </div>

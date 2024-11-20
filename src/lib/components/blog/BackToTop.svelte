@@ -8,7 +8,7 @@
 
     const goTop = () => {
         document.body.scrollIntoView();
-    }
+    };
 
     const handleOnScroll = () => {
         if (!document.documentElement) {
@@ -16,7 +16,7 @@
         }
 
         isShown = document.documentElement.scrollTop > minY;
-    }
+    };
 
     onMount(() => {
         handleOnScroll();
@@ -27,8 +27,8 @@
 
 {#if isShown}
     <button
-        onclick={goTop}
         transition:fade
+        onclick={goTop}
         class="fixed bottom-5 right-5 bg-blue-700 dark:bg-sky-300 p-5 rounded-full text-white dark:text-zinc-800 shadow-lg z-10"
     >
         <IconArrowNarrowUp class="pointer-events-none" />

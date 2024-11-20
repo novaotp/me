@@ -1,21 +1,16 @@
 <script lang="ts">
+    import { goto } from '$app/navigation';
     import { page } from '$app/stores';
     import IconArrowRight from '@tabler/icons-svelte/icons/arrow-right';
     import IconMenu from '@tabler/icons-svelte/icons/menu';
     import IconHeartHandshake from '@tabler/icons-svelte/icons/heart-handshake';
     import LL, { locale } from '$i18n/i18n-svelte';
-    import { stripTrailingSlash } from '$lib/utils/strip-trailing-slash';
-    import { goto } from '$app/navigation';
 
     interface Props {
         show: boolean;
     }
 
     let { show = $bindable() }: Props = $props();
-
-    $effect(() => {
-        $page.url.pathname;
-    });
 
     const showMenu = () => {
         show = true;
@@ -27,6 +22,10 @@
             ? 'text-indigo-700 dark:text-sky-300'
             : 'text-gray-500 dark:text-gray-400';
     }
+
+    $effect(() => {
+        $page.url.pathname;
+    });
 </script>
 
 <!--

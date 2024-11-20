@@ -1,6 +1,6 @@
 {
     "name": "me",
-    "version": "0.16.4",
+    "version": "0.17.0",
     "private": true,
     "type": "module",
     "scripts": {
@@ -40,7 +40,7 @@
         "unified": "^11.0.4"
     },
     "devDependencies": {
-        "@sveltejs/adapter-vercel": "^5.4.3",
+        "@sveltejs/adapter-static": "^3.0.6",
         "@sveltejs/kit": "^2.5.2",
         "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
         "@types/eslint": "^9.6.0",

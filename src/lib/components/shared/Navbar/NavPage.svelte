@@ -27,9 +27,9 @@
     <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
     <div
         role="dialog"
-        class="lg:hidden fixed w-full h-full bg-[rgba(0,0,0,0.1)] dark:bg-[rgba(0,0,0,0.2)] z-50"
         transition:fade
         onclick={closeMenu}
+        class="lg:hidden fixed w-full h-full bg-[rgba(0,0,0,0.1)] dark:bg-[rgba(0,0,0,0.2)] z-50"
     >
         <aside
             transition:fly={{ y: -100 }}

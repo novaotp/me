@@ -4,7 +4,7 @@
     import type { Snippet } from 'svelte';
 
     interface Props {
-        children: Snippet;
+        children?: Snippet;
         type: 'success' | 'error' | 'info';
     }
 
@@ -18,10 +18,12 @@
 
 {#if show}
     <aside role="banner" class="relative w-full flex justify-center items-center gap-4 px-4 py-2 {bgColor}">
-        <div class="relative w-full max-w-[1200px] h-full flex justify-center items-center gap-4 px-4 py-2 text-neutral-50">
+        <div
+            class="relative w-full max-w-[1200px] h-full flex justify-center items-center gap-4 px-4 py-2 text-neutral-50"
+        >
             <Icon class="min-h-6 min-w-6" />
             <p class="text-sm flex-grow">
-                {@render children()}
+                {@render children?.()}
             </p>
             <button class="border-none bg-transparent text-neutral-50" onclick={() => (show = false)}>
                 <CloseIcon class="size-6" />
