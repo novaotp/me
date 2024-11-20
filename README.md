@@ -2,7 +2,15 @@
 
 This repository represents my portfolio that you can [preview on my website](https://sajidur.dev).
 
-## Built with
+## Features
+
+- Showcasing my work
+- A blog
+- A contact page
+- Multilingual website (french and english)
+- Light/dark mode
+
+## Technologies
 
 Stack :
 * [SvelteKit](https://kit.svelte.dev/) - A framework for rapidly developing robust, performant web applications using Svelte.
@@ -12,34 +20,40 @@ Stack :
 Services :
 * [EmailJS](https://www.emailjs.com) - Send Email Directly From Your Code. No server code needed. Focus on things that matter!
 * [Shiki](https://shiki.style/) - A beautiful syntax highlighter based on TextMate grammar, accurate and powerful.
-* [RemarkJS](https://remark.js.org/) - A markdown processor powered by plugins part of the @unifiedjs collective .
-
-## Requirements
-
-This project requires [Node.js](https://nodejs.org/en). Tested on version 20.11.1.
+* [RemarkJS](https://remark.js.org/) - A markdown processor powered by plugins part of the @unifiedjs collective.
 
 ## Getting Started
 
-1. Clone the repository
+### Requirements
 
-```bash
-git clone https://github.com/novaotp/me
-```
+* Node.JS v20+ (tested on v20.11.1)
 
-2. Install the dependencies
+### Installation
 
-```bash
-npm install
-```
+1. Clone the repository.
 
-3. Create your `.env` file based on `.env.example`
+    ```bash
+    git clone https://github.com/novaotp/me
+    ```
 
-4. Run the dev server
+1. Install the dependencies.
 
-```bash
-npm run dev
-```
+    ```bash
+    npm install
+    ```
+
+1. Create your `.env` file based on `.env.example`.
+
+1. Run the dev server.
+
+    ```bash
+    npm run dev
+    ```
+
+## License
+
+This project is licensed under the MIT license.
 
 ## Acknowlegments
 
-* Sajidur Rahman
+Sajidur Rahman
