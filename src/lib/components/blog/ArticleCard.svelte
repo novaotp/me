@@ -16,7 +16,7 @@
 </script>
 
 <button
-    onclick={() => goto(`/${$locale}/blog/${category}/${filename}`, { noScroll: false })}
+    onclick={() => goto(`/${$locale}/blog/${category}/${filename}`)}
     class={cn(
         'relative rounded-lg shadow-[0_0_15px_0px_rgba(0,0,0,0.25)] duration-150 flex flex-col items-start',
         'overflow-hidden hover:scale-105 hover:shadow-[0_0_25px_0px_rgba(0,0,0,0.25)] dark:bg-zinc-700',

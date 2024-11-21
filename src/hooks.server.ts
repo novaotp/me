@@ -1,6 +1,6 @@
 import { redirect, type Handle, type RequestEvent } from '@sveltejs/kit';
 import { base } from '$app/paths';
-import { getPathnameWithoutBase } from '$lib/utils/locale';
+import { getPathnameWithoutBase } from '$lib/utils';
 import { detectLocale, i18n, isLocale } from './i18n/i18n-util';
 import { loadAllLocales } from './i18n/i18n-util.sync';
 import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors';

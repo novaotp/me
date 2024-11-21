@@ -38,16 +38,10 @@ export const CONTENT_DIR = './content/articles';
  * @param locale The locale to use to fetch articles. If not set, will return all articles.
  * @returns An array of articles.
  */
-export async function importArticles(locale?: string): Promise<Article[]> {
-    let paths: string[];
-    if (!locale) {
-        paths = await glob(`${CONTENT_DIR}/*.md`);
-    } else {
-        paths = await glob(`${CONTENT_DIR}/${locale}/*.md`);
-    }
+export async function importArticles(locale: string): Promise<Article[]> {
+    const paths: string[] = await glob(`${CONTENT_DIR}/${locale}/*.md`);
 
-    const asyncArticles = paths.map(async (path) => await convertMarkdown(path));
-    return await Promise.all(asyncArticles);
+    return Promise.all(paths.map(convertMarkdown));
 }
 
 /**

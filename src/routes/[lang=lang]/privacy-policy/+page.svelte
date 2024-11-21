@@ -1,6 +1,6 @@
 <script lang="ts">
     import LL, { locale } from '$i18n/i18n-svelte';
-    import { slugify } from '$lib/utils/slugify/index.js';
+    import { slugify } from '$lib/utils/slugify.js';
     import Banner from '$lib/components/shared/Banner/Banner.svelte';
 
     let { data } = $props();

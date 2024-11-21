@@ -1,12 +1,11 @@
-
 # Politique de confidentialité
 
-*Dernière mise à jour le 15 mai 2024*
+_Dernière mise à jour le 15 mai 2024_
 
 Le présent avis de confidentialité de Sajidur Rahman Technologies ("nous", "notre" ou "nos") décrit comment et pourquoi nous pouvons collecter, stocker, utiliser et/ou partager ("traiter") vos informations lorsque vous utilisez nos services ("Services"), par exemple lorsque vous :
 
-* Visitez notre site web à l'adresse [https://www.sajidur.dev](https://www.sajidur.dev), ou tout autre site web qui renvoie à la présente déclaration de confidentialité.
-* Vous engagez avec nous dans d'autres domaines connexes, y compris les ventes, le marketing ou les événements.
+-   Visitez notre site web à l'adresse [https://www.sajidur.dev](https://www.sajidur.dev), ou tout autre site web qui renvoie à la présente déclaration de confidentialité.
+-   Vous engagez avec nous dans d'autres domaines connexes, y compris les ventes, le marketing ou les événements.
 
 Des questions ou des inquiétudes ? La lecture de cet avis de confidentialité vous aidera à comprendre vos droits et vos choix en matière de protection de la vie privée. Si vous n'êtes pas d'accord avec nos politiques et pratiques, veuillez ne pas utiliser nos services. Si vous avez encore des questions ou des préoccupations, veuillez nous contacter à [contact@sajidur.dev](mailto:contact@sajidur.dev).
 
@@ -14,21 +13,37 @@ Des questions ou des inquiétudes ? La lecture de cet avis de confidentialité v
 
 **_Ce résumé présente les points clés de notre avis de confidentialité, mais vous pouvez obtenir plus de détails sur chacun de ces sujets en cliquant sur le lien qui suit chaque point clé ou en utilisant notre table des matières ci-dessous pour trouver la section que vous recherchez._**
 
-**Quelles sont les informations personnelles que nous traitons ?** Lorsque vous visitez, utilisez ou naviguez sur nos services, nous pouvons traiter des informations personnelles en fonction de la manière dont vous interagissez avec nous et les services, des choix que vous faites et des produits et fonctionnalités que vous utilisez. En savoir plus sur les informations personnelles que vous nous communiquez.
+**Quelles sont les informations personnelles que nous traitons ?**
 
-**Traitons-nous des informations personnelles sensibles ?** Nous ne traitons pas d'informations personnelles sensibles.
+Lorsque vous visitez, utilisez ou naviguez sur nos services, nous pouvons traiter des informations personnelles en fonction de la manière dont vous interagissez avec nous et les services, des choix que vous faites et des produits et fonctionnalités que vous utilisez. En savoir plus sur les informations personnelles que vous nous communiquez.
 
-**Recevons-nous des informations de la part de tiers ?** Nous ne recevons aucune information de la part de tiers.
+**Traitons-nous des informations personnelles sensibles ?**
 
-**Comment traitons-nous vos informations ?** Nous traitons vos informations pour fournir, améliorer et administrer nos services, pour communiquer avec vous, pour la sécurité et la prévention de la fraude, et pour nous conformer à la loi. Nous pouvons également traiter vos informations à d'autres fins avec votre consentement. Nous ne traitons vos informations que lorsque nous avons une raison légale valable de le faire. En savoir plus sur la manière dont nous traitons vos informations.
+Nous ne traitons pas d'informations personnelles sensibles.
 
-**Dans quelles situations et avec quels types de parties partageons-nous des informations personnelles ?** Dans quelles situations et avec quels types de parties partageons-nous les informations personnelles ? Nous pouvons partager des informations dans des situations spécifiques et avec des catégories spécifiques de tierces parties. Découvrez quand et avec qui nous partageons vos informations personnelles.
+**Recevons-nous des informations de la part de tiers ?**
 
-**Comment assurons-nous la sécurité de vos informations ?** Nous avons mis en place des processus et des procédures organisationnels et techniques pour protéger vos informations personnelles. Toutefois, aucune transmission électronique sur l'internet ou technologie de stockage des informations ne peut être garantie à 100 %. Nous ne pouvons donc pas promettre ou garantir que des pirates informatiques, des cybercriminels ou d'autres tiers non autorisés ne seront pas en mesure de déjouer notre sécurité et de collecter, d'accéder, de voler ou de modifier vos informations de manière inappropriée. Pour en savoir plus sur la manière dont nous assurons la sécurité de vos informations.
+Nous ne recevons aucune information de la part de tiers.
 
-**Quels sont vos droits ?** En fonction de votre situation géographique, la loi sur la protection de la vie privée applicable peut vous conférer certains droits concernant vos informations personnelles. En savoir plus sur vos droits en matière de protection de la vie privée.
+**Comment traitons-nous vos informations ?**
 
-**Comment exercer vos droits ?** La manière la plus simple d'exercer vos droits est de soumettre une demande d'accès à la base de données ou de nous contacter. Nous examinerons toute demande et y donnerons suite conformément aux lois applicables en matière de protection des données.
+Nous traitons vos informations pour fournir, améliorer et administrer nos services, pour communiquer avec vous, pour la sécurité et la prévention de la fraude, et pour nous conformer à la loi. Nous pouvons également traiter vos informations à d'autres fins avec votre consentement. Nous ne traitons vos informations que lorsque nous avons une raison légale valable de le faire. En savoir plus sur la manière dont nous traitons vos informations.
+
+**Dans quelles situations et avec quels types de parties partageons-nous des informations personnelles ?**
+
+Dans quelles situations et avec quels types de parties partageons-nous les informations personnelles ? Nous pouvons partager des informations dans des situations spécifiques et avec des catégories spécifiques de tierces parties. Découvrez quand et avec qui nous partageons vos informations personnelles.
+
+**Comment assurons-nous la sécurité de vos informations ?**
+
+Nous avons mis en place des processus et des procédures organisationnels et techniques pour protéger vos informations personnelles. Toutefois, aucune transmission électronique sur l'internet ou technologie de stockage des informations ne peut être garantie à 100 %. Nous ne pouvons donc pas promettre ou garantir que des pirates informatiques, des cybercriminels ou d'autres tiers non autorisés ne seront pas en mesure de déjouer notre sécurité et de collecter, d'accéder, de voler ou de modifier vos informations de manière inappropriée. Pour en savoir plus sur la manière dont nous assurons la sécurité de vos informations.
+
+**Quels sont vos droits ?**
+
+En fonction de votre situation géographique, la loi sur la protection de la vie privée applicable peut vous conférer certains droits concernant vos informations personnelles. En savoir plus sur vos droits en matière de protection de la vie privée.
+
+**Comment exercer vos droits ?**
+
+La manière la plus simple d'exercer vos droits est de soumettre une demande d'accès à la base de données ou de nous contacter. Nous examinerons toute demande et y donnerons suite conformément aux lois applicables en matière de protection des données.
 
 Vous voulez en savoir plus sur ce que nous faisons des informations que nous recueillons ? Consultez l'avis de confidentialité dans son intégralité.
 
@@ -55,10 +70,12 @@ Vous voulez en savoir plus sur ce que nous faisons des informations que nous rec
 
 Nous recueillons les informations personnelles que vous nous fournissez volontairement lorsque vous souhaitez obtenir des informations sur nous ou sur nos produits et services, lorsque vous participez à des activités sur les services ou lorsque vous nous contactez.
 
-**Informations personnelles fournies par vous.** Les informations personnelles que nous recueillons dépendent du contexte de vos interactions avec nous et les services, des choix que vous faites et des produits et fonctions que vous utilisez. Les informations personnelles que nous collectons peuvent inclure les éléments suivants :
+**Informations personnelles fournies par vous.**
 
-* Noms
-* Adresses électroniques
+Les informations personnelles que nous recueillons dépendent du contexte de vos interactions avec nous et les services, des choix que vous faites et des produits et fonctions que vous utilisez. Les informations personnelles que nous collectons peuvent inclure les éléments suivants :
+
+-   Noms
+-   Adresses électroniques
 
 **Informations sensibles**. Nous ne traitons pas d'informations sensibles.
 
@@ -72,9 +89,9 @@ Nous recueillons automatiquement certaines informations lorsque vous visitez, ut
 
 Les informations que nous recueillons sont les suivantes :
 
-* Données de connexion et d'utilisation. Les données de connexion et d'utilisation sont des informations relatives au service, au diagnostic, à l'utilisation et à la performance que nos serveurs collectent automatiquement lorsque vous accédez à nos services ou les utilisez et que nous enregistrons dans des fichiers de connexion. Selon la manière dont vous interagissez avec nous, ces données de journal peuvent inclure votre adresse IP, des informations sur votre appareil, votre type de navigateur et vos paramètres, ainsi que des informations sur votre activité dans les services (telles que les horodatages associés à votre utilisation, les pages et les fichiers consultés, les recherches et les autres actions que vous effectuez, telles que les fonctions que vous utilisez), des informations sur les événements de l'appareil (telles que l'activité du système, les rapports d'erreur (parfois appelés "crash dumps") et les paramètres du matériel).
-* Données relatives à l'appareil. Nous collectons des données sur les appareils, telles que des informations sur votre ordinateur, votre téléphone, votre tablette ou tout autre appareil que vous utilisez pour accéder aux services. En fonction de l'appareil utilisé, ces données peuvent inclure des informations telles que votre adresse IP (ou serveur proxy), les numéros d'identification de l'appareil et de l'application, la localisation, le type de navigateur, le modèle de matériel, le fournisseur d'accès Internet et/ou l'opérateur mobile, le système d'exploitation et les informations relatives à la configuration du système.
-* Données de localisation. Nous collectons des données de localisation telles que des informations sur l'emplacement de votre appareil, qui peuvent être précises ou imprécises. La quantité d'informations collectées dépend du type et des paramètres de l'appareil que vous utilisez pour accéder aux services. Par exemple, nous pouvons utiliser le GPS et d'autres technologies pour collecter des données de géolocalisation qui nous indiquent votre emplacement actuel (sur la base de votre adresse IP). Vous pouvez choisir de ne pas nous autoriser à collecter ces informations, soit en refusant l'accès à ces informations, soit en désactivant les paramètres de localisation de votre appareil. Toutefois, si vous choisissez de vous désengager, il se peut que vous ne puissiez pas utiliser certains aspects des services.
+-   Données de connexion et d'utilisation. Les données de connexion et d'utilisation sont des informations relatives au service, au diagnostic, à l'utilisation et à la performance que nos serveurs collectent automatiquement lorsque vous accédez à nos services ou les utilisez et que nous enregistrons dans des fichiers de connexion. Selon la manière dont vous interagissez avec nous, ces données de journal peuvent inclure votre adresse IP, des informations sur votre appareil, votre type de navigateur et vos paramètres, ainsi que des informations sur votre activité dans les services (telles que les horodatages associés à votre utilisation, les pages et les fichiers consultés, les recherches et les autres actions que vous effectuez, telles que les fonctions que vous utilisez), des informations sur les événements de l'appareil (telles que l'activité du système, les rapports d'erreur (parfois appelés "crash dumps") et les paramètres du matériel).
+-   Données relatives à l'appareil. Nous collectons des données sur les appareils, telles que des informations sur votre ordinateur, votre téléphone, votre tablette ou tout autre appareil que vous utilisez pour accéder aux services. En fonction de l'appareil utilisé, ces données peuvent inclure des informations telles que votre adresse IP (ou serveur proxy), les numéros d'identification de l'appareil et de l'application, la localisation, le type de navigateur, le modèle de matériel, le fournisseur d'accès Internet et/ou l'opérateur mobile, le système d'exploitation et les informations relatives à la configuration du système.
+-   Données de localisation. Nous collectons des données de localisation telles que des informations sur l'emplacement de votre appareil, qui peuvent être précises ou imprécises. La quantité d'informations collectées dépend du type et des paramètres de l'appareil que vous utilisez pour accéder aux services. Par exemple, nous pouvons utiliser le GPS et d'autres technologies pour collecter des données de géolocalisation qui nous indiquent votre emplacement actuel (sur la base de votre adresse IP). Vous pouvez choisir de ne pas nous autoriser à collecter ces informations, soit en refusant l'accès à ces informations, soit en désactivant les paramètres de localisation de votre appareil. Toutefois, si vous choisissez de vous désengager, il se peut que vous ne puissiez pas utiliser certains aspects des services.
 
 ### 2. COMMENT TRAITONS-NOUS VOS INFORMATIONS?
 
@@ -82,14 +99,14 @@ Les informations que nous recueillons sont les suivantes :
 
 **Nous traitons vos informations personnelles pour diverses raisons, en fonction de la manière dont vous interagissez avec nos services, y compris:**
 
-* Pour fournir et faciliter la fourniture de services à l'utilisateur. Nous pouvons traiter vos informations pour vous fournir le service demandé.
-* Pour répondre aux demandes des utilisateurs/offrir une assistance aux utilisateurs. Nous pouvons traiter vos informations pour répondre à vos demandes et résoudre tout problème potentiel que vous pourriez avoir avec le service demandé.
-* Pour vous envoyer des informations administratives. Nous pouvons traiter vos informations pour vous envoyer des détails sur nos produits et services, des modifications de nos conditions et politiques, et d'autres informations similaires.
-* Pour demander un retour d'information. Nous pouvons traiter vos informations lorsque cela est nécessaire pour vous demander un retour d'information et pour vous contacter au sujet de votre utilisation de nos services.
-* Pour vous envoyer des communications marketing et promotionnelles. Nous pouvons traiter les informations personnelles que vous nous envoyez à des fins de marketing, si cela correspond à vos préférences en matière de marketing. Vous pouvez à tout moment refuser de recevoir nos courriers électroniques de marketing. Pour plus d'informations, voir "QUELS SONT VOS DROITS EN MATIÈRE DE CONFIDENTIALITÉ ?
-* Pour protéger nos services. Nous pouvons traiter vos informations dans le cadre de nos efforts visant à assurer la sécurité de nos services, y compris la surveillance et la prévention de la fraude.
-* Pour identifier les tendances d'utilisation. Nous pouvons traiter des informations sur la manière dont vous utilisez nos services afin de mieux comprendre comment ils sont utilisés et de les améliorer.
-* Pour sauver ou protéger l'intérêt vital d'une personne. Nous pouvons traiter vos informations lorsque cela est nécessaire pour sauver ou protéger l'intérêt vital d'une personne, par exemple pour prévenir un préjudice.
+-   Pour fournir et faciliter la fourniture de services à l'utilisateur. Nous pouvons traiter vos informations pour vous fournir le service demandé.
+-   Pour répondre aux demandes des utilisateurs/offrir une assistance aux utilisateurs. Nous pouvons traiter vos informations pour répondre à vos demandes et résoudre tout problème potentiel que vous pourriez avoir avec le service demandé.
+-   Pour vous envoyer des informations administratives. Nous pouvons traiter vos informations pour vous envoyer des détails sur nos produits et services, des modifications de nos conditions et politiques, et d'autres informations similaires.
+-   Pour demander un retour d'information. Nous pouvons traiter vos informations lorsque cela est nécessaire pour vous demander un retour d'information et pour vous contacter au sujet de votre utilisation de nos services.
+-   Pour vous envoyer des communications marketing et promotionnelles. Nous pouvons traiter les informations personnelles que vous nous envoyez à des fins de marketing, si cela correspond à vos préférences en matière de marketing. Vous pouvez à tout moment refuser de recevoir nos courriers électroniques de marketing. Pour plus d'informations, voir "QUELS SONT VOS DROITS EN MATIÈRE DE CONFIDENTIALITÉ ?
+-   Pour protéger nos services. Nous pouvons traiter vos informations dans le cadre de nos efforts visant à assurer la sécurité de nos services, y compris la surveillance et la prévention de la fraude.
+-   Pour identifier les tendances d'utilisation. Nous pouvons traiter des informations sur la manière dont vous utilisez nos services afin de mieux comprendre comment ils sont utilisés et de les améliorer.
+-   Pour sauver ou protéger l'intérêt vital d'une personne. Nous pouvons traiter vos informations lorsque cela est nécessaire pour sauver ou protéger l'intérêt vital d'une personne, par exemple pour prévenir un préjudice.
 
 ### 3. SUR QUELLES BASES JURIDIQUES NOUS APPUYONS-NOUS POUR TRAITER VOS INFORMATIONS?
 
@@ -99,15 +116,25 @@ Les informations que nous recueillons sont les suivantes :
 
 Le règlement général sur la protection des données (RGPD) et le RGPD britannique nous obligent à expliquer les bases juridiques valables sur lesquelles nous nous appuyons pour traiter vos informations personnelles. Ainsi, nous pouvons nous appuyer sur les bases juridiques suivantes pour traiter vos informations personnelles :
 
-* **Consentement.** Nous pouvons traiter vos informations si vous nous avez donné la permission (c'est-à-dire le consentement) d'utiliser vos informations personnelles à des fins spécifiques. Vous pouvez retirer votre consentement à tout moment. En savoir plus sur le retrait de votre consentement.
-* **Exécution d'un contrat.** Nous pouvons traiter vos informations personnelles lorsque nous pensons que cela est nécessaire pour remplir nos obligations contractuelles envers vous, y compris la fourniture de nos services ou à votre demande avant de conclure un contrat avec vous.
-* **Intérêts légitimes.** Nous pouvons traiter vos informations lorsque nous estimons que cela est raisonnablement nécessaire pour atteindre nos intérêts commerciaux légitimes et que ces intérêts ne l'emportent pas sur vos intérêts et vos droits et libertés fondamentaux. Par exemple, nous pouvons traiter vos informations personnelles pour certains des objectifs décrits afin de :
-    * Envoyer aux utilisateurs des informations sur les offres spéciales et les réductions sur nos produits et services.
-    * Analyser la façon dont nos services sont utilisés afin de les améliorer et de fidéliser les utilisateurs.
-    * Diagnostiquer les problèmes et/ou prévenir les activités frauduleuses
-    * Comprendre comment nos utilisateurs utilisent nos produits et services afin d'améliorer l'expérience de l'utilisateur
-* **Obligations légales.** Nous pouvons traiter vos informations si nous estimons que cela est nécessaire pour nous conformer à nos obligations légales, par exemple pour coopérer avec un organisme chargé de l'application de la loi ou un organisme de réglementation, pour exercer ou défendre nos droits légaux ou pour divulguer vos informations en tant que preuve dans un litige dans lequel nous sommes impliqués.
-* **Intérêts vitaux.** Nous pouvons traiter vos informations lorsque nous pensons qu'il est nécessaire de protéger vos intérêts vitaux ou les intérêts vitaux d'un tiers, par exemple dans des situations impliquant des menaces potentielles pour la sécurité d'une personne.
+-   **Consentement.**
+
+Nous pouvons traiter vos informations si vous nous avez donné la permission (c'est-à-dire le consentement) d'utiliser vos informations personnelles à des fins spécifiques. Vous pouvez retirer votre consentement à tout moment. En savoir plus sur le retrait de votre consentement.
+
+-   **Exécution d'un contrat.**
+
+Nous pouvons traiter vos informations personnelles lorsque nous pensons que cela est nécessaire pour remplir nos obligations contractuelles envers vous, y compris la fourniture de nos services ou à votre demande avant de conclure un contrat avec vous.
+
+-   **Intérêts légitimes.**
+
+Nous pouvons traiter vos informations lorsque nous estimons que cela est raisonnablement nécessaire pour atteindre nos intérêts commerciaux légitimes et que ces intérêts ne l'emportent pas sur vos intérêts et vos droits et libertés fondamentaux. Par exemple, nous pouvons traiter vos informations personnelles pour certains des objectifs décrits afin de : - Envoyer aux utilisateurs des informations sur les offres spéciales et les réductions sur nos produits et services. - Analyser la façon dont nos services sont utilisés afin de les améliorer et de fidéliser les utilisateurs. - Diagnostiquer les problèmes et/ou prévenir les activités frauduleuses - Comprendre comment nos utilisateurs utilisent nos produits et services afin d'améliorer l'expérience de l'utilisateur
+
+-   **Obligations légales.**
+
+Nous pouvons traiter vos informations si nous estimons que cela est nécessaire pour nous conformer à nos obligations légales, par exemple pour coopérer avec un organisme chargé de l'application de la loi ou un organisme de réglementation, pour exercer ou défendre nos droits légaux ou pour divulguer vos informations en tant que preuve dans un litige dans lequel nous sommes impliqués.
+
+-   **Intérêts vitaux.**
+
+Nous pouvons traiter vos informations lorsque nous pensons qu'il est nécessaire de protéger vos intérêts vitaux ou les intérêts vitaux d'un tiers, par exemple dans des situations impliquant des menaces potentielles pour la sécurité d'une personne.
 
 **_Si vous êtes situé au Canada, cette section s'applique à vous._**
 
@@ -115,36 +142,43 @@ Nous pouvons traiter vos informations si vous nous avez donné l'autorisation sp
 
 Dans certains cas exceptionnels, nous pouvons être légalement autorisés, en vertu de la loi applicable, à traiter vos informations sans votre consentement, y compris, par exemple :
 
-* Si la collecte est clairement dans l'intérêt d'une personne et que le consentement ne peut être obtenu en temps utile
-* Pour les enquêtes et la détection et la prévention de la fraude
-* Pour les transactions commerciales, sous réserve que certaines conditions soient remplies
-* Si elles sont contenues dans une déclaration de témoin et que la collecte est nécessaire pour évaluer, traiter ou régler une réclamation d'assurance.
-* Pour identifier les personnes blessées, malades ou décédées et communiquer avec les proches.
-* Si nous avons des motifs raisonnables de croire qu'une personne a été, est ou peut être victime d'un abus financier.
-* S'il est raisonnable de s'attendre à ce que la collecte et l'utilisation avec consentement compromettent la disponibilité ou l'exactitude des informations et si la collecte est raisonnable à des fins liées à une enquête sur une violation d'un accord ou une contravention au droit du Canada ou d'une province.
-* Si la divulgation est nécessaire pour se conformer à une citation à comparaître, à un mandat, à une ordonnance du tribunal ou aux règles du tribunal relatives à la production de documents.
-* si elles ont été produites par une personne dans le cadre de son emploi, de son entreprise ou de sa profession et que la collecte est compatible avec les objectifs pour lesquels les informations ont été produites
-* Si la collection est uniquement destinée à des fins journalistiques, artistiques ou littéraires
-* Si l'information est accessible au public et est spécifiée par les règlements
+-   Si la collecte est clairement dans l'intérêt d'une personne et que le consentement ne peut être obtenu en temps utile
+-   Pour les enquêtes et la détection et la prévention de la fraude
+-   Pour les transactions commerciales, sous réserve que certaines conditions soient remplies
+-   Si elles sont contenues dans une déclaration de témoin et que la collecte est nécessaire pour évaluer, traiter ou régler une réclamation d'assurance.
+-   Pour identifier les personnes blessées, malades ou décédées et communiquer avec les proches.
+-   Si nous avons des motifs raisonnables de croire qu'une personne a été, est ou peut être victime d'un abus financier.
+-   S'il est raisonnable de s'attendre à ce que la collecte et l'utilisation avec consentement compromettent la disponibilité ou l'exactitude des informations et si la collecte est raisonnable à des fins liées à une enquête sur une violation d'un accord ou une contravention au droit du Canada ou d'une province.
+-   Si la divulgation est nécessaire pour se conformer à une citation à comparaître, à un mandat, à une ordonnance du tribunal ou aux règles du tribunal relatives à la production de documents.
+-   si elles ont été produites par une personne dans le cadre de son emploi, de son entreprise ou de sa profession et que la collecte est compatible avec les objectifs pour lesquels les informations ont été produites
+-   Si la collection est uniquement destinée à des fins journalistiques, artistiques ou littéraires
+-   Si l'information est accessible au public et est spécifiée par les règlements
 
 ### 4. QUAND ET AVEC QUI PARTAGEONS-NOUS VOS INFORMATIONS PERSONNELLES?
 
 **_En bref:_ Nous pouvons partager des informations dans des situations spécifiques décrites dans cette section et/ou avec les catégories de tiers suivantes**.
 
-**Fournisseurs, consultants et autres prestataires de services tiers.** Nous pouvons partager vos données avec des vendeurs, des prestataires de services, des contractants ou des agents tiers ("tiers") qui fournissent des services pour nous ou en notre nom et qui ont besoin d'accéder à ces informations pour effectuer leur travail. Nous avons mis en place des contrats avec nos tiers, qui sont conçus pour contribuer à la protection de vos informations personnelles. Cela signifie qu'ils ne peuvent rien faire avec vos informations personnelles à moins que nous ne leur ayons donné l'ordre de le faire. Ils ne partageront pas non plus vos informations personnelles avec d'autres organisations que la nôtre. Ils s'engagent également à protéger les données qu'ils détiennent en notre nom et à les conserver pendant la période que nous leur indiquons. Les catégories de tiers avec lesquels nous pouvons partager des informations personnelles sont les suivantes :
+**Fournisseurs, consultants et autres prestataires de services tiers.**
 
-* Services d'analyse de données
+Nous pouvons partager vos données avec des vendeurs, des prestataires de services, des contractants ou des agents tiers ("tiers") qui fournissent des services pour nous ou en notre nom et qui ont besoin d'accéder à ces informations pour effectuer leur travail. Nous avons mis en place des contrats avec nos tiers, qui sont conçus pour contribuer à la protection de vos informations personnelles. Cela signifie qu'ils ne peuvent rien faire avec vos informations personnelles à moins que nous ne leur ayons donné l'ordre de le faire. Ils ne partageront pas non plus vos informations personnelles avec d'autres organisations que la nôtre. Ils s'engagent également à protéger les données qu'ils détiennent en notre nom et à les conserver pendant la période que nous leur indiquons. Les catégories de tiers avec lesquels nous pouvons partager des informations personnelles sont les suivantes :
+
+-   Services d'analyse de données
 
 Nous pouvons également être amenés à partager vos informations personnelles dans les situations suivantes :
 
-* **Transferts d'entreprise.** Nous pouvons partager ou transférer vos informations dans le cadre d'une fusion, d'une vente d'actifs de la société, d'un financement ou d'une acquisition de tout ou partie de nos activités à une autre société, ou pendant les négociations relatives à une telle fusion, vente d'actifs de la société, financement ou acquisition.
-* **Lorsque nous utilisons Google Analytics.** Nous pouvons partager vos informations avec Google Analytics pour suivre et analyser l'utilisation des services. Les fonctionnalités publicitaires de Google Analytics que nous pouvons utiliser comprennent : Google Display Network Impressions Reporting et Google Analytics Demographics and Interests Reporting. Pour refuser d'être suivi par Google Analytics sur l'ensemble des services, consultez le site https://tools.google.com/dlpage/gaoptout. Vous pouvez désactiver les fonctionnalités publicitaires de Google Analytics dans les Paramètres des annonces et les Paramètres des annonces pour les applications mobiles. D'autres moyens de désactivation sont disponibles à l'adresse http://optout.networkadvertising.org/ et http://www.networkadvertising.org/mobile-choice. Pour plus d'informations sur les pratiques de Google en matière de confidentialité, veuillez consulter la page Confidentialité et conditions d'utilisation de Google.
+-   **Transferts d'entreprise.**
+
+Nous pouvons partager ou transférer vos informations dans le cadre d'une fusion, d'une vente d'actifs de la société, d'un financement ou d'une acquisition de tout ou partie de nos activités à une autre société, ou pendant les négociations relatives à une telle fusion, vente d'actifs de la société, financement ou acquisition.
+
+-   **Lorsque nous utilisons Google Analytics.**
+
+Nous pouvons partager vos informations avec Google Analytics pour suivre et analyser l'utilisation des services. Les fonctionnalités publicitaires de Google Analytics que nous pouvons utiliser comprennent : Google Display Network Impressions Reporting et Google Analytics Demographics and Interests Reporting. Pour refuser d'être suivi par Google Analytics sur l'ensemble des services, consultez le site https://tools.google.com/dlpage/gaoptout. Vous pouvez désactiver les fonctionnalités publicitaires de Google Analytics dans les Paramètres des annonces et les Paramètres des annonces pour les applications mobiles. D'autres moyens de désactivation sont disponibles à l'adresse http://optout.networkadvertising.org/ et http://www.networkadvertising.org/mobile-choice. Pour plus d'informations sur les pratiques de Google en matière de confidentialité, veuillez consulter la page Confidentialité et conditions d'utilisation de Google.
 
 ### 5. COMBIEN DE TEMPS CONSERVONS-NOUS VOS INFORMATIONS?
 
 **_En bref:_ Nous conservons vos informations aussi longtemps que nécessaire pour atteindre les objectifs décrits dans le présent avis de confidentialité, à moins que la loi ne l'exige autrement.**
 
-Nous ne conserverons vos informations personnelles qu'aussi longtemps que nécessaire aux fins énoncées dans le présent avis de confidentialité, à moins qu'une période de conservation plus longue ne soit requise ou autorisée par la loi (par exemple, pour des raisons fiscales, comptables ou autres exigences légales). 
+Nous ne conserverons vos informations personnelles qu'aussi longtemps que nécessaire aux fins énoncées dans le présent avis de confidentialité, à moins qu'une période de conservation plus longue ne soit requise ou autorisée par la loi (par exemple, pour des raisons fiscales, comptables ou autres exigences légales).
 
 Lorsque nous n'avons plus de besoin commercial légitime de traiter vos informations personnelles, nous les supprimons ou les rendons anonymes ou, si cela n'est pas possible (par exemple, parce que vos informations personnelles ont été stockées dans des archives de sauvegarde), nous les conservons en toute sécurité et les isolons de tout traitement ultérieur jusqu'à ce que leur suppression soit possible.
 
@@ -167,7 +201,7 @@ Nous ne sollicitons pas sciemment de données auprès d'enfants de moins de 18 a
 Dans certaines régions (comme l'EEE, le Royaume-Uni, la Suisse et le Canada), vous disposez de certains droits en vertu des lois applicables en matière de protection des données. Il peut s'agir du droit (i) de demander l'accès à vos informations personnelles et d'en obtenir une copie, (ii) de demander la rectification ou l'effacement, (iii) de restreindre le traitement de vos informations personnelles, (iv) le cas échéant, de bénéficier de la portabilité des données, et (v) de ne pas faire l'objet d'une prise de décision automatisée. Dans certaines circonstances, vous pouvez également avoir le droit de vous opposer au traitement de vos informations personnelles. Vous pouvez faire une telle demande en nous contactant aux coordonnées indiquées dans la section "COMMENT PEUT-ON NOUS CONTACTER AU SUJET DE LA PRÉSENTE NOTICE" ci-dessous.
 
 Nous examinerons toute demande et y donnerons suite conformément aux lois applicables en matière de protection des données.
- 
+
 Si vous êtes situé dans l'EEE ou au Royaume-Uni et que vous pensez que nous traitons illégalement vos informations personnelles, vous avez également le droit de vous plaindre auprès de l'autorité de protection des données de votre État membre ou de l'autorité de protection des données du Royaume-Uni.
 
 Si vous êtes situé en Suisse, vous pouvez vous adresser au Préposé fédéral à la protection des données et à la transparence.

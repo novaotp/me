@@ -7,13 +7,11 @@
     let { html }: Props = $props();
 </script>
 
-<div class="blog-article relative w-full flex flex-col justify-start items-start text-justify">
+<div class="blog-article relative w-full flex flex-col justify-start items-start">
     {@html html}
 </div>
 
 <style>
-    @import url('https://fonts.cdnfonts.com/css/cascadia-code');
-
     :global(div.blog-article code) {
         padding: 20px 0;
         counter-reset: line;

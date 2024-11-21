@@ -4,6 +4,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@font-face {
+    font-family: 'Cascadia Code';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/cascadia-code/Cascadia.woff') format('woff');
+}
+
 * {
     margin: 0;
     padding: 0;
