@@ -1,6 +1,6 @@
 {
     "name": "me",
-    "version": "0.17.4",
+    "version": "0.17.5",
     "private": true,
     "type": "module",
     "scripts": {
@@ -23,7 +23,7 @@
         "@tabler/icons-svelte": "^3.12.0",
         "@vercel/analytics": "^1.2.2",
         "@vercel/speed-insights": "^1.0.10",
-        "bits-ui": "^0.21.13",
+        "bits-ui": "^1.0.0-next.63",
         "clsx": "^2.1.1",
         "front-matter": "^4.0.2",
         "glob": "^10.3.12",
@@ -41,8 +41,8 @@
     },
     "devDependencies": {
         "@sveltejs/adapter-vercel": "^5.4.7",
-        "@sveltejs/kit": "^2.5.2",
-        "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
+        "@sveltejs/kit": "^2.8.1",
+        "@sveltejs/vite-plugin-svelte": "^4.0.1",
         "@types/eslint": "^9.6.0",
         "@types/mapbox__rehype-prism": "^0.8.3",
         "@types/node": "^20.12.7",
@@ -57,12 +57,11 @@
         "postcss": "^8.4.45",
         "prettier": "^3.2.5",
         "prettier-plugin-svelte": "^3.2.2",
-        "svelte": "^5.0.0-next.1",
+        "svelte": "^5.2.7",
         "svelte-check": "^4.0.0",
         "tailwindcss": "^3.4.10",
         "tslib": "^2.6.2",
         "typescript": "^5.3.3",
-        "vite": "^5.1.5",
-        "vitest": "^1.3.1"
+        "vite": "^5.1.5"
     }
 }

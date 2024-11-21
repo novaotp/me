@@ -1,5 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
     plugins: [sveltekit()],
@@ -19,7 +19,9 @@ export default defineConfig({
             '@internationalized/date',
             '@floating-ui/dom',
             'focus-trap',
-            'bits-ui'
+            'bits-ui',
+            'esm-env',
+            'devalue'
         ]
     },
     server: {
