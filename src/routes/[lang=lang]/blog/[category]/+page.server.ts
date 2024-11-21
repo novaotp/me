@@ -14,11 +14,9 @@ export async function load({ locals: { locale }, params }) {
 export const entries: EntryGenerator = async () => {
     const categories = await allCategories();
 
-    return locales
-        .map((locale) =>
-            categories.map((category) => {
-                return { lang: locale, category };
-            })
-        )
-        .flat();
+    return locales.flatMap((locale) => {
+        return categories.map((category) => {
+            return { lang: locale, category };
+        });
+    });
 };

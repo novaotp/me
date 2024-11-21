@@ -1,8 +1,8 @@
-import { latestArticles } from '$lib/server/article';
+import { getLatestArticles } from '$lib/server/article';
 import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = async ({ locals: { locale } }) => {
-    const latest = await latestArticles(locale);
+    const latestArticles = await getLatestArticles(locale);
 
-    return { latest };
+    return { latestArticles };
 };

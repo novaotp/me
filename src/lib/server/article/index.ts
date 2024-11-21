@@ -66,7 +66,7 @@ export async function allCategories() {
  * @param count The number of articles to get.
  * @returns An amount of the latest articles.
  */
-export async function latestArticles(
+export async function getLatestArticles(
     locale: string,
     currentFilename: string = '',
     count: number = 4

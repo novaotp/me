@@ -12,7 +12,7 @@
 </script>
 
 <!-- By https://uiverse.io/Galahhad/strong-squid-82 -->
-<button class="theme-switch" onclick={catchClick}>
+<button onclick={catchClick} aria-label="Toggle between light and dark mode" class="theme-switch">
     <input
         bind:this={inputNode}
         type="checkbox"

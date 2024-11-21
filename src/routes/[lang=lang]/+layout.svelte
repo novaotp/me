@@ -41,7 +41,7 @@
             </div>
             <div class="flex flex-col gap-5">
                 <h3 class="font-semibold text-xl">{$LL.footer.latestArticles()}</h3>
-                {#each data.latest as { filename, metadata } (filename)}
+                {#each data.latestArticles as { filename, metadata } (filename)}
                     <a href="/{$locale}/blog/{metadata.category}/{filename}">
                         {metadata.shortTitle ?? metadata.title}
                     </a>

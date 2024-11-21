@@ -10,7 +10,7 @@
     import type { Locales } from '$i18n/i18n-types';
 
     let showList = $state(false);
-    let currentLanguageNode: HTMLButtonElement | undefined = $state<HTMLButtonElement>();
+    let currentLanguageNode = $state<HTMLButtonElement>();
 
     function isLocale(locale: string): locale is Locales {
         return locales.includes(locale as Locales);
@@ -30,9 +30,15 @@
         await invalidateAll();
     };
 
+    function changeLang(newLocale: string) {
+        showList = false;
+        goto(replaceLocaleInUrl($page.url, newLocale), { noScroll: true });
+    }
+
     $effect(() => {
-        // update `lang` attribute
-        browser && document.querySelector('html')!.setAttribute('lang', $locale);
+        if (browser) {
+            document.querySelector('html')!.setAttribute('lang', $locale);
+        }
     });
 
     $effect(() => {
@@ -42,11 +48,6 @@
             history.replaceState({ ...history.state, locale: lang }, '', replaceLocaleInUrl($page.url, lang));
         }
     });
-
-    function changeLang(newLocale: string) {
-        showList = false;
-        goto(replaceLocaleInUrl($page.url, newLocale), { noScroll: true });
-    }
 </script>
 
 <div class="relative">
