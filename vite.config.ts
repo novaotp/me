@@ -9,8 +9,6 @@ export default defineConfig({
             'typesafe-i18n',
             'typesafe-i18n/detectors',
             'typesafe-i18n/utils',
-            '@vercel/speed-insights/sveltekit',
-            '@vercel/analytics',
             'typesafe-i18n/svelte',
             'tailwind-merge',
             'clsx'
