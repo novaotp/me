@@ -10,8 +10,7 @@ export default {
         }),
         alias: {
             $components: './src/lib/components',
-            $stores: './src/lib/stores',
-            $i18n: './src/i18n'
+            $stores: './src/lib/stores'
         }
     }
 };

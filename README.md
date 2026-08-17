@@ -5,7 +5,6 @@ This repository represents my portfolio that you can [preview on my website](htt
 ## Features
 
 - Showcasing my work
-- Multilingual website (french and english)
 - Light/dark mode
 
 ## Technologies

@@ -1,10 +1,6 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
     import { page } from '$app/stores';
-    import IconArrowRight from '@tabler/icons-svelte/icons/arrow-right';
     import IconMenu from '@tabler/icons-svelte/icons/menu';
-    import IconHeartHandshake from '@tabler/icons-svelte/icons/heart-handshake';
-    import LL, { locale } from '$i18n/i18n-svelte';
 
     interface Props {
         show: boolean;
@@ -18,14 +14,10 @@
     };
 
     function colors(href: string) {
-        return $page.url.pathname === `/${$locale}/${href}`
+        return $page.url.pathname === `/${href}`
             ? 'text-indigo-700 dark:text-sky-300'
             : 'text-gray-500 dark:text-gray-400';
     }
-
-    $effect(() => {
-        $page.url.pathname;
-    });
 </script>
 
 <!--
@@ -40,21 +32,18 @@ Renders a navbar adapted for devices under 1024px wide.
             <IconMenu class="size-6" />
         </span>
     </button>
-    <a href="/{$locale}" class="relative h-5">
+    <a href="/" class="relative h-5">
         <img src="/logos/logo_only_name.png" alt="Sajidur Rahman's Logo" class="relative h-5" />
     </a>
 </nav>
 
 <nav class="lg:flex hidden w-full h-20 px-10 py-5 justify-between items-center">
-    <a href="/{$locale}" class="relative h-10">
+    <a href="/" class="relative h-10">
         <img src="/logos/logo_one_line.png" alt="Sajidur Rahman's Logo" class="relative h-10" />
     </a>
     <div class="flex items-center gap-12">
-        <a
-            href="/{$locale}/work"
-            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('work')}"
-        >
-            {$LL.navigation.workPage()}
+        <a href="/work" class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('work')}">
+            Works
         </a>
     </div>
 </nav>

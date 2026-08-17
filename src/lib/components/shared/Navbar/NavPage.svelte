@@ -4,7 +4,6 @@
     import IconX from '@tabler/icons-svelte/icons/x';
     import { fly, fade } from 'svelte/transition';
     import Link from './Link.svelte';
-    import LL from '$i18n/i18n-svelte';
 
     interface Props {
         show: boolean;
@@ -40,12 +39,10 @@
             </nav>
             <article class="relative w-full flex-grow flex flex-col justify-center items-center list-none gap-5">
                 <Link href="/" onclick={closeMenu}>
-                    <IconHome />
-                    {$LL.navigation.homePage()}
+                    <IconHome /> Home
                 </Link>
                 <Link href="/work" onclick={closeMenu}>
-                    <IconBuildingEstate />
-                    {$LL.navigation.workPage()}
+                    <IconBuildingEstate /> Works
                 </Link>
             </article>
         </aside>

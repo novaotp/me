@@ -4,8 +4,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "npm-run-all --parallel vite typesafe-i18n",
-        "vite": "vite dev",
+        "dev": "vite dev",
         "build": "vite build",
         "preview": "vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -14,8 +13,7 @@
         "test:watch": "vitest",
         "coverage": "vitest run --coverage",
         "lint": "prettier --check . && eslint .",
-        "format": "prettier --write .",
-        "typesafe-i18n": "typesafe-i18n"
+        "format": "prettier --write ."
     },
     "dependencies": {
         "@tabler/icons-svelte": "^3.12.0",
@@ -23,8 +21,7 @@
         "@vercel/speed-insights": "^1.0.10",
         "bits-ui": "^0.21.13",
         "clsx": "^2.1.1",
-        "tailwind-merge": "^2.5.2",
-        "typesafe-i18n": "^5.26.2"
+        "tailwind-merge": "^2.5.2"
     },
     "devDependencies": {
         "@sveltejs/adapter-vercel": "^5.4.7",
@@ -39,7 +36,6 @@
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-svelte": "^2.36.0",
         "globals": "^15.0.0",
-        "npm-run-all": "^4.1.5",
         "postcss": "^8.4.45",
         "prettier": "^3.2.5",
         "prettier-plugin-svelte": "^3.2.2",

@@ -1,4 +1,3 @@
-import { locales } from '$i18n/i18n-util';
 import type { RequestHandler } from '@sveltejs/kit';
 
 export const GET: RequestHandler = async ({ url }) => {
@@ -15,14 +14,12 @@ export const GET: RequestHandler = async ({ url }) => {
                 xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
                 xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
             >
-                ${locales.map((locale) => {
-                    return paths.map((path) => {
-                        return `
+                ${paths.map((path) => {
+                    return `
                             <url>
-                                <loc>${url.protocol}//${url.hostname}/${locale}/${path}</loc>
+                                <loc>${url.protocol}//${url.hostname}/${path}</loc>
                             </url>
                         `;
-                    });
                 })}
             </urlset>
         `.trim(),

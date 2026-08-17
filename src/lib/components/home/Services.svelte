@@ -1,40 +1,32 @@
 <script lang="ts">
-    import LL, { locale } from '$i18n/i18n-svelte';
     import IconCode from '@tabler/icons-svelte/icons/code';
     import IconHammer from '@tabler/icons-svelte/icons/hammer';
     import IconPalette from '@tabler/icons-svelte/icons/palette';
 
     type Service = {
-        Icon: typeof IconCode,
-        title: string,
-        description: string
-    }
+        Icon: typeof IconCode;
+        title: string;
+        description: string;
+    };
 
-    let services = $state<Service[]>([]);
-
-    // Wrapped in $effect because it doesn't properly re-render on locale change
-    $effect(() => {
-        $locale;
-
-        services = [
-                {
-                    Icon: IconPalette,
-                    title: $LL.homePage.services.design.title(),
-                    description: $LL.homePage.services.design.description()
-                },
-                {
-                    Icon: IconCode,
-                    title: $LL.homePage.services.development.title(),
-                    description: $LL.homePage.services.development.description()
-                },
-                {
-                    Icon: IconHammer,
-                    title: $LL.homePage.services.maintenance.title(),
-                    description: $LL.homePage.services.maintenance.description()
-                }
-            ];
-    });
-    
+    let services = $state<Service[]>([
+        {
+            Icon: IconPalette,
+            title: 'Design',
+            description: 'Custom-made and modern designs that perfectly reflect your brand identity.'
+        },
+        {
+            Icon: IconCode,
+            title: 'Development',
+            description: 'High-performing and dynamic applications designed to deliver a smooth user experience.'
+        },
+        {
+            Icon: IconHammer,
+            title: 'Maintenance',
+            description:
+                'Comprehensive site maintenance to ensure it stays updated, secure, and performs optimally at all times.'
+        }
+    ]);
 </script>
 
 <div class="flex flex-col md:flex-row gap-10 items-start">
