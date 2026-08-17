@@ -1,0 +1,4 @@
+allowBuilds:
+  '@sveltejs/kit': true
+  '@vercel/speed-insights': true
+  esbuild: true

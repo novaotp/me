@@ -19,26 +19,27 @@ Stack :
 
 ### Requirements
 
-- Node.JS v20+ (tested on v20.11.1)
+- [NodeJS](https://nodejs.org/en/download) `24+`
+- [pnpm](https://pnpm.io/installation) `11+`
 
 ### Installation
 
 1. Clone the repository.
 
-    ```bash
-    git clone https://github.com/novaotp/me
+    ```sh
+    git clone https://github.com/novaotp/itsnova.sh
     ```
 
-1. Install the dependencies.
+2. Install the dependencies.
 
-    ```bash
-    npm install
+    ```sh
+    pnpm install
     ```
 
-1. Run the dev server.
+3. Run the dev server.
 
-    ```bash
-    npm run dev
+    ```sh
+    pnpm run dev
     ```
 
 ## License
