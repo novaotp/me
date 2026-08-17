@@ -2,7 +2,7 @@ import { locales } from '$i18n/i18n-util';
 import type { RequestHandler } from '@sveltejs/kit';
 
 export const GET: RequestHandler = async ({ url }) => {
-    const paths = ['', 'work', 'contact'].flat();
+    const paths = ['', 'work'].flat();
 
     return new Response(
         `

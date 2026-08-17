@@ -17,18 +17,6 @@
             <!-- Rendering as HTML to highlight parts of the text with CSS. -->
             {@html $LL.homePage.briefDescription()}
         </h1>
-        <a
-            href="/{$locale}/contact"
-            aria-label="Go to the contact page"
-            class="relative py-3 px-10 flex gap-[6px] flex-col xsm:flex-row justify-center items-center
-                 bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800 rounded"
-        >
-            <span>{$LL.homePage.contact.idea()}</span>
-            <div class="flex gap-2">
-                <span>{$LL.homePage.contact.letsTalk()}</span>
-                <IconArrowNarrowRight />
-            </div>
-        </a>
     </section>
     <section class="relative flex flex-col items-center justify-center w-full h-full gap-16">
         <h2 class="w-full text-3xl text-start">{$LL.homePage.services.title()}</h2>

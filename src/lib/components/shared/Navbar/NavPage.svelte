@@ -1,14 +1,10 @@
 <script lang="ts">
     import IconHome from '@tabler/icons-svelte/icons/home';
     import IconBuildingEstate from '@tabler/icons-svelte/icons/building-estate';
-    import IconNews from '@tabler/icons-svelte/icons/news';
-    import IconArrowNarrowRight from '@tabler/icons-svelte/icons/arrow-narrow-right';
-    import IconHeartHandshake from '@tabler/icons-svelte/icons/heart-handshake';
     import IconX from '@tabler/icons-svelte/icons/x';
     import { fly, fade } from 'svelte/transition';
     import Link from './Link.svelte';
-    import LL, { locale } from '$i18n/i18n-svelte';
-    import { goto } from '$app/navigation';
+    import LL from '$i18n/i18n-svelte';
 
     interface Props {
         show: boolean;
@@ -51,19 +47,6 @@
                     <IconBuildingEstate />
                     {$LL.navigation.workPage()}
                 </Link>
-                <button
-                    onclick={() => {
-                        closeMenu();
-                        goto(`/${$locale}/contact`);
-                    }}
-                    aria-label="Go to the contact page"
-                    class="relative w-full py-3 px-10 flex gap-[6px] xsm:flex-row justify-center items-center
-                         bg-indigo-700 dark:bg-sky-300 text-white dark:text-zinc-800 rounded"
-                >
-                    <IconHeartHandshake />
-                    <span>{$LL.navigation.contact.letsWorkTogether()}</span>
-                    <IconArrowNarrowRight />
-                </button>
             </article>
         </aside>
     </div>

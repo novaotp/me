@@ -25,13 +25,7 @@ const en = {
     },
     navigation: {
         homePage: 'Home',
-        workPage: 'Works',
-        contact: {
-            idea: 'Have an idea ?',
-            letsTalk: "Let's talk",
-            page: 'Contact',
-            letsWorkTogether: "Let's Work Together"
-        }
+        workPage: 'Works'
     },
     homePage: {
         meta: {
@@ -42,10 +36,6 @@ const en = {
         greet: 'Hello, I am Sajidur Rahman.',
         briefDescription:
             'A developer focused on performant applications for <span class="text-indigo-700 dark:text-sky-300">optimal customer satisfaction</span>.',
-        contact: {
-            idea: 'Have an idea ?',
-            letsTalk: "Let's talk"
-        },
         services: {
             title: 'Services',
             design: {
@@ -100,41 +90,6 @@ const en = {
         },
         title: 'My works',
         notYet: "I haven't been able to develop any websites for clients yet. Check back soon... or be my first client !"
-    },
-    contactPage: {
-        meta: {
-            title: 'Contact - Sajidur Rahman',
-            description: "Ready to Collaborate? Let's chat! Use our convenient contact form to reach out today."
-        },
-        title: "Let's start a project together",
-        content: {
-            email: 'Send an email at',
-            or: 'or',
-            form: 'Complete the form below to contact me.'
-        },
-        email: {
-            subject: 'Contact Form - Sajidur Rahman'
-        },
-        form: {
-            notifications: {
-                fillAll: 'Please complete all fields.',
-                invalidEmail: 'Enter a valid email.',
-                emailSent: 'Email sent successfully, I will get back to you as soon as possible.',
-                emailError: 'An error occurred. Try again later.'
-            },
-            fields: {
-                name: {
-                    placeholder: 'Enter your name here...'
-                },
-                email: {
-                    placeholder: 'Enter your email here...'
-                },
-                message: {
-                    placeholder: 'Enter your message here...'
-                }
-            },
-            send: 'Send'
-        }
     },
     pageNotFound: {
         meta: {

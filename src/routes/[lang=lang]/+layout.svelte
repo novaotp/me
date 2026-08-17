@@ -36,7 +36,6 @@
                 <h3 class="font-semibold text-xl">{$LL.footer.quickLinks()}</h3>
                 <a href="/{$locale}">{$LL.navigation.homePage()}</a>
                 <a href="/{$locale}/work">{$LL.navigation.workPage()}</a>
-                <a href="/{$locale}/contact">{$LL.navigation.contact.page()}</a>
             </div>
         </div>
         <div class="relative w-full md:w-auto flex flex-col sm:flex-row md:flex-col justify-between gap-5">

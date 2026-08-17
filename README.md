@@ -16,10 +16,6 @@ Stack :
 - [TailwindCSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
 - [Tabler Icons](https://tabler.io/icons) - A set of free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful.
 
-Services :
-
-- [EmailJS](https://www.emailjs.com) - Send Email Directly From Your Code. No server code needed. Focus on things that matter!
-
 ## Getting Started
 
 ### Requirements
@@ -39,8 +35,6 @@ Services :
     ```bash
     npm install
     ```
-
-1. Create your `.env` file based on `.env.example`.
 
 1. Run the dev server.
 

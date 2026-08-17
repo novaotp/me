@@ -56,13 +56,5 @@ Renders a navbar adapted for devices under 1024px wide.
         >
             {$LL.navigation.workPage()}
         </a>
-        <button
-            onclick={() => goto(`/${$locale}/contact`)}
-            class="bg-indigo-700 dark:bg-sky-300 py-2 px-6 rounded text-white dark:text-zinc-800 flex gap-3 items-center"
-        >
-            <IconHeartHandshake />
-            {$LL.navigation.contact.letsWorkTogether()}
-            <IconArrowRight />
-        </button>
     </div>
 </nav>

@@ -71,24 +71,6 @@ type RootTranslation = {
 		 * T​r​a​v​a​u​x
 		 */
 		workPage: string
-		contact: {
-			/**
-			 * U​n​ ​p​r​o​j​e​t​ ​e​n​ ​t​ê​t​e​ ​?
-			 */
-			idea: string
-			/**
-			 * P​a​r​l​o​n​s​-​e​n
-			 */
-			letsTalk: string
-			/**
-			 * C​o​n​t​a​c​t
-			 */
-			page: string
-			/**
-			 * T​r​a​v​a​i​l​l​o​n​s​ ​e​n​s​e​m​b​l​e
-			 */
-			letsWorkTogether: string
-		}
 	}
 	homePage: {
 		meta: {
@@ -109,16 +91,6 @@ type RootTranslation = {
 		 * U​n​ ​d​é​v​e​l​o​p​p​e​u​r​ ​a​x​é​ ​s​u​r​ ​d​e​s​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​p​e​r​f​o​r​m​a​n​t​e​s​ ​p​o​u​r​ ​u​n​e​ ​<​s​p​a​n​ ​c​l​a​s​s​=​"​t​e​x​t​-​i​n​d​i​g​o​-​7​0​0​ ​d​a​r​k​:​t​e​x​t​-​s​k​y​-​3​0​0​"​>​s​a​t​i​s​f​a​c​t​i​o​n​ ​c​l​i​e​n​t​ ​o​p​t​i​m​a​l​e​<​/​s​p​a​n​>​.
 		 */
 		briefDescription: string
-		contact: {
-			/**
-			 * U​n​ ​p​r​o​j​e​t​ ​e​n​ ​t​ê​t​e​ ​?
-			 */
-			idea: string
-			/**
-			 * P​a​r​l​o​n​s​-​e​n
-			 */
-			letsTalk: string
-		}
 		services: {
 			/**
 			 * S​e​r​v​i​c​e​s
@@ -244,86 +216,6 @@ type RootTranslation = {
 		 */
 		notYet: string
 	}
-	contactPage: {
-		meta: {
-			/**
-			 * C​o​n​t​a​c​t​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
-			 */
-			title: string
-			/**
-			 * P​r​ê​t​ ​à​ ​c​o​l​l​a​b​o​r​e​r​ ​?​ ​D​i​s​c​u​t​o​n​s​ ​!​ ​U​t​i​l​i​s​e​z​ ​n​o​t​r​e​ ​f​o​r​m​u​l​a​i​r​e​ ​d​e​ ​c​o​n​t​a​c​t​ ​p​r​a​t​i​q​u​e​ ​p​o​u​r​ ​n​o​u​s​ ​c​o​n​t​a​c​t​e​r​ ​d​è​s​ ​a​u​j​o​u​r​d​'​h​u​i​.
-			 */
-			description: string
-		}
-		/**
-		 * C​o​m​m​e​n​ç​o​n​s​ ​u​n​ ​p​r​o​j​e​t​ ​e​n​s​e​m​b​l​e
-		 */
-		title: string
-		content: {
-			/**
-			 * E​n​v​o​i​e​ ​u​n​ ​e​m​a​i​l​ ​à​ ​l​'​a​d​r​e​s​s​e
-			 */
-			email: string
-			/**
-			 * o​u
-			 */
-			or: string
-			/**
-			 * C​o​m​p​l​è​t​e​ ​l​e​ ​f​o​r​m​u​l​a​i​r​e​ ​c​i​-​d​e​s​s​o​u​s​ ​p​o​u​r​ ​m​e​ ​c​o​n​t​a​c​t​e​r​.
-			 */
-			form: string
-		}
-		email: {
-			/**
-			 * F​o​r​m​u​l​a​i​r​e​ ​d​e​ ​c​o​n​t​a​c​t​ ​-​ ​S​a​j​i​d​u​r​ ​R​a​h​m​a​n
-			 */
-			subject: string
-		}
-		form: {
-			notifications: {
-				/**
-				 * P​e​n​s​e​ ​à​ ​c​o​m​p​l​é​t​e​r​ ​t​o​u​s​ ​l​e​s​ ​c​h​a​m​p​s​.
-				 */
-				fillAll: string
-				/**
-				 * E​n​t​r​e​ ​u​n​ ​e​m​a​i​l​ ​v​a​l​i​d​e​.
-				 */
-				invalidEmail: string
-				/**
-				 * E​m​a​i​l​ ​e​n​v​o​y​é​ ​a​v​e​c​ ​s​u​c​c​è​s​,​ ​j​e​ ​r​e​v​i​e​n​d​r​a​i​ ​v​e​r​s​ ​t​o​i​ ​d​è​s​ ​q​u​e​ ​p​o​s​s​i​b​l​e​.
-				 */
-				emailSent: string
-				/**
-				 * U​n​e​ ​e​r​r​e​u​r​ ​s​'​e​s​t​ ​p​r​o​d​u​i​t​e​.​ ​R​é​e​s​s​a​i​e​ ​p​l​u​s​ ​t​a​r​d​.
-				 */
-				emailError: string
-			}
-			fields: {
-				name: {
-					/**
-					 * E​n​t​r​e​ ​t​o​n​ ​n​o​m​ ​i​c​i​.​.​.
-					 */
-					placeholder: string
-				}
-				email: {
-					/**
-					 * E​n​t​r​e​ ​t​o​n​ ​e​m​a​i​l​ ​i​c​i​.​.​.
-					 */
-					placeholder: string
-				}
-				message: {
-					/**
-					 * E​n​t​r​e​ ​t​o​n​ ​m​e​s​s​a​g​e​ ​i​c​i​.​.​.
-					 */
-					placeholder: string
-				}
-			}
-			/**
-			 * E​n​v​o​y​e​r
-			 */
-			send: string
-		}
-	}
 	pageNotFound: {
 		meta: {
 			/**
@@ -408,24 +300,6 @@ export type TranslationFunctions = {
 		 * Travaux
 		 */
 		workPage: () => LocalizedString
-		contact: {
-			/**
-			 * Un projet en tête ?
-			 */
-			idea: () => LocalizedString
-			/**
-			 * Parlons-en
-			 */
-			letsTalk: () => LocalizedString
-			/**
-			 * Contact
-			 */
-			page: () => LocalizedString
-			/**
-			 * Travaillons ensemble
-			 */
-			letsWorkTogether: () => LocalizedString
-		}
 	}
 	homePage: {
 		meta: {
@@ -446,16 +320,6 @@ export type TranslationFunctions = {
 		 * Un développeur axé sur des applications performantes pour une <span class="text-indigo-700 dark:text-sky-300">satisfaction client optimale</span>.
 		 */
 		briefDescription: () => LocalizedString
-		contact: {
-			/**
-			 * Un projet en tête ?
-			 */
-			idea: () => LocalizedString
-			/**
-			 * Parlons-en
-			 */
-			letsTalk: () => LocalizedString
-		}
 		services: {
 			/**
 			 * Services
@@ -580,86 +444,6 @@ export type TranslationFunctions = {
 		 * Je n'ai pas encore pu développer de sites web pour des clients. Reviens prochainement... ou sois mon premier client !
 		 */
 		notYet: () => LocalizedString
-	}
-	contactPage: {
-		meta: {
-			/**
-			 * Contact - Sajidur Rahman
-			 */
-			title: () => LocalizedString
-			/**
-			 * Prêt à collaborer ? Discutons ! Utilisez notre formulaire de contact pratique pour nous contacter dès aujourd'hui.
-			 */
-			description: () => LocalizedString
-		}
-		/**
-		 * Commençons un projet ensemble
-		 */
-		title: () => LocalizedString
-		content: {
-			/**
-			 * Envoie un email à l'adresse
-			 */
-			email: () => LocalizedString
-			/**
-			 * ou
-			 */
-			or: () => LocalizedString
-			/**
-			 * Complète le formulaire ci-dessous pour me contacter.
-			 */
-			form: () => LocalizedString
-		}
-		email: {
-			/**
-			 * Formulaire de contact - Sajidur Rahman
-			 */
-			subject: () => LocalizedString
-		}
-		form: {
-			notifications: {
-				/**
-				 * Pense à compléter tous les champs.
-				 */
-				fillAll: () => LocalizedString
-				/**
-				 * Entre un email valide.
-				 */
-				invalidEmail: () => LocalizedString
-				/**
-				 * Email envoyé avec succès, je reviendrai vers toi dès que possible.
-				 */
-				emailSent: () => LocalizedString
-				/**
-				 * Une erreur s'est produite. Réessaie plus tard.
-				 */
-				emailError: () => LocalizedString
-			}
-			fields: {
-				name: {
-					/**
-					 * Entre ton nom ici...
-					 */
-					placeholder: () => LocalizedString
-				}
-				email: {
-					/**
-					 * Entre ton email ici...
-					 */
-					placeholder: () => LocalizedString
-				}
-				message: {
-					/**
-					 * Entre ton message ici...
-					 */
-					placeholder: () => LocalizedString
-				}
-			}
-			/**
-			 * Envoyer
-			 */
-			send: () => LocalizedString
-		}
 	}
 	pageNotFound: {
 		meta: {
