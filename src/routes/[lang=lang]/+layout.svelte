@@ -9,7 +9,7 @@
     import IconBrandGithub from '@tabler/icons-svelte/icons/brand-github';
     import IconBrandLinkedin from '@tabler/icons-svelte/icons/brand-linkedin';
 
-    let { children, data } = $props();
+    let { children } = $props();
 
     let show = $state(false);
 </script>
@@ -36,16 +36,7 @@
                 <h3 class="font-semibold text-xl">{$LL.footer.quickLinks()}</h3>
                 <a href="/{$locale}">{$LL.navigation.homePage()}</a>
                 <a href="/{$locale}/work">{$LL.navigation.workPage()}</a>
-                <a href="/{$locale}/blog">{$LL.navigation.blogPage()}</a>
                 <a href="/{$locale}/contact">{$LL.navigation.contact.page()}</a>
-            </div>
-            <div class="flex flex-col gap-5">
-                <h3 class="font-semibold text-xl">{$LL.footer.latestArticles()}</h3>
-                {#each data.latest as { filename, metadata } (filename)}
-                    <a href="/{$locale}/blog/{metadata.category}/{filename}">
-                        {metadata.shortTitle ?? metadata.title}
-                    </a>
-                {/each}
             </div>
         </div>
         <div class="relative w-full md:w-auto flex flex-col sm:flex-row md:flex-col justify-between gap-5">
@@ -71,15 +62,8 @@
             <IconBrandLinkedin class="size-8" />
         </a>
     </div>
-    <div class="w-full flex flex-col justify-center items-center gap-2">
-        <div class="w-full flex justify-center items-center gap-5">
-            <IconCopyright />
-            <span>{new Date().getFullYear()} - Sajidur Rahman</span>
-        </div>
-        <div class="w-full flex justify-center items-center gap-5">
-            <a href="/{$locale}/privacy-policy" class="text-xs underline">
-                {$LL.footer.policy()}
-            </a>
-        </div>
+    <div class="w-full flex justify-center items-center gap-5">
+        <IconCopyright />
+        <span>{new Date().getFullYear()} - Sajidur Rahman</span>
     </div>
 </footer>

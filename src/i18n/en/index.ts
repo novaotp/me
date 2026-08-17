@@ -7,7 +7,6 @@ const en = {
     },
     footer: {
         quickLinks: 'Quick Links',
-        latestArticles: 'My Latest Articles',
         language: {
             title: 'Language'
         },
@@ -27,7 +26,6 @@ const en = {
     navigation: {
         homePage: 'Home',
         workPage: 'Works',
-        blogPage: 'Blog',
         contact: {
             idea: 'Have an idea ?',
             letsTalk: "Let's talk",
@@ -103,30 +101,6 @@ const en = {
         title: 'My works',
         notYet: "I haven't been able to develop any websites for clients yet. Check back soon... or be my first client !"
     },
-    blogPage: {
-        meta: {
-            title: 'Blog - Sajidur Rahman',
-            description:
-                'Unlock the Power of Modern Web Dev with clear guides on SvelteKit, Tailwind CSS, PostgreSQL, and more! Learn essential skills to build amazing websites. Start your journey today!'
-        },
-        summary: "Here, you'll find articles I've written.",
-        categories: {
-            all: 'All',
-            personal: 'Personal',
-            guide: 'Guide'
-        },
-        readTime: '{0} min read'
-    },
-    articlePage: {
-        back: 'Back',
-        summary: 'Summary',
-        postedAt: 'Published on {0}',
-        latestArticles: 'Latest Articles',
-        copy: {
-            success: 'Copied successfully',
-            fail: 'Failed to copy'
-        }
-    },
     contactPage: {
         meta: {
             title: 'Contact - Sajidur Rahman',
@@ -161,19 +135,6 @@ const en = {
             },
             send: 'Send'
         }
-    },
-    privacyPolicyPage: {
-        meta: {
-            title: 'Privacy Policy - Sajidur Rahman',
-            description:
-                'Transparency and data protection are our top priorities. Our detailed privacy policy explains how we handle your information, ensuring your privacy is always respected.'
-        },
-        banner: {
-            title: 'Important Notice',
-            content:
-                "Our privacy policy is a work in progress. We're committed to providing clear information about how we handle your data. To help us improve, let us know if you have any questions or suggestions at"
-        },
-        onThisPage: 'On this page'
     },
     pageNotFound: {
         meta: {

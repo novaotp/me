@@ -7,7 +7,6 @@ const fr = {
     },
     footer: {
         quickLinks: 'Liens rapides',
-        latestArticles: 'Mes Derniers Articles',
         language: {
             title: 'Langue'
         },
@@ -27,7 +26,6 @@ const fr = {
     navigation: {
         homePage: 'Home',
         workPage: 'Travaux',
-        blogPage: 'Blog',
         contact: {
             idea: 'Un projet en tête ?',
             letsTalk: 'Parlons-en',
@@ -105,30 +103,6 @@ const fr = {
         title: 'Mes travaux',
         notYet: "Je n'ai pas encore pu développer de sites web pour des clients. Reviens prochainement... ou sois mon premier client !"
     },
-    blogPage: {
-        meta: {
-            title: 'Blog - Sajidur Rahman',
-            description:
-                "Libérez la puissance du développement Web moderne avec des guides clairs sur SvelteKit, Tailwind CSS, PostgreSQL et plus encore ! Apprenez les compétences essentielles pour créer des sites Web incroyables. Commencez votre voyage aujourd'hui !"
-        },
-        summary: "Ici, tu trouveras quelques articles que j'ai rédigés.",
-        categories: {
-            all: 'Tout',
-            personal: 'Personnel',
-            guide: 'Guide'
-        },
-        readTime: '{0} min de lecture'
-    },
-    articlePage: {
-        back: 'Retour',
-        summary: 'Sommaire',
-        postedAt: 'Publié le {0}',
-        latestArticles: 'Récents Articles',
-        copy: {
-            success: 'Copié avec succès',
-            fail: 'Échec de la copie'
-        }
-    },
     contactPage: {
         meta: {
             title: 'Contact - Sajidur Rahman',
@@ -164,19 +138,6 @@ const fr = {
             },
             send: 'Envoyer'
         }
-    },
-    privacyPolicyPage: {
-        meta: {
-            title: 'Politique de confidentialité - Sajidur Rahman',
-            description:
-                'La transparence et la protection des données est ma principales priorité. Ma politique de confidentialité détaillée explique comment je traitons tes informations, en veillant à ce que ta vie privée soit toujours respectée.'
-        },
-        banner: {
-            title: 'Avis important',
-            content:
-                "Ma politique de confidentialité est en cours d'élaboration. Je m'engage à fournir des informations claires sur la manière dont je traite tes données. Pour m'aider à l'améliorer, fais-moi part de tes questions ou suggestions à l'adresse suivante"
-        },
-        onThisPage: 'Sur cette page'
     },
     pageNotFound: {
         meta: {

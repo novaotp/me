@@ -1,18 +1,8 @@
-import { allCategories, importArticles } from '$lib/server/article';
-import { baseLocale, locales } from '$i18n/i18n-util';
+import { locales } from '$i18n/i18n-util';
 import type { RequestHandler } from '@sveltejs/kit';
 
 export const GET: RequestHandler = async ({ url }) => {
-    const paths = [
-        '',
-        'work',
-        'contact',
-        'privacy-policy',
-        'blog',
-        (await allCategories()).map((category) => `blog/${category}`),
-        // The locale itself doesn't matter.
-        (await importArticles(baseLocale)).map((article) => `blog/${article.metadata.category}/${article.filename}`)
-    ].flat();
+    const paths = ['', 'work', 'contact'].flat();
 
     return new Response(
         `

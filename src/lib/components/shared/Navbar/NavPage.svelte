@@ -51,10 +51,6 @@
                     <IconBuildingEstate />
                     {$LL.navigation.workPage()}
                 </Link>
-                <Link href="/blog" onclick={closeMenu}>
-                    <IconNews />
-                    {$LL.navigation.blogPage()}
-                </Link>
                 <button
                     onclick={() => {
                         closeMenu();
