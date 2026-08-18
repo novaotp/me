@@ -3,10 +3,8 @@
     import { onMount } from 'svelte';
     import { initTheme } from '$stores/theme.svelte';
 
-    import ToastContainer from '$lib/components/shared/Toast/ToastContainer.svelte';
     import Navbar from '$lib/components/shared/Navbar/Navbar.svelte';
     import NavPage from '$lib/components/shared/Navbar/NavPage.svelte';
-    import LanguageSelect from '$lib/components/shared/footer/LanguageSelect.svelte';
     import ThemeSwitch from '$components/shared/footer/ThemeSwitch.svelte';
     import IconCopyright from '@tabler/icons-svelte/icons/copyright';
     import IconBrandGithub from '@tabler/icons-svelte/icons/brand-github';
@@ -30,7 +28,6 @@
 
 <NavPage bind:show />
 <Navbar bind:show />
-<ToastContainer />
 <div class="relative w-full min-h-[calc(100%-7.5rem)] flex-grow flex justify-center items-center flex-col">
     {@render children()}
 </div>
