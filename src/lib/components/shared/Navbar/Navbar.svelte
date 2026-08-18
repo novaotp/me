@@ -2,6 +2,8 @@
     import IconMenu from "@tabler/icons-svelte/icons/menu";
 
     import { page } from "$app/stores";
+    import logoOneLine from "$assets/logos/logo_one_line.png";
+    import logoOnlyName from "$assets/logos/logo_only_name.png";
 
     interface Props {
         show: boolean;
@@ -34,13 +36,13 @@ Renders a navbar adapted for devices under 1024px wide.
         </span>
     </button>
     <a href="/" class="relative h-5">
-        <img src="/logos/logo_only_name.png" alt="Sajidur Rahman's Logo" class="relative h-5" />
+        <img src={logoOnlyName} alt="Sajidur Rahman's Logo" class="relative h-5" />
     </a>
 </nav>
 
 <nav class="lg:flex hidden w-full h-20 px-10 py-5 justify-between items-center">
     <a href="/" class="relative h-10">
-        <img src="/logos/logo_one_line.png" alt="Sajidur Rahman's Logo" class="relative h-10" />
+        <img src={logoOneLine} alt="Sajidur Rahman's Logo" class="relative h-10" />
     </a>
     <div class="flex items-center gap-12">
         <a

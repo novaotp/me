@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "../app.css";
+    import "./layout.css";
 
     import IconBrandGithub from "@tabler/icons-svelte/icons/brand-github";
     import IconBrandLinkedin from "@tabler/icons-svelte/icons/brand-linkedin";
@@ -30,12 +30,12 @@
 <NavPage bind:show />
 <Navbar bind:show />
 <div
-    class="relative w-full min-h-[calc(100%-7.5rem)] flex-grow flex justify-center items-center flex-col"
+    class="relative w-full min-h-[calc(100%-7.5rem)] grow flex justify-center items-center flex-col"
 >
     {@render children()}
 </div>
 <footer
-    class="relative flex flex-col justify-center items-center p-10 gap-10 mt-10 bg-gray-900 dark:bg-zinc-900 text-white"
+    class="relative flex flex-col items-center justify-center p-10 gap-10 mt-10 bg-gray-900 dark:bg-zinc-900 text-white"
 >
     <div
         class="w-full sm:w-auto md:flex-row flex flex-col items-start sm:items-center md:items-start gap-10 md:gap-20"

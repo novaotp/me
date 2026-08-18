@@ -1,23 +1,10 @@
-# My portfolio
+# itsnova.sh
 
-This repository represents my portfolio that you can [preview on my website](https://sajidur.dev).
-
-## Features
-
-- Showcasing my work
-- Light/dark mode
-
-## Technologies
-
-Stack :
-
-- [SvelteKit](https://kit.svelte.dev/) - A framework for rapidly developing robust, performant web applications using Svelte.
-- [TailwindCSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
-- [Tabler Icons](https://tabler.io/icons) - A set of free and open source icons designed to make your website or app attractive, visually consistent and simply beautiful.
+My personal website.
 
 ## Getting Started
 
-### Requirements
+### Prerequisites
 
 - [NodeJS](https://nodejs.org/en/download) `24+`
 - [pnpm](https://pnpm.io/installation) `11+`
@@ -45,7 +32,3 @@ Stack :
 ## License
 
 This project is licensed under the MIT license.
-
-## Acknowlegments
-
-Sajidur Rahman
