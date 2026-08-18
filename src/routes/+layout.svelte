@@ -1,16 +1,13 @@
 <script lang="ts">
-    import '../app.css';
-    import { onMount } from 'svelte';
-    import { initTheme } from '$stores/theme.svelte';
-    import { setLocale } from '../i18n/i18n-svelte';
+    import "./layout.css";
 
-    let { children, data } = $props();
+    import favicon from "#assets/favicon.svg";
 
-    setLocale(data.locale);
-    
-    onMount(() => {
-        initTheme();
-    });
+    let { children } = $props();
 </script>
+
+<svelte:head>
+    <link rel="icon" href={favicon} />
+</svelte:head>
 
 {@render children()}
