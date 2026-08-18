@@ -1,7 +1,7 @@
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from "@sveltejs/kit";
 
 export const GET: RequestHandler = async ({ url }) => {
-    const paths = ['', 'work'].flat();
+    const paths = ["", "work"].flat();
 
     return new Response(
         `
@@ -23,6 +23,6 @@ export const GET: RequestHandler = async ({ url }) => {
                 })}
             </urlset>
         `.trim(),
-        { headers: { 'Content-Type': 'application/xml' } }
+        { headers: { "Content-Type": "application/xml" } },
     );
 };

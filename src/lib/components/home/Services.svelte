@@ -1,7 +1,7 @@
 <script lang="ts">
-    import IconCode from '@tabler/icons-svelte/icons/code';
-    import IconHammer from '@tabler/icons-svelte/icons/hammer';
-    import IconPalette from '@tabler/icons-svelte/icons/palette';
+    import IconCode from "@tabler/icons-svelte/icons/code";
+    import IconHammer from "@tabler/icons-svelte/icons/hammer";
+    import IconPalette from "@tabler/icons-svelte/icons/palette";
 
     type Service = {
         Icon: typeof IconCode;
@@ -12,20 +12,22 @@
     let services = $state<Service[]>([
         {
             Icon: IconPalette,
-            title: 'Design',
-            description: 'Custom-made and modern designs that perfectly reflect your brand identity.'
+            title: "Design",
+            description:
+                "Custom-made and modern designs that perfectly reflect your brand identity.",
         },
         {
             Icon: IconCode,
-            title: 'Development',
-            description: 'High-performing and dynamic applications designed to deliver a smooth user experience.'
+            title: "Development",
+            description:
+                "High-performing and dynamic applications designed to deliver a smooth user experience.",
         },
         {
             Icon: IconHammer,
-            title: 'Maintenance',
+            title: "Maintenance",
             description:
-                'Comprehensive site maintenance to ensure it stays updated, secure, and performs optimally at all times.'
-        }
+                "Comprehensive site maintenance to ensure it stays updated, secure, and performs optimally at all times.",
+        },
     ]);
 </script>
 

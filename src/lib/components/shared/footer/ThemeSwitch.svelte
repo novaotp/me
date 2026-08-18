@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { getTheme, switchTheme } from '$stores/theme.svelte';
-    import type { MouseEventHandler } from 'svelte/elements';
+    import type { MouseEventHandler } from "svelte/elements";
+
+    import { getTheme, switchTheme } from "$stores/theme.svelte";
 
     let inputNode = $state<HTMLInputElement>();
 
@@ -16,8 +17,8 @@
     <input
         bind:this={inputNode}
         type="checkbox"
-        checked={getTheme() !== 'light'}
-        onchange={(event) => switchTheme(event.currentTarget.checked ? 'dark' : 'light')}
+        checked={getTheme() !== "light"}
+        onchange={(event) => switchTheme(event.currentTarget.checked ? "dark" : "light")}
         class="theme-switch__checkbox"
     />
     <div class="theme-switch__container">
@@ -61,7 +62,9 @@
         --sun-bg: #ecca2f;
         --moon-bg: #c4c9d1;
         --spot-color: #959db1;
-        --circle-container-offset: calc((var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
+        --circle-container-offset: calc(
+            (var(--circle-container-diameter) - var(--container-height)) / 2 * -1
+        );
         --stars-color: #fff;
         --clouds-color: #f3fdff;
         --back-clouds-color: #aacadf;
@@ -94,7 +97,7 @@
     }
 
     .theme-switch__container::before {
-        content: '';
+        content: "";
         position: absolute;
         z-index: 1;
         inset: 0;
@@ -276,8 +279,12 @@
         left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter));
     }
 
-    .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
-        left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em);
+    .theme-switch__checkbox:checked
+        + .theme-switch__container
+        .theme-switch__circle-container:hover {
+        left: calc(
+            100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em
+        );
     }
 
     .theme-switch__circle-container:hover {

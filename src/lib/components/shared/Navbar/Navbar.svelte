@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { page } from '$app/stores';
-    import IconMenu from '@tabler/icons-svelte/icons/menu';
+    import IconMenu from "@tabler/icons-svelte/icons/menu";
+
+    import { page } from "$app/stores";
 
     interface Props {
         show: boolean;
@@ -10,13 +11,13 @@
 
     const showMenu = () => {
         show = true;
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = "hidden";
     };
 
     function colors(href: string) {
         return $page.url.pathname === `/${href}`
-            ? 'text-indigo-700 dark:text-sky-300'
-            : 'text-gray-500 dark:text-gray-400';
+            ? "text-indigo-700 dark:text-sky-300"
+            : "text-gray-500 dark:text-gray-400";
     }
 </script>
 
@@ -42,7 +43,10 @@ Renders a navbar adapted for devices under 1024px wide.
         <img src="/logos/logo_one_line.png" alt="Sajidur Rahman's Logo" class="relative h-10" />
     </a>
     <div class="flex items-center gap-12">
-        <a href="/work" class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('work')}">
+        <a
+            href="/work"
+            class="py-1 duration-150 hover:text-indigo-700 dark:hover:text-sky-300 {colors('work')}"
+        >
             Works
         </a>
     </div>

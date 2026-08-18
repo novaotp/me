@@ -1,9 +1,10 @@
 <script lang="ts">
-    import IconHome from '@tabler/icons-svelte/icons/home';
-    import IconBuildingEstate from '@tabler/icons-svelte/icons/building-estate';
-    import IconX from '@tabler/icons-svelte/icons/x';
-    import { fly, fade } from 'svelte/transition';
-    import Link from './Link.svelte';
+    import IconBuildingEstate from "@tabler/icons-svelte/icons/building-estate";
+    import IconHome from "@tabler/icons-svelte/icons/home";
+    import IconX from "@tabler/icons-svelte/icons/x";
+    import { fade, fly } from "svelte/transition";
+
+    import Link from "./Link.svelte";
 
     interface Props {
         show: boolean;
@@ -13,7 +14,7 @@
 
     const closeMenu = () => {
         show = false;
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = "auto";
     };
 </script>
 
@@ -37,7 +38,9 @@
                     </span>
                 </button>
             </nav>
-            <article class="relative w-full flex-grow flex flex-col justify-center items-center list-none gap-5">
+            <article
+                class="relative w-full flex-grow flex flex-col justify-center items-center list-none gap-5"
+            >
                 <Link href="/" onclick={closeMenu}>
                     <IconHome /> Home
                 </Link>

@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
-    import IconArrowRight from '@tabler/icons-svelte/icons/arrow-right';
+    import IconArrowRight from "@tabler/icons-svelte/icons/arrow-right";
+
+    import { goto } from "$app/navigation";
 </script>
 
 <svelte:head>
@@ -12,7 +13,7 @@
     <h1 class="text-6xl flex">Wrong path...</h1>
     <p>It seems that you got lost...</p>
     <button
-        on:click={() => goto('/')}
+        on:click={() => goto("/")}
         class="bg-indigo-700 dark:bg-sky-300 py-2 px-6 rounded text-white dark:text-zinc-800 flex gap-5 items-center"
     >
         Back to home
